@@ -1568,9 +1568,9 @@
 <p>VKS Supervisor with "VDS + FLB" has the following Networking requirements:  </p>
 <ul>
 <li><strong>Physical Fabric:</strong>  <ul>
-<li><strong>2 subnets/VLAN</strong>  <ul>
+<li><strong>2 or 3 subnets/VLAN</strong>  <ul>
 <li><strong>Management</strong>:<br>
-  Can be an existing Management subnet/VLAN hosting already other components such as vCenter. 6 consicutive IP@ in that subnet are needed (4 for Supervisor Mgt + 2 for FLB Mgt).</li>
+  Can be an existing Management subnet/VLAN hosting already other components such as vCenter. 6 consecutive IP@ in that subnet are needed (4 for Supervisor Mgt + 2 for FLB Mgt).</li>
 <li><strong>Dataplane</strong>:<br>
   Can be an existing subnet/VLAN hosting already other components such as Physical Servers. A large amount is needed though (for K8s Controller and Worker Nodes IPs and optionally VIPs).</li>
 <li><strong>(optionally) VIP</strong>:<br>
