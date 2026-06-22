@@ -1551,32 +1551,68 @@
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><div style="width: 20%;">Architecture Option</div></th>
-<th style="text-align: left;"><div style="min-width: 130px; white-space: nowrap;">Network Stack</div></th>
-<th style="text-align: left;"><div style="width: 65%;">Description &amp; Use Case</div></th>
+<th style="text-align: left;"><div style="width: 30%;">Architecture Option</div></th>
+<th style="text-align: left;"><div style="width: 70%;">Description &amp; Use Case</div></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>1. VDS + FLB</strong></td>
-<td style="text-align: left;">VLAN-Backed</td>
-<td style="text-align: left;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/0-VDS.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="images/0-VDS.jpg" style="display: block; margin: 0 auto; max-width: 300px;" width="90%"></a> <br> <strong>Uses VDS port groups</strong> for the Supervisor Cluster and deploys <strong>FLB virtual appliances</strong> to handle load balancing traffic. <br><br> <strong>Best for:</strong> Lab environments, Proof of Concepts (PoC), or smaller environments. <br><br> <strong>Limitation:</strong> Not supported with VCF Automation.</td>
+<td style="text-align: left;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/0-VDS.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="images/0-VDS.jpg" style="display: block; margin: 0 auto; max-width: 300px;" width="90%"></a> <br><br> <ul><li><strong>Architecture:</strong> Uses <strong>VDS port groups</strong> for the Supervisor Cluster and deploys <strong>FLB virtual appliances</strong> to handle load balancing traffic.</li><li><strong>Best for:</strong> Lab environments, Proof of Concepts (PoC), or smaller environments.</li><li><strong>Limitation:</strong> Cannot be used with VCF Automation.</li></ul></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>2. NSX + DTGW/VNA</strong></td>
-<td style="text-align: left;">NSX Overlay</td>
-<td style="text-align: left;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/0-DTGW.jpg" data-desc-position="bottom"><img alt="DTGW Architecture" src="images/0-DTGW.jpg" style="display: block; margin: 0 auto; max-width: 300px;" width="90%"></a> <br> <strong>Uses NSX Distributed Transit Gateways + VNA</strong> for the Supervisor Cluster. <br><br> <strong>Best for:</strong> Fully integrated VCF architecture for better scale and security. <br><br> <strong>Consideration:</strong> Requires NSX.</td>
+<td style="text-align: left;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/0-DTGW.jpg" data-desc-position="bottom"><img alt="DTGW Architecture" src="images/0-DTGW.jpg" style="display: block; margin: 0 auto; max-width: 300px;" width="90%"></a> <br><br> <ul><li><strong>Architecture:</strong> Uses <strong>NSX Distributed Transit Gateways + VNA</strong> for the Supervisor Cluster.</li><li><strong>Best for:</strong> Fully integrated VCF architecture for better scale and security.</li><li><strong>Consideration:</strong> Requires fully deployed NSX overlay infrastructure.</li></ul></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Upcoming Architectures</p>
+<details class="info">
+<summary>Detailed Architecture Pros &amp; Cons</summary>
+<p><strong>1. Supervisor with "VDS + FLB"</strong></p>
+<ul>
+<li><strong>Pros:</strong><ul>
+<li><strong>Footprint:</strong> Slightly smaller overall footprint (the FLB appliance is slightly smaller than a VNA)</li>
+</ul>
+</li>
+<li><strong>Cons:</strong><ul>
+<li><strong>Integration Limitations:</strong> Lacks support for other VCF components, specifically VCF Automation (VCF-A)</li>
+<li><strong>Scale:</strong> All VIPs are managed by a single FLB's Active/Standby (A/S)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>2. Supervisor with "NSX + DTGW/VNA"</strong></p>
+<ul>
+<li><strong>Pros:</strong><ul>
+<li><strong>Security:</strong> * No possible external access directly to K8s Nodes<ul>
+<li>Option to control application communication including:<ul>
+<li>Cross-Container via Antrea CNI (DFW)</li>
+<li>Cross-VPC VIP communication (VPC Connectivity Policies)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Scale:</strong> * Uses fewer public IPs (K8s nodes use private IPs)<ul>
+<li>VIPs are highly scalable, distributed across up to 10 VNA Nodes in an Active/Active (A/A) configuration</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Cons:</strong><ul>
+<li><strong>Operations:</strong> Requires NSX (though installation and management remain very simple)</li>
+<li><strong>Footprint:</strong> Slightly larger footprint (the VNA is slightly larger than the FLB)</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary>Upcoming Architectures</summary>
 <p>The following architectures will be covered in future updates:  </p>
 <ul>
 <li>NSX + CTGW/Edge  </li>
 <li>Avi Load Balancer  </li>
 </ul>
-</div>
+</details>
 <hr>
 <div class="admonition info">
 <p class="admonition-title">Document Versioning</p>
