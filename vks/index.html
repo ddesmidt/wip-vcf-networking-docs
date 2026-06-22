@@ -11,6 +11,8 @@
         <link rel="prev" href="../vcenter/3f-connectivity_policy/">
       
       
+        <link rel="next" href="1a-requirements/">
+      
       
         
       
@@ -1193,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="1a-requirements.md" class="md-nav__link">
+      <a href="1a-requirements/" class="md-nav__link">
         
   
   
@@ -1221,7 +1223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="1b-deployment.md" class="md-nav__link">
+      <a href="1b-deployment/" class="md-nav__link">
         
   
   
@@ -1249,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="1c-deployment-vms.md" class="md-nav__link">
+      <a href="1c-deployment-vms/" class="md-nav__link">
         
   
   
@@ -1277,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="1d-deployment-k8s.md" class="md-nav__link">
+      <a href="1d-deployment-k8s/" class="md-nav__link">
         
   
   
@@ -1368,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="2a-requirements.md" class="md-nav__link">
+      <a href="2a-requirements/" class="md-nav__link">
         
   
   
@@ -1396,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="2b-deployment.md" class="md-nav__link">
+      <a href="2b-deployment/" class="md-nav__link">
         
   
   
@@ -1424,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="2c-deployment-vms.md" class="md-nav__link">
+      <a href="2c-deployment-vms/" class="md-nav__link">
         
   
   
@@ -1452,7 +1454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="2d-deployment-k8s.md" class="md-nav__link">
+      <a href="2d-deployment-k8s/" class="md-nav__link">
         
   
   
@@ -1557,18 +1559,18 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>1. VDS + FLB</strong></td>
+<td style="text-align: left;"><strong><a href="1a-requirements/">1. VDS + FLB</a></strong></td>
 <td style="text-align: left;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/0-VDS.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="images/0-VDS.jpg" style="display: block; margin: 0 auto; max-width: 300px;" width="90%"></a> <br><br> <ul><li><strong>Architecture:</strong> Uses <strong>VDS port groups</strong> for the Supervisor Cluster and deploys <strong>FLB virtual appliances</strong> to handle load balancing traffic.</li><li><strong>Best for:</strong> Lab environments, Proof of Concepts (PoC), or smaller environments.</li><li><strong>Limitation:</strong> Cannot be used with VCF Automation.</li></ul></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>2. NSX + DTGW/VNA</strong></td>
+<td style="text-align: left;"><strong><a href="2a-requirements/">2. NSX + DTGW/VNA</a></strong></td>
 <td style="text-align: left;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/0-DTGW.jpg" data-desc-position="bottom"><img alt="DTGW Architecture" src="images/0-DTGW.jpg" style="display: block; margin: 0 auto; max-width: 300px;" width="90%"></a> <br><br> <ul><li><strong>Architecture:</strong> Uses <strong>NSX Distributed Transit Gateways + VNA</strong> for the Supervisor Cluster.</li><li><strong>Best for:</strong> Fully integrated VCF architecture for better scale and security.</li><li><strong>Consideration:</strong> Requires fully deployed NSX overlay infrastructure.</li></ul></td>
 </tr>
 </tbody>
 </table>
 <details class="info">
 <summary>Detailed Architecture Pros &amp; Cons</summary>
-<p><strong>1. Supervisor with "VDS + FLB"</strong></p>
+<p><strong><a href="1a-requirements/">1. Supervisor with "VDS + FLB"</a></strong></p>
 <ul>
 <li><strong>Pros:</strong><ul>
 <li><strong>Footprint:</strong> Slightly smaller overall footprint (the FLB appliance is slightly smaller than a VNA)</li>
@@ -1581,7 +1583,7 @@
 </li>
 </ul>
 <hr>
-<p><strong>2. Supervisor with "NSX + DTGW/VNA"</strong></p>
+<p><strong><a href="2a-requirements/">2. Supervisor with "NSX + DTGW/VNA"</a></strong></p>
 <ul>
 <li><strong>Pros:</strong><ul>
 <li><strong>Security:</strong> * No possible external access directly to K8s Nodes<ul>
