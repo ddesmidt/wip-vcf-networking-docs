@@ -17,12 +17,21 @@ This section describes the procedures for **deploying the VKS Supervisor with "V
 <div markdown>
 ![VDS Architecture](images/0-VDS.jpg){ width="100%" }
 </div>
-
 </div>
-
-
 
 ---
 
 ## Requirements {: #requirements }
 
+![Topology](images/1a-1-Topology.jpg){: .center style="width:60%" }
+
+VKS Supervisor with "VDS + FLB" has the following Networking requirements:  
+
+* **Physical Fabric:**  
+    * **2 subnets/VLAN**  
+        * **Management**:  
+          Can be an existing Management subnet/VLAN hosting already other components such as vCenter. 6 consicutive IP@ in that subnet are needed (xxx 4 for Supervisor Mgt + 2 for FLB Mgt ???).
+        * **Dataplane**:  
+          Can be an existing subnet/VLAN hosting already other components such as Physical Servers. A large amount is needed though (for K8s Controller and Worker Nodes IPs and optionally VIPs).
+        * **(optionally) VIP**:  
+          Can be an existing subnet/VLAN hosting already other components such as Physical Servers. A large amount is needed though (for VIPs).

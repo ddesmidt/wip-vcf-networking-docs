@@ -17,10 +17,7 @@ This section describes the procedures for **deploying the VKS Supervisor with "V
 <div markdown>
 ![VDS Architecture](images/0-VDS.jpg){ width="100%" }
 </div>
-
 </div>
-
-
 
 ---
 
