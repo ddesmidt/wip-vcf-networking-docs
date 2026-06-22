@@ -75,32 +75,19 @@ nav:
             - Network Span: vcenter/3d-network_span.md
             - Connectivity Profile: vcenter/3e-connectivity_profile.md
             - Connectivity Policy: vcenter/3f-connectivity_policy.md
-  - VCF Automation:
-      - Introduction: vcfa/index.md
-      - VCF-A Tenant:
-          - External Connectivity & Services:
-            - Transit Gateway: vcfa/wip-tgw.md
-            - Connectivity Profile: vcfa/wip-profile.md
-            - Tenant IP Block: vcfa/wip-block.md
-            - Tenant IP Quota: vcfa/wip-quota.md
-          - Network Services:
-            - VPC Gateway: vcfa/wip-gateway.md
-            - VCF-A Namespace: vcfa/wip-namespace.md
-            - VPC Subnet: vcfa/wip-subnet.md
-            - NAT: vcfa/wip-nat.md
-            - DHCP: vcfa/wip-dhcp.md
-            - Load Balancer: vcfa/wip-lb.md
-            - VPN: vcfa/wip-vpn.md
-      - VCF-A Provider:
-          - Provider Infrastructure:
-            - Zone / Region: vcfa/wip-zone.md
-            - Edge Cluster / Node: vcfa/wip-edge.md
-            - VNA Cluster / Node: vcfa/wip-vna.md
-          - External Connectivity & Services:
-            - External Connection: vcfa/wip-extconn.md
-            - Subnet VLAN: vcfa/wip-subnet_vlan.md
-            - Provider IP Block: vcfa/wip-ipblock.md
-            - Provider IP Quota: vcfa/wip-ipquota.md
+  - VKS:
+      - Introduction: vks/index.md
+      - VDS + FLB:
+        - Requirements: vks/1a-requirements.md
+        - Supervisor Deployment: vks/1b-deployment.md
+        - Deployment App (VMs): vks/1c-deployment-vms.md
+        - Deployment App (k8s): vks/1d-deployment-k8s.md
+      - NSX + DTGW/VNA:
+        - Requirements: vks/2a-requirements.md
+        - Supervisor Deployment: vks/2b-deployment.md
+        - Deployment App (VMs): vks/2c-deployment-vms.md
+        - Deployment App (k8s): vks/2d-deployment-k8s.md
+
 
   
 
