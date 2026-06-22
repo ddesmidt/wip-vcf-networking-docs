@@ -1564,6 +1564,20 @@
 </div>
 <hr>
 <h2 id="requirements">Requirements</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" class="center" src="../images/2a-1-Topology.jpg" style="width:60%"></a></p>
+<p>VKS Supervisor with "VDS + FLB" has the following Networking requirements:  </p>
+<ul>
+<li><strong>Physical Fabric:</strong>  <ul>
+<li><strong>2 subnets/VLAN</strong>  <ul>
+<li><strong>Management</strong>:<br>
+  Can be an existing Management subnet/VLAN hosting already other components such as vCenter. 6 consicutive IP@ in that subnet are needed (xxx 4 for Supervisor Mgt + 2 for FLB Mgt ???).</li>
+<li><strong>Dataplane</strong>:<br>
+  Can be an existing subnet/VLAN hosting already other components such as Physical Servers. A large amount is needed though (for K8s Controller and Worker Nodes IPs and optionally VIPs).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 
 
