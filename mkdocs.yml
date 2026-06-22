@@ -1,0 +1,106 @@
+site_name: VCF Networking Encyclopedia
+site_description: Technical configuration guide for VCF Networking services in VCF
+use_directory_urls: true
+
+theme:
+  name: material
+  palette:
+    # This sets a "VMware-like" blue and white theme
+    - scheme: default
+      primary: custom
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  logo: assets/VMware_by_Broadcom_White.png
+  favicon: assets/VMware_by_Broadcom_White.png  # Optional: uses same logo for browser tab
+  features:
+    - navigation.tabs              # Top navigation bar
+    - navigation.sections          # Grouping in sidebar
+    - navigation.top               # "Back to top" button
+    - content.code.copy            # "Copy" button on CLI commands
+    - navigation.grid              # This is the feature that enables "grid" and "cards"
+    - lightbox                     # This is for the image zoom
+
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      zoomable: true
+      draggable: true
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition                     # For "Warning" and "Note" boxes
+  - pymdownx.details               # For collapsible "Read More" sections
+  - pymdownx.superfences           # Better code blocks
+  - pymdownx.tabbed:               # For UI vs. API tabs
+      alternate_style: true
+  - attr_list                      # "grid cards" class to work
+  - md_in_html                     # Allows Markdown (the bullets) inside the <div>
+  - pymdownx.emoji: # <--- OPTIONAL: Makes the :material-xxx: icons appear
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tilde
+  - toc:
+      toc_depth: 3
+
+# THIS IS YOUR TABLE OF CONTENTS
+nav:
+  - VCF Networking Encyclopedia: index.md
+  - vCenter Server:
+      - Introduction: vcenter/index.md
+      - VPC Network Services:
+        - VPC Gateway: vcenter/1a-vpc_gateway.md
+        - VPC Subnet: vcenter/1b-vpc_subnet.md
+        - NAT: vcenter/1c-vpc_nat.md
+        - DHCP: vcenter/1d-vpc_DHCP.md
+      - VPC Northbound Architecture:
+          - VCF Network Infrastructure:
+            - Edge Cluster / Node: vcenter/2a-edge.md
+            - VNA Cluster / Node: vcenter/2b-vna.md
+          - External Connectivity & Services:
+            - External Connection: vcenter/3a-external_connection.md
+            - Transit Gateway: vcenter/3b-transit_gateway.md
+            - IP Block: vcenter/3c-ip_block.md
+            - Network Span: vcenter/3d-network_span.md
+            - Connectivity Profile: vcenter/3e-connectivity_profile.md
+            - Connectivity Policy: vcenter/3f-connectivity_policy.md
+  - VCF Automation:
+      - Introduction: vcfa/index.md
+      - VCF-A Tenant:
+          - External Connectivity & Services:
+            - Transit Gateway: vcfa/wip-tgw.md
+            - Connectivity Profile: vcfa/wip-profile.md
+            - Tenant IP Block: vcfa/wip-block.md
+            - Tenant IP Quota: vcfa/wip-quota.md
+          - Network Services:
+            - VPC Gateway: vcfa/wip-gateway.md
+            - VCF-A Namespace: vcfa/wip-namespace.md
+            - VPC Subnet: vcfa/wip-subnet.md
+            - NAT: vcfa/wip-nat.md
+            - DHCP: vcfa/wip-dhcp.md
+            - Load Balancer: vcfa/wip-lb.md
+            - VPN: vcfa/wip-vpn.md
+      - VCF-A Provider:
+          - Provider Infrastructure:
+            - Zone / Region: vcfa/wip-zone.md
+            - Edge Cluster / Node: vcfa/wip-edge.md
+            - VNA Cluster / Node: vcfa/wip-vna.md
+          - External Connectivity & Services:
+            - External Connection: vcfa/wip-extconn.md
+            - Subnet VLAN: vcfa/wip-subnet_vlan.md
+            - Provider IP Block: vcfa/wip-ipblock.md
+            - Provider IP Quota: vcfa/wip-ipquota.md
+
+  
+
