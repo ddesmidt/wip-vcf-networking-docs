@@ -23,7 +23,7 @@ This section describes the procedures for **deploying the VKS Supervisor with "N
 
 ## Requirements {: #requirements }
 
-![Topology](images/2a-1-Topology.jpg){: .center style="width:60%" }
+![Topology](images/2a-1-Topology.jpg){: .center style="width:80%" }
 
 VKS Supervisor with "VDS + FLB" has the following Networking requirements:  
 

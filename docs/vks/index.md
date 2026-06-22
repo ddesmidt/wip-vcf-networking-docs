@@ -19,8 +19,9 @@ Explore the specific network architectures available for your VKS Supervisor clu
     
     * **Pros:**
         * **Footprint:** Slightly smaller overall footprint (the FLB appliance is slightly smaller than a VNA)
+        * **VMware Editions:** Available in VMware vSphere Foundation (VVF) and VMware Cloud Foundation (VCF)
     * **Cons:**
-        * **Integration Limitations:** Lacks support for other VCF components, specifically VCF Automation (VCF-A)
+        * **VCF Integration Limitations:** Lacks support for other VCF components, specifically VCF Automation (VCF-A)
         * **Scale:** All VIPs are managed by a single FLB's Active/Standby (A/S)
 
     ---
@@ -35,6 +36,7 @@ Explore the specific network architectures available for your VKS Supervisor clu
         * **Scale:** * Uses fewer public IPs (K8s nodes use private IPs)
             * VIPs are highly scalable, distributed across up to 10 VNA Nodes in an Active/Active (A/A) configuration
     * **Cons:**
+        * **VMware Editions:** Only available in VMware Cloud Foundation (VCF) (not VMware vSphere Foundation (VVF))
         * **Operations:** Requires NSX (though installation and management remain very simple)
         * **Footprint:** Slightly larger footprint (the VNA is slightly larger than the FLB)
 
