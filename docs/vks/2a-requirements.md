@@ -52,7 +52,7 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
 
 ### NSX {: #nsx }
 
-!!! warning "Drafting Note"
+!!! XXX PERSONAL "Drafting Note"
     xxx REDO SCREENSHOTS BEFORE THE DEPLOYMENT OF THE SUPERVISOR xxx  
 
 
