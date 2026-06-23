@@ -27,6 +27,7 @@ theme:
     - content.code.copy            # "Copy" button on CLI commands
     - navigation.grid              # This is the feature that enables "grid" and "cards"
     - lightbox                     # This is for the image zoom
+    - navigation.indexes
 
 plugins:
   - search
@@ -84,6 +85,9 @@ nav:
         - Deployment App (k8s): vks/1d-deployment-k8s.md
       - NSX + DTGW/VNA:
         - Requirements: vks/2a-requirements.md
+        - Optional - Install Requirements:
+          - NSX Overlay: vks/2a1-deploy-NSXOverlay.md
+          - DTGW + VNA: vks/2a2-deploy-DTGW_VNA.md
         - Supervisor Deployment: vks/2b-deployment.md
         - Deployment App (VMs): vks/2c-deployment-vms.md
         - Deployment App (k8s): vks/2d-deployment-k8s.md
