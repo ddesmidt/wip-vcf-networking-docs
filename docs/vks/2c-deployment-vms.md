@@ -23,3 +23,9 @@ This section describes the procedures for **deploying the VKS Supervisor with "N
 
 ## Deployment App (VMs) {: #deployment_vms }
 
+![Topology](images/2c-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+
+### Launch "Supervisor Creation Wizard"
+Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and click **ADD SUPERVISOR**.
+![Add Supervisor Wizard](images/2b-1-AddSupervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+
