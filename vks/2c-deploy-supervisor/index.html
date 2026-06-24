@@ -1982,6 +1982,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Validate Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validate-supervisor-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate Supervisor Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-supervisor-content-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate Supervisor Content Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2266,6 +2294,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Validate Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validate-supervisor-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate Supervisor Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-supervisor-content-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate Supervisor Content Library
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2373,8 +2429,8 @@
 <h3 id="finish-supervisor-creation-for-future-kubernetes-clusters">Finish Supervisor Creation for future Kubernetes Clusters</h3>
 <h4 id="create-a-content-library-for-future-kubernetes-clusters"><strong>Create a Content Library for future Kubernetes Clusters</strong></h4>
 <p>If you plan to deploy Kubernetes Clusters, create a Content Library with VKS images.<br>
-Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, and select <strong>[your supervisor]</strong>.
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2a-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2a-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt; and click <strong>Create</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2a-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2a-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 <ol>
 <li>
 <p><strong>Name and Location</strong><br>
@@ -2409,14 +2465,22 @@ Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong>
 </li>
 </ol>
 <h4 id="associate-the-content-library-to-the-supervisor"><strong>Associate the Content Library to the Supervisor</strong></h4>
-<p>Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt; and click <strong>Create</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2a-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2a-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, and click on <strong>Kubernetes Service - Manage</strong>.
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-4a-Supervisor.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-4a-Supervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 <ol>
-<li><strong>Name and Location</strong><br>
-    Give it a <strong>Name</strong> and select the <strong>vCenter</strong> hosting that Content Library, and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3a-Name.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3a-Name.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </li>
+<li>
+<p><strong>Add Content Library</strong><br>
+    Click <strong>ADD</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-4b-AddContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-4b-AddContentLibrary.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+<li>
+<p><strong>Select Content Library</strong><br>
+    Select <strong>Content Library with VKS images</strong>, and click <strong>ADD</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-4c-SelectContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-4c-SelectContentLibrary.jpg" style="display: block; margin: 0 auto;" width="65%"></a>  </p>
+</li>
 </ol>
 <h3 id="validate-deployment">Validate Deployment</h3>
+<h4 id="validate-supervisor-status"><strong>Validate Supervisor Status</strong></h4>
 <p>Once the wizard completes, verify the deployment was successful by navigating to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>. </p>
 <p>Check the following fields to ensure they reflect a healthy state:</p>
 <ul style="margin-top: -10px; margin-bottom: 15px; line-height: 1.3;">
@@ -2424,8 +2488,10 @@ Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong>
   <li style="margin-bottom: 2px;">Host Config Status</li>
   <li style="margin-bottom: 2px;">Control Plane Node Address</li>
 </ul>
-
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/2b-2-Validation.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-5a-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/2b-5a-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
+<h4 id="validate-supervisor-content-library"><strong>Validate Supervisor Content Library</strong></h4>
+<p>Validate Supervisor Content Library by navigating to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-5b-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/2b-5b-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
 
 
 
