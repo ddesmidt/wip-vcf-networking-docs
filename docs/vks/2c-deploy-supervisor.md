@@ -65,7 +65,7 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and click
 
 #### **Create a Content Library for future Kubernetes Clusters**  
 If you plan to deploy Kubernetes Clusters, create a Content Library with VKS images.  
-Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and select **[your supervisor]**.
+Navigate to **vCenter** > **Content Libraries** > and click **Create**.  
     ![vCenter Server and Network Configuration](images/2b-2a-ContentLibrary.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
   1. **Name and Location**  
@@ -96,15 +96,21 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and selec
 
 
 #### **Associate the Content Library to the Supervisor**  
-Navigate to **vCenter** > **Content Libraries** > and click **Create**.  
-    ![vCenter Server and Network Configuration](images/2b-2a-ContentLibrary.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, and click on **Kubernetes Service - Manage**.
+    ![vCenter Server and Network Configuration](images/2b-4a-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-  1. **Name and Location**  
-    Give it a **Name** and select the **vCenter** hosting that Content Library, and click **Next**.  
-    ![vCenter Server and Network Configuration](images/2b-3a-Name.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+  1. **Add Content Library**  
+    Click **ADD**.  
+    ![vCenter Server and Network Configuration](images/2b-4b-AddContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+
+  1. **Select Content Library**  
+    Select **Content Library with VKS images**, and click **ADD**.  
+    ![vCenter Server and Network Configuration](images/2b-4c-SelectContentLibrary.jpg){ width="65%" style="display: block; margin: 0 auto;" }  
 
 
 ### Validate Deployment
+
+#### **Validate Supervisor Status**  
 Once the wizard completes, verify the deployment was successful by navigating to **vCenter** > **Supervisor Management** > **Supervisors**. 
 
 Check the following fields to ensure they reflect a healthy state:
@@ -113,6 +119,9 @@ Check the following fields to ensure they reflect a healthy state:
   <li style="margin-bottom: 2px;">Host Config Status</li>
   <li style="margin-bottom: 2px;">Control Plane Node Address</li>
 </ul>
+![Supervisor Validation Status](images/2b-5a-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
 
-![Supervisor Validation Status](images/2b-2-Validation.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+#### **Validate Supervisor Content Library**  
+Validate Supervisor Content Library by navigating to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**
+![Supervisor Validation Status](images/2b-5b-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
 
