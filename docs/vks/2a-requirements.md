@@ -45,7 +45,7 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     VDS Port Group VLAN for the Management traffic.  
 
     ??? info "Status Validation"
-        Navigate to **Networking** > **VDS-PortGroup** > **Edit Settings** > **VLAN**.  
+        Navigate to **vCenter** > **Networking** > **VDS-PortGroup** > **Edit Settings** > **VLAN**.  
         Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
         ![VDS Port Group Settings](images/1a-2a-VDS-PG.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
@@ -68,8 +68,8 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     The vCenter Cluster must be prepared for VCF Networking so the future Supervisor Cluster can connect to the VPC.  
 
     ??? info "Status Validation"
-        Navigate to **NSX** > **System** > **Fabric** > **Hosts** > **Clusters**.  
-        Ensure all ESX have at least one "TEP IP Address" and a "Green Status".  
+        Navigate to **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
+        Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
         *Note: If no workloads are deployed on logical networks yet, it is expected to have no Tunnels established on the ESXi hosts.*
         ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
