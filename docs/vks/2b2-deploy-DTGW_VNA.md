@@ -55,4 +55,4 @@ Navigate to **NSX** > **Networking** > **VPC Connectivity** > **Transit Gateways
 
 ### Validate Deployment
 Once the wizard completes, verify the deployment was successful using the steps outlined in the prerequisites:  
-**[Validate "DTGW + VNA" Deployment](2a-requirements.md#nsx)**
+**[Validate "DTGW + VNA" Deployment](2a-requirements.md#dtgw-vna-ready)**

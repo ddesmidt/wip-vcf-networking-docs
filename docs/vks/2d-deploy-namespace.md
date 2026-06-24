@@ -22,6 +22,8 @@ This section describes the procedures for **deploying the VKS Supervisor with "N
 
 ## Namespace Deployment {: #namespacedeployment }
 
+![Topology](images/2d-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+
 ### Create NameSpace
 Navigate to **vCenter** > **Supervisor Management** > **Namespaces**, and click **NEW NAMESPACE**.
 ![Add Namespace](images/2c-1-AddSupervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }
