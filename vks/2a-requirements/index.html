@@ -1776,6 +1776,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Physical Fabric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-subnetsvlans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Subnets/VLANs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1787,6 +1804,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="vCenter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vds-port-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VDS Port Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -1797,6 +1831,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="NSX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vcenter-cluster-vcf-networking-ready-nsx-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vCenter Cluster "VCF Networking ready (NSX Overlay)"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vcenter-with-dtgw-vna-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vCenter with "DTGW + VNA ready"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1958,7 +2020,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -1986,7 +2048,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -2190,6 +2252,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Physical Fabric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-subnetsvlans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 Subnets/VLANs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2201,6 +2280,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="vCenter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vds-port-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VDS Port Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2211,6 +2307,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="NSX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vcenter-cluster-vcf-networking-ready-nsx-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vCenter Cluster "VCF Networking ready (NSX Overlay)"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vcenter-with-dtgw-vna-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vCenter with "DTGW + VNA ready"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2263,11 +2387,15 @@
 <li><strong>Management</strong>:<br>
     Can be an existing Management subnet/VLAN that already hosts other components (such as vCenter).<br>
 <strong>Requires 5 consecutive IPs</strong> (for the Supervisor Cluster).</li>
-<li><strong>Dataplane</strong>:<br>
+<li>
+<p><strong>Dataplane</strong>:<br>
     Can be an existing subnet/VLAN that already hosts other components (such as Physical Servers).<br>
-<strong>A large pool of IPs is required</strong> (for future K8s VIPs and VPC Outbound-NAT).</li>
+<strong>A large pool of IPs is required</strong> (for future K8s VIPs and VPC Outbound-NAT).</p>
+</li>
+<li>
+<p><strong>Note:</strong> No requirement for dynamic routing (such as BGP).</p>
+</li>
 </ul>
-<h4 id="note-no-requirement-for-dynamic-routing-such-as-bgp"><strong>Note:</strong> No requirement for dynamic routing (such as BGP).</h4>
 <h3 id="vcenter">vCenter</h3>
 <h4 id="vds-port-group"><strong>VDS Port Group</strong></h4>
 <ul>
@@ -2291,8 +2419,8 @@ Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
 <p class="admonition-title">Missing NSX Requirements?</p>
 <p>If your environment is not yet configured with the NSX prerequisites below, please refer to:  </p>
 <ul>
-<li><a href="xxx">Make vCenter Cluster "VCF Networking ready (NSX Overlay)"</a> xxx to do</li>
-<li><a href="2a2-deploy-DTGW_VNA.md">Make vCenter with "DTGW + VNA ready"</a></li>
+<li><a href="../2b1-deploy-NSXOverlay/">Make vCenter Cluster "VCF Networking ready (NSX Overlay)"</a> xxx to do</li>
+<li><a href="../2b2-deploy-DTGW_VNA/">Make vCenter with "DTGW + VNA ready"</a></li>
 </ul>
 </div>
 <h4 id="vcenter-cluster-vcf-networking-ready-nsx-overlay"><strong>vCenter Cluster "VCF Networking ready (NSX Overlay)"</strong></h4>
@@ -2338,7 +2466,7 @@ Ensure you have at least 1 External IP Block configured:
 <summary>Status Validation</summary>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>Virtual Private Clouds</strong> &gt; <strong>Configure</strong> &gt; <strong>Connectivity Profiles</strong>.<br>
 Ensure the Connectivity Profile has the following configured:
-</p><ul style="margin-top: 5px; margin-bottom: 15px; line-height: 1.3;">
+</p><ul style="margin-top: -5px; margin-bottom: 15px; line-height: 1.3;">
   <li style="margin-bottom: 2px;">External and Private Transit Gateway IP Blocks selected</li>
   <li style="margin-bottom: 2px;">A VNA Cluster selected</li>
   <li style="margin-bottom: 2px;">N-S Services enabled (for the LB service)</li>

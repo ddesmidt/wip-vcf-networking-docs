@@ -1995,7 +1995,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -2023,7 +2023,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -2362,10 +2362,14 @@
 Note: This resource cannot be created via vCenter; it must be configured within the NSX Manager.</p>
 </div>
 </div>
-<h4 id="step1-create-new-centralized-external-connection">Step1. Create new Centralized External Connection</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-1a-Create_Cent_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Cent Ext Conn config" src="../images/3a-1a-Create_Cent_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
-<h4 id="step2-configure-new-centralized-external-connection">Step2. Configure new Centralized External Connection</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-1b-Create_Cent_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Cent Ext Conn config" src="../images/3a-1b-Create_Cent_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+<ul>
+<li>
+<p><strong>*Step1. Create new Centralized External Connection</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-1a-Create_Cent_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Cent Ext Conn config" src="../images/3a-1a-Create_Cent_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+</li>
+<li>
+<p><strong>Step2. Configure new Centralized External Connection</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-1b-Create_Cent_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Cent Ext Conn config" src="../images/3a-1b-Create_Cent_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
 <ul>
 <li>
 <p><strong>Tier-0 Gateway</strong>:<br>
@@ -2378,7 +2382,7 @@ Note: This resource cannot be created via vCenter; it must be configured within 
 </li>
 <li>
 <p><strong>External IP Blocks</strong>:<br>
- Select the External IP Block(s) permitted to be advertised to the physical network via the selected Tier-0.</p>
+  Select the External IP Block(s) permitted to be advertised to the physical network via the selected Tier-0.</p>
 </li>
 <li>
 <p><strong>Private IP Blocks</strong>:<br>
@@ -2396,24 +2400,34 @@ Note: This resource cannot be created via vCenter; it must be configured within 
   Select the specific External IP Block to be used for the Provider Outbound SNAT.</p>
 </li>
 </ul>
+</li>
+</ul>
 <h3 id="monitoring">Monitoring</h3>
-<h4 id="status">Status</h4>
-<p>The status reflects the successful application of the configuration.</p>
-<div style="margin-left: 40px; margin-right: 40px;">
+<ul>
+<li>
+<p><strong>Status</strong>
+    The status reflects the successful application of the configuration.</p>
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 <details class="info">
 <summary>Note about the Status</summary>
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
 </div>
+</li>
+</ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-1b-Validation_Cent_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Cent Ext Conn validation" src="../images/3a-1b-Validation_Cent_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <hr>
 <h2 id="dist-conn">Distributed External Connection</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-2-Dist.jpg" data-desc-position="bottom"><img alt="Ext Connectivity Dist" class="center" src="../images/3a-2-Dist.jpg" style="width:30%"></a></p>
 <h3 id="configuration_1">Configuration</h3>
-<h4 id="step1-create-new-distributed-external-connection">Step1. Create new Distributed External Connection</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-2a-Create_Dist_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Dist Ext Conn config" src="../images/3a-2a-Create_Dist_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
-<h4 id="step2-configure-new-distributed-external-connection">Step2. Configure new Distributed External Connection</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-2b-Create_Dist_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Dist Ext Conn config" src="../images/3a-2b-Create_Dist_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+<ul>
+<li>
+<p><strong>Step1. Create new Distributed External Connection</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-2a-Create_Dist_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Dist Ext Conn config" src="../images/3a-2a-Create_Dist_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+</li>
+<li>
+<p><strong>Step2. Configure new Distributed External Connection</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-2b-Create_Dist_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Dist Ext Conn config" src="../images/3a-2b-Create_Dist_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
 <ul>
 <li>
 <p><strong>VLAN ID</strong>:<br>
@@ -2424,16 +2438,22 @@ Note: This resource cannot be created via vCenter; it must be configured within 
   Specifies the IP address of the upstream physical router or firewall (the Next Hop) that acts as the default gateway for this connection.</p>
 </li>
 </ul>
+</li>
+</ul>
 <h3 id="monitoring_1">Monitoring</h3>
-<h4 id="status_1">Status</h4>
-<p>The status reflects the successful application of the configuration.</p>
-<div style="margin-left: 40px; margin-right: 40px;">
+<ul>
+<li>
+<p><strong>Status</strong><br>
+    The status reflects the successful application of the configuration.</p>
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 <details class="info">
 <summary>Note about the Status</summary>
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
 </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-2b-Validation_Dist_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Dist Ext Conn validation" src="../images/3a-2b-Validation_Dist_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+</li>
+</ul>
 <hr>
 
 

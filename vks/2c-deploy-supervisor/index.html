@@ -22,7 +22,7 @@
     
     
       
-        <title>Supervisor Installation - VCF Networking Encyclopedia</title>
+        <title>Supervisor Deployment - VCF Networking Encyclopedia</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Supervisor Installation
+              Supervisor Deployment
             
           </span>
         </div>
@@ -1870,7 +1870,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -1888,7 +1888,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -1924,13 +1924,52 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#launch-supervisor-creation-wizard" class="md-nav__link">
+  <a href="#create-supervisor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Launch "Supervisor Creation Wizard"
+        Create Supervisor
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finish-supervisor-creation-for-future-kubernetes-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finish Supervisor Creation for future Kubernetes Clusters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Finish Supervisor Creation for future Kubernetes Clusters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-content-library-for-future-kubernetes-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a Content Library for future Kubernetes Clusters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#associate-the-content-library-to-the-supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Associate the Content Library to the Supervisor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1973,7 +2012,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -2169,13 +2208,52 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#launch-supervisor-creation-wizard" class="md-nav__link">
+  <a href="#create-supervisor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Launch "Supervisor Creation Wizard"
+        Create Supervisor
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#finish-supervisor-creation-for-future-kubernetes-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finish Supervisor Creation for future Kubernetes Clusters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Finish Supervisor Creation for future Kubernetes Clusters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-content-library-for-future-kubernetes-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a Content Library for future Kubernetes Clusters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#associate-the-content-library-to-the-supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Associate the Content Library to the Supervisor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2232,7 +2310,7 @@
 <hr>
 <h2 id="supervisordeployment">Supervisor Deployment</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-0-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2b-0-Topology.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-<h3 id="launch-supervisor-creation-wizard">Launch "Supervisor Creation Wizard"</h3>
+<h3 id="create-supervisor">Create Supervisor</h3>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, and click <strong>ADD SUPERVISOR</strong>.
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1-AddSupervisor.jpg" data-desc-position="bottom"><img alt="Add Supervisor Wizard" src="../images/2b-1-AddSupervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ol>
@@ -2292,7 +2370,52 @@
 </ul>
 </li>
 </ol>
-<hr>
+<h3 id="finish-supervisor-creation-for-future-kubernetes-clusters">Finish Supervisor Creation for future Kubernetes Clusters</h3>
+<h4 id="create-a-content-library-for-future-kubernetes-clusters"><strong>Create a Content Library for future Kubernetes Clusters</strong></h4>
+<p>If you plan to deploy Kubernetes Clusters, create a Content Library with VKS images.<br>
+Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, and select <strong>[your supervisor]</strong>.
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2a-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2a-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+<ol>
+<li>
+<p><strong>Name and Location</strong><br>
+    Give it a <strong>Name</strong> and select the <strong>vCenter</strong> hosting that Content Library, and click <strong>Next</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3a-Name.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3a-Name.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+<li>
+<p><strong>Configure Content Library</strong><br>
+  Choose between <strong>Local content library</strong> (you upload VKS images) and <strong>Subscribed content library</strong> (vCenter downloads VKS images from a repository), and click <strong>Next</strong>.<br>
+<em>I'm using here Subscribed content library with:</em>
+    </p><ul style="margin-top: -10px; margin-bottom: 5px; line-height: 1.3;">
+      <li style="margin-bottom: 2px;"><i>the public repository: https://wp-content.vmware.com/v2/latest/lib.json</i></li>
+      <li style="margin-bottom: 2px;"><i>the option to download content when needed to save storage space</i></li>
+    </ul>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3b-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3b-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  <p></p>
+</li>
+<li>
+<p><strong>Apply Security Policy</strong><br>
+  Apply <strong>security policy</strong> if you choose to, and click <strong>Next</strong>.<br>
+<em>I'm using here no security policy.</em><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3c-SecurityPolicy.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3c-SecurityPolicy.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+<li>
+<p><strong>Add Storage</strong><br>
+  Select a <strong>storage</strong> to host the content library images, and click <strong>Next</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3d-Storage.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3d-Storage.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+<li>
+<p><strong>Ready to complete</strong><br>
+  Review the content library, and click <strong>Finish</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3e-Review.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3e-Review.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+</ol>
+<h4 id="associate-the-content-library-to-the-supervisor"><strong>Associate the Content Library to the Supervisor</strong></h4>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt; and click <strong>Create</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2a-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2a-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+<ol>
+<li><strong>Name and Location</strong><br>
+    Give it a <strong>Name</strong> and select the <strong>vCenter</strong> hosting that Content Library, and click <strong>Next</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3a-Name.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3a-Name.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </li>
+</ol>
 <h3 id="validate-deployment">Validate Deployment</h3>
 <p>Once the wizard completes, verify the deployment was successful by navigating to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>. </p>
 <p>Check the following fields to ensure they reflect a healthy state:</p>

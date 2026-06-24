@@ -1945,7 +1945,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -1973,7 +1973,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -2229,17 +2229,23 @@
 <hr>
 <h2 id="vna-cluster-vna-nodes">VNA Cluster / VNA Nodes</h2>
 <h3 id="configuration">Configuration</h3>
-<h4 id="step1-create-new-vna-cluster-vna-nodes">Step1. Create new VNA Cluster / VNA Nodes</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1-Create_VNA.jpg" data-desc-position="bottom"><img alt="vCenter VNA Cluster" src="../images/2b-1-Create_VNA.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-<h4 id="step2-configure-vna-cluster">Step2. Configure VNA Cluster</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2-Create_VNA.jpg" data-desc-position="bottom"><img alt="vCenter VNA Cluster config" src="../images/2b-2-Create_VNA.jpg" style="display: block; margin: 0 auto;" width="50%"></a></p>
+<ul>
+<li>
+<p><strong>Step1. Create new VNA Cluster / VNA Nodes</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1-Create_VNA.jpg" data-desc-position="bottom"><img alt="vCenter VNA Cluster" src="../images/2b-1-Create_VNA.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+</li>
+<li>
+<p><strong>Step2. Configure VNA Cluster</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2-Create_VNA.jpg" data-desc-position="bottom"><img alt="vCenter VNA Cluster config" src="../images/2b-2-Create_VNA.jpg" style="display: block; margin: 0 auto;" width="50%"></a></p>
 <ul>
 <li><strong>Node Form Factor</strong>:<br>
   Select the appliance size (vCPU / Memory) of the VNA Nodes.<br>
   This determines the scale and performance limits for the logical routers (VPC-SR Gateways) hosted on the node.</li>
 </ul>
-<h4 id="step3-configure-vna-nodes-placement-and-networking">Step3. Configure VNA Nodes Placement and Networking</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3a-Configure_VNANode1.jpg" data-desc-position="bottom"><img alt="vCenter VNA Node" src="../images/2b-3a-Configure_VNANode1.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+</li>
+<li>
+<p><strong>Step3. Configure VNA Nodes Placement and Networking</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3a-Configure_VNANode1.jpg" data-desc-position="bottom"><img alt="vCenter VNA Node" src="../images/2b-3a-Configure_VNANode1.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <ul>
 <li>
 <p><strong>vSphere Cluster / Resource Pool / Host Group Affinity / Data Store</strong>:<br>
@@ -2251,6 +2257,8 @@
   Configures the IP assignment and Port Group for the VNA Node management interface.</p>
 </li>
 </ul>
+</li>
+</ul>
 <p><strong>Repeat these steps for the remaining VNA Nodes (2+ nodes recommended).</strong></p>
 <div style="margin-left: 40px; margin-right: 40px;">
 <details class="info">
@@ -2260,9 +2268,11 @@
 </details>
 </div>
 <h3 id="monitoring">Monitoring</h3>
-<h4 id="status">Status</h4>
-<p>The status reflects the successful application of the configuration.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-4-Validation_VNA.jpg" data-desc-position="bottom"><img alt="vCenter VNA Status" src="../images/2b-4-Validation_VNA.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<ul>
+<li><strong>Status</strong>
+    The status reflects the successful application of the configuration.
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-4-Validation_VNA.jpg" data-desc-position="bottom"><img alt="vCenter VNA Status" src="../images/2b-4-Validation_VNA.jpg" style="display: block; margin: 0 auto;" width="90%"></a></li>
+</ul>
 <hr>
 
 

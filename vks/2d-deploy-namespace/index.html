@@ -22,7 +22,7 @@
     
     
       
-        <title>Namespace Installation - VCF Networking Encyclopedia</title>
+        <title>Namespace Deployment - VCF Networking Encyclopedia</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Namespace Installation
+              Namespace Deployment
             
           </span>
         </div>
@@ -1863,7 +1863,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -1898,7 +1898,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -1916,7 +1916,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -1947,6 +1947,40 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Namespace Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create NameSpace
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create NameSpace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-content-library-for-future-vms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a Content Library for future VMs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2137,6 +2171,40 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Namespace Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create NameSpace
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create NameSpace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-content-library-for-future-vms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a Content Library for future VMs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2175,6 +2243,83 @@
 </div>
 <hr>
 <h2 id="namespacedeployment">Namespace Deployment</h2>
+<h3 id="create-namespace">Create NameSpace</h3>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Namespces</strong>, and click <strong>NEW NAMESPACE</strong>.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1-AddSupervisor.jpg" data-desc-position="bottom"><img alt="Add Namespace" src="../images/2c-1-AddSupervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<ol>
+<li>
+<p><strong>Location</strong>  </p>
+<ul>
+<li>Select the <strong>Supervisor</strong>, and click <strong>Next</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1a-SupervisorNamespace.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-1a-SupervisorNamespace.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+</ul>
+</li>
+<li>
+<p><strong>Configuration</strong>  </p>
+<ul>
+<li>Give a name to the <strong>Namespace</strong>, and click <strong>Next</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1b-SupervisorNamespace.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-1b-SupervisorNamespace.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+</ul>
+</li>
+<li>
+<p><strong>Add Zones</strong>  </p>
+<ul>
+<li>Select the <strong>Workload Zone</strong> (one or more vCenter Clusters), and click <strong>Next</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1c-SupervisorNamespace.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-1c-SupervisorNamespace.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+</ul>
+</li>
+<li>
+<p><strong>Review</strong>  </p>
+<ul>
+<li>Review the Namespace settings, and click <strong>Finish</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1d-SupervisorNamespace.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-1d-SupervisorNamespace.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+</ul>
+</li>
+</ol>
+<h4 id="create-a-content-library-for-future-vms"><strong>Create a Content Library for future VMs</strong></h4>
+<p>If you plan to deploy VMs, create a Content Library with VM images.<br>
+Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt; and click <strong>Create</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2a-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2a-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+<ol>
+<li>
+<p><strong>Name and Location</strong><br>
+    Give it a <strong>Name</strong> and select the <strong>vCenter</strong> hosting that Content Library, and click <strong>Next</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2a-Name.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2a-Name.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+<li>
+<p><strong>Configure Content Library</strong><br>
+    Choose between <strong>Local content library</strong> (you upload VM images) and <strong>Subscribed content library</strong> (vCenter downloads VM images from a repository), and click <strong>Next</strong>.<br>
+<em>I'm using here Local content library.</em><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2b-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2b-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+<li>
+<p><strong>Apply Security Policy</strong><br>
+    Apply <strong>security policy</strong> if you choose to, and click <strong>Next</strong>.<br>
+<em>I'm using here no security policy.</em><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2c-SecurityPolicy.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2c-SecurityPolicy.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+<li>
+<p><strong>Add Storage</strong><br>
+    Select a <strong>storage</strong> to host the content library images, and click <strong>Next</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2d-Storage.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2d-Storage.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+<li>
+<p><strong>Ready to complete</strong><br>
+    Review the content library, and click <strong>Finish</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2e-Review.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2e-Review.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+<li>
+<p><strong>Import VM Image</strong><br>
+    In the Content Library created, import a VM Image, click on <strong>Import Item</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2f-ImportItem.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2f-ImportItem.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+<li>
+<p><strong>Choose VM Image</strong><br>
+    Choose a <strong>Source file</strong> via URL or Local file, and click <strong>Import</strong>.<br>
+<em>I'm using here the URL https://cloud-images.ubuntu.com/noble/current/noble-server-cloudimg-amd64.ova to download Ubuntu 24.04.</em><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2g-ImportURL.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2g-ImportURL.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+</li>
+</ol>
 
 
 
