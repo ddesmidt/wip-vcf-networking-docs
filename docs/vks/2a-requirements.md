@@ -9,8 +9,8 @@
 This section describes the procedures for **deploying the VKS Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.
 
 * [**Requirements**](#requirements)
-* [Supervisor Deployment](2b-deploy-supervisor.md)
-* [Namespace Deployment](2c-deploy-namespace.md)
+* [Supervisor Deployment](2c-deploy-supervisor.md)
+* [Namespace Deployment](2d-deploy-namespace.md)
 </div>
 
 <div markdown>
