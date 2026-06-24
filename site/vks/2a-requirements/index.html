@@ -2404,7 +2404,7 @@
     VDS Port Group VLAN for the Management traffic.  </p>
 <details class="info">
 <summary>Status Validation</summary>
-<p>Navigate to <strong>Networking</strong> &gt; <strong>VDS-PortGroup</strong> &gt; <strong>Edit Settings</strong> &gt; <strong>VLAN</strong>.<br>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>VDS-PortGroup</strong> &gt; <strong>Edit Settings</strong> &gt; <strong>VLAN</strong>.<br>
 Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1a-2a-VDS-PG.jpg" data-desc-position="bottom"><img alt="VDS Port Group Settings" src="../images/1a-2a-VDS-PG.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 </details>
@@ -2430,8 +2430,8 @@ Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
     The vCenter Cluster must be prepared for VCF Networking so the future Supervisor Cluster can connect to the VPC.  </p>
 <details class="info">
 <summary>Status Validation</summary>
-<p>Navigate to <strong>NSX</strong> &gt; <strong>System</strong> &gt; <strong>Fabric</strong> &gt; <strong>Hosts</strong> &gt; <strong>Clusters</strong>.<br>
-Ensure all ESX have at least one "TEP IP Address" and a "Green Status".<br>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Host and Clusters</strong> &gt; <strong>[your vCenter Cluster]</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>Network Configuration</strong>.<br>
+Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:<br>
 <em>Note: If no workloads are deployed on logical networks yet, it is expected to have no Tunnels established on the ESXi hosts.</em>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3a-NSX-Prep.jpg" data-desc-position="bottom"><img alt="NSX Host Preparation Status" src="../images/2a-3a-NSX-Prep.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 </details>
