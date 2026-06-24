@@ -11,7 +11,7 @@ Explore the specific network architectures available for your VKS Supervisor clu
 
 | <div style="width: 30%;">Architecture Option</div> | <div style="width: 70%;">Description & Use Case</div> |
 | :--- | :--- |
-| **[1. VDS + FLB](1a-requirements.md)** | ![VDS Architecture](images/0-VDS.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 300px;" } <br><br> <ul><li>**Architecture:** Uses **VDS port groups** for the Supervisor Cluster and deploys **FLB virtual appliances** to handle load balancing traffic.</li><li>**Best for:** VMware vSphere Foundation (VVF), lab environments, Proof of Concepts (PoC), or smaller environments.</li><li>**Limitation:** Cannot be used with VCF Automation.</li></ul> |
+| **[1. VDS + FLB](1a-requirements.md)** | ![VDS Architecture](images/0-VDS.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 300px;" } <br><br> <ul><li>**Architecture:** Uses **VDS port groups** for the Supervisor Cluster and deploys **FLB virtual appliances** to handle load balancing traffic.</li><li>**Best for:** VMware vSphere Foundation (VVF), lab environments, Proof of Concepts (PoC), or smaller environments.</li><li>**Limitation:** Limited VCF Automation support, such as namespace create/delete/update from VCFA.</li></ul> |
 | **[2. NSX + DTGW/VNA](2a-requirements.md)** | ![DTGW Architecture](images/0-DTGW.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 300px;" } <br><br> <ul><li>**Architecture:** Uses **NSX Distributed Transit Gateways + VNA** for the Supervisor Cluster.</li><li>**Best for:** Fully integrated VCF architecture for better scale and security.</li><li>**Consideration:** Requires fully deployed NSX overlay infrastructure.</li></ul> |
 
 ??? info "Detailed Architecture Pros & Cons"
@@ -21,7 +21,7 @@ Explore the specific network architectures available for your VKS Supervisor clu
         * **Footprint:** Slightly smaller overall footprint (the FLB appliance is slightly smaller than a VNA)
         * **VMware Editions:** Available in VMware vSphere Foundation (VVF) and VMware Cloud Foundation (VCF)
     * **Cons:**
-        * **VCF Integration Limitations:** Lacks support for other VCF components, specifically VCF Automation (VCF-A)
+        * **VCF Integration Limitations:** Lacks full support for other VCF components, specifically VCF Automation (VCF-A)
         * **Scale:** All VIPs are managed by a single FLB's Active/Standby (A/S)
 
     ---
