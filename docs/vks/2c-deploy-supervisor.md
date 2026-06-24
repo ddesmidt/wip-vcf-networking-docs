@@ -24,7 +24,7 @@ This section describes the procedures for **deploying the VKS Supervisor with "N
 
 ![Topology](images/2b-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
-### Launch "Supervisor Creation Wizard"
+### Create Supervisor
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and click **ADD SUPERVISOR**.
 ![Add Supervisor Wizard](images/2b-1-AddSupervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
@@ -59,7 +59,50 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and click
     * Review your configuration and click **Finish**.  
     ![Review and Complete](images/2b-1g-Ready.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
----
+
+
+### Finish Supervisor Creation for future Kubernetes Clusters
+
+#### **Create a Content Library for future Kubernetes Clusters**  
+If you plan to deploy Kubernetes Clusters, create a Content Library with VKS images.  
+Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and select **[your supervisor]**.
+    ![vCenter Server and Network Configuration](images/2b-2a-ContentLibrary.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+
+  1. **Name and Location**  
+    Give it a **Name** and select the **vCenter** hosting that Content Library, and click **Next**.  
+    ![vCenter Server and Network Configuration](images/2b-3a-Name.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+
+  1. **Configure Content Library**  
+  Choose between **Local content library** (you upload VKS images) and **Subscribed content library** (vCenter downloads VKS images from a repository), and click **Next**.  
+  *I'm using here Subscribed content library with:*
+    <ul style="margin-top: -10px; margin-bottom: 5px; line-height: 1.3;">
+      <li style="margin-bottom: 2px;"><i>the public repository: https://wp-content.vmware.com/v2/latest/lib.json</i></li>
+      <li style="margin-bottom: 2px;"><i>the option to download content when needed to save storage space</i></li>
+    </ul>
+  ![vCenter Server and Network Configuration](images/2b-3b-ContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+
+  1. **Apply Security Policy**  
+  Apply **security policy** if you choose to, and click **Next**.  
+  *I'm using here no security policy.*  
+  ![vCenter Server and Network Configuration](images/2b-3c-SecurityPolicy.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+
+  1. **Add Storage**  
+  Select a **storage** to host the content library images, and click **Next**.  
+  ![vCenter Server and Network Configuration](images/2b-3d-Storage.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+
+  1. **Ready to complete**  
+  Review the content library, and click **Finish**.  
+  ![vCenter Server and Network Configuration](images/2b-3e-Review.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+
+
+#### **Associate the Content Library to the Supervisor**  
+Navigate to **vCenter** > **Content Libraries** > and click **Create**.  
+    ![vCenter Server and Network Configuration](images/2b-2a-ContentLibrary.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+
+  1. **Name and Location**  
+    Give it a **Name** and select the **vCenter** hosting that Content Library, and click **Next**.  
+    ![vCenter Server and Network Configuration](images/2b-3a-Name.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+
 
 ### Validate Deployment
 Once the wizard completes, verify the deployment was successful by navigating to **vCenter** > **Supervisor Management** > **Supervisors**. 

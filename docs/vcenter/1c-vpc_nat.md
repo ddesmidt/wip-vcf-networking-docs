@@ -41,15 +41,15 @@ Maps a single Public IP to a single Private IP for specific workloads.
 
 ### Configuration
 
-#### Step1. Create a new External IP
-![vCenter Create External IP](images/1c-1a-Create_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+* **Step1. Create a new External IP**
+    ![vCenter Create External IP](images/1c-1a-Create_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ### Monitoring
-#### Show External IPs
-![vCenter Result VPC Subnet](images/1c-1b-Validation_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+* ***Show External IPs**
+    ![vCenter Result VPC Subnet](images/1c-1b-Validation_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ---
-## Configuration Outbound-NAT (N:1 SNAT) {: #outbound-nat }
+## Outbound-NAT (N:1 SNAT) {: #outbound-nat }
 
 Allows multiple workloads to share a single Public IP for external access.
 
@@ -62,18 +62,18 @@ Allows multiple workloads to share a single Public IP for external access.
     (only supported on VPCs connected to Centralized Transit Gateways or Distributed Transit Gateways with VNA)
 </div>
 
-#### Step1. Check Outbound-NAT configuration in the VPC Gateway
-![vCenter Check Outbound NAT Config](images/1c-2a-Check_VPC_ONAT_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+* ***Step1. Check Outbound-NAT configuration in the VPC Gateway**
+    ![vCenter Check Outbound NAT Config](images/1c-2a-Check_VPC_ONAT_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-#### Step2. If disabled, Edit the VPC to find the Connectivity Profile used by the VPC
-![vCenter Validation VPC Subnet](images/1c-2b-Find_Connectivity_Profile.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+* **Step2. If disabled, Edit the VPC to find the Connectivity Profile used by the VPC**
+    ![vCenter Validation VPC Subnet](images/1c-2b-Find_Connectivity_Profile.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-#### Step3. Edit the Connectivity Profile and enable Outbound-NAT
-![vCenter Validation VPC Subnet](images/1c-2c-Enable_ONAT.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+* **Step3. Edit the Connectivity Profile and enable Outbound-NAT**
+    ![vCenter Validation VPC Subnet](images/1c-2c-Enable_ONAT.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
 ### Monitoring
-#### Show the Outbound-NAT IP used by the VPC
-![vCenter Result VPC Subnet](images/1c-2d-Validation_VPC_ONAT.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+* ***Show the Outbound-NAT IP used by the VPC**
+    ![vCenter Result VPC Subnet](images/1c-2d-Validation_VPC_ONAT.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 ---
 
@@ -87,9 +87,11 @@ xxx To correct picture.
 
 ### Configuration
 
-To do...
+xxx To do...
 
+### Monitoring
 
+xxx To do...
 
 ---
 

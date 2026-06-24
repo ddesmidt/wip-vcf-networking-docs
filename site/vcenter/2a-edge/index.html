@@ -1945,7 +1945,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -1973,7 +1973,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -2238,10 +2238,14 @@
 </ul>
 </details>
 </div>
-<h4 id="step1-create-new-edge-cluster-edge-nodes">Step1. Create new Edge Cluster / Edge Nodes</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-1-Create_Edge.jpg" data-desc-position="bottom"><img alt="vCenter Edge Cluster" src="../images/2a-1-Create_Edge.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-<h4 id="step2-configure-edge-cluster">Step2. Configure Edge Cluster</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-2-Create_Edge.jpg" data-desc-position="bottom"><img alt="vCenter Edge Cluster config" src="../images/2a-2-Create_Edge.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+<ul>
+<li>
+<p><strong>Step1. Create new Edge Cluster / Edge Nodes</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-1-Create_Edge.jpg" data-desc-position="bottom"><img alt="vCenter Edge Cluster" src="../images/2a-1-Create_Edge.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+</li>
+<li>
+<p><strong>Step2. Configure Edge Cluster</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-2-Create_Edge.jpg" data-desc-position="bottom"><img alt="vCenter Edge Cluster config" src="../images/2a-2-Create_Edge.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
 <ul>
 <li>
 <p><strong>Node Form Factor</strong>:<br>
@@ -2254,8 +2258,10 @@
   Enabling this option automates password generation and allows SDDC Manager to handle credential lifecycle management.</p>
 </li>
 </ul>
-<h4 id="step3-configure-edge-nodes-placement-and-networking">Step3. Configure Edge Nodes Placement and Networking</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3a-Configure_EdgeNode1.jpg" data-desc-position="bottom"><img alt="vCenter Edge Node" src="../images/2a-3a-Configure_EdgeNode1.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+</li>
+<li>
+<p><strong>Step3. Configure Edge Nodes Placement and Networking</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3a-Configure_EdgeNode1.jpg" data-desc-position="bottom"><img alt="vCenter Edge Node" src="../images/2a-3a-Configure_EdgeNode1.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <ul>
 <li>
 <p><strong>vSphere Cluster / Resource Pool / Host Group Affinity / Data Store</strong>:<br>
@@ -2275,20 +2281,22 @@
 <summary>In case "Use the host overlay network configuration from the selected vSphere Cluster" is greyed out</summary>
 <p>If this option is greyed out, follow these steps:<br>
 1. Go to <strong>NSX Manager</strong>.<br>
-2. Navigate to <strong>System</strong> &gt; <strong>Fabric</strong> &gt; <strong>Nodes</strong> &gt; <strong>Settings</strong>.<br>
-3. Enable the <strong>NSX on DVPG</strong> toggle.  </p>
+2. Navigate to <strong>System</strong> &gt; <strong>Fabric</strong> &gt; <strong>Host</strong> &gt; <strong>Clusters</strong>.<br>
+3. Activate NSX on DVPGs.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3b-Enable_NSX_on_DVPGs.jpg" data-desc-position="bottom"><img alt="NSX on DVPGs" src="../images/2a-3b-Enable_NSX_on_DVPGs.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Security Consideration: Microsegmentation / DFW</p>
 <p>Enabling "NSX on DVPG" activates the <strong>Distributed Firewall (DFW)</strong> for all VMs connected to VDS Port Groups. 
 <strong>Critical:</strong> Ensure no "Deny All" rules are active in your DFW policy before enabling this, as it may immediately block traffic to existing workloads on those Port Groups.</p>
 </div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3b-Enable_NSX_on_DVPGs.jpg" data-desc-position="bottom"><img alt="NSX on DVPGs" src="../images/2a-3b-Enable_NSX_on_DVPGs.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 </details>
 </div>
 </li>
 <li>
 <p><strong>VLAN MTU Check</strong><br>
   (Optional) Validates the MTU settings on the selected VLAN to ensure overlay traffic is not fragmented.</p>
+</li>
+</ul>
 </li>
 </ul>
 <p><strong>Repeat these steps for the remaining Edge Nodes (2+ nodes recommended).</strong></p>
@@ -2300,9 +2308,11 @@
 </details>
 </div>
 <h3 id="monitoring">Monitoring</h3>
-<h4 id="status">Status</h4>
-<p>The status reflects the successful application of the configuration.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-4-Validation_Edge.jpg" data-desc-position="bottom"><img alt="vCenter Edge Status" src="../images/2a-4-Validation_Edge.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<ul>
+<li><strong>Status</strong>
+    The status reflects the successful application of the configuration.
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-4-Validation_Edge.jpg" data-desc-position="bottom"><img alt="vCenter Edge Status" src="../images/2a-4-Validation_Edge.jpg" style="display: block; margin: 0 auto;" width="90%"></a></li>
+</ul>
 <hr>
 
 

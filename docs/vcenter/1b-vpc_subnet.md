@@ -44,38 +44,38 @@ Different Subnet Overlay types are available:
 
 ### Configuration
 
-#### Step1. Create new VPC Subnet (Overlay)
-![vCenter Create VPC](images/1b-1a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+* **Step1. Create new VPC Subnet (Overlay)**
+    ![vCenter Create VPC](images/1b-1a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-#### Step2. Configure new VPC Subnet
-![vCenter Create VPC](images/1b-1b-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+* **Step2. Configure new VPC Subnet**
+    ![vCenter Create VPC](images/1b-1b-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
-* **VLAN Extensions**  
-  "No" for a VPC-Subnet Overlay.  
-  Note: VLAN Extension is detailed in a the section below.
+    * **VLAN Extensions**  
+      "No" for a VPC-Subnet Overlay.  
+      Note: VLAN Extension is detailed in a the section below.
 
-* **Access Mode**  
-  Select VPC Subnet mode based (Public / Private TGW / Private VPC) based on the VM connectivity you need.
+    * **Access Mode**  
+      Select VPC Subnet mode based (Public / Private TGW / Private VPC) based on the VM connectivity you need.
 
-* **IP Block**  
-  Choose "Any", or select a specific IP Block for that VPC Subnet.
+    * **IP Block**  
+      Choose "Any", or select a specific IP Block for that VPC Subnet.
 
-* **Auto allocate Subnet CIDR from IP Blocks**  
-  . "Yes" to let VCF Networking choose the VPC Subnet CIDR,  
-  . "No" to choose manually the CIDR to use (you can see the "Available Ranges" when clicking on "View IPs..." - not showed in the screenshot).
+    * **Auto allocate Subnet CIDR from IP Blocks**  
+      . "Yes" to let VCF Networking choose the VPC Subnet CIDR,  
+      . "No" to choose manually the CIDR to use (you can see the "Available Ranges" when clicking on "View IPs..." - not showed in the screenshot).
 
-* **Subnet size**  
-  Choose the number of IPs you'll need in that subnet to connect your workloads.  
-  Keep in mind, 3 IP will be consumed by the VPC Gateway (subnet IP, default gateway, broadcast IP) + optionally a 4th IP if you enable DHCP Server.
+    * **Subnet size**  
+      Choose the number of IPs you'll need in that subnet to connect your workloads.  
+      Keep in mind, 3 IP will be consumed by the VPC Gateway (subnet IP, default gateway, broadcast IP) + optionally a 4th IP if you enable DHCP Server.
 
-* **VPC Gateway Connectivity**  
-  . "Yes": The VPC Subnet will be connected to the VPC Gateway and so workloads connected on that VPC Subnet will have access to outside of that VPC Subnet.  
-  . "No": The VPC Subnet will NOT be connected to the VPC Gateway and so workloads connected on that VPC Subnet will NOT have access outside of that VPC Subnet.  
+    * **VPC Gateway Connectivity**  
+      . "Yes": The VPC Subnet will be connected to the VPC Gateway and so workloads connected on that VPC Subnet will have access to outside of that VPC Subnet.  
+      . "No": The VPC Subnet will NOT be connected to the VPC Gateway and so workloads connected on that VPC Subnet will NOT have access outside of that VPC Subnet.  
 
-* **DHCP Config**  
-  . "None": No DHCP Service.  
-  . "DHCP Server": VPC Subnet will have a DHCP Server to offer DHCP service to the workloads connected to that VPC Subnet.  
-  .  "DHCP Relay": VPC Gateway will forward DHCP requests for workloads connected to that VPC Subnet to an external DHCP Server.This option is not available if the VPC Gateway is connected to a Distributed Transit Gateway.
+    * **DHCP Config**  
+      . "None": No DHCP Service.  
+      . "DHCP Server": VPC Subnet will have a DHCP Server to offer DHCP service to the workloads connected to that VPC Subnet.  
+      . "DHCP Relay": VPC Gateway will forward DHCP requests for workloads connected to that VPC Subnet to an external DHCP Server.This option is not available if the VPC Gateway is connected to a Distributed Transit Gateway.
 
 
 ### Monitoring
@@ -112,28 +112,28 @@ Different Subnet VLAN options are available:
 
 ### Configuration
 
-#### Step1. Create new VPC Subnet VLAN-Extension
-![vCenter Create VPC](images/1b-2a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+* **Step1. Create new VPC Subnet VLAN-Extension**
+    ![vCenter Create VPC](images/1b-2a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
 
-#### Step2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity)
-![vCenter Create VPC](images/1b-2b-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+* **Step2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity)**
+    ![vCenter Create VPC](images/1b-2b-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-* **VLAN Extensions**  
-  "Yes" for a VPC-Subnet VLAN-Extension.  
+    * **VLAN Extensions**  
+      "Yes" for a VPC-Subnet VLAN-Extension.  
 
-* **Access Mode**  
-  Select Access Mode (L2-Only / Public - No VPC Connectivity / Public - VPC Connectivity) based on the VM connectivity you need.
+    * **Access Mode**  
+      Select Access Mode (L2-Only / Public - No VPC Connectivity / Public - VPC Connectivity) based on the VM connectivity you need.
 
-* **VLAN ID**  
-  Enter the physical VLAN ID.
+    * **VLAN ID**  
+      Enter the physical VLAN ID.
 
-* **Gateway CIDR IPv4 Address** (only for the Access Mode Public)  
-  Enter the default gateway of that VLAN (configured in the physical network).
+    * **Gateway CIDR IPv4 Address** (only for the Access Mode Public)  
+      Enter the default gateway of that VLAN (configured in the physical network).
 
-* **VPC Gateway Connectivity** (only for the Access Mode Public)  
-  . "No": The VPC Subnet VLAN-Extension will NOT be connected to the VPC Gateway, but directly to the physical VLAN.    
-  . "Yes": The VPC Subnet VLAN-Extention will be connected to the VPC Gateway and bridged to the physical VLAN.  
+    * **VPC Gateway Connectivity** (only for the Access Mode Public)  
+      . "No": The VPC Subnet VLAN-Extension will NOT be connected to the VPC Gateway, but directly to the physical VLAN.    
+      . "Yes": The VPC Subnet VLAN-Extention will be connected to the VPC Gateway and bridged to the physical VLAN.  
 
 ### Monitoring 
 #### Topology

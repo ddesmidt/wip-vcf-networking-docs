@@ -2006,7 +2006,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -2034,7 +2034,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -2383,10 +2383,14 @@
 <p>An <a href="../2a-edge/"><strong>Edge Cluster</strong></a> must be pre-provisioned in the environment.  </p>
 </div>
 </div>
-<h4 id="step1-create-new-centralized-transit-gateway">Step1. Create new Centralized Transit Gateway</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-1a-Create_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW config" src="../images/3b-1a-Create_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
-<h4 id="step2-configure-centralized-transit-gateway-connectivity">Step2. Configure Centralized Transit Gateway Connectivity</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-1b-Configure_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW connectivity" src="../images/3b-1b-Configure_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<ul>
+<li>
+<p><strong>Step1. Create new Centralized Transit Gateway</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-1a-Create_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW config" src="../images/3b-1a-Create_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
+</li>
+<li>
+<p><strong>Step2. Configure Centralized Transit Gateway Connectivity</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-1b-Configure_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW connectivity" src="../images/3b-1b-Configure_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <ul>
 <li>
 <p><strong>Span</strong>:<br>
@@ -2408,8 +2412,10 @@
   Select the specific Edge Cluster that will host this Centralized Transit Gateway.</p>
 </li>
 </ul>
-<h4 id="step3-configure-workload-domain-connectivity">Step3. Configure Workload Domain Connectivity</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-1c-Configure_WLD.jpg" data-desc-position="bottom"><img alt="Cent WLD connectivity" src="../images/3b-1c-Configure_WLD.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+</li>
+<li>
+<p><strong>Step3. Configure Workload Domain Connectivity</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-1c-Configure_WLD.jpg" data-desc-position="bottom"><img alt="Cent WLD connectivity" src="../images/3b-1c-Configure_WLD.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <ul>
 <li>
 <p><strong>External Connection</strong>:<br>
@@ -2429,26 +2435,38 @@
 </ul>
 </li>
 </ul>
+</li>
+</ul>
 <h3 id="monitoring">Monitoring</h3>
-<h4 id="status">Status</h4>
-<p>The status reflects the successful application of the configuration.</p>
-<div style="margin-left: 40px; margin-right: 40px;">
+<ul>
+<li>
+<p><strong>Status</strong><br>
+    The status reflects the successful application of the configuration.</p>
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 <details class="info">
 <summary>Note about the Status</summary>
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
 </div>
+</li>
+</ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-1d-Validation_Cent_TGW.jpg" data-desc-position="bottom"><img alt="Cent TGW validation" src="../images/3b-1d-Validation_Cent_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <hr>
 <h2 id="dist-tgw">Distributed Transit Gateway</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2-Dist.jpg" data-desc-position="bottom"><img alt="Ext Connectivity Dist" class="center" src="../images/3b-2-Dist.jpg" style="width:30%"></a></p>
 <h3 id="configuration_1">Configuration</h3>
-<h4 id="step1-create-new-distributed-transit-gateway">Step1. Create new Distributed Transit Gateway</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2a-Create_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW config" src="../images/3b-2a-Create_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
-<h4 id="step2-configure-distributed-transit-gateway-connectivity">Step2. Configure Distributed Transit Gateway Connectivity</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2b-Configure_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW connectivity" src="../images/3b-2b-Configure_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-<h4 id="step3-configure-external-network-connectivity">Step3. Configure External Network Connectivity</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2c-Configure_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Dist WLD connectivity" src="../images/3b-2c-Configure_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<ul>
+<li>
+<p><strong>Step1. Create new Distributed Transit Gateway</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2a-Create_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW config" src="../images/3b-2a-Create_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
+</li>
+<li>
+<p><strong>Step2. Configure Distributed Transit Gateway Connectivity</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2b-Configure_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW connectivity" src="../images/3b-2b-Configure_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+</li>
+<li>
+<p><strong>Step3. Configure External Network Connectivity</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2c-Configure_Ext_Conn.jpg" data-desc-position="bottom"><img alt="Dist WLD connectivity" src="../images/3b-2c-Configure_Ext_Conn.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <ul>
 <li>
 <p><strong>External Connection</strong>:<br>
@@ -2467,9 +2485,11 @@
 </ul>
 </li>
 </ul>
-<h4 id="step4-configure-vpc-service">Step4. Configure VPC Service</h4>
-<p>Option to offer Network Services NAT, AVI Plugin.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2d-Configure_VPC_Service.jpg" data-desc-position="bottom"><img alt="Dist WLD connectivity" src="../images/3b-2d-Configure_VPC_Service.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+</li>
+<li>
+<p><strong>Step4. Configure VPC Service</strong> <br>
+    Option to offer Network Services NAT, AVI Plugin.
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2d-Configure_VPC_Service.jpg" data-desc-position="bottom"><img alt="Dist WLD connectivity" src="../images/3b-2d-Configure_VPC_Service.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
 <ul>
 <li>
 <p><strong>Virtual Network Appliance Cluster</strong>:<br>
@@ -2482,16 +2502,22 @@
   For more information on Outbound NAT, refer to the <a href="../1c-vpc_nat/#outbound-nat">Outbound NAT</a> page.</p>
 </li>
 </ul>
+</li>
+</ul>
 <h3 id="monitoring_1">Monitoring</h3>
-<h4 id="status_1">Status</h4>
-<p>The status reflects the successful application of the configuration.</p>
-<div style="margin-left: 40px; margin-right: 40px;">
+<ul>
+<li>
+<p><strong>Status</strong><br>
+    The status reflects the successful application of the configuration.</p>
+<div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 <details class="info">
 <summary>Note about the Status</summary>
 <p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
 </details>
 </div>
 <h2 id="_1"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3b-2e-Validation_Dist_TGW.jpg" data-desc-position="bottom"><img alt="Dist TGW validation" src="../images/3b-2e-Validation_Dist_TGW.jpg" style="display: block; margin: 0 auto;" width="80%"></a></h2>
+</li>
+</ul>
 
 
 

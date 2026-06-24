@@ -611,6 +611,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -660,6 +677,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topology_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2004,7 +2038,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -2032,7 +2066,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -2258,6 +2292,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2307,6 +2358,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topology_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2385,10 +2453,14 @@ There are 2 types of VPC Subnets:</p>
 </table>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-0-VPC_Subnet_AccessMode_Types.jpg" data-desc-position="bottom"><img alt="VPC Subnet Option" class="center" src="../images/1b-0-VPC_Subnet_AccessMode_Types.jpg" style="width:95%"></a></p>
 <h3 id="configuration">Configuration</h3>
-<h4 id="step1-create-new-vpc-subnet-overlay">Step1. Create new VPC Subnet (Overlay)</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1a-Create_VPC_Subnet.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-1a-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
-<h4 id="step2-configure-new-vpc-subnet">Step2. Configure new VPC Subnet</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1b-Create_VPC_Subnet.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-1b-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<ul>
+<li>
+<p><strong>Step1. Create new VPC Subnet (Overlay)</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1a-Create_VPC_Subnet.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-1a-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+</li>
+<li>
+<p><strong>Step2. Configure new VPC Subnet</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1b-Create_VPC_Subnet.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-1b-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <ul>
 <li>
 <p><strong>VLAN Extensions</strong><br>
@@ -2422,7 +2494,9 @@ There are 2 types of VPC Subnets:</p>
 <p><strong>DHCP Config</strong><br>
   . "None": No DHCP Service.<br>
   . "DHCP Server": VPC Subnet will have a DHCP Server to offer DHCP service to the workloads connected to that VPC Subnet.<br>
-  .  "DHCP Relay": VPC Gateway will forward DHCP requests for workloads connected to that VPC Subnet to an external DHCP Server.This option is not available if the VPC Gateway is connected to a Distributed Transit Gateway.</p>
+  . "DHCP Relay": VPC Gateway will forward DHCP requests for workloads connected to that VPC Subnet to an external DHCP Server.This option is not available if the VPC Gateway is connected to a Distributed Transit Gateway.</p>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="monitoring">Monitoring</h3>
@@ -2469,10 +2543,14 @@ Note: That subnet-VLAN can NOT be shared in multiple Orgs.</p>
 </table>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg" data-desc-position="bottom"><img alt="VPC Subnet VLAN Option" class="center" src="../images/1b-0-VPC_Subnet_VLAN-Extension_Options.jpg" style="width:80%"></a></p>
 <h3 id="configuration_1">Configuration</h3>
-<h4 id="step1-create-new-vpc-subnet-vlan-extension">Step1. Create new VPC Subnet VLAN-Extension</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-2a-Create_VPC_Subnet.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-2a-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
-<h4 id="step2-choose-the-vpc-subnet-name-vlan-extension-access-mode-vlan-id-gateway-ip-connectivity">Step2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity)</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-2b-Create_VPC_Subnet_VLAN.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-2b-Create_VPC_Subnet_VLAN.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+<ul>
+<li>
+<p><strong>Step1. Create new VPC Subnet VLAN-Extension</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-2a-Create_VPC_Subnet.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-2a-Create_VPC_Subnet.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+</li>
+<li>
+<p><strong>Step2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity)</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-2b-Create_VPC_Subnet_VLAN.jpg" data-desc-position="bottom"><img alt="vCenter Create VPC" src="../images/1b-2b-Create_VPC_Subnet_VLAN.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
 <ul>
 <li>
 <p><strong>VLAN Extensions</strong><br>
@@ -2494,6 +2572,8 @@ Note: That subnet-VLAN can NOT be shared in multiple Orgs.</p>
 <p><strong>VPC Gateway Connectivity</strong> (only for the Access Mode Public)<br>
   . "No": The VPC Subnet VLAN-Extension will NOT be connected to the VPC Gateway, but directly to the physical VLAN.  <br>
   . "Yes": The VPC Subnet VLAN-Extention will be connected to the VPC Gateway and bridged to the physical VLAN.  </p>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="monitoring_1">Monitoring</h3>

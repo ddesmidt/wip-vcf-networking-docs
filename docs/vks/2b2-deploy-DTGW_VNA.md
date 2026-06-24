@@ -16,7 +16,7 @@ This section describes the procedures for **deploying the "NSX + DTGW/VNA" archi
 
 ---
 
-## Installation
+## Install Requirements - DTGW + VNA
 
 When no Transit Gateway has been deployed, NSX offers a simple wizard to deploy the DTGW + VNA.
 

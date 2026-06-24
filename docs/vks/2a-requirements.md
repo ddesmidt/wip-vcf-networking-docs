@@ -36,7 +36,7 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     Can be an existing subnet/VLAN that already hosts other components (such as Physical Servers).  
     **A large pool of IPs is required** (for future K8s VIPs and VPC Outbound-NAT).
 
-#### **Note:** No requirement for dynamic routing (such as BGP).
+* **Note:** No requirement for dynamic routing (such as BGP).
 
 ### vCenter {: #vcenter }
 
@@ -58,8 +58,8 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
 !!! warning "Missing NSX Requirements?"
     If your environment is not yet configured with the NSX prerequisites below, please refer to:  
 
-    *  [Make vCenter Cluster "VCF Networking ready (NSX Overlay)"](xxx) xxx to do
-    *  [Make vCenter with "DTGW + VNA ready"](2a2-deploy-DTGW_VNA.md)
+    *  [Make vCenter Cluster "VCF Networking ready (NSX Overlay)"](2b1-deploy-NSXOverlay.md) xxx to do
+    *  [Make vCenter with "DTGW + VNA ready"](2b2-deploy-DTGW_VNA.md)
 
 
 
@@ -97,7 +97,7 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **Virtual Private Clouds** > **Configure** > **Connectivity Profiles**.  
         Ensure the Connectivity Profile has the following configured:
-        <ul style="margin-top: 5px; margin-bottom: 15px; line-height: 1.3;">
+        <ul style="margin-top: -5px; margin-bottom: 15px; line-height: 1.3;">
           <li style="margin-bottom: 2px;">External and Private Transit Gateway IP Blocks selected</li>
           <li style="margin-bottom: 2px;">A VNA Cluster selected</li>
           <li style="margin-bottom: 2px;">N-S Services enabled (for the LB service)</li>

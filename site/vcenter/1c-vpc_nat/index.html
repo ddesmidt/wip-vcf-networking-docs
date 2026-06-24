@@ -650,12 +650,12 @@
   <a href="#outbound-nat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration Outbound-NAT (N:1 SNAT)
+        Outbound-NAT (N:1 SNAT)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration Outbound-NAT (N:1 SNAT)">
+    <nav class="md-nav" aria-label="Outbound-NAT (N:1 SNAT)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -702,6 +702,17 @@
     <span class="md-ellipsis">
       
         Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
       
     </span>
   </a>
@@ -2021,7 +2032,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -2049,7 +2060,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -2286,12 +2297,12 @@
   <a href="#outbound-nat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration Outbound-NAT (N:1 SNAT)
+        Outbound-NAT (N:1 SNAT)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration Outbound-NAT (N:1 SNAT)">
+    <nav class="md-nav" aria-label="Outbound-NAT (N:1 SNAT)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2338,6 +2349,17 @@
     <span class="md-ellipsis">
       
         Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring
       
     </span>
   </a>
@@ -2415,13 +2437,17 @@
 <p>Maps a single Public IP to a single Private IP for specific workloads.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-1-VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="VPC NAT Ext-IP" class="center" src="../images/1c-1-VPC_NAT_ExtIP.jpg" style="width:70%"></a></p>
 <h3 id="configuration">Configuration</h3>
-<h4 id="step1-create-a-new-external-ip">Step1. Create a new External IP</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-1a-Create_VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="vCenter Create External IP" src="../images/1c-1a-Create_VPC_NAT_ExtIP.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<ul>
+<li><strong>Step1. Create a new External IP</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-1a-Create_VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="vCenter Create External IP" src="../images/1c-1a-Create_VPC_NAT_ExtIP.jpg" style="display: block; margin: 0 auto;" width="90%"></a></li>
+</ul>
 <h3 id="monitoring">Monitoring</h3>
-<h4 id="show-external-ips">Show External IPs</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-1b-Validation_VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1c-1b-Validation_VPC_NAT_ExtIP.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<ul>
+<li><strong>*Show External IPs</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-1b-Validation_VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1c-1b-Validation_VPC_NAT_ExtIP.jpg" style="display: block; margin: 0 auto;" width="90%"></a></li>
+</ul>
 <hr>
-<h2 id="outbound-nat">Configuration Outbound-NAT (N:1 SNAT)</h2>
+<h2 id="outbound-nat">Outbound-NAT (N:1 SNAT)</h2>
 <p>Allows multiple workloads to share a single Public IP for external access.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-2-VPC_ONAT.jpg" data-desc-position="bottom"><img alt="VPC NAT Ext-IP" class="center" src="../images/1c-2-VPC_ONAT.jpg" style="width:70%"></a></p>
 <h3 id="configuration_1">Configuration</h3>
@@ -2432,22 +2458,34 @@
 (only supported on VPCs connected to Centralized Transit Gateways or Distributed Transit Gateways with VNA)</p>
 </div>
 </div>
-<h4 id="step1-check-outbound-nat-configuration-in-the-vpc-gateway">Step1. Check Outbound-NAT configuration in the VPC Gateway</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-2a-Check_VPC_ONAT_Config.jpg" data-desc-position="bottom"><img alt="vCenter Check Outbound NAT Config" src="../images/1c-2a-Check_VPC_ONAT_Config.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
-<h4 id="step2-if-disabled-edit-the-vpc-to-find-the-connectivity-profile-used-by-the-vpc">Step2. If disabled, Edit the VPC to find the Connectivity Profile used by the VPC</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-2b-Find_Connectivity_Profile.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="../images/1c-2b-Find_Connectivity_Profile.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
-<h4 id="step3-edit-the-connectivity-profile-and-enable-outbound-nat">Step3. Edit the Connectivity Profile and enable Outbound-NAT</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-2c-Enable_ONAT.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="../images/1c-2c-Enable_ONAT.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<ul>
+<li>
+<p><strong>*Step1. Check Outbound-NAT configuration in the VPC Gateway</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-2a-Check_VPC_ONAT_Config.jpg" data-desc-position="bottom"><img alt="vCenter Check Outbound NAT Config" src="../images/1c-2a-Check_VPC_ONAT_Config.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+</li>
+<li>
+<p><strong>Step2. If disabled, Edit the VPC to find the Connectivity Profile used by the VPC</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-2b-Find_Connectivity_Profile.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="../images/1c-2b-Find_Connectivity_Profile.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+</li>
+<li>
+<p><strong>Step3. Edit the Connectivity Profile and enable Outbound-NAT</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-2c-Enable_ONAT.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="../images/1c-2c-Enable_ONAT.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+</li>
+</ul>
 <h3 id="monitoring_1">Monitoring</h3>
-<h4 id="show-the-outbound-nat-ip-used-by-the-vpc">Show the Outbound-NAT IP used by the VPC</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-2d-Validation_VPC_ONAT.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1c-2d-Validation_VPC_ONAT.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<ul>
+<li><strong>*Show the Outbound-NAT IP used by the VPC</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-2d-Validation_VPC_ONAT.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1c-2d-Validation_VPC_ONAT.jpg" style="display: block; margin: 0 auto;" width="80%"></a></li>
+</ul>
 <hr>
 <h2 id="full-nat">NAT (SNAT/DNAT)</h2>
 <p>Provides stateful Layer 4 translation for granular traffic control.</p>
 <p>xxx To correct picture.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1c-3-VPC_NAT.jpg" data-desc-position="bottom"><img alt="VPC NAT Ext-IP" class="center" src="../images/1c-3-VPC_NAT.jpg" style="width:70%"></a></p>
 <h3 id="configuration_2">Configuration</h3>
-<p>To do...</p>
+<p>xxx To do...</p>
+<h3 id="monitoring_2">Monitoring</h3>
+<p>xxx To do...</p>
 <hr>
 
 

@@ -36,48 +36,48 @@ Different DHCP types are available:
 
 ### Configuration
 
-#### Step0. Edit Global DHCP Server Configuration
-![vCenter Edit Gloabl DHCP Server](images/1d-0a-Edit_DHCP_Server_Config.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+* **Step0. Edit Global DHCP Server Configuration**
+    ![vCenter Edit Gloabl DHCP Server](images/1d-0a-Edit_DHCP_Server_Config.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
-* **Enable DHCP Server Config**  
-  "Yes" to enable native DHCP services across all subnets within the VPC.
+    * **Enable DHCP Server Config**  
+      "Yes" to enable native DHCP services across all subnets within the VPC.
 
-* **DNS Server IPs**  
-  Specifies the IP addresses of the DNS servers to be assigned to the DHCP clients for name resolution.
+    * **DNS Server IPs**  
+      Specifies the IP addresses of the DNS servers to be assigned to the DHCP clients for name resolution.
 
-* **Lease Time (Seconds)**  
-  Defines the duration for which an IP address remains valid for a DHCP client before renewal is required.  
-  (default = 86400 seconds / 1 day).
+    * **Lease Time (Seconds)**  
+      Defines the duration for which an IP address remains valid for a DHCP client before renewal is required.  
+      (default = 86400 seconds / 1 day).
 
-* **NTP Server IPs**  
-  Specifies the IP addresses of the NTP servers to be provided to the DHCP clients for time synchronization.
-
-
-#### Step1. Enable DHCP Server in the VPC subnet
-![vCenter Enable DHCP Server](images/1d-1a-Enable_DHCP_Server.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+    * **NTP Server IPs**  
+      Specifies the IP addresses of the NTP servers to be provided to the DHCP clients for time synchronization.
 
 
-#### Step2. (Optional) Configure Advanced DHCP Server Settings
-![vCenter Configure DHCP Server settings](images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+* **Step1. Enable DHCP Server in the VPC subnet**
+    ![vCenter Enable DHCP Server](images/1d-1a-Enable_DHCP_Server.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
-* **DNS Server IPs / Lease Time (Seconds) / NTP Server IPs**  
-  These values are pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.
 
-* **Reserved IP Ranges**  
-  Specific IP ranges excluded from the DHCP pool to prevent address conflicts with statically assigned workloads.
+* **Step2. (Optional) Configure Advanced DHCP Server Settings**
+    ![vCenter Configure DHCP Server settings](images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
-* **Classless Static Routes**  
-  Defines additional static routes to be pushed to clients (supplementing the default gateway provided by the VPC Gateway).
+    * **DNS Server IPs / Lease Time (Seconds) / NTP Server IPs**  
+      These values are pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.
 
-* **Generic DHCP Options**  
-  Allows configuration of specialized DHCP options, such as TFTP (66/67) or PXE boot parameters (209/210).
+    * **Reserved IP Ranges**  
+      Specific IP ranges excluded from the DHCP pool to prevent address conflicts with statically assigned workloads.
 
-* **Static Bindings**  
-  Creates fixed MAC-to-IP address mappings to ensure specific workloads always receive the same IP address.
+    * **Classless Static Routes**  
+      Defines additional static routes to be pushed to clients (supplementing the default gateway provided by the VPC Gateway).
+
+    * **Generic DHCP Options**  
+      Allows configuration of specialized DHCP options, such as TFTP (66/67) or PXE boot parameters (209/210).
+
+    * **Static Bindings**  
+      Creates fixed MAC-to-IP address mappings to ensure specific workloads always receive the same IP address.
 
 
 ### Monitoring
-#### Configuration
+* **Configuration**
 ![vCenter Result VPC Subnet](images/1d-3a-Validation_VPC_DHCP_Server.jpg){ width="60%" style="display: block; margin: 0 auto;" }
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
@@ -103,25 +103,25 @@ Different DHCP types are available:
 
 ### Configuration
 
-#### Step0. Edit Global DHCP Server Configuration
-![vCenter Edit Gloabl DHCP Server](images/1d-0b-Edit_DHCP_Relay_Config.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+* **Step0. Edit Global DHCP Server Configuration**
+    ![vCenter Edit Gloabl DHCP Server](images/1d-0b-Edit_DHCP_Relay_Config.jpg){ width="90%" style="display: block; margin: 0 auto;" }
 
-* **Enable DHCP Replay Config**  
-  "Yes" to enable DHCP Relay service across all subnets within the VPC.
+    * **Enable DHCP Replay Config**  
+      "Yes" to enable DHCP Relay service across all subnets within the VPC.
 
-* **External DHCP Server Addresses**  
-  Specifies the external IP addresses of the 3rd party DNS servers.
+    * **External DHCP Server Addresses**  
+      Specifies the external IP addresses of the 3rd party DNS servers.
 
 
-#### Step1. Enable DHCP Relay in the VPC subnet
-![vCenter Enable DHCP Server](images/1d-1b-Enable_DHCP_Relay.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+* **Step1. Enable DHCP Relay in the VPC subnet**
+    ![vCenter Enable DHCP Server](images/1d-1b-Enable_DHCP_Relay.jpg){ width="70%" style="display: block; margin: 0 auto;" }
 
-* **External DHCP Server Addresses**  
-  This value is pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.
+    * **External DHCP Server Addresses**  
+      This value is pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.
 
 ### Monitoring
-#### Configuration
-![vCenter Result VPC Subnet](images/1d-2b-Validation_VPC_DHCP_Relay.jpg){ width="60%" style="display: block; margin: 0 auto;" }
+* **Configuration**
+    ![vCenter Result VPC Subnet](images/1d-2b-Validation_VPC_DHCP_Relay.jpg){ width="60%" style="display: block; margin: 0 auto;" }
 
 
 ---

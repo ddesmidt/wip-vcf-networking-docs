@@ -2034,7 +2034,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -2062,7 +2062,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -2444,8 +2444,10 @@ Also used for VLAN-backed Subnets.</p>
 <li><strong>VLAN-backed Subnets</strong>: These IP Blocks are not created here; they are configured directly within the <a href="../1b-vpc_subnet/#vlan">VPC Subnet VLAN Extension</a></li>
 </ul>
 <h3 id="configuration">Configuration</h3>
-<h4 id="step1-create-new-ip-block-external">Step1. Create new IP Block External</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-1a-Create_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="IP Block Ext config" src="../images/3c-1a-Create_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<ul>
+<li>
+<p><strong>Step1. Create new IP Block External</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-1a-Create_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="IP Block Ext config" src="../images/3c-1a-Create_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ul>
 <li>
 <p><strong>Visibility</strong>:<br>
@@ -2468,21 +2470,26 @@ Also used for VLAN-backed Subnets.</p>
   Note: IP Blocks for VLAN-backed Subnets are created directly within the <a href="../1b-vpc_subnet/#vlan">VPC Subnet VLAN Extension</a>.  </p>
 </li>
 </ul>
+</li>
+</ul>
 <h3 id="monitoring">Monitoring</h3>
-<p>The status reflects the successful application of the configuration.</p>
-<div style="margin-left: 40px; margin-right: 40px;">
-<details class="info">
-<summary>Note about the Status</summary>
-<p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
-</details>
-</div>
+<ul>
+<li><strong>Status</strong><br>
+  The status reflects the successful application of the configuration.</li>
+</ul>
+<div markdown="block" style="margin-left: 40px; margin-right: 40px;">
+  ??? info "Note about the Status"
+      Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
+  </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-1b-Validation_IPBlock_Ext.jpg" data-desc-position="bottom"><img alt="IP Block Ext validation" src="../images/3c-1b-Validation_IPBlock_Ext.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <hr>
 <h2 id="privatetgw-ipblock">IP Block Private-TGW</h2>
 <h3 id="configuration_1">Configuration</h3>
 <p>This is the IP Block used for future VPC Subnets Private-TGW.</p>
-<h4 id="step1-create-new-ip-block-private-tgw">Step1. Create new IP Block Private-TGW</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-2a-Create_IPBlock_Private_TGW.jpg" data-desc-position="bottom"><img alt="IP Block Ext config" src="../images/3c-2a-Create_IPBlock_Private_TGW.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<ul>
+<li>
+<p><strong>Step1. Create new IP Block Private-TGW</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-2a-Create_IPBlock_Private_TGW.jpg" data-desc-position="bottom"><img alt="IP Block Ext config" src="../images/3c-2a-Create_IPBlock_Private_TGW.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ul>
 <li>
 <p><strong>Visibility</strong>:<br>
@@ -2503,15 +2510,17 @@ Also used for VLAN-backed Subnets.</p>
   Not Applicable.</p>
 </li>
 </ul>
+</li>
+</ul>
 <h3 id="monitoring_1">Monitoring</h3>
-<h4 id="status">Status</h4>
-<p>The status reflects the successful application of the configuration.</p>
-<div style="margin-left: 40px; margin-right: 40px;">
-<details class="info">
-<summary>Note about the Status</summary>
-<p>Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.</p>
-</details>
-</div>
+<ul>
+<li><strong>Status</strong><br>
+  The status reflects the successful application of the configuration.</li>
+</ul>
+<div markdown="block" style="margin-left: 40px; margin-right: 40px;">
+  ??? info "Note about the Status"
+      Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
+  </div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-2b-Validation_IPBlock_Private_TGW.jpg" data-desc-position="bottom"><img alt="IP Block Ext validation" src="../images/3c-2b-Validation_IPBlock_Private_TGW.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <hr>
 <h2 id="privatevpc-ipblock">IP Block Private-VPC</h2>
@@ -2520,8 +2529,10 @@ Also used for VLAN-backed Subnets.</p>
 It's configuration is managed directly within the <a href="../1a-vpc_gateway/">VPC Gateway</a> settings.</p>
 <hr>
 <h2 id="monitoring-ip-blocks">Monitoring IP Blocks</h2>
-<h4 id="utilization">Utilization</h4>
-<p>Real-time utilization metrics for IP Blocks can be monitored via the following indicators:</p>
+<ul>
+<li>
+<p><strong>Utilization</strong><br>
+  Real-time utilization metrics for IP Blocks can be monitored via the following indicators:</p>
 <ul>
 <li>
 <p><strong>Available IPs</strong>: The remaining number of addresses in the pool ready for allocation.</p>
@@ -2531,6 +2542,8 @@ It's configuration is managed directly within the <a href="../1a-vpc_gateway/">V
 </li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c-4-Statistics_IPBlock.jpg" data-desc-position="bottom"><img alt="IP Block Statistics" src="../images/3c-4-Statistics_IPBlock.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+</li>
+</ul>
 <hr>
 
 

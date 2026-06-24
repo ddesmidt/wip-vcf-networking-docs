@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying the "NSX Overlay** within a vCenter Cluster.
+This section describes the procedures for **deploying the "NSX Overlay"** within a vCenter Cluster.
 </div>
 
 <div markdown>

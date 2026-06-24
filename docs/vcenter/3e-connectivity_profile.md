@@ -41,38 +41,38 @@ Defines the VPC's connection to the Transit Gateway, specifies the assigned Exte
 
 ### Configuration
 
-#### Step1. Create Connectivity Profile
-![Connectivity Prof config](images/3e-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+* **Step1. Create Connectivity Profile**  
+    ![Connectivity Prof config](images/3e-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
-* **Transit Gateway**:  
-  Select the Centralized Transit Gateway, VPC Gateways will be connected to.
+    * **Transit Gateway**:  
+      Select the Centralized Transit Gateway, VPC Gateways will be connected to.
 
-* **External IP Blocks**:  
-  Select the [External IP Block(s)](3c-ip_block.md#ext-ipblock) or create a new one for future VPC Subnets Public and NAT.
+    * **External IP Blocks**:  
+      Select the [External IP Block(s)](3c-ip_block.md#ext-ipblock) or create a new one for future VPC Subnets Public and NAT.
   
-* **Private - Transit Gateway IP Blocks**:  
-  Select the [Private IP Block(s)](3c-ip_block.md#privatetgw-ipblock) or create a new one for future VPC Subnets Private-TGW.
+    * **Private - Transit Gateway IP Blocks**:  
+      Select the [Private IP Block(s)](3c-ip_block.md#privatetgw-ipblock) or create a new one for future VPC Subnets Private-TGW.
   
-* **Edge Cluster**:  
-  (Optional) Select the Edge Cluster to use for the VPC Gateway.  
-  Required if N-S Services and/or Default Outbound NAT is enabled in this VPC Connectivity Profile.
+    * **Edge Cluster**:  
+      (Optional) Select the Edge Cluster to use for the VPC Gateway.  
+      Required if N-S Services and/or Default Outbound NAT is enabled in this VPC Connectivity Profile.
   
-* **N-S Services**:  
-  Enable to allow [NAT](1c-vpc_nat.md#full-nat) on VPC Gateways.
+    * **N-S Services**:  
+      Enable to allow [NAT](1c-vpc_nat.md#full-nat) on VPC Gateways.
 
-* **Default Outbound NAT**:  
-  Enable to allow [Default Outbound NAT](1c-vpc_nat.md#outbound-nat) on VPC Gateways.  
-  Note: If the Centralized Transit Gateway selected is Active/Active, then Default Outbound NAT can not be enabled.
+    * **Default Outbound NAT**:  
+      Enable to allow [Default Outbound NAT](1c-vpc_nat.md#outbound-nat) on VPC Gateways.  
+      Note: If the Centralized Transit Gateway selected is Active/Active, then Default Outbound NAT can not be enabled.
 
-* **External IP Block for Default Outbound NAT**:  
-  (Optional) Select a specif External IP Block to use for Outbound NAT.  
-  If not selected, it will pick an IP from the External IP Blocks list configured above.
+    * **External IP Block for Default Outbound NAT**:  
+      (Optional) Select a specif External IP Block to use for Outbound NAT.  
+      If not selected, it will pick an IP from the External IP Blocks list configured above.
 
 
 
 ### Monitoring
 
-#### Status
+* **Status**
 The status reflects the successful application of the configuration.
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
@@ -91,32 +91,32 @@ The status reflects the successful application of the configuration.
 
 ### Configuration
 
-#### Step1. Create Connectivity Profile
-![Connectivity Prof config](images/3e-2a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+* **Step1. Create Connectivity Profile**  
+    ![Connectivity Prof config](images/3e-2a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
-* **Transit Gateway**:  
-  Select the Distributed Transit Gateway, VPC Gateways will be connected to.
+    * **Transit Gateway**:  
+      Select the Distributed Transit Gateway, VPC Gateways will be connected to.
 
-* **External IP Blocks**:  
-  Select the External IP Block(s) for future VPC Subnets Public and NAT.
+    * **External IP Blocks**:  
+      Select the External IP Block(s) for future VPC Subnets Public and NAT.
   
-* **Virtual Network Appliance Cluster**:  
-  (Optional) Select the Virtual Network Appliance Cluster to use for the VPC Gateway.  
-  Required if N-S Services and/or Default Outbound NAT is enabled in this VPC Connectivity Profile.
+    * **Virtual Network Appliance Cluster**:  
+      (Optional) Select the Virtual Network Appliance Cluster to use for the VPC Gateway.  
+      Required if N-S Services and/or Default Outbound NAT is enabled in this VPC Connectivity Profile.
   
-* **N-S Services**:  
-  Enable to allow [NAT](1c-vpc_nat.md#full-nat) on VPC Gateways.
+    * **N-S Services**:  
+      Enable to allow [NAT](1c-vpc_nat.md#full-nat) on VPC Gateways.
 
-* **Default Outbound NAT**:  
-  Enable to allow [Default Outbound NAT](1c-vpc_nat.md#outbound-nat) on VPC Gateways.  
+    * **Default Outbound NAT**:  
+      Enable to allow [Default Outbound NAT](1c-vpc_nat.md#outbound-nat) on VPC Gateways.  
 
-* **External IP Block for Default Outbound NAT**:  
-  Select the External IP Block to use for VPC Gateways which enabled Outbound NAT.
+    * **External IP Block for Default Outbound NAT**:  
+      Select the External IP Block to use for VPC Gateways which enabled Outbound NAT.
 
 
 ### Monitoring
 
-#### Status
+* **Status**
 The status reflects the successful application of the configuration.
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">

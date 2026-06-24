@@ -38,7 +38,7 @@ VKS Supervisor with "VDS + FLB" has the following networking requirements:
     Can be an existing subnet/VLAN that already hosts other components.  
     A large pool of IPs is required for future K8s VIPs.
 
-#### **Note:** No requirement for dynamic routing (such as BGP).
+***Note:** No requirement for dynamic routing (such as BGP).*
 
 ### vCenter {: #vcenter }
 

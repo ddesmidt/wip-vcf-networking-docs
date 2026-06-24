@@ -687,7 +687,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration_2" class="md-nav__link">
+  <a href="#configuration_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Configuration
@@ -1993,7 +1993,7 @@
   <span class="md-ellipsis">
     
   
-    Supervisor Installation
+    Supervisor Deployment
   
 
     
@@ -2021,7 +2021,7 @@
   <span class="md-ellipsis">
     
   
-    Namespace Installation
+    Namespace Deployment
   
 
     
@@ -2267,7 +2267,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration_2" class="md-nav__link">
+  <a href="#configuration_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Configuration
@@ -2352,8 +2352,10 @@
 <hr>
 <h2 id="dhcp-server">DHCP Server</h2>
 <h3 id="configuration">Configuration</h3>
-<h4 id="step0-edit-global-dhcp-server-configuration">Step0. Edit Global DHCP Server Configuration</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0a-Edit_DHCP_Server_Config.jpg" data-desc-position="bottom"><img alt="vCenter Edit Gloabl DHCP Server" src="../images/1d-0a-Edit_DHCP_Server_Config.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<ul>
+<li>
+<p><strong>Step0. Edit Global DHCP Server Configuration</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0a-Edit_DHCP_Server_Config.jpg" data-desc-position="bottom"><img alt="vCenter Edit Gloabl DHCP Server" src="../images/1d-0a-Edit_DHCP_Server_Config.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <ul>
 <li>
 <p><strong>Enable DHCP Server Config</strong><br>
@@ -2373,10 +2375,14 @@
   Specifies the IP addresses of the NTP servers to be provided to the DHCP clients for time synchronization.</p>
 </li>
 </ul>
-<h4 id="step1-enable-dhcp-server-in-the-vpc-subnet">Step1. Enable DHCP Server in the VPC subnet</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-1a-Enable_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter Enable DHCP Server" src="../images/1d-1a-Enable_DHCP_Server.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-<h4 id="step2-optional-configure-advanced-dhcp-server-settings">Step2. (Optional) Configure Advanced DHCP Server Settings</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter Configure DHCP Server settings" src="../images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+</li>
+<li>
+<p><strong>Step1. Enable DHCP Server in the VPC subnet</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-1a-Enable_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter Enable DHCP Server" src="../images/1d-1a-Enable_DHCP_Server.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+</li>
+<li>
+<p><strong>Step2. (Optional) Configure Advanced DHCP Server Settings</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter Configure DHCP Server settings" src="../images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <ul>
 <li>
 <p><strong>DNS Server IPs / Lease Time (Seconds) / NTP Server IPs</strong><br>
@@ -2399,9 +2405,13 @@
   Creates fixed MAC-to-IP address mappings to ensure specific workloads always receive the same IP address.</p>
 </li>
 </ul>
+</li>
+</ul>
 <h3 id="monitoring">Monitoring</h3>
-<h4 id="configuration_1">Configuration</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-3a-Validation_VPC_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1d-3a-Validation_VPC_DHCP_Server.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
+<ul>
+<li><strong>Configuration</strong>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-3a-Validation_VPC_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1d-3a-Validation_VPC_DHCP_Server.jpg" style="display: block; margin: 0 auto;" width="60%"></a></li>
+</ul>
 <div style="margin-left: 40px; margin-right: 40px;">
 <div class="admonition info">
 <p class="admonition-title">DHCP Lease Monitoring</p>
@@ -2421,9 +2431,11 @@
 </ul>
 </div>
 </div>
-<h3 id="configuration_2">Configuration</h3>
-<h4 id="step0-edit-global-dhcp-server-configuration_1">Step0. Edit Global DHCP Server Configuration</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0b-Edit_DHCP_Relay_Config.jpg" data-desc-position="bottom"><img alt="vCenter Edit Gloabl DHCP Server" src="../images/1d-0b-Edit_DHCP_Relay_Config.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<h3 id="configuration_1">Configuration</h3>
+<ul>
+<li>
+<p><strong>Step0. Edit Global DHCP Server Configuration</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0b-Edit_DHCP_Relay_Config.jpg" data-desc-position="bottom"><img alt="vCenter Edit Gloabl DHCP Server" src="../images/1d-0b-Edit_DHCP_Relay_Config.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
 <ul>
 <li>
 <p><strong>Enable DHCP Replay Config</strong><br>
@@ -2434,15 +2446,21 @@
   Specifies the external IP addresses of the 3rd party DNS servers.</p>
 </li>
 </ul>
-<h4 id="step1-enable-dhcp-relay-in-the-vpc-subnet">Step1. Enable DHCP Relay in the VPC subnet</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-1b-Enable_DHCP_Relay.jpg" data-desc-position="bottom"><img alt="vCenter Enable DHCP Server" src="../images/1d-1b-Enable_DHCP_Relay.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+</li>
+<li>
+<p><strong>Step1. Enable DHCP Relay in the VPC subnet</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-1b-Enable_DHCP_Relay.jpg" data-desc-position="bottom"><img alt="vCenter Enable DHCP Server" src="../images/1d-1b-Enable_DHCP_Relay.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
 <ul>
 <li><strong>External DHCP Server Addresses</strong><br>
   This value is pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.</li>
 </ul>
+</li>
+</ul>
 <h3 id="monitoring_1">Monitoring</h3>
-<h4 id="configuration_3">Configuration</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-2b-Validation_VPC_DHCP_Relay.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1d-2b-Validation_VPC_DHCP_Relay.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
+<ul>
+<li><strong>Configuration</strong>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-2b-Validation_VPC_DHCP_Relay.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1d-2b-Validation_VPC_DHCP_Relay.jpg" style="display: block; margin: 0 auto;" width="60%"></a></li>
+</ul>
 <hr>
 
 
