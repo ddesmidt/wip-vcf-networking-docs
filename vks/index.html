@@ -2116,7 +2116,7 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong><a href="1a-requirements/">1. VDS + FLB</a></strong></td>
-<td style="text-align: left;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/0-VDS.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="images/0-VDS.jpg" style="display: block; margin: 0 auto; max-width: 300px;" width="90%"></a> <br><br> <ul><li><strong>Architecture:</strong> Uses <strong>VDS port groups</strong> for the Supervisor Cluster and deploys <strong>FLB virtual appliances</strong> to handle load balancing traffic.</li><li><strong>Best for:</strong> Lab environments, Proof of Concepts (PoC), or smaller environments.</li><li><strong>Limitation:</strong> Cannot be used with VCF Automation.</li></ul></td>
+<td style="text-align: left;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/0-VDS.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="images/0-VDS.jpg" style="display: block; margin: 0 auto; max-width: 300px;" width="90%"></a> <br><br> <ul><li><strong>Architecture:</strong> Uses <strong>VDS port groups</strong> for the Supervisor Cluster and deploys <strong>FLB virtual appliances</strong> to handle load balancing traffic.</li><li><strong>Best for:</strong> VMware vSphere Foundation (VVF), lab environments, Proof of Concepts (PoC), or smaller environments.</li><li><strong>Limitation:</strong> Limited VCF Automation support, such as namespace create/delete/update from VCFA.</li></ul></td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong><a href="2a-requirements/">2. NSX + DTGW/VNA</a></strong></td>
@@ -2134,7 +2134,7 @@
 </ul>
 </li>
 <li><strong>Cons:</strong><ul>
-<li><strong>VCF Integration Limitations:</strong> Lacks support for other VCF components, specifically VCF Automation (VCF-A)</li>
+<li><strong>VCF Integration Limitations:</strong> Lacks full support for other VCF components, specifically VCF Automation (VCF-A)</li>
 <li><strong>Scale:</strong> All VIPs are managed by a single FLB's Active/Standby (A/S)</li>
 </ul>
 </li>
