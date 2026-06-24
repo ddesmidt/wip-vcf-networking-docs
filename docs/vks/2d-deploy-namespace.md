@@ -1,5 +1,5 @@
 <h1>
-  <img src="../../assets/VKS.png" style="height:30px"; vertical-align:middle;> Supervisor with "NSX + DTGW/VNA"
+  <img src="../../assets/VKS.png" style="height:30px; vertical-align:middle;"> Supervisor with "NSX + DTGW/VNA"
 </h1>
 
 <div class="grid" markdown style="grid-template-columns: 60% 40%">
@@ -9,9 +9,8 @@
 This section describes the procedures for **deploying the VKS Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.
 
 * [Requirements](2a-requirements.md)
-* [Supervisor Deployment](2b-deployment.md)
-* [Deployment App (VMs)](2c-deployment-vms.md)
-* [**Deployment App (k8s)**](#deployment_k8s)
+* [Supervisor Deployment](2b-deploy-supervisor.md)
+* [**Namespace Deployment**](#namespacedeployment)
 </div>
 
 <div markdown>
@@ -21,5 +20,5 @@ This section describes the procedures for **deploying the VKS Supervisor with "N
 
 ---
 
-## Deployment App (k8s) {: #deployment_k8s }
+## Namespace Deployment {: #namespacedeployment }
 

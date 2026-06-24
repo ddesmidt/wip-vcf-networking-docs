@@ -28,6 +28,7 @@ theme:
     - navigation.grid              # This is the feature that enables "grid" and "cards"
     - lightbox                     # This is for the image zoom
     - navigation.indexes
+    #- navigation.expand            
 
 plugins:
   - search
@@ -79,19 +80,23 @@ nav:
   - VKS:
       - Introduction: vks/index.md
       - VDS + FLB:
-        - Requirements: vks/1a-requirements.md
-        - Supervisor Deployment: vks/1b-deployment.md
-        - Deployment App (VMs): vks/1c-deployment-vms.md
-        - Deployment App (k8s): vks/1d-deployment-k8s.md
+          - Installation:
+              - Requirements:
+                  - Check Requirements: vks/1a-requirements.md
+              - Supervisor Installation: vks/1b-deploy-supervisor.md
+              - Namespace Installation: vks/1c-deploy-namespace.md
+          - Application Deployment:
+              - App Deployment (VMs): vks/1d-deployment-vms.md
+              - App Deployment (k8s): vks/1e-deployment-k8s.md
       - NSX + DTGW/VNA:
-        - Requirements: vks/2a-requirements.md
-        - Optional - Install Requirements:
-          - NSX Overlay: vks/2a1-deploy-NSXOverlay.md
-          - DTGW + VNA: vks/2a2-deploy-DTGW_VNA.md
-        - Supervisor Deployment: vks/2b-deployment.md
-        - Deployment App (VMs): vks/2c-deployment-vms.md
-        - Deployment App (k8s): vks/2d-deployment-k8s.md
-
-
-  
-
+          - Installation:
+              - Requirements:
+                  - Check Requirements: vks/2a-requirements.md
+                  - Install Requirements:
+                      - NSX Overlay: vks/2b1-deploy-NSXOverlay.md
+                      - DTGW + VNA: vks/2b2-deploy-DTGW_VNA.md
+              - Supervisor Installation: vks/2c-deploy-supervisor.md
+              - Namespace Installation: vks/2d-deploy-namespace.md
+          - Application Deployment:
+              - App Deployment (VMs): vks/2e-deployment-vms.md
+              - App Deployment (k8s): vks/2f-deployment-k8s.md

@@ -1,5 +1,5 @@
 <h1>
-  <img src="../../assets/VKS.png" style="height:30px"; vertical-align:middle;> Supervisor with "VDS + FLB"
+  <img src="../../assets/VKS.png" style="height:30px; vertical-align:middle;"> Supervisor with "VDS + FLB"
 </h1>
 
 <div class="grid" markdown style="grid-template-columns: 60% 40%">
@@ -10,8 +10,7 @@ This section describes the procedures for **deploying the VKS Supervisor with "V
 
 * [Requirements](1a-requirements.md)
 * [**Supervisor Deployment**](#supervisordeployment)
-* [Deployment App (VMs)](1c-deployment-vms.md)
-* [Deployment App (k8s)](1d-deployment-k8s.md)
+* [Namespace Deployment](1c-deploy-namespace.md)
 </div>
 
 <div markdown>

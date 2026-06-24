@@ -9,9 +9,8 @@
 This section describes the procedures for **deploying the VKS Supervisor with "VDS + FLB"** within a vSphere environment.
 
 * [**Requirements**](#requirements)
-* [Supervisor Deployment](1b-deployment.md)
-* [Deployment App (VMs)](1c-deployment-vms.md)
-* [Deployment App (k8s)](1d-deployment-k8s.md)
+* [Supervisor Deployment](1b-deploy-supervisor.md)
+* [Namespace Deployment](1c-deploy-namespace.md)
 </div>
 
 <div markdown>

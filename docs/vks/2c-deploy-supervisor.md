@@ -10,8 +10,7 @@ This section describes the procedures for **deploying the VKS Supervisor with "N
 
 * [Requirements](2a-requirements.md)
 * [**Supervisor Deployment**](#supervisordeployment)
-* [Deployment App (VMs)](2c-deployment-vms.md)
-* [Deployment App (k8s)](2d-deployment-k8s.md)
+* [Namespace Deployment](2c-deploy-namespace.md)
 </div>
 
 <div markdown>
@@ -33,30 +32,30 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and click
     * Select the network stack **VCF Networking with VPC (recommended)**, and click **Next**.  
     ![vCenter Server and Network Configuration](images/2b-1a-vCenter.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-2. **Supervisor Location**  
+1. **Supervisor Location**  
     * Select the **Cluster Deployment**, and click **Next**.  
     ![Supervisor Location Settings](images/2b-1b-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-3. **Storage**  
+1. **Storage**  
     * Select the different **Storage Policies**, and click **Next**.  
     ![Storage Policy Selection](images/2b-1c-Storage.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-4. **Management Network**  
+1. **Management Network**  
     * Configure the **Supervisor Management IP Settings**, and click **Next**.  
     ![Management Network IP Settings](images/2b-1d-Management.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-5. **Workload Network**  
+1. **Workload Network**  
     * Configure the **Workload Network** (fields are pre-populated, except for DNS and NTP Servers), and click **Next**.  
     ![Workload Network Configuration](images/2b-1e-Workload.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
         ??? warning "Troubleshooting: Auto SNAT Error"
             If you receive the error *"Auto SNAT must be enabled for VPC Connectivity Profile Default"*, refer back to the **["DTGW + VNA" Requirements](2a-requirements.md#nsx)** page and ensure **Default Outbound NAT** is enabled in the Connectivity Profile.
 
-6. **Advanced Settings**  
+1. **Advanced Settings**  
     * Select the **Supervisor Control Plane Size**, and click **Next**.  
     ![Advanced Settings and Sizing](images/2b-1f-Advanced.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-7. **Ready to Complete**  
+1. **Ready to Complete**  
     * Review your configuration and click **Finish**.  
     ![Review and Complete](images/2b-1g-Ready.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
