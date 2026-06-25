@@ -10,7 +10,8 @@ This section describes the procedures for **deploying the VKS Supervisor with "N
 
 * [Requirements](2a-requirements.md)
 * [**Supervisor Deployment**](#supervisordeployment)
-* [Namespace Deployment](2d-deploy-namespace.md)
+* [Namespace Deployment](2d1-deploy-namespace.md)
+* [Namespace Access](2d2-access-namespace.md)
 </div>
 
 <div markdown>
