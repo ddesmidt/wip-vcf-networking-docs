@@ -101,5 +101,8 @@ nav:
                 - Create Namespace: vks/2d1-deploy-namespace.md
                 - Namespace Access via Kubectl: vks/2d2-access-namespace.md
           - Application Deployment:
-              - App Deployment (VMs): vks/2e-deployment-vms.md
-              - App Deployment (k8s): vks/2f-deployment-k8s.md
+              - App Deployment (VMs):
+                - via vCenter UI: vks/2e1-deployment-vms.md
+                - via yaml: vks/2e2-deployment-vms.md
+              - App Deployment (k8s): 
+                - via yaml: vks/2f1-deployment-k8s.md

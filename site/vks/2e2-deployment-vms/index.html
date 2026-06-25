@@ -8,8 +8,10 @@
       
       
       
-        <link rel="prev" href="../2e-deployment-vms/">
+        <link rel="prev" href="../2e1-deployment-vms/">
       
+      
+        <link rel="next" href="../2f1-deployment-k8s/">
       
       
         
@@ -20,7 +22,7 @@
     
     
       
-        <title>App Deployment (k8s) - VCF Networking Encyclopedia</title>
+        <title>via yaml - VCF Networking Encyclopedia</title>
       
     
     
@@ -83,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deployment_k8s" class="md-skip">
+        <a href="#deployment_vms" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              App Deployment (k8s)
+              via yaml
             
           </span>
         </div>
@@ -2131,17 +2133,77 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../2e-deployment-vms/" class="md-nav__link">
+  
+    
+    
+      
         
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2_1" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2_1" id="__nav_3_3_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
     
   
     App Deployment (VMs)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    App Deployment (VMs)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2e1-deployment-vms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via vCenter UI
   
 
     
@@ -2176,7 +2238,7 @@
   <span class="md-ellipsis">
     
   
-    App Deployment (k8s)
+    via yaml
   
 
     
@@ -2194,7 +2256,7 @@
   <span class="md-ellipsis">
     
   
-    App Deployment (k8s)
+    via yaml
   
 
     
@@ -2218,19 +2280,197 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#deployment_k8s" class="md-nav__link">
+  <a href="#deployment_vms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deployment App (k8s)
+        Deployment App (VMs)
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Deployment App (VMs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-a-full-application-load-balancer-vms-via-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy a Full Application (Load Balancer + VMs) via yaml
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy a Full Application (Load Balancer + VMs) via yaml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-supervisor-namespace-via-kubectl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to Supervisor Namespace via kubectl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-application-lb-2-vms-apache-yaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create application (LB + 2 VMs apache) yaml file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy the application (LB + 2 VMs apache)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-deployment-of-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate deployment of the application (LB + 2 VMs apache)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access the application (LB + 2 VMs apache)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2_2" id="__nav_3_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    App Deployment (k8s)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    App Deployment (k8s)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2f1-deployment-k8s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via yaml
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -2285,13 +2525,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#deployment_k8s" class="md-nav__link">
+  <a href="#deployment_vms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deployment App (k8s)
+        Deployment App (VMs)
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Deployment App (VMs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-a-full-application-load-balancer-vms-via-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy a Full Application (Load Balancer + VMs) via yaml
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy a Full Application (Load Balancer + VMs) via yaml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-supervisor-namespace-via-kubectl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to Supervisor Namespace via kubectl
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-application-lb-2-vms-apache-yaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create application (LB + 2 VMs apache) yaml file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy the application (LB + 2 VMs apache)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-deployment-of-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate deployment of the application (LB + 2 VMs apache)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access the application (LB + 2 VMs apache)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2320,8 +2638,9 @@
 <div>
 <p>This section describes the procedures for <strong>deploying an application (VMs/K8s) into the VKS Namespace with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
 <ul>
-<li><a href="../2e-deployment-vms/">Deployment App (VMs)</a></li>
-<li><a href="#deployment_k8s"><strong>Deployment App (k8s)</strong></a></li>
+<li><a href="../2e1-deployment-vms/">Deployment App (VMs) via vCenter UI</a></li>
+<li><a href="#deployment_vms"><strong>Deployment App (VMs) via yaml</strong></a></li>
+<li><a href="../2f1-deployment-k8s/">Deployment App (k8s) via yaml</a></li>
 </ul>
 </div>
 <div>
@@ -2329,7 +2648,162 @@
 </div>
 </div>
 <hr>
-<h2 id="deployment_k8s">Deployment App (k8s)</h2>
+<h2 id="deployment_vms">Deployment App (VMs)</h2>
+<h3 id="deploy-a-full-application-load-balancer-vms-via-yaml">Deploy a Full Application (Load Balancer + VMs) via yaml</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2e2-2-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2e2-2-Topology.jpg" style="display: block; margin: 0 auto;" width="40%"></a></p>
+<h4 id="connect-to-supervisor-namespace-via-kubectl">Connect to Supervisor Namespace via kubectl</h4>
+<p>See <a href="../2d2-access-namespace/#namespacek8sclient">Connect to Namespace via Kubectl client</a></p>
+<h4 id="create-application-lb-2-vms-apache-yaml-file">Create application (LB + 2 VMs apache) yaml file</h4>
+<p>Create file "my-web-farm.yaml"</p>
+<details class="info">
+<summary>my-web-farm.yaml file</summary>
+<div class="highlight"><pre><span></span><code>apiVersion: v1
+kind: Secret
+metadata:
+  name: ubuntu-cloud-init
+  namespace: demo-space
+stringData:
+  user-data: |
+    #cloud-config
+    package_update: true
+    packages:
+      - apache2
+      - unzip
+      - open-vm-tools
+      - net-tools
+      - php
+      - libapache2-mod-php
+
+    # Create the user and add to sudo group
+    users:
+      - default
+      - name: demouser
+        groups: sudo
+        shell: /bin/bash
+        lock_passwd: false
+
+    # Set the plain-text password and prevent it from expiring immediately
+    chpasswd:
+      list: |
+        demouser:VMware123!VMware123!
+      expire: false
+
+    # Allow password authentication over SSH
+    ssh_pwauth: true
+
+    # Overwrite the default Apache page to show the VM hostname
+    runcmd:
+      - echo "&lt;h1&gt;Hello from $(hostname)&lt;/h1&gt;" &gt; /var/www/html/index.html
+      - systemctl enable --now apache2
+      - iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
+
+---
+apiVersion: vmoperator.vmware.com/v1alpha5
+kind: VirtualMachine
+metadata:
+  name: web-vm-1
+  namespace: demo-space
+labels:
+    app: web-pool                  # &lt;-- The label tying it to the Load Balancer
+spec:
+  className: best-effort-xsmall
+  imageName: noble-server-cloudimg-amd64
+  storageClass: vsan-default-storage-policy
+  powerState: PoweredOn
+  bootstrap:
+    cloudInit:
+      rawCloudConfig:
+        name: ubuntu-cloud-init
+        key: user-data
+
+---
+apiVersion: vmoperator.vmware.com/v1alpha5
+kind: VirtualMachine
+metadata:
+  name: web-vm-2
+  namespace: demo-space
+  labels:
+    app: web-pool                  # &lt;-- The label tying it to the Load Balancer
+spec:
+  className: best-effort-xsmall
+  imageName: noble-server-cloudimg-amd64
+  storageClass: vsan-default-storage-policy
+  powerState: PoweredOn
+  bootstrap:
+    cloudInit:
+      rawCloudConfig:
+        name: ubuntu-cloud-init
+        key: user-data
+
+---
+apiVersion: vmoperator.vmware.com/v1alpha5
+kind: VirtualMachineService
+metadata:
+  name: web-lb-vip
+  namespace: demo-space
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    app: web-pool
+</code></pre></div>
+</details>
+<h4 id="deploy-the-application-lb-2-vms-apache">Deploy the application (LB + 2 VMs apache)</h4>
+<div class="highlight"><pre><span></span><code>kubectl apply -f my-web-farm.yaml
+</code></pre></div>
+<details class="info">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl apply -f my-web-vm.yaml</b>
+secret/ubuntu-cloud-init created
+virtualmachine.vmoperator.vmware.com/web-vm-1 created
+virtualmachine.vmoperator.vmware.com/web-vm-2 created
+virtualmachineservice.vmoperator.vmware.com/web-lb-vip created
+</code></pre><p></p>
+</details>
+<h3 id="validate-deployment-of-the-application-lb-2-vms-apache">Validate deployment of the application (LB + 2 VMs apache)</h3>
+<ul>
+<li>
+<p><strong>Check application VIP</strong><br>
+  </p><div class="highlight"><pre><span></span><code>get service web-lb-vip
+</code></pre></div><p></p>
+<details class="info">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get service web-lb-vip</b>
+NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+web-lb-vip   LoadBalancer   172.29.143.82   <b>10.1.7.137</b>    80/TCP    24s
+</code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Check application VMs</strong><br>
+  </p><div class="highlight"><pre><span></span><code>kubectl get virtualmachines -o wide
+</code></pre></div><p></p>
+<details class="info">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get virtualmachines -o wide</b>
+NAME       POWER-STATE   CLASS                IMAGE                   PRIMARY-IP4   AGE
+<b>web-vm-1</b>   PoweredOn     best-effort-xsmall   vmi-4143a3379f59e4a48   <b>172.30.0.3</b>    46s
+<b>web-vm-2</b>   PoweredOn     best-effort-xsmall   vmi-4143a3379f59e4a48   <b>172.30.0.4</b>    46
+</code></pre><p></p>
+</details>
+</li>
+</ul>
+<h3 id="access-the-application-lb-2-vms-apache">Access the application (LB + 2 VMs apache)</h3>
+<div class="highlight"><pre><span></span><code>curl http://10.1.7.137
+</code></pre></div>
+<details class="info">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>curl http://10.1.7.137</b>
+&lt;h1&gt;Hello from <b>web-vm-1</b>&lt;/h1&gt;
+&nbsp;
+PS C:\Users\Administrator\Documents&gt; <b>curl http://10.1.7.137</b>
+&lt;h1&gt;Hello from <b>web-vm-2</b>&lt;/h1&gt;
+</code></pre><p></p>
+</details>
 
 
 
