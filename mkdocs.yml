@@ -105,4 +105,5 @@ nav:
                 - via vCenter UI: vks/2e1-deployment-vms.md
                 - via yaml: vks/2e2-deployment-vms.md
               - App Deployment (k8s): 
-                - via yaml: vks/2f1-deployment-k8s.md
+                - via vCenter UI: vks/2f1-deployment-k8s.md
+                - via yaml: vks/2f2-deployment-k8s.md                

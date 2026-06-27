@@ -2385,6 +2385,8 @@
       
         
       
+        
+      
     
     
     
@@ -2438,6 +2440,34 @@
   
     <li class="md-nav__item">
       <a href="../2f1-deployment-k8s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via vCenter UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2f2-deployment-k8s/" class="md-nav__link">
         
   
   
@@ -2616,18 +2646,20 @@
 <div>
 <p>This section describes the procedures for <strong>deploying an application (VMs/K8s) into the VKS Namespace with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
 <ul>
-<li><a href="#deployment-app-vms--deployment_vms-">Deployment App (VMs) {: #deployment_vms }</a></li>
-<li><a href="#deploy-a-vm-via-the-vcenter-ui">Deploy a VM via the vCenter UI</a></li>
-<li><a href="#validate-deployment-and-status-of-the-vm">Validate deployment and status of the VM</a><ul>
-<li><a href="#via-vcenter-supervisor-namespace">via vCenter Supervisor Namespace</a></li>
-<li><a href="#via-vcenter-inventory">via vCenter Inventory</a></li>
+<li><strong>Deployment App (VMs)</strong><ul>
+<li><a href="#deployment_vms"><strong>via vCenter UI</strong></a></li>
+<li><a href="../2e2-deployment-vms/">via yaml</a></li>
 </ul>
 </li>
-<li><a href="#access-the-vm">Access the VM</a></li>
+<li>Deployment App (k8s)<ul>
+<li><a href="../2f1-deployment-k8s/">via vCenter UI</a></li>
+<li><a href="../2f2-deployment-k8s/">via yaml</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/0-DTGW.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/0-DTGW.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2e1-0-VM.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2e1-0-VM.jpg" width="100%"></a></p>
 </div>
 </div>
 <hr>
@@ -2669,11 +2701,19 @@ To offer direct access to the VM, differentes options sont possibles:  </p>
 <ul>
 <li>
 <p><strong>Create a Subnet Public and plug the VM on it</strong><br>
-  Under <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Network - Go to Service</strong></p>
+  Under <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Network - Go to Service</strong>  </p>
+<div class="admonition warning">
+<p class="admonition-title">XXX PERSONAL Drafting Note</p>
+<p>xxx Provide the steps xxx  </p>
+</div>
 </li>
 <li>
 <p><strong>Create a Load Balancer in front of the VM</strong><br>
-  Under <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Network - Go to Service</strong></p>
+  Under <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Network - Go to Service</strong>  </p>
+<div class="admonition warning">
+<p class="admonition-title">XXX PERSONAL Drafting Note</p>
+<p>xxx Provide the steps xxx  </p>
+</div>
 </li>
 </ul>
 

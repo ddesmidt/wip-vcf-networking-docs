@@ -10,7 +10,7 @@ This section describes the procedures for **deploying the "NSX + DTGW/VNA" archi
 </div>
 
 <div markdown>
-![DTGW Architecture](images/2a2-0-DTGW_VNA.jpg){ width="100%" }
+![DTGW Architecture](images/2b2-0-DTGW_VNA.jpg){ width="100%" }
 </div>
 </div>
 

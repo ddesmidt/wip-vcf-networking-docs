@@ -15,7 +15,7 @@ This section describes the procedures for **deploying the VKS Supervisor with "N
 </div>
 
 <div markdown>
-![VDS Architecture](images/0-DTGW.jpg){ width="100%" }
+![VDS Architecture](images/2d1-0-Namespace.jpg){ width="100%" }
 </div>
 </div>
 

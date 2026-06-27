@@ -8,22 +8,22 @@
 
 This section describes the procedures for **deploying an application (VMs/K8s) into the VKS Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
 
-* **Deployment App (VMs)**
+* Deployment App (VMs)
     * [via vCenter UI](2e1-deployment-vms.md)
-    * [**via yaml**](#deployment_vms)
-* Deployment App (k8s)
+    * [via yaml](2e2-deployment-vms.md)
+* **Deployment App (k8s)**
     * [via vCenter UI](2f1-deployment-k8s.md)
-    * [via yaml](2f2-deployment-k8s.md)
+    * [**via yaml**](#deployment_k8s)
 </div>
 
 <div markdown>
-![VDS Architecture](images/2e1-0-VM.jpg){ width="100%" }
+![VDS Architecture](images/2f1-0-VM.jpg){ width="100%" }
 </div>
 </div>
 
 ---
 
-## Deployment App (VMs) {: #deployment_vms }
+## Deployment App (k8s) {: #deployment_k8s }
 
 ### Deploy a Full Application (Load Balancer + VMs) via yaml
 

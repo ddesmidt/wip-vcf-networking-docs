@@ -8,16 +8,16 @@
 
 This section describes the procedures for **deploying an application (VMs/K8s) into the VKS Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
 
-- [Deployment App (VMs) {: #deployment\_vms }](#deployment-app-vms--deployment_vms-)
-  - [Deploy a VM via the vCenter UI](#deploy-a-vm-via-the-vcenter-ui)
-  - [Validate deployment and status of the VM](#validate-deployment-and-status-of-the-vm)
-    - [via vCenter Supervisor Namespace](#via-vcenter-supervisor-namespace)
-    - [via vCenter Inventory](#via-vcenter-inventory)
-  - [Access the VM](#access-the-vm)
+* **Deployment App (VMs)**
+    * [**via vCenter UI**](#deployment_vms)
+    * [via yaml](2e2-deployment-vms.md)
+* Deployment App (k8s)
+    * [via vCenter UI](2f1-deployment-k8s.md)
+    * [via yaml](2f2-deployment-k8s.md)
 </div>
 
 <div markdown>
-![VDS Architecture](images/0-DTGW.jpg){ width="100%" }
+![VDS Architecture](images/2e1-0-VM.jpg){ width="100%" }
 </div>
 </div>
 
@@ -62,8 +62,17 @@ By default the VM is connected to a private network for security reasons.
 To offer direct access to the VM, differentes options sont possibles:  
 
 * **Create a Subnet Public and plug the VM on it**  
-  Under **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Network - Go to Service**
+  Under **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Network - Go to Service**  
+
+    !!! warning "XXX PERSONAL Drafting Note"
+        xxx Provide the steps xxx  
+
+
 
 * **Create a Load Balancer in front of the VM**  
-  Under **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Network - Go to Service**
+  Under **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Network - Go to Service**  
+  
+    !!! warning "XXX PERSONAL Drafting Note"
+        xxx Provide the steps xxx  
+
 

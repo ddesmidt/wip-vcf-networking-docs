@@ -10,7 +10,7 @@ This section describes the procedures for **deploying the "NSX Overlay"** within
 </div>
 
 <div markdown>
-![DTGW Architecture](images/2a1-0-NSXInstall.jpg){ width="100%" }
+![DTGW Architecture](images/2b1-0-NSXInstall.jpg){ width="100%" }
 </div>
 </div>
 
@@ -18,4 +18,5 @@ This section describes the procedures for **deploying the "NSX Overlay"** within
 
 ## Installation
 
-xxx
+!!! warning "XXX PERSONAL Drafting Note"
+    xxx Provide the steps xxx  

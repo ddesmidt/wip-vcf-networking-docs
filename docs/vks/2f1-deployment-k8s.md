@@ -8,13 +8,17 @@
 
 This section describes the procedures for **deploying an application (VMs/K8s) into the VKS Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
 
-* [Deployment App (VMs) via vCenter UI](2e1-deployment-vms.md)
-* [Deployment App (VMs) via yaml](2e2-deployment-vms.md)
-* [**Deployment App (k8s) via yaml**](#deployment_k8s)
+* Deployment App (VMs)
+    * [via vCenter UI](2e1-deployment-vms.md)
+    * [via yaml](2e2-deployment-vms.md)
+* **Deployment App (k8s)**
+    * [**via vCenter UI**](#deployment_k8s)
+    * [via yaml](2f2-deployment-k8s.md)
+
 </div>
 
 <div markdown>
-![VDS Architecture](images/0-DTGW.jpg){ width="100%" }
+![VDS Architecture](images/2f1-0-VM.jpg){ width="100%" }
 </div>
 </div>
 
