@@ -74,3 +74,12 @@ img.center {
   margin-right: 10px;
 }
 
+/* Indent all top-level content, but keep headings (h1-h6) aligned to the far left */
+.md-typeset > :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(hr) {
+  margin-left: 1rem; /* Adjust this value to your preferred indentation */
+}
+
+/* Optional: Ensure grid cards don't look weird with the new margin */
+.md-typeset > .grid {
+  margin-left: 1rem; 
+}
