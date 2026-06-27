@@ -6,18 +6,20 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying the VKS Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.
+This section describes the procedures for **deploying a Supervisor Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
 
-* [Requirements](2a-requirements.md)
-* [Supervisor Deployment](2c-deploy-supervisor.md)
-* [**Namespace Deployment**](#namespacedeployment)
-* [Namespace Access](2d2-access-namespace.md)
+* **Namespace**
+    * [**Deployment**](#namespacedeployment)
+    * [Accesss via CLI](2d2-access-namespace.md)
+
 </div>
 
 <div markdown>
 ![VDS Architecture](images/2d1-0-Namespace.jpg){ width="100%" }
 </div>
 </div>
+
+---
 
 ## Namespace Deployment {: #namespacedeployment }
 
@@ -92,7 +94,8 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **
 ![Navigate to Namespace VM Class](images/2d1-3a-NameSpace.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 1. **Add VM Classes** Select **VM Classes**, and click **OK**.  
-    *I filter here all VM Classes type "small" and "xsmall".* ![Add VM Classes](images/2d1-5b-AddVMClass.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+*I selected here all VM Classes type "small" and "medium".*
+![Add VM Classes](images/2d1-5b-AddVMClass.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
 
 

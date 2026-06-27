@@ -1588,6 +1588,8 @@
       
         
       
+        
+      
     
     
     
@@ -2192,7 +2194,129 @@
   <span class="md-ellipsis">
     
   
-    Namespace Access via Kubectl
+    Namespace Access via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_4">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_4" id="__nav_3_3_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K8s Cluster Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    K8s Cluster Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2e1-deployment-k8s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via vCenter UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2e2-deployment-k8s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via yaml
   
 
     
@@ -2345,7 +2469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2e1-deployment-vms/" class="md-nav__link">
+      <a href="../2f1-deployment-vms/" class="md-nav__link">
         
   
   
@@ -2373,7 +2497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2e2-deployment-vms/" class="md-nav__link">
+      <a href="../2f2-deployment-vms/" class="md-nav__link">
         
   
   
@@ -2467,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2f1-deployment-k8s/" class="md-nav__link">
+      <a href="../2g1-deployment-pods/" class="md-nav__link">
         
   
   
@@ -2495,7 +2619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2f2-deployment-k8s/" class="md-nav__link">
+      <a href="../2g2-deployment-pods/" class="md-nav__link">
         
   
   
@@ -2700,12 +2824,9 @@
 
 <div class="grid" style="grid-template-columns: 60% 40%">
 <div>
-<p>This section describes the procedures for <strong>deploying the VKS Supervisor with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
+<p>This section describes the procedures for <strong>deploying a Supervisor with "NSX + DTGW/VNA"</strong> within a vSphere environment.  </p>
 <ul>
-<li><a href="../2a-requirements/">Requirements</a></li>
 <li><a href="#supervisordeployment"><strong>Supervisor Deployment</strong></a></li>
-<li><a href="../2d1-deploy-namespace/">Namespace Deployment</a></li>
-<li><a href="../2d2-access-namespace/">Namespace Access</a></li>
 </ul>
 </div>
 <div>
@@ -2775,6 +2896,7 @@
 </ul>
 </li>
 </ol>
+<hr>
 <h3 id="finish-supervisor-creation-for-future-kubernetes-clusters">Finish Supervisor Creation for future Kubernetes Clusters</h3>
 <h4 id="create-a-content-library-for-future-kubernetes-clusters"><strong>Create a Content Library for future Kubernetes Clusters</strong></h4>
 <p>If you plan to deploy Kubernetes Clusters, create a Content Library with VKS images.<br>
@@ -2828,6 +2950,7 @@ Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-4c-SelectContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-4c-SelectContentLibrary.jpg" style="display: block; margin: 0 auto;" width="65%"></a>  </p>
 </li>
 </ol>
+<hr>
 <h3 id="validate-deployment">Validate Deployment</h3>
 <h4 id="validate-supervisor-status"><strong>Validate Supervisor Status</strong></h4>
 <p>Once the wizard completes, verify the deployment was successful by navigating to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>. </p>

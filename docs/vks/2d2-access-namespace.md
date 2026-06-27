@@ -6,18 +6,22 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying the VKS Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.
+This section describes the procedures for **deploying a Supervisor Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
 
-* [Requirements](2a-requirements.md)
-* [Supervisor Deployment](2c-deploy-supervisor.md)
-* [Namespace Deployment](2d1-deploy-namespace.md)
-* [**Namespace Access**](#namespaceaccess)
+* **Namespace**
+    * [Deployment](2d1-deploy-namespace.md)
+    * [**Accesss via CLI**](#namespaceaccess)
+
 </div>
 
 <div markdown>
 ![VDS Architecture](images/2d1-0-Namespace.jpg){ width="100%" }
 </div>
 </div>
+
+
+---
+
 
 ## Namespace Access {: #namespaceaccess }
 
@@ -26,12 +30,15 @@ This section describes the procedures for **deploying the VKS Supervisor with "N
 
 ### Connect to Namespace via Kubectl client {: #namespacek8sclient }
 
+??? info ":material-laptop: Client Operating System"
+    While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.
+
 #### Find Supervisor Control Plane IP Address
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**.  
 ![Supervisor Validation Status](images/2b-5a-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
 
 #### Connect to the Supervisor
-From your K8s client (mine is Windows):
+From your K8s client:
 
 * **Create the VCF Context**  
     ```text

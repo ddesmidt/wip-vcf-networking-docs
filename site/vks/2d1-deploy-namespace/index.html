@@ -1588,6 +1588,8 @@
       
         
       
+        
+      
     
     
     
@@ -2214,7 +2216,129 @@
   <span class="md-ellipsis">
     
   
-    Namespace Access via Kubectl
+    Namespace Access via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_4">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_4" id="__nav_3_3_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K8s Cluster Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    K8s Cluster Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2e1-deployment-k8s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via vCenter UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2e2-deployment-k8s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via yaml
   
 
     
@@ -2367,7 +2491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2e1-deployment-vms/" class="md-nav__link">
+      <a href="../2f1-deployment-vms/" class="md-nav__link">
         
   
   
@@ -2395,7 +2519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2e2-deployment-vms/" class="md-nav__link">
+      <a href="../2f2-deployment-vms/" class="md-nav__link">
         
   
   
@@ -2489,7 +2613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2f1-deployment-k8s/" class="md-nav__link">
+      <a href="../2g1-deployment-pods/" class="md-nav__link">
         
   
   
@@ -2517,7 +2641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2f2-deployment-k8s/" class="md-nav__link">
+      <a href="../2g2-deployment-pods/" class="md-nav__link">
         
   
   
@@ -2744,18 +2868,20 @@
 
 <div class="grid" style="grid-template-columns: 60% 40%">
 <div>
-<p>This section describes the procedures for <strong>deploying the VKS Supervisor with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
+<p>This section describes the procedures for <strong>deploying a Supervisor Namespace with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
 <ul>
-<li><a href="../2a-requirements/">Requirements</a></li>
-<li><a href="../2c-deploy-supervisor/">Supervisor Deployment</a></li>
-<li><a href="#namespacedeployment"><strong>Namespace Deployment</strong></a></li>
-<li><a href="../2d2-access-namespace/">Namespace Access</a></li>
+<li><strong>Namespace</strong><ul>
+<li><a href="#namespacedeployment"><strong>Deployment</strong></a></li>
+<li><a href="../2d2-access-namespace/">Accesss via CLI</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-0-Namespace.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2d1-0-Namespace.jpg" width="100%"></a></p>
 </div>
 </div>
+<hr>
 <h2 id="namespacedeployment">Namespace Deployment</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-0-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2d1-0-Topology.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <h3 id="create-namespace">Create Namespace</h3>
@@ -2834,7 +2960,8 @@ Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-3a-NameSpace.jpg" data-desc-position="bottom"><img alt="Navigate to Namespace VM Class" src="../images/2d1-3a-NameSpace.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 <ol>
 <li><strong>Add VM Classes</strong> Select <strong>VM Classes</strong>, and click <strong>OK</strong>.<br>
-<em>I filter here all VM Classes type "small" and "xsmall".</em> <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-5b-AddVMClass.jpg" data-desc-position="bottom"><img alt="Add VM Classes" src="../images/2d1-5b-AddVMClass.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </li>
+<em>I selected here all VM Classes type "small" and "medium".</em>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-5b-AddVMClass.jpg" data-desc-position="bottom"><img alt="Add VM Classes" src="../images/2d1-5b-AddVMClass.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </li>
 </ol>
 <hr>
 <h3 id="validate-deployment">Validate Deployment</h3>

@@ -6,7 +6,13 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying the "NSX + DTGW/VNA" architecture** within a vSphere environment.
+This section describes the requirements for **deploying the VKS Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.
+
+* [Requirements](2a-requirements.md)
+* **Install Requirements**
+    * [NSX Overlay](2b1-deploy-NSXOverlay.md)
+    * [**DTGW + VNA**](#installation)
+
 </div>
 
 <div markdown>
@@ -16,7 +22,7 @@ This section describes the procedures for **deploying the "NSX + DTGW/VNA" archi
 
 ---
 
-## Install Requirements - DTGW + VNA
+## Install Requirements - DTGW + VNA {: #installation }
 
 When no Transit Gateway has been deployed, NSX offers a simple wizard to deploy the DTGW + VNA.
 

@@ -6,7 +6,13 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying the "NSX Overlay"** within a vCenter Cluster.
+This section describes the requirements for **deploying the VKS Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.
+
+* [Requirements](2a-requirements.md)
+* **Install Requirements**
+    * [**NSX Overlay**](#installation)
+    * [DTGW + VNA](2b2-deploy-DTGW_VNA.md)
+
 </div>
 
 <div markdown>
@@ -16,7 +22,7 @@ This section describes the procedures for **deploying the "NSX Overlay"** within
 
 ---
 
-## Installation
+## Installation {: #installation }
 
 !!! warning "XXX PERSONAL Drafting Note"
     xxx Provide the steps xxx  

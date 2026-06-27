@@ -9,15 +9,15 @@
 This section describes the procedures for **deploying an application (VMs/K8s) into the VKS Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
 
 * **Deployment App (VMs)**
-    * [via vCenter UI](2e1-deployment-vms.md)
+    * [via vCenter UI](2f1-deployment-vms.md)
     * [**via yaml**](#deployment_vms)
 * Deployment App (k8s)
-    * [via vCenter UI](2f1-deployment-k8s.md)
-    * [via yaml](2f2-deployment-k8s.md)
+    * [via vCenter UI](2g1-deployment-pods.md)
+    * [via yaml](2g2-deployment-pods.md)
 </div>
 
 <div markdown>
-![VDS Architecture](images/2e1-0-VM.jpg){ width="100%" }
+![VDS Architecture](images/2f1-0-VM.jpg){ width="100%" }
 </div>
 </div>
 
@@ -27,7 +27,10 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ### Deploy a Full Application (Load Balancer + VMs) via yaml
 
-![Topology](images/2e2-2-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
+![Topology](images/2f2-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
+
+??? info ":material-laptop: Client Operating System"
+    While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.
 
 #### Connect to Supervisor Namespace via kubectl  
 See [Connect to Namespace via Kubectl client](2d2-access-namespace.md#namespacek8sclient)
@@ -145,6 +148,7 @@ kubectl apply -f my-web-farm.yaml
     virtualmachineservice.vmoperator.vmware.com/web-lb-vip created
     </code></pre>
 
+---
 
 ### Validate deployment of the application (LB + 2 VMs apache) 
 * **Check application VIP**  
@@ -170,6 +174,8 @@ kubectl apply -f my-web-farm.yaml
         <b>web-vm-2</b>   PoweredOn     best-effort-xsmall   vmi-4143a3379f59e4a48   <b>172.30.0.4</b>    46
         </code></pre>
 
+---
+
 ### Access the application (LB + 2 VMs apache) 
 ```text
 curl http://10.1.7.137
@@ -182,6 +188,5 @@ curl http://10.1.7.137
     PS C:\Users\Administrator\Documents> <b>curl http://10.1.7.137</b>
     &lt;h1&gt;Hello from <b>web-vm-2</b>&lt;/h1&gt;
     </code></pre>
-
 
 

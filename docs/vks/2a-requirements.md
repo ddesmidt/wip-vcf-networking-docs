@@ -6,12 +6,13 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying the VKS Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.
+This section describes the requirements for **deploying the VKS Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.
 
 * [**Requirements**](#requirements)
-* [Supervisor Deployment](2c-deploy-supervisor.md)
-* [Namespace Deployment](2d1-deploy-namespace.md)
-* [Namespace Access](2d2-access-namespace.md)
+* Install Requirements
+    * [NSX Overlay](2b1-deploy-NSXOverlay.md)
+    * [DTGW + VNA](2b2-deploy-DTGW_VNA.md)
+
 </div>
 
 <div markdown>
@@ -39,6 +40,8 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
 
 * **Note:** No requirement for dynamic routing (such as BGP).
 
+---
+
 ### vCenter {: #vcenter }
 
 #### **VDS Port Group**  
@@ -49,6 +52,8 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
         Navigate to **vCenter** > **Networking** > **VDS-PortGroup** > **Edit Settings** > **VLAN**.  
         Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
         ![VDS Port Group Settings](images/1a-2a-VDS-PG.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+
+---
 
 ### NSX {: #nsx }
 

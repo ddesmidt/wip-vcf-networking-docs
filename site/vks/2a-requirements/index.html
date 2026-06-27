@@ -1588,6 +1588,8 @@
       
         
       
+        
+      
     
     
     
@@ -2198,7 +2200,129 @@
   <span class="md-ellipsis">
     
   
-    Namespace Access via Kubectl
+    Namespace Access via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_4">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_4" id="__nav_3_3_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K8s Cluster Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    K8s Cluster Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2e1-deployment-k8s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via vCenter UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2e2-deployment-k8s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via yaml
   
 
     
@@ -2351,7 +2475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2e1-deployment-vms/" class="md-nav__link">
+      <a href="../2f1-deployment-vms/" class="md-nav__link">
         
   
   
@@ -2379,7 +2503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2e2-deployment-vms/" class="md-nav__link">
+      <a href="../2f2-deployment-vms/" class="md-nav__link">
         
   
   
@@ -2473,7 +2597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2f1-deployment-k8s/" class="md-nav__link">
+      <a href="../2g1-deployment-pods/" class="md-nav__link">
         
   
   
@@ -2501,7 +2625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2f2-deployment-k8s/" class="md-nav__link">
+      <a href="../2g2-deployment-pods/" class="md-nav__link">
         
   
   
@@ -2712,12 +2836,14 @@
 
 <div class="grid" style="grid-template-columns: 60% 40%">
 <div>
-<p>This section describes the procedures for <strong>deploying the VKS Supervisor with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
+<p>This section describes the requirements for <strong>deploying the VKS Supervisor with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
 <ul>
 <li><a href="#requirements"><strong>Requirements</strong></a></li>
-<li><a href="../2c-deploy-supervisor/">Supervisor Deployment</a></li>
-<li><a href="../2d1-deploy-namespace/">Namespace Deployment</a></li>
-<li><a href="../2d2-access-namespace/">Namespace Access</a></li>
+<li>Install Requirements<ul>
+<li><a href="../2b1-deploy-NSXOverlay/">NSX Overlay</a></li>
+<li><a href="../2b2-deploy-DTGW_VNA/">DTGW + VNA</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div>
@@ -2743,6 +2869,7 @@
 <p><strong>Note:</strong> No requirement for dynamic routing (such as BGP).</p>
 </li>
 </ul>
+<hr>
 <h3 id="vcenter">vCenter</h3>
 <h4 id="vds-port-group"><strong>VDS Port Group</strong></h4>
 <ul>
@@ -2757,6 +2884,7 @@ Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
 </details>
 </li>
 </ul>
+<hr>
 <h3 id="nsx">NSX</h3>
 <div class="admonition warning">
 <p class="admonition-title">XXX PERSONAL Drafting Note</p>

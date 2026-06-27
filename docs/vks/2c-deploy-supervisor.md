@@ -6,12 +6,10 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying the VKS Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.
+This section describes the procedures for **deploying a Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.  
 
-* [Requirements](2a-requirements.md)
 * [**Supervisor Deployment**](#supervisordeployment)
-* [Namespace Deployment](2d1-deploy-namespace.md)
-* [Namespace Access](2d2-access-namespace.md)
+
 </div>
 
 <div markdown>
@@ -61,6 +59,7 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and click
     ![Review and Complete](images/2b-1g-Ready.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 
+---
 
 ### Finish Supervisor Creation for future Kubernetes Clusters
 
@@ -108,6 +107,7 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **
     Select **Content Library with VKS images**, and click **ADD**.  
     ![vCenter Server and Network Configuration](images/2b-4c-SelectContentLibrary.jpg){ width="65%" style="display: block; margin: 0 auto;" }  
 
+---
 
 ### Validate Deployment
 
