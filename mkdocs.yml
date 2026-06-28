@@ -87,7 +87,7 @@ nav:
               - Namespace Installation(ToDO): vks/1c-deploy-namespace.md
           - Application Deployment:
               - App Deployment (VMs)(ToDO): vks/1d-deployment-vms.md
-              - App Deployment (k8s)(ToDO): vks/1e-deployment-k8s.md
+              - App Deployment (K8s)(ToDO): vks/1e-deployment-k8s.md
       - NSX + DTGW/VNA:
           - Installation:
               - Requirements:
@@ -102,15 +102,14 @@ nav:
                 - Namespace Access via CLI: vks/2d2-access-namespace.md
               - K8s Cluster Deployment:
                 - via vCenter UI: vks/2e1-deployment-k8s.md
-                - via yaml(ToDO): vks/2e2-deployment-k8s.md
+                - via CLI: vks/2e2-deployment-k8s.md
           - Application Deployment:
               - App Deployment (VMs):
                 - via vCenter UI: vks/2f1-deployment-vms.md
                 - via CLI: vks/2f2-deployment-vms.md
-              - App Deployment (k8s): 
-                - via vCenter UI(ToDO): vks/2g1-deployment-pods.md
-                - via CLI(ToDO): vks/2g2-deployment-pods.md
-          - Network Services(ToDO):
+              - App Deployment (K8s): 
+                - via CLI: vks/2g1-deployment-pods.md
+          - Network Services(ToDO): 
               - Subnets(ToDO): vks/2h1-network-subnet.md
               - SubnetSets(ToDO): vks/2h2-network-subnetset.md
               - Static Routes(ToDO): vks/2h3-network-staticroute.md

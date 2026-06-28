@@ -12,8 +12,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
     * [via vCenter UI](2f1-deployment-vms.md)
     * [**via CLI**](#deployment_vms)
 * Deployment App (k8s)
-    * [via vCenter UI](2g1-deployment-pods.md)
-    * [via CLI](2g2-deployment-pods.md)
+    * [via CLI](2g1-deployment-pods.md)
 </div>
 
 <div markdown>
@@ -25,15 +24,13 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ## Deployment App (VMs) {: #deployment_vms }
 
-### Deploy a Full Application (Load Balancer + VMs) via CLI
-
-![Topology](images/2f2-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
-
 ??? info ":material-laptop: Client Operating System"
     While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.
 
-#### Connect to Supervisor Namespace via kubectl  
-See [Connect to Namespace via Kubectl client](2d2-access-namespace.md#namespacek8sclient)
+### Deploy a Full Application (Load Balancer + VMs)
+
+#### Connect to Supervisor Namespace  
+See [Namespace Access via CLI](2d2-access-namespace.md#namespacek8sclient)
 
 #### Create application (LB + 2 VMs apache) yaml file  
 Create file "my-web-farm.yaml"
@@ -153,7 +150,7 @@ kubectl apply -f my-web-farm.yaml
 ### Validate deployment of the application (LB + 2 VMs apache) 
 * **Check application VIP**  
   ```text
-  get service web-lb-vip
+  kubectl get service web-lb-vip
   ```
 
     ??? info "Output example"

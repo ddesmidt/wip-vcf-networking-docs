@@ -27,11 +27,10 @@ This section describes the procedures for **deploying a Supervisor Namespace wit
 
 ![Topology](images/2d1-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
-
-### Connect to Namespace via Kubectl client {: #namespacek8sclient }
-
 ??? info ":material-laptop: Client Operating System"
     While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.
+
+### Connect to Namespace {: #namespacek8sclient }
 
 #### Find Supervisor Control Plane IP Address
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**.  
@@ -40,7 +39,7 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**.
 #### Connect to the Supervisor
 From your K8s client:
 
-* **Create the VCF Context**  
+* **Create once the VCF Context**  
     ```text
     vcf context create supervisor-mgt --endpoint=10.1.7.134 --type k8s --username administrator@vsphere.local --insecure-skip-tls-verify
     ```
@@ -84,6 +83,21 @@ From your K8s client:
 #### Connect to the Supervisor Namespace
 When the VCF Context has been created once (see above):
 
+* **List the Supervisor Namespaces**  
+    ```text
+    vcf context list
+    ```
+
+    ??? info "Output example"
+        <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context list</b>
+        NAME                             CURRENT  TYPE
+        <b>supervisor-mgt                   false    kubernetes</b>
+        supervisor-mgt:demo-space        true     kubernetes
+        supervisor-mgt:svc-cci-ns-whl2t  false    kubernetes
+        supervisor-mgt:svc-tkg-f0cpi     false    kubernetes
+        supervisor-mgt:svc-velero-t234z  false    kubernetes
+        </code></pre>
+
 * **Connect to the Supervisor Namespace**  
     ```text
     vcf context use supervisor-mgt:demo-space
@@ -108,7 +122,6 @@ When the VCF Context has been created once (see above):
         [i] Installed plugin 'kubernetes-release:v3.6.1'
         [i] Installed plugin 'package:v3.6.1'
         [i] Installed plugin 'registry-secret:v3.6.1'
-        [x] unable to automatically sync the plugins recommended by the active context. Please run 'vcf plugin sync' to sync plugins manually, error: [unable to find plugin 'namespaces' matching version 'v9.1.0', unable to find plugin 'vm' matching version 'v9.1.0']
         </code></pre>
 
 * **Validate the current Supervisor Namespace context**  

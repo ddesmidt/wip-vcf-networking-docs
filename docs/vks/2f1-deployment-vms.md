@@ -12,8 +12,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
     * [**via vCenter UI**](#deployment_vms)
     * [via CLI](2f2-deployment-vms.md)
 * Deployment App (k8s)
-    * [via vCenter UI](2g1-deployment-pods.md)
-    * [via CLI](2g2-deployment-pods.md)
+    * [via CLI](2g1-deployment-pods.md)
 </div>
 
 <div markdown>
@@ -25,7 +24,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ## Deployment App (VMs) {: #deployment_vms }
 
-### Deploy a VM via the vCenter UI
+### Deploy a VM
 
 ![Topology](images/2f1-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
 
