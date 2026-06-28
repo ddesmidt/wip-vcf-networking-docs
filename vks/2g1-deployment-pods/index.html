@@ -11,7 +11,7 @@
         <link rel="prev" href="../2f2-deployment-vms/">
       
       
-        <link rel="next" href="../2g2-deployment-pods/">
+        <link rel="next" href="../2h1-network-subnet/">
       
       
         
@@ -22,7 +22,7 @@
     
     
       
-        <title>via vCenter UI(ToDO) - VCF Networking Encyclopedia</title>
+        <title>via CLI - VCF Networking Encyclopedia</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              via vCenter UI(ToDO)
+              via CLI
             
           </span>
         </div>
@@ -1478,7 +1478,7 @@
   <span class="md-ellipsis">
     
   
-    App Deployment (k8s)(ToDO)
+    App Deployment (K8s)(ToDO)
   
 
     
@@ -2167,7 +2167,7 @@
   <span class="md-ellipsis">
     
   
-    via yaml(ToDO)
+    via CLI
   
 
     
@@ -2392,8 +2392,6 @@
       
         
       
-        
-      
     
     
     
@@ -2417,7 +2415,7 @@
   <span class="md-ellipsis">
     
   
-    App Deployment (k8s)
+    App Deployment (K8s)
   
 
     
@@ -2433,7 +2431,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    App Deployment (k8s)
+    App Deployment (K8s)
   
 
           </label>
@@ -2460,7 +2458,7 @@
   <span class="md-ellipsis">
     
   
-    via vCenter UI(ToDO)
+    via CLI
   
 
     
@@ -2478,7 +2476,7 @@
   <span class="md-ellipsis">
     
   
-    via vCenter UI(ToDO)
+    via CLI
   
 
     
@@ -2514,10 +2512,82 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deploy-a-full-application-load-balancer-vms-via-the-vcenter-ui" class="md-nav__link">
+  <a href="#deploy-a-full-application-load-balancer-vms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deploy a Full Application (Load Balancer + VMs) via the vCenter UI
+        Deploy a Full Application (Load Balancer + VMs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy a Full Application (Load Balancer + VMs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-k8s-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to the K8s Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-create-a-namespace-in-the-k8s-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Optional) Create a Namespace in the K8s Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-application-lb-2-vms-apache-yaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create application (LB + 2 VMs apache) yaml file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy the application (LB + 2 VMs apache)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-deployment-of-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate deployment of the application (LB + 2 VMs apache)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access the application (LB + 2 VMs apache)
       
     </span>
   </a>
@@ -2533,34 +2603,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../2g2-deployment-pods/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    via CLI(ToDO)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -3062,10 +3104,82 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deploy-a-full-application-load-balancer-vms-via-the-vcenter-ui" class="md-nav__link">
+  <a href="#deploy-a-full-application-load-balancer-vms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deploy a Full Application (Load Balancer + VMs) via the vCenter UI
+        Deploy a Full Application (Load Balancer + VMs)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy a Full Application (Load Balancer + VMs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-k8s-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to the K8s Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-create-a-namespace-in-the-k8s-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Optional) Create a Namespace in the K8s Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-application-lb-2-vms-apache-yaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create application (LB + 2 VMs apache) yaml file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy the application (LB + 2 VMs apache)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-deployment-of-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate deployment of the application (LB + 2 VMs apache)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-the-application-lb-2-vms-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access the application (LB + 2 VMs apache)
       
     </span>
   </a>
@@ -3108,8 +3222,7 @@
 </ul>
 </li>
 <li><strong>Deployment App (k8s)</strong><ul>
-<li><a href="#deployment_pods"><strong>via vCenter UI</strong></a></li>
-<li><a href="../2g2-deployment-pods/">via CLI</a></li>
+<li><a href="#deployment_pods"><strong>via CLI</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -3120,7 +3233,127 @@
 </div>
 <hr>
 <h2 id="deployment_pods">Deployment App (k8s)</h2>
-<h3 id="deploy-a-full-application-load-balancer-vms-via-the-vcenter-ui">Deploy a Full Application (Load Balancer + VMs) via the vCenter UI</h3>
+<details class="info">
+<summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2z"></path></svg></span> Client Operating System</summary>
+<p>While the command outputs below are captured from a <strong>Windows client</strong>, the <code>vcf</code> and <code>kubectl</code> CLI tools operate identically across <strong>Linux</strong> and <strong>macOS</strong> environments.</p>
+</details>
+<h3 id="deploy-a-full-application-load-balancer-vms">Deploy a Full Application (Load Balancer + VMs)</h3>
+<h4 id="connect-to-the-k8s-cluster">Connect to the K8s Cluster</h4>
+<p>See <a href="../2e2-deployment-k8s/#connect_k8s">Connect to the K8s Cluster</a></p>
+<h4 id="optional-create-a-namespace-in-the-k8s-cluster">(Optional) Create a Namespace in the K8s Cluster</h4>
+<p>The goal is to deploy the application is a specific K8s Cluster Namespace (not default).<br>
+</p><div class="highlight"><pre><span></span><code>kubectl create namespace ns1
+</code></pre></div>
+And allow the deployment of applications.<br>
+<div class="highlight"><pre><span></span><code>kubectl label ns ns1 pod-security.kubernetes.io/enforce=baseline
+</code></pre></div><p></p>
+<details class="info">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl create namespace ns1</b>
+namespace/ns1 created
+&nbsp;
+PS C:\Users\Administrator\Documents&gt; <b>kubectl label ns ns1 pod-security.kubernetes.io/enforce=baseline</b>
+namespace/ns1 labeled
+</code></pre><p></p>
+</details>
+<h4 id="create-application-lb-2-vms-apache-yaml-file">Create application (LB + 2 VMs apache) yaml file</h4>
+<p>Create file "apache-k8s.yaml"</p>
+<details class="info">
+<summary>apache-k8s.yaml file</summary>
+<div class="highlight"><pre><span></span><code>apiVersion: v1
+kind: Service
+metadata:
+  name: apache-vip-service
+  namespace: ns1
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: apache-web
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache-deployment
+  namespace: ns1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: apache-web
+  template:
+    metadata:
+      labels:
+        app: apache-web
+    spec:
+      containers:
+        - name: apache
+          image: public.ecr.aws/docker/library/httpd:2.4
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          # Intercept startup to write the file, THEN start Apache
+          command: ["/bin/sh", "-c"]
+          args: 
+            - 'sed -i "s/Listen 80/Listen 8080/g" /usr/local/apache2/conf/httpd.conf &amp;&amp; echo "&lt;h1&gt;It works - Pod: $HOSTNAME&lt;/h1&gt;" &gt; /usr/local/apache2/htdocs/index.html &amp;&amp; httpd-foreground'
+</code></pre></div>
+</details>
+<h4 id="deploy-the-application-lb-2-vms-apache">Deploy the application (LB + 2 VMs apache)</h4>
+<div class="highlight"><pre><span></span><code>kubectl apply -f apache-k8s.yaml
+</code></pre></div>
+<details class="info">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl apply -f apache-k8s.yaml</b>
+service/apache-vip-service created
+deployment.apps/apache-deployment created
+</code></pre><p></p>
+</details>
+<hr>
+<h3 id="validate-deployment-of-the-application-lb-2-vms-apache">Validate deployment of the application (LB + 2 VMs apache)</h3>
+<ul>
+<li>
+<p><strong>Check application VIP</strong><br>
+<code>text
+kubectl get service apache-vip-service -n ns1</code></p>
+<details class="info">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get service apache-vip-service -n ns1</b>
+NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+apache-vip-service   LoadBalancer   10.107.238.63   10.1.7.138    80:32329/TCP   53s
+</code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Check application Pods</strong><br>
+  </p><div class="highlight"><pre><span></span><code>kubectl get pods -n ns1
+</code></pre></div><p></p>
+<details class="info">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get pods -n ns1</b>
+NAME                                 READY   STATUS    RESTARTS   AGE
+apache-deployment-58bf9564f6-c8gqc   1/1     Running   0          28s
+apache-deployment-58bf9564f6-dpmcd   1/1     Running   0          28s
+</code></pre><p></p>
+</details>
+</li>
+</ul>
+<hr>
+<h3 id="access-the-application-lb-2-vms-apache">Access the application (LB + 2 VMs apache)</h3>
+<div class="highlight"><pre><span></span><code>curl http://10.1.7.137
+</code></pre></div>
+<details class="info">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>curl http://10.1.7.138</b>
+&lt;h1&gt;It works - Pod: <b>apache-deployment-58bf9564f6-dpmcd</b>&lt;/h1&gt;
+&nbsp;
+PS C:\Users\Administrator\Documents&gt; <b>curl http://10.1.7.137</b>
+&lt;h1&gt;It works - Pod: <b>apache-deployment-58bf9564f6-c8gqc</b>&lt;/h1&gt;
+</code></pre><p></p>
+<p>The external load balancer (NSX) load balances (round-robin mode) to the Worker Nodes. Then, each Worker Node load balances to the Apache pods (random). So, to validate the load balancing to the different Apache pods, run the <code>curl</code> command multiple times.</p>
+</details>
 
 
 

@@ -1478,7 +1478,7 @@
   <span class="md-ellipsis">
     
   
-    App Deployment (k8s)(ToDO)
+    App Deployment (K8s)(ToDO)
   
 
     
@@ -2167,7 +2167,7 @@
   <span class="md-ellipsis">
     
   
-    via yaml(ToDO)
+    via CLI
   
 
     
@@ -2420,22 +2420,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deploy-a-full-application-load-balancer-vms-via-cli" class="md-nav__link">
+  <a href="#deploy-a-full-application-load-balancer-vms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deploy a Full Application (Load Balancer + VMs) via CLI
+        Deploy a Full Application (Load Balancer + VMs)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deploy a Full Application (Load Balancer + VMs) via CLI">
+    <nav class="md-nav" aria-label="Deploy a Full Application (Load Balancer + VMs)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-to-supervisor-namespace-via-kubectl" class="md-nav__link">
+  <a href="#connect-to-supervisor-namespace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connect to Supervisor Namespace via kubectl
+        Connect to Supervisor Namespace
       
     </span>
   </a>
@@ -2524,8 +2524,6 @@
       
         
       
-        
-      
     
     
     
@@ -2549,7 +2547,7 @@
   <span class="md-ellipsis">
     
   
-    App Deployment (k8s)
+    App Deployment (K8s)
   
 
     
@@ -2565,7 +2563,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    App Deployment (k8s)
+    App Deployment (K8s)
   
 
           </label>
@@ -2585,35 +2583,7 @@
   <span class="md-ellipsis">
     
   
-    via vCenter UI(ToDO)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../2g2-deployment-pods/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    via CLI(ToDO)
+    via CLI
   
 
     
@@ -3123,22 +3093,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deploy-a-full-application-load-balancer-vms-via-cli" class="md-nav__link">
+  <a href="#deploy-a-full-application-load-balancer-vms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deploy a Full Application (Load Balancer + VMs) via CLI
+        Deploy a Full Application (Load Balancer + VMs)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deploy a Full Application (Load Balancer + VMs) via CLI">
+    <nav class="md-nav" aria-label="Deploy a Full Application (Load Balancer + VMs)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-to-supervisor-namespace-via-kubectl" class="md-nav__link">
+  <a href="#connect-to-supervisor-namespace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Connect to Supervisor Namespace via kubectl
+        Connect to Supervisor Namespace
       
     </span>
   </a>
@@ -3230,8 +3200,7 @@
 </ul>
 </li>
 <li>Deployment App (k8s)<ul>
-<li><a href="../2g1-deployment-pods/">via vCenter UI</a></li>
-<li><a href="../2g2-deployment-pods/">via CLI</a></li>
+<li><a href="../2g1-deployment-pods/">via CLI</a></li>
 </ul>
 </li>
 </ul>
@@ -3242,14 +3211,13 @@
 </div>
 <hr>
 <h2 id="deployment_vms">Deployment App (VMs)</h2>
-<h3 id="deploy-a-full-application-load-balancer-vms-via-cli">Deploy a Full Application (Load Balancer + VMs) via CLI</h3>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2f2-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2f2-1-Topology.jpg" style="display: block; margin: 0 auto;" width="40%"></a></p>
 <details class="info">
 <summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2z"></path></svg></span> Client Operating System</summary>
 <p>While the command outputs below are captured from a <strong>Windows client</strong>, the <code>vcf</code> and <code>kubectl</code> CLI tools operate identically across <strong>Linux</strong> and <strong>macOS</strong> environments.</p>
 </details>
-<h4 id="connect-to-supervisor-namespace-via-kubectl">Connect to Supervisor Namespace via kubectl</h4>
-<p>See <a href="../2d2-access-namespace/#namespacek8sclient">Connect to Namespace via Kubectl client</a></p>
+<h3 id="deploy-a-full-application-load-balancer-vms">Deploy a Full Application (Load Balancer + VMs)</h3>
+<h4 id="connect-to-supervisor-namespace">Connect to Supervisor Namespace</h4>
+<p>See <a href="../2d2-access-namespace/#namespacek8sclient">Namespace Access via CLI</a></p>
 <h4 id="create-application-lb-2-vms-apache-yaml-file">Create application (LB + 2 VMs apache) yaml file</h4>
 <p>Create file "my-web-farm.yaml"</p>
 <details class="info">
@@ -3366,7 +3334,7 @@ virtualmachineservice.vmoperator.vmware.com/web-lb-vip created
 <ul>
 <li>
 <p><strong>Check application VIP</strong><br>
-  </p><div class="highlight"><pre><span></span><code>get service web-lb-vip
+  </p><div class="highlight"><pre><span></span><code>kubectl get service web-lb-vip
 </code></pre></div><p></p>
 <details class="info">
 <summary>Output example</summary>
