@@ -10,11 +10,10 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 * Deployment App (VMs)
     * [via vCenter UI](2f1-deployment-vms.md)
-    * [via yaml](2f2-deployment-vms.md)
+    * [via CLI](2f2-deployment-vms.md)
 * **Deployment App (k8s)**
     * [**via vCenter UI**](#deployment_pods)
-    * [via yaml](2g2-deployment-pods.md)
-
+    * [via CLI](2g2-deployment-pods.md)
 </div>
 
 <div markdown>
@@ -26,4 +25,6 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ## Deployment App (k8s) {: #deployment_pods }
 
-#
+### Deploy a Full Application (Load Balancer + VMs) via the vCenter UI
+
+

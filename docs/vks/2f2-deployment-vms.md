@@ -10,10 +10,10 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 * **Deployment App (VMs)**
     * [via vCenter UI](2f1-deployment-vms.md)
-    * [**via yaml**](#deployment_vms)
+    * [**via CLI**](#deployment_vms)
 * Deployment App (k8s)
     * [via vCenter UI](2g1-deployment-pods.md)
-    * [via yaml](2g2-deployment-pods.md)
+    * [via CLI](2g2-deployment-pods.md)
 </div>
 
 <div markdown>
@@ -25,7 +25,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ## Deployment App (VMs) {: #deployment_vms }
 
-### Deploy a Full Application (Load Balancer + VMs) via yaml
+### Deploy a Full Application (Load Balancer + VMs) via CLI
 
 ![Topology](images/2f2-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
 
@@ -161,6 +161,11 @@ kubectl apply -f my-web-farm.yaml
         NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
         web-lb-vip   LoadBalancer   172.29.143.82   <b>10.1.7.137</b>    80/TCP    24s
         </code></pre>
+
+    ??? warning "Load Balancer VM pool status"
+        The Load Balancer does not offer VM pool member healthchecks.  
+        If the VM or the application within the VM crashes, the load balancer will still use that member.
+
 
 * **Check application VMs**  
   ```text

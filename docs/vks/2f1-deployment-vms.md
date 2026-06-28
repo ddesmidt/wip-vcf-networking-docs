@@ -10,10 +10,10 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 * **Deployment App (VMs)**
     * [**via vCenter UI**](#deployment_vms)
-    * [via yaml](2f2-deployment-vms.md)
+    * [via CLI](2f2-deployment-vms.md)
 * Deployment App (k8s)
     * [via vCenter UI](2g1-deployment-pods.md)
-    * [via yaml](2g2-deployment-pods.md)
+    * [via CLI](2g2-deployment-pods.md)
 </div>
 
 <div markdown>
