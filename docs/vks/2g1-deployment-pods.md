@@ -24,6 +24,8 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ## Deployment App (k8s) {: #deployment_pods }
 
+![Topology](images/2g1-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
+
 ??? info ":material-laptop: Client Operating System"
     While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.
 
@@ -138,14 +140,14 @@ kubectl get service apache-vip-service -n ns1
 
 ### Access the application (LB + 2 VMs apache) 
 ```text
-curl http://10.1.7.137
+curl http://10.1.7.138
 ```
 
 ??? info "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>curl http://10.1.7.138</b>
     &lt;h1&gt;It works - Pod: <b>apache-deployment-58bf9564f6-dpmcd</b>&lt;/h1&gt;
     &nbsp;
-    PS C:\Users\Administrator\Documents> <b>curl http://10.1.7.137</b>
+    PS C:\Users\Administrator\Documents> <b>curl http://10.1.7.138</b>
     &lt;h1&gt;It works - Pod: <b>apache-deployment-58bf9564f6-c8gqc</b>&lt;/h1&gt;
     </code></pre>
     

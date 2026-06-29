@@ -24,9 +24,9 @@ This section describes the procedures for **deploying a K8s Cluster in a Namespa
 
 ## K8s Cluster Deployment {: #deployment_k8s }
 
-### Create K8s Cluster
-
 ![Topology](images/2e1-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
+
+### Create K8s Cluster
 
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Kubernetes - Create Cluster**  
 ![Add Namespace Resources](images/2e1-1-kubernetes-create.jpg){ width="95%" style="display: block; margin: 0 auto;" }
