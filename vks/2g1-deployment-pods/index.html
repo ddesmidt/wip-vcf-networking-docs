@@ -3233,6 +3233,7 @@
 </div>
 <hr>
 <h2 id="deployment_pods">Deployment App (k8s)</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2g1-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2g1-1-Topology.jpg" style="display: block; margin: 0 auto;" width="40%"></a></p>
 <details class="info">
 <summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2z"></path></svg></span> Client Operating System</summary>
 <p>While the command outputs below are captured from a <strong>Windows client</strong>, the <code>vcf</code> and <code>kubectl</code> CLI tools operate identically across <strong>Linux</strong> and <strong>macOS</strong> environments.</p>
@@ -3342,14 +3343,14 @@ apache-deployment-58bf9564f6-dpmcd   1/1     Running   0          28s
 </ul>
 <hr>
 <h3 id="access-the-application-lb-2-vms-apache">Access the application (LB + 2 VMs apache)</h3>
-<div class="highlight"><pre><span></span><code>curl http://10.1.7.137
+<div class="highlight"><pre><span></span><code>curl http://10.1.7.138
 </code></pre></div>
 <details class="info">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>curl http://10.1.7.138</b>
 &lt;h1&gt;It works - Pod: <b>apache-deployment-58bf9564f6-dpmcd</b>&lt;/h1&gt;
 &nbsp;
-PS C:\Users\Administrator\Documents&gt; <b>curl http://10.1.7.137</b>
+PS C:\Users\Administrator\Documents&gt; <b>curl http://10.1.7.138</b>
 &lt;h1&gt;It works - Pod: <b>apache-deployment-58bf9564f6-c8gqc</b>&lt;/h1&gt;
 </code></pre><p></p>
 <p>The external load balancer (NSX) load balances (round-robin mode) to the Worker Nodes. Then, each Worker Node load balances to the Apache pods (random). So, to validate the load balancing to the different Apache pods, run the <code>curl</code> command multiple times.</p>
