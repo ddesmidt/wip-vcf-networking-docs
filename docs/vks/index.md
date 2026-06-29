@@ -2,12 +2,12 @@
   <img src="../assets/VKS.png" style="height:30px; vertical-align:middle;"> VKS Network Services
 </h1>
 
-This section describes the procedures for **deploying the VKS Supervisor** within a vSphere environment.
+This section describes the procedures for **deploying the Supervisor** within a vSphere environment.
 
 ---
 
-## Different network options for VKS Supervisor deployment  
-Explore the specific network architectures available for your VKS Supervisor cluster:
+## Different network options for Supervisor deployment  
+Explore the specific network architectures available for your Supervisor cluster:
 
 | <div style="width: 30%;">Architecture Option</div> | <div style="width: 70%;">Description & Use Case</div> |
 | :--- | :--- |

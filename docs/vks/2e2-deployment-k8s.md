@@ -124,14 +124,14 @@ Create file "my-cluster.yaml"
           cidrBlocks: ["192.168.156.0/20"]
         serviceDomain: "cluster.local"
       topology:
-        classRef:                                  # <--- CHANGED HERE
-          name: builtin-generic-v3.6.0             # <--- CHANGED HERE
+        classRef:
+          name: builtin-generic-v3.6.0
         version: v1.35.5---vmware.1-vkr.1
         controlPlane:
           replicas: 3
         workers:
           machineDeployments:
-            - class: node-pool                     # (Note: workers still use 'class', only topology changed!)
+            - class: node-pool
               name: workers
               metadata:
                 annotations:
