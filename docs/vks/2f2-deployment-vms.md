@@ -151,9 +151,9 @@ kubectl apply -f my-web-farm.yaml
 
 ### Validate deployment of the application (LB + 2 VMs apache) 
 * **Check application VIP**  
-  ```text
-  kubectl get service web-lb-vip
-  ```
+```text
+kubectl get service web-lb-vip
+```
 
     ??? info "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get service web-lb-vip</b>
@@ -167,9 +167,9 @@ kubectl apply -f my-web-farm.yaml
 
 
 * **Check application VMs**  
-  ```text
-  kubectl get virtualmachines -o wide
-  ```
+```text
+kubectl get virtualmachines -o wide
+```
     
     ??? info "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get virtualmachines -o wide</b>

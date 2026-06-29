@@ -113,9 +113,9 @@ kubectl apply -f apache-k8s.yaml
 
 ### Validate deployment of the application (LB + 2 VMs apache) 
 * **Check application VIP**  
-  ```text
+```text
 kubectl get service apache-vip-service -n ns1
-  ```
+```
 
     ??? info "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get service apache-vip-service -n ns1</b>
@@ -125,9 +125,9 @@ kubectl get service apache-vip-service -n ns1
 
 
 * **Check application Pods**  
-  ```text
-  kubectl get pods -n ns1
-  ```
+```text
+kubectl get pods -n ns1
+```
     
     ??? info "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get pods -n ns1</b>
