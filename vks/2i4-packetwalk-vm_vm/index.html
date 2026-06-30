@@ -2968,6 +2968,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Packet Walk - E/W VM to VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packet-walk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packet Walk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3195,6 +3251,62 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Packet Walk - E/W VM to VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packet-walk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packet Walk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3222,7 +3334,7 @@
 <div>
 <p>This section describes the procedures for <strong>Troubleshooting Network Services into the VKS Namespace with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
 <ul>
-<li><strong>Packet Walk(ToDO)</strong>  <ul>
+<li><strong>Packet Walk</strong>  <ul>
 <li><a href="../2i1-packetwalk-ext_vip/">N/S External to VIP</a>  </li>
 <li><a href="../2i2-packetwalk-ext_vm/">N/S External to VM</a>  </li>
 <li><a href="../2i3-packetwalk-pod_pod/">E/W pod to pod</a>  </li>
@@ -3230,9 +3342,9 @@
 </ul>
 </li>
 <li>App Access broken(ToDO)  <ul>
-<li><a href="../2j1-troubleshooting-vip/">VIP access down(ToDO)</a>  </li>
-<li><a href="../2j2-troubleshooting-vm/">VM access down(ToDO)</a>  </li>
-<li><a href="../2j3-troubleshooting-pod/">Pod access down(ToDO)</a>  </li>
+<li><a href="../2j1-troubleshooting-vip/">VIP access down</a>  </li>
+<li><a href="../2j2-troubleshooting-vm/">VM access down</a>  </li>
+<li><a href="../2j3-troubleshooting-pod/">Pod access down</a>  </li>
 </ul>
 </li>
 </ul>
@@ -3243,6 +3355,24 @@
 </div>
 <hr>
 <h2 id="packetwalk">Packet Walk - E/W VM to VM</h2>
+<p>Multiple VMs have been deployed (see <a href="../2f1-deployment-vms/#deployment_vms">Application Deployment &gt; App Deployment (VMs) &gt; via vCenter UI</a> or <a href="../2f2-deployment-vms/#deployment_vms">Application Deployment &gt; App Deployment (VMs) &gt; via vCenter UI | via CLI</a>).</p>
+<h3 id="view">View</h3>
+<p>The VMs can be connected to the same or different subnets.<br>
+In the example below, the VMs are connected to different subnets.</p>
+<h4 id="logical-view">Logical View</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i4-0-LogicalView.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i4-0-LogicalView.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
+<h4 id="physical-view">Physical View</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i4-0-PhysicalView.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i4-0-PhysicalView.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<hr>
+<h3 id="packet-walk">Packet Walk</h3>
+<ul>
+<li>
+<p><strong>Step1: External Client accesses the VM</strong><br>
+<code>VM1 (10.1.7.147) =&gt; VM (172.30.0.2)</code>  </p>
+<p>If the VMs are on different subnets, the traffic is first routed by the local distributed VPC gateway.<br>
+Then if the VMs reside on a different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  </p>
+</li>
+</ul>
 
 
 
