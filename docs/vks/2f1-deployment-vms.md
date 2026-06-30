@@ -24,7 +24,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ## Deploy App (VMs) {: #deployment_vms }
 
-![Topology](images/2f1-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
+![Topology](images/2f1-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
 
 ### Deploy a VM
 

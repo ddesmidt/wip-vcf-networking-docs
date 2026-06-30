@@ -24,7 +24,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ## Deploy App (K8s) {: #deployment_pods }
 
-![Topology](images/2g1-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
+![Topology](images/2g1-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
 
 ??? info ":material-laptop: Client Operating System"
     While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.

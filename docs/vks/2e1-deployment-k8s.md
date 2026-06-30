@@ -24,7 +24,7 @@ This section describes the procedures for **deploying a K8s Cluster in a Namespa
 
 ## K8s Cluster Deployment {: #deployment_k8s }
 
-![Topology](images/2e1-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
+![Topology](images/2e1-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
 
 ### Create K8s Cluster
 
