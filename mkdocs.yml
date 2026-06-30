@@ -115,8 +115,8 @@ nav:
               - Static Routes(ToDO): vks/2h3-network-staticroute.md
               - External IPs(ToDO): vks/2h4-network-externalip.md
               - VM Load Balancers(ToDO): vks/2h5-network-lb.md
-          - Troubleshooting(ToDO):
-              - Packet Walk(ToDO):
+          - Troubleshooting:
+              - Packet Walk:
                 - N/S External to VIP: vks/2i1-packetwalk-ext_vip.md
                 - N/S External to VM: vks/2i2-packetwalk-ext_vm.md
                 - E/W pod to pod: vks/2i3-packetwalk-pod_pod.md
