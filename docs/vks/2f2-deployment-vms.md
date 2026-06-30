@@ -8,10 +8,10 @@
 
 This section describes the procedures for **deploying an application (VMs/K8s) into the VKS Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
 
-* **Deployment App (VMs)**
+* **Deploy App (VMs)**
     * [via vCenter UI](2f1-deployment-vms.md)
     * [**via CLI**](#deployment_vms)
-* Deployment App (k8s)
+* Deploy App (K8s)
     * [via CLI](2g1-deployment-pods.md)
 </div>
 
@@ -22,7 +22,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ---
 
-## Deployment App (VMs) {: #deployment_vms }
+## Deploy App (VMs) {: #deployment_vms }
 
 ![Topology](images/2f2-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
 

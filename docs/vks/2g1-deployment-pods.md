@@ -8,10 +8,10 @@
 
 This section describes the procedures for **deploying an application (VMs/K8s) into the VKS Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
 
-* Deployment App (VMs)
+* Deploy App (VMs)
     * [via vCenter UI](2f1-deployment-vms.md)
     * [via CLI](2f2-deployment-vms.md)
-* **Deployment App (k8s)**
+* **Deploy App (K8s)**
     * [**via CLI**](#deployment_pods)
 </div>
 
@@ -22,37 +22,39 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ---
 
-## Deployment App (k8s) {: #deployment_pods }
+## Deploy App (K8s) {: #deployment_pods }
 
 ![Topology](images/2g1-1-Topology.jpg){ width="40%" style="display: block; margin: 0 auto;" }
 
 ??? info ":material-laptop: Client Operating System"
     While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.
 
-### Deploy a Full Application (Load Balancer + VMs)
+### Deploy a Full Application (Load Balancer + Pods)
 
 #### Connect to the K8s Cluster  
 See [Connect to the K8s Cluster](2e2-deployment-k8s.md#connect_k8s)
 
 #### (Optional) Create a Namespace in the K8s Cluster  
-The goal is to deploy the application is a specific K8s Cluster Namespace (not default).  
+Create a Namespace if you want to deploy the application (pod) in a specific K8s Cluster Namespace (not default).  
 ```text
 kubectl create namespace ns1
-```  
-And allow the deployment of applications.  
-```text
-kubectl label ns ns1 pod-security.kubernetes.io/enforce=baseline
 ```  
 
 ??? info "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl create namespace ns1</b>
     namespace/ns1 created
-    &nbsp;
-    PS C:\Users\Administrator\Documents> <b>kubectl label ns ns1 pod-security.kubernetes.io/enforce=baseline</b>
+    </code></pre>
+#### Allow the deployment of applications in the Namespace.  
+```text
+kubectl label ns [default|namespace] pod-security.kubernetes.io/enforce=baseline
+```  
+
+??? info "Output example"
+    <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl label ns ns1 pod-security.kubernetes.io/enforce=baseline</b>
     namespace/ns1 labeled
     </code></pre>
 
-#### Create application (LB + 2 VMs apache) yaml file  
+#### Create application (LB + 2 Pods apache) yaml file  
 Create file "apache-k8s.yaml"
 
 ??? info "apache-k8s.yaml file"
@@ -98,7 +100,7 @@ Create file "apache-k8s.yaml"
                 - 'sed -i "s/Listen 80/Listen 8080/g" /usr/local/apache2/conf/httpd.conf && echo "<h1>It works - Pod: $HOSTNAME</h1>" > /usr/local/apache2/htdocs/index.html && httpd-foreground'
     ```
 
-#### Deploy the application (LB + 2 VMs apache) 
+#### Deploy the application (LB + 2 Pods apache) 
 ```text
 kubectl apply -f apache-k8s.yaml
 ```
@@ -111,7 +113,7 @@ kubectl apply -f apache-k8s.yaml
 
 ---
 
-### Validate deployment of the application (LB + 2 VMs apache) 
+### Validate deployment of the application (LB + 2 Pods apache) 
 * **Check application VIP**  
 ```text
 kubectl get service apache-vip-service -n ns1
@@ -120,7 +122,7 @@ kubectl get service apache-vip-service -n ns1
     ??? info "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get service apache-vip-service -n ns1</b>
         NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
-        apache-vip-service   LoadBalancer   10.107.238.63   10.1.7.138    80:32329/TCP   53s
+        apache-vip-service   LoadBalancer   10.107.238.63   10.1.7.138    80:31147/TCP   53s
         </code></pre>
 
 
@@ -138,7 +140,7 @@ kubectl get pods -n ns1
 
 ---
 
-### Access the application (LB + 2 VMs apache) 
+### Access the application (LB + 2 Pods apache) 
 ```text
 curl http://10.1.7.138
 ```
