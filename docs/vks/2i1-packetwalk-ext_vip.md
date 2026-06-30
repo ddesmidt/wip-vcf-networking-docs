@@ -27,7 +27,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 
 ---
 
-## Packet Walk - N.S External to VIP {: #packetwalk }
+## Packet Walk - N/S External to VIP {: #packetwalk }
 A Full Application (Load Balancer + Pods) has been deployed (see [Application Deployment > App Deployment (K8s) > via CLI](2g1-deployment-pods.md#deployment_pods)).
 
 ### View
