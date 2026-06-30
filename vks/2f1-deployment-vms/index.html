@@ -2383,12 +2383,12 @@
   <a href="#deployment_vms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deployment App (VMs)
+        Deploy App (VMs)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deployment App (VMs)">
+    <nav class="md-nav" aria-label="Deploy App (VMs)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3257,12 +3257,12 @@
   <a href="#deployment_vms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Deployment App (VMs)
+        Deploy App (VMs)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deployment App (VMs)">
+    <nav class="md-nav" aria-label="Deploy App (VMs)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3356,12 +3356,12 @@
 <div>
 <p>This section describes the procedures for <strong>deploying an application (VMs/K8s) into the VKS Namespace with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
 <ul>
-<li><strong>Deployment App (VMs)</strong><ul>
+<li><strong>Deploy App (VMs)</strong><ul>
 <li><a href="#deployment_vms"><strong>via vCenter UI</strong></a></li>
 <li><a href="../2f2-deployment-vms/">via CLI</a></li>
 </ul>
 </li>
-<li>Deployment App (k8s)<ul>
+<li>Deploy App (K8s)<ul>
 <li><a href="../2g1-deployment-pods/">via CLI</a></li>
 </ul>
 </li>
@@ -3372,9 +3372,9 @@
 </div>
 </div>
 <hr>
-<h2 id="deployment_vms">Deployment App (VMs)</h2>
-<h3 id="deploy-a-vm">Deploy a VM</h3>
+<h2 id="deployment_vms">Deploy App (VMs)</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2f1-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2f1-1-Topology.jpg" style="display: block; margin: 0 auto;" width="40%"></a></p>
+<h3 id="deploy-a-vm">Deploy a VM</h3>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Virtual Machine - Create VM</strong><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2f1-1-namespace-resources.jpg" data-desc-position="bottom"><img alt="Add Namespace Resources" src="../images/2f1-1-namespace-resources.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ol>
@@ -3409,11 +3409,11 @@ For more information, refer to the <a href="https://techdocs.broadcom.com/us/en/
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2f1-1e-vm-info.jpg" data-desc-position="bottom"><img alt="View VM" src="../images/2f1-1e-vm-info.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <hr>
 <h3 id="access-the-vm">Access the VM</h3>
-<p>By default the VM is connected to a private network for security reasons.<br>
-To offer direct access to the VM, differentes options sont possibles:  </p>
+<p>By default the VM is connected to the Private-VPC subnetset <code>vm-default</code>.<br>
+To offer direct access to the VM, there are several options:</p>
 <ul>
 <li>
-<p><strong>Create a Subnet Public and plug the VM on it</strong><br>
+<p><strong>Create a Public Subnet and plug the VM on it</strong><br>
 Under <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Network - Go to Service</strong>  </p>
 <div class="admonition warning">
 <p class="admonition-title">XXX PERSONAL Drafting Note</p>

@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#troubleshooting" class="md-skip">
+        <a href="#packetwalk" class="md-skip">
           Skip to content
         </a>
       
@@ -2876,13 +2876,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#packetwalk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Troubleshooting - Pod access down
+        Packet Walk - N.S External to VIP
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Packet Walk - N.S External to VIP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packet-walk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packet Walk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3187,13 +3243,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#packetwalk" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Troubleshooting - Pod access down
+        Packet Walk - N.S External to VIP
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Packet Walk - N.S External to VIP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#packet-walk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packet Walk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3223,7 +3335,7 @@
 <p>This section describes the procedures for <strong>Troubleshooting Network Services into the VKS Namespace with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
 <ul>
 <li><strong>Packet Walk(ToDO)</strong>  <ul>
-<li><a href="./"><strong>N/S External to VIP</strong></a>  </li>
+<li><a href="#packetwalk"><strong>N/S External to VIP</strong></a>  </li>
 <li><a href="../2i2-packetwalk-ext_vm/">N/S External to VM</a>  </li>
 <li><a href="../2i3-packetwalk-pod_pod/">E/W pod to pod</a>  </li>
 <li><a href="../2i4-packetwalk-vm_vm/">E/W VM to VM</a>  </li>
@@ -3242,7 +3354,34 @@
 </div>
 </div>
 <hr>
-<h2 id="troubleshooting">Troubleshooting - Pod access down</h2>
+<h2 id="packetwalk">Packet Walk - N.S External to VIP</h2>
+<p>A Full Application (Load Balancer + Pods) has been deployed (see <a href="../2g1-deployment-pods/#deployment_pods">Application Deployment &gt; App Deployment (K8s) &gt; via CLI</a>).</p>
+<h3 id="view">View</h3>
+<h4 id="logical-view">Logical View</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i1-0-LogicalView.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i1-0-LogicalView.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+<h4 id="physical-view">Physical View</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i1-0-PhysicalView.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i1-0-PhysicalView.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<hr>
+<h3 id="packet-walk">Packet Walk</h3>
+<ul>
+<li>
+<p><strong>Step1: External Client accesses the VIP</strong><br>
+<code>Client-IP =&gt; VIP:80 (10.1.7.138)</code>  </p>
+<p>The traffic enters the ESXi host running the VNA Node that hosts the Active VPC-SR (Service Router).</p>
+</li>
+<li>
+<p><strong>Step2: VIP load balances traffic to Pods (kube-proxy)</strong><br>
+<code>VPC-SR-Internal-IP =&gt; K8s WorkerNode[1-3]:31147 (172.30.0.[x])</code>  </p>
+<p>The load balancer (VPC-SR) forwards the traffic to the dynamically assigned NodePort on the Kubernetes Worker Nodes.<br>
+If the target Worker Node resides on a different ESX than the Active VPC-SR, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  </p>
+<p><em>Note: You can find the dynamically assigned Worker Node TCP port (<code>31147</code>) by running the command <code>kubectl get service apache-vip-service -n ns1</code> and looking under the PORT(S) column (see <a href="../2g1-deployment-pods/#deployment_pods">Application Deployment &gt; App Deployment (K8s) &gt; via CLI</a>).</em></p>
+</li>
+<li>
+<p><strong>Step3 (not represented): kube-proxy load balances traffic to Pods</strong><br>
+    Once the traffic hits the Worker Node on the NodePort, Kubernetes <code>kube-proxy</code> pod load balances to the different pods hosted by the different Worker Nodes.<br>
+    See <a href="../2i3-packetwalk-pod_pod/#packetwalk">Packet Walk - E/W pod to pod</a> for cross pods communication.</p>
+</li>
+</ul>
 
 
 
