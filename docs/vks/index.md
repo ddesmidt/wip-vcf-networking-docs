@@ -29,11 +29,13 @@ Explore the specific network architectures available for your Supervisor cluster
     **[2. Supervisor with "NSX + DTGW/VNA"](2a-requirements.md)**
 
     * **Pros:**
-        * **Security:** * No possible external access directly to K8s Nodes
+        * **Security:**  
+            * No possible external access directly to K8s Nodes
             * Option to control application communication including:
                 * Cross-Container via Antrea CNI (DFW)
                 * Cross-VPC VIP communication (VPC Connectivity Policies)
-        * **Scale:** * Uses fewer public IPs (K8s nodes use private IPs)
+        * **Scale:**
+            * Uses fewer public IPs (K8s nodes use private IPs)
             * VIPs are highly scalable, distributed across up to 10 VNA Nodes in an Active/Active (A/A) configuration
     * **Cons:**
         * **VMware Editions:** Only available in VMware Cloud Foundation (VCF) (not VMware vSphere Foundation (VVF))
