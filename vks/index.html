@@ -3199,7 +3199,8 @@
 <p><strong><a href="2a-requirements/">2. Supervisor with "NSX + DTGW/VNA"</a></strong></p>
 <ul>
 <li><strong>Pros:</strong><ul>
-<li><strong>Security:</strong> * No possible external access directly to K8s Nodes<ul>
+<li><strong>Security:</strong>  <ul>
+<li>No possible external access directly to K8s Nodes</li>
 <li>Option to control application communication including:<ul>
 <li>Cross-Container via Antrea CNI (DFW)</li>
 <li>Cross-VPC VIP communication (VPC Connectivity Policies)</li>
@@ -3207,7 +3208,8 @@
 </li>
 </ul>
 </li>
-<li><strong>Scale:</strong> * Uses fewer public IPs (K8s nodes use private IPs)<ul>
+<li><strong>Scale:</strong><ul>
+<li>Uses fewer public IPs (K8s nodes use private IPs)</li>
 <li>VIPs are highly scalable, distributed across up to 10 VNA Nodes in an Active/Active (A/A) configuration</li>
 </ul>
 </li>
