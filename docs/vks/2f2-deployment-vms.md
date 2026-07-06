@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying an application (VMs/K8s) into the VKS Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
+This section describes the procedures for **deploying an application (VMs/K8s) into the VKS Namespace utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
 * **Deploy App (VMs)**
     * [via vCenter UI](2f1-deployment-vms.md)

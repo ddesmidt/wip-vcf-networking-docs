@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying a K8s Cluster in a Namespace with "NSX + DTGW/VNA"** within a vSphere environment.  
+This section describes the procedures for **deploying a K8s Cluster in a Namespace utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
 * **K8s Cluster Deployment**
     * [**via vCenter UI**](#deployment_k8s)

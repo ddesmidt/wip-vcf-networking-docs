@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for **Troubleshooting Network Services into the VKS Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
+This section describes the procedures for **Troubleshooting Network Services into the VKS Namespace utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
 * Packet Walk(ToDO)  
     * [N/S External to VIP](2i1-packetwalk-ext_vip.md)  

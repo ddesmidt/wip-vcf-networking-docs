@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying a Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.  
+This section describes the procedures for **deploying the Supervisor utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
 * [**Supervisor Deployment**](#supervisordeployment)
 

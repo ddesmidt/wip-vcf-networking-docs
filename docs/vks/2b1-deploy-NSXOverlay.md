@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the requirements for **deploying the VKS Supervisor with "NSX + DTGW/VNA"** within a vSphere environment.
+This section describes the requirements for **deploying the Supervisor utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
 * [Requirements](2a-requirements.md)
 * **Install Requirements**

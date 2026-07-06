@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying a Supervisor Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
+This section describes the procedures for **deploying a Supervisor Namespace utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
 * **Namespace**
     * [Deployment](2d1-deploy-namespace.md)

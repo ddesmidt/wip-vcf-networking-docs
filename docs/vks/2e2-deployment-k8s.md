@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying a K8s Cluster in a Namespace with "NSX + DTGW/VNA"** within a vSphere environment.  
+This section describes the procedures for **deploying a K8s Cluster in a Namespace utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
 * **K8s Cluster Deployment**
     * [via vCenter UI](2e1-deployment-k8s.md)
@@ -224,44 +224,54 @@ kubectl get machines
 #### **Connect to the K8s Cluster** 
 
 * **Create KUBECONFIG variable**
-```text
-$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"
-```
+    ```text
+    $env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"
+    ```
 
-??? info "Output example"
-    <pre><code>PS C:\Users\Administrator\Documents> <b>$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"</b>
-    </code></pre>
-    Note: To connect back to the Supervisor Namespace (demo-space)
-    <pre><code>PS C:\Users\Administrator\Documents> <b>$env:KUBECONFIG = $null</b>
-    </code></pre>
+    ??? info "Output example"
+        <pre><code>PS C:\Users\Administrator\Documents> <b>$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"</b>
+        </code></pre>
+        Note: To connect back to the Supervisor Namespace (demo-space)
+        <pre><code>PS C:\Users\Administrator\Documents> <b>$env:KUBECONFIG = $null</b>
+        </code></pre>
+
+* **Change context to my K8s Cluster**
+    ```text
+    kubectl config use-context my-cluster-admin@my-cluster
+    ```
+
+    ??? info "Output example"
+        <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl config use-context my-cluster-admin@my-cluster</b>
+        Switched to context "my-cluster-admin@my-cluster".
+        </code></pre>
 
 * **Validate Context is the K8s Cluster**
-```text
-kubectl config get-contexts
-```
+    ```text
+    kubectl config get-contexts
+    ```
 
-??? info "Output example"
-    The current context is:  
-    . **Cluster: my-cluster**  
-    . **Namespace: default (empty)**  
-    <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl config get-contexts</b>
-    CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPACE
-    *         my-cluster-admin@my-cluster   my-cluster   my-cluster-admin
-    </code></pre>
+    ??? info "Output example"
+        The current context is:  
+        . **Cluster: my-cluster**  
+        . **Namespace: default (empty)**  
+        <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl config get-contexts</b>
+        CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPACE
+        *         my-cluster-admin@my-cluster   my-cluster   my-cluster-admin
+        </code></pre>
 
 * **Validate K8s Cluster connection**
-```text
-kubectl get nodes
-```
+    ```text
+    kubectl get nodes
+    ```
 
-??? info "Output example"
-    <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get nodes</b>
-    NAME                                   STATUS   ROLES           AGE   VERSION
-    my-cluster-wglt6-dlpqm                 Ready    control-plane   49m   v1.35.5+vmware.1
-    my-cluster-wglt6-jv9t5                 Ready    control-plane   47m   v1.35.5+vmware.1
-    my-cluster-wglt6-n9m25                 Ready    control-plane   45m   v1.35.5+vmware.1
-    my-cluster-workers-qjq5s-xj695-2kt4z   Ready    <none>          48m   v1.35.5+vmware.1
-    my-cluster-workers-qjq5s-xj695-dff4g   Ready    <none>          48m   v1.35.5+vmware.1
-    my-cluster-workers-qjq5s-xj695-p55n8   Ready    <none>          48m   v1.35.5+vmware.1
-    </code></pre>
+    ??? info "Output example"
+        <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get nodes</b>
+        NAME                                   STATUS   ROLES           AGE   VERSION
+        my-cluster-wglt6-dlpqm                 Ready    control-plane   49m   v1.35.5+vmware.1
+        my-cluster-wglt6-jv9t5                 Ready    control-plane   47m   v1.35.5+vmware.1
+        my-cluster-wglt6-n9m25                 Ready    control-plane   45m   v1.35.5+vmware.1
+        my-cluster-workers-qjq5s-xj695-2kt4z   Ready    <none>          48m   v1.35.5+vmware.1
+        my-cluster-workers-qjq5s-xj695-dff4g   Ready    <none>          48m   v1.35.5+vmware.1
+        my-cluster-workers-qjq5s-xj695-p55n8   Ready    <none>          48m   v1.35.5+vmware.1
+        </code></pre>
 
