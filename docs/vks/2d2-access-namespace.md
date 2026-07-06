@@ -34,7 +34,7 @@ This section describes the procedures for **deploying a Supervisor Namespace wit
 
 #### Find Supervisor Control Plane IP Address
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**.  
-![Supervisor Validation Status](images/2b-5a-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
+![Supervisor Validation Status](images/2c-5a-Validation.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 #### Connect to the Supervisor
 From your K8s client:

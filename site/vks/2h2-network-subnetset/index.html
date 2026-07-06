@@ -22,7 +22,7 @@
     
     
       
-        <title>SubnetSets(ToDO) - VCF Networking Encyclopedia</title>
+        <title>SubnetSets - VCF Networking Encyclopedia</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SubnetSets(ToDO)
+              SubnetSets
             
           </span>
         </div>
@@ -2557,7 +2557,7 @@
   <span class="md-ellipsis">
     
   
-    Subnets(ToDO)
+    Subnets
   
 
     
@@ -2592,7 +2592,7 @@
   <span class="md-ellipsis">
     
   
-    SubnetSets(ToDO)
+    SubnetSets
   
 
     
@@ -2610,7 +2610,7 @@
   <span class="md-ellipsis">
     
   
-    SubnetSets(ToDO)
+    SubnetSets
   
 
     
@@ -2641,6 +2641,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Network Services - Subnetsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-subnetset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create SubnetSet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3193,6 +3210,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Network Services - Subnetsets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-subnetset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create SubnetSet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3221,8 +3255,8 @@
 <p>This section describes the procedures for <strong>deploying Network Services into the VKS Namespace with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
 <ul>
 <li><strong>Network Services(ToDO)</strong><ul>
-<li><a href="../2h1-network-subnet/">Subnets(ToDO)</a></li>
-<li><a href="#networkservices"><strong>SubnetSets(ToDo)</strong></a></li>
+<li><a href="../2h1-network-subnet/">Subnets</a></li>
+<li><a href="#networkservices"><strong>SubnetSets</strong></a></li>
 <li><a href="../2h3-network-staticroute/">Static Routes(ToDO)</a></li>
 <li><a href="../2h4-network-externalip/">External IPs(ToDO)</a></li>
 <li><a href="../2h5-network-lb/">VM Load Balancers(ToDO)</a></li>
@@ -3231,11 +3265,26 @@
 </ul>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2g1-0-k8s.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2g1-0-k8s.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h2-0-subnetset.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2h2-0-subnetset.jpg" width="100%"></a></p>
 </div>
 </div>
 <hr>
 <h2 id="networkservices">Network Services - Subnetsets</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h2-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2h2-1-Topology.jpg" style="display: block; margin: 0 auto;" width="55%"></a></p>
+<h3 id="create-subnetset">Create SubnetSet</h3>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Network - Go to Service</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Add Namespace Resources" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<ol>
+<li><strong>Create New SubnetSet</strong><br>
+Navigate to <strong>SubnetSets</strong>, and click <strong>New SubnetSet</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h2-1a-subnetsetcreate.jpg" data-desc-position="bottom"><img alt="Create Subnet" src="../images/2h2-1a-subnetsetcreate.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </li>
+</ol>
+<p>A <strong>SubnetSet</strong> provides dynamic, automated scaling functionality for subnets:  </p>
+<ul>
+<li><strong>Scale Out</strong>: As soon as a subnet within the SubnetSet consumes its available IP capacity, a new subnet is automatically provisioned.  </li>
+<li><strong>Scale In</strong>: Conversely, when a subnet becomes completely empty (no workload attached to it), it is automatically deleted.</li>
+</ul>
+<p>For more information about Subnets settings review the <a href="../../vcenter/1b-vpc_subnet/#overlay" target="_blank">VPC Subnet Overlay page</a>.</p>
 
 
 

@@ -64,7 +64,7 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
 !!! warning "Missing NSX Requirements?"
     If your environment is not yet configured with the NSX prerequisites below, please refer to:  
 
-    *  [Make vCenter Cluster "VCF Networking ready (NSX Overlay)"](2b1-deploy-NSXOverlay.md) xxx to do
+    *  [Make vCenter Cluster "VCF Networking ready (NSX Overlay)"](2b1-deploy-NSXOverlay.md)
     *  [Make vCenter with "DTGW + VNA ready"](2b2-deploy-DTGW_VNA.md)
 
 

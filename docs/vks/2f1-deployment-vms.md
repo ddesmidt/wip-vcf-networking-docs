@@ -33,15 +33,15 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **
 
 1. **Deploy VM from..**  
 Select between **OVF** or **ISO**, and click **Next**.  
-![Select VM Deployment Source](images/2f1-1a-VMFrom.jpg){ width="95%" align="center" }  
+![Select VM Deployment Source](images/2f1-1a-VMFrom.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 1. **Deploy a New VM**  
 Choose a **VM Name**, a **VM Image**, a **VM Class** (size and reservation of the VM), and click **Review and Confirm**.  
-![Configure New VM Settings](images/2f1-1b-NewVM.jpg){ width="95%" align="center" }  
+![Configure New VM Settings](images/2f1-1b-NewVM.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 1. **Review and Confirm**  
 Review the settings, and click **Deploy VM**.  
-![Review VM Deployment Details](images/2f1-1c-DeployVM.jpg){ width="95%" align="center" }  
+![Review VM Deployment Details](images/2f1-1c-DeployVM.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
     ??? info "More options"
         More options are available under **Advanced Settings (Optional)** and **Network Configuration (Optional)**, such as Persistent Volumes and Cloud-Init for Guest Customization.  

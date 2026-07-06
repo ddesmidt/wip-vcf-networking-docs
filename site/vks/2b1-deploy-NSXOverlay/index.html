@@ -1858,6 +1858,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validate-nsx-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate NSX Overlay
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2615,7 +2632,7 @@
   <span class="md-ellipsis">
     
   
-    Subnets(ToDO)
+    Subnets
   
 
     
@@ -2643,7 +2660,7 @@
   <span class="md-ellipsis">
     
   
-    SubnetSets(ToDO)
+    SubnetSets
   
 
     
@@ -3197,6 +3214,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validate-nsx-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate NSX Overlay
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3238,10 +3272,13 @@
 </div>
 <hr>
 <h2 id="installation">Installation</h2>
-<div class="admonition warning">
-<p class="admonition-title">XXX PERSONAL Drafting Note</p>
-<p>xxx Provide the steps xxx  </p>
-</div>
+<p>From VCF 9.0, all workload domains have NSX Overlay configured in vCenter Clusters.</p>
+<hr>
+<h3 id="validate-nsx-overlay">Validate NSX Overlay</h3>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Host and Clusters</strong> &gt; <strong>[your vCenter Cluster]</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>Network Configuration</strong>.<br>
+Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:<br>
+<em>Note: If no workloads are deployed on logical networks yet, it is expected to have no Tunnels established on the ESXi hosts.</em>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3a-NSX-Prep.jpg" data-desc-position="bottom"><img alt="NSX Host Preparation Status" src="../images/2a-3a-NSX-Prep.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 
 
 

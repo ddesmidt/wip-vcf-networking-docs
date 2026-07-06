@@ -33,11 +33,11 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **
 
 1. **Configuration Type**  
 Select the **Cluster Type** and **Configuration Type**.
-![Select VM Deployment Source](images/2e1-1a-ConfType.jpg){ width="95%" align="center" }  
+![Select VM Deployment Source](images/2e1-1a-ConfType.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 1. **Review and Confirm**  
 Review and click **Finish** to deploy the k8s cluster.
-![Select VM Deployment Source](images/2e1-1b-Deploy.jpg){ width="95%" align="center" }  
+![Select VM Deployment Source](images/2e1-1b-Deploy.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 ??? info "More k8s cluster options"
     To get more options, such as **replicas** and **OS images**, select at step1 **Customer configuration**.

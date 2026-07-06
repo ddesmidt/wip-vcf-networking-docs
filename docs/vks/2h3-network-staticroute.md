@@ -9,15 +9,15 @@
 This section describes the procedures for **deploying Network Services into the VKS Namespace with "NSX + DTGW/VNA"** within a vSphere environment.
 
 * **Network Services(ToDO)**
-    * [Subnets(ToDO)](2h1-network-subnet.md)
-    * [SubnetSets(ToDO)](2h2-network-subnetset.md)
+    * [Subnets](2h1-network-subnet.md)
+    * [SubnetSets](2h2-network-subnetset.md)
     * [**Static Routes(ToDO)**](#networkservices)
     * [External IPs(ToDO)](2h4-network-externalip.md)
     * [VM Load Balancers(ToDO)](2h5-network-lb.md)
 </div>
 
 <div markdown>
-![VDS Architecture](images/2g1-0-k8s.jpg){ width="100%" }
+![VDS Architecture](images/2h3-0-staticroute.jpg){ width="100%" }
 </div>
 </div>
 

@@ -21,42 +21,42 @@ This section describes the procedures for **deploying a Supervisor with "NSX + D
 
 ## Supervisor Deployment {: #supervisordeployment }
 
-![Topology](images/2b-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Topology](images/2c-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 ### Create Supervisor
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and click **ADD SUPERVISOR**.
-![Add Supervisor Wizard](images/2b-1-AddSupervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Add Supervisor Wizard](images/2c-1-AddSupervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 1. **vCenter Server and Network**  
     * Select the network stack **VCF Networking with VPC (recommended)**, and click **Next**.  
-    ![vCenter Server and Network Configuration](images/2b-1a-vCenter.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c-1a-vCenter.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 1. **Supervisor Location**  
     * Select the **Cluster Deployment**, and click **Next**.  
-    ![Supervisor Location Settings](images/2b-1b-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Supervisor Location Settings](images/2c-1b-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 1. **Storage**  
     * Select the different **Storage Policies**, and click **Next**.  
-    ![Storage Policy Selection](images/2b-1c-Storage.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Storage Policy Selection](images/2c-1c-Storage.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 1. **Management Network**  
     * Configure the **Supervisor Management IP Settings**, and click **Next**.  
-    ![Management Network IP Settings](images/2b-1d-Management.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Management Network IP Settings](images/2c-1d-Management.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 1. **Workload Network**  
     * Configure the **Workload Network** (fields are pre-populated, except for DNS and NTP Servers), and click **Next**.  
-    ![Workload Network Configuration](images/2b-1e-Workload.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Workload Network Configuration](images/2c-1e-Workload.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
         ??? warning "Troubleshooting: Auto SNAT Error"
             If you receive the error *"Auto SNAT must be enabled for VPC Connectivity Profile Default"*, refer back to the **["DTGW + VNA" Requirements](2a-requirements.md#nsx)** page and ensure **Default Outbound NAT** is enabled in the Connectivity Profile.
 
 1. **Advanced Settings**  
     * Select the **Supervisor Control Plane Size**, and click **Next**.  
-    ![Advanced Settings and Sizing](images/2b-1f-Advanced.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Advanced Settings and Sizing](images/2c-1f-Advanced.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 1. **Ready to Complete**  
     * Review your configuration and click **Finish**.  
-    ![Review and Complete](images/2b-1g-Ready.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Review and Complete](images/2c-1g-Ready.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 
 ---
@@ -66,11 +66,11 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and click
 #### **Create a Content Library for future Kubernetes Clusters**  
 If you plan to deploy Kubernetes Clusters, create a Content Library with VKS images.  
 Navigate to **vCenter** > **Content Libraries** > and click **Create**.  
-    ![vCenter Server and Network Configuration](images/2b-2a-ContentLibrary.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c-2a-ContentLibrary.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
   1. **Name and Location**  
     Give it a **Name** and select the **vCenter** hosting that Content Library, and click **Next**.  
-    ![vCenter Server and Network Configuration](images/2b-3a-Name.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c-3a-Name.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
   1. **Configure Content Library**  
   Choose between **Local content library** (you upload VKS images) and **Subscribed content library** (vCenter downloads VKS images from a repository), and click **Next**.  
@@ -79,33 +79,33 @@ Navigate to **vCenter** > **Content Libraries** > and click **Create**.
       <li style="margin-bottom: 2px;"><i>the public repository: https://wp-content.vmware.com/v2/latest/lib.json</i></li>
       <li style="margin-bottom: 2px;"><i>the option to download content when needed to save storage space</i></li>
     </ul>
-  ![vCenter Server and Network Configuration](images/2b-3b-ContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+  ![vCenter Server and Network Configuration](images/2c-3b-ContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
   1. **Apply Security Policy**  
   Apply **security policy** if you choose to, and click **Next**.  
   *I'm using here no security policy.*  
-  ![vCenter Server and Network Configuration](images/2b-3c-SecurityPolicy.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+  ![vCenter Server and Network Configuration](images/2c-3c-SecurityPolicy.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
   1. **Add Storage**  
   Select a **storage** to host the content library images, and click **Next**.  
-  ![vCenter Server and Network Configuration](images/2b-3d-Storage.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+  ![vCenter Server and Network Configuration](images/2c-3d-Storage.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
   1. **Ready to complete**  
   Review the content library, and click **Finish**.  
-  ![vCenter Server and Network Configuration](images/2b-3e-Review.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+  ![vCenter Server and Network Configuration](images/2c-3e-Review.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
 
 #### **Associate the Content Library to the Supervisor**  
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, and click on **Kubernetes Service - Manage**.
-    ![vCenter Server and Network Configuration](images/2b-4a-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c-4a-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
   1. **Add Content Library**  
     Click **ADD**.  
-    ![vCenter Server and Network Configuration](images/2b-4b-AddContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c-4b-AddContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
   1. **Select Content Library**  
     Select **Content Library with VKS images**, and click **ADD**.  
-    ![vCenter Server and Network Configuration](images/2b-4c-SelectContentLibrary.jpg){ width="65%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c-4c-SelectContentLibrary.jpg){ width="65%" style="display: block; margin: 0 auto;" }  
 
 ---
 
@@ -120,9 +120,9 @@ Check the following fields to ensure they reflect a healthy state:
   <li style="margin-bottom: 2px;">Host Config Status</li>
   <li style="margin-bottom: 2px;">Control Plane Node Address</li>
 </ul>
-![Supervisor Validation Status](images/2b-5a-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
+![Supervisor Validation Status](images/2c-5a-Validation.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 #### **Validate Supervisor Content Library**  
 Validate Supervisor Content Library by navigating to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**
-![Supervisor Validation Status](images/2b-5b-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
+![Supervisor Validation Status](images/2c-5b-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
 
