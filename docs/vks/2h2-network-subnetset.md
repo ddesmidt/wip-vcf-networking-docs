@@ -8,7 +8,7 @@
 
 This section describes the procedures for **provisioning and managing Network Services within a VKS Namespace utilizing an "NSX + DTGW/VNA"** architecture inside a vSphere environment.
 
-* **Network Services(ToDO)**
+* **Network Services**
     * [Subnets](2h1-network-subnet.md)
     * [**SubnetSets**](#networkservices)
     * [Static Routes](2h3-network-staticroute.md)

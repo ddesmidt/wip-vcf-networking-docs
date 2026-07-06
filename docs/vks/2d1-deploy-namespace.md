@@ -51,7 +51,7 @@ Navigate to **vCenter** > **Supervisor Management** > **Namespaces**, and click 
 #### **Create a Content Library for future VMs**  
 If you plan to deploy VMs, create a Content Library with VM images.  
 Navigate to **vCenter** > **Content Libraries** > and click **Create**.  
-![Create Content Library](images/2b-2a-ContentLibrary.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+![Create Content Library](images/2c-2a-ContentLibrary.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 1. **Name and Location** Give it a **Name** and select the **vCenter** hosting that Content Library, and click **Next**.  
     ![Name Content Library](images/2d1-2b-Name.jpg){ width="85%" style="display: block; margin: 0 auto;" }  

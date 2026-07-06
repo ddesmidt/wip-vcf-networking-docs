@@ -109,7 +109,7 @@ nav:
                 - via CLI: vks/2f2-deployment-vms.md
               - App Deployment (K8s): 
                 - via CLI: vks/2g1-deployment-pods.md
-          - Network Services(ToDO): 
+          - Network Services: 
               - Subnets: vks/2h1-network-subnet.md
               - SubnetSets: vks/2h2-network-subnetset.md
               - Static Routes: vks/2h3-network-staticroute.md
