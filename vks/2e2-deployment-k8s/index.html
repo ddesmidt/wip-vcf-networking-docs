@@ -2814,7 +2814,7 @@
   <span class="md-ellipsis">
     
   
-    Static Routes(ToDO)
+    Static Routes
   
 
     
@@ -3510,7 +3510,7 @@
 
 <div class="grid" style="grid-template-columns: 60% 40%">
 <div>
-<p>This section describes the procedures for <strong>deploying a K8s Cluster in a Namespace with "NSX + DTGW/VNA"</strong> within a vSphere environment.  </p>
+<p>This section describes the procedures for <strong>deploying a K8s Cluster in a Namespace utilizing an "NSX + DTGW/VNA" architecture</strong> inside a vSphere environment.</p>
 <ul>
 <li><strong>K8s Cluster Deployment</strong><ul>
 <li><a href="../2e1-deployment-k8s/">via vCenter UI</a></li>
@@ -3720,10 +3720,10 @@ users:
 </details>
 <h4 id="connect-to-the-k8s-cluster"><strong>Connect to the K8s Cluster</strong></h4>
 <ul>
-<li><strong>Create KUBECONFIG variable</strong>
-<div class="highlight"><pre><span></span><code>$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"
-</code></pre></div></li>
-</ul>
+<li>
+<p><strong>Create KUBECONFIG variable</strong>
+    </p><div class="highlight"><pre><span></span><code>$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"
+</code></pre></div><p></p>
 <details class="info">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"</b>
@@ -3732,11 +3732,22 @@ Note: To connect back to the Supervisor Namespace (demo-space)
 <pre><code>PS C:\Users\Administrator\Documents&gt; <b>$env:KUBECONFIG = $null</b>
 </code></pre><p></p>
 </details>
-<ul>
-<li><strong>Validate Context is the K8s Cluster</strong>
-<div class="highlight"><pre><span></span><code>kubectl config get-contexts
-</code></pre></div></li>
-</ul>
+</li>
+<li>
+<p><strong>Change context to my K8s Cluster</strong>
+    </p><div class="highlight"><pre><span></span><code>kubectl config use-context my-cluster-admin@my-cluster
+</code></pre></div><p></p>
+<details class="info">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl config use-context my-cluster-admin@my-cluster</b>
+Switched to context "my-cluster-admin@my-cluster".
+</code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Validate Context is the K8s Cluster</strong>
+    </p><div class="highlight"><pre><span></span><code>kubectl config get-contexts
+</code></pre></div><p></p>
 <details class="info">
 <summary>Output example</summary>
 <p>The current context is:<br>
@@ -3747,11 +3758,11 @@ CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPAC
 *         my-cluster-admin@my-cluster   my-cluster   my-cluster-admin
 </code></pre><p></p>
 </details>
-<ul>
-<li><strong>Validate K8s Cluster connection</strong>
-<div class="highlight"><pre><span></span><code>kubectl get nodes
-</code></pre></div></li>
-</ul>
+</li>
+<li>
+<p><strong>Validate K8s Cluster connection</strong>
+    </p><div class="highlight"><pre><span></span><code>kubectl get nodes
+</code></pre></div><p></p>
 <details class="info">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get nodes</b>
@@ -3764,6 +3775,8 @@ my-cluster-workers-qjq5s-xj695-dff4g   Ready    <none>          48m   v1.35.5+vm
 my-cluster-workers-qjq5s-xj695-p55n8   Ready    <none>          48m   v1.35.5+vmware.1
 </none></none></none></code></pre><p></p>
 </details>
+</li>
+</ul>
 
 
 

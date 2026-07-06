@@ -22,7 +22,7 @@
     
     
       
-        <title>Static Routes(ToDO) - VCF Networking Encyclopedia</title>
+        <title>Static Routes - VCF Networking Encyclopedia</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Static Routes(ToDO)
+              Static Routes
             
           </span>
         </div>
@@ -2620,7 +2620,7 @@
   <span class="md-ellipsis">
     
   
-    Static Routes(ToDO)
+    Static Routes
   
 
     
@@ -2638,7 +2638,7 @@
   <span class="md-ellipsis">
     
   
-    Static Routes(ToDO)
+    Static Routes
   
 
     
@@ -2669,6 +2669,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Network Services - Static Routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-static-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Static Route
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-the-static-route-direct-access-to-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate the Static Route (Direct Access to Pod)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3193,6 +3221,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Network Services - Static Routes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-static-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Static Route
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-the-static-route-direct-access-to-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate the Static Route (Direct Access to Pod)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3218,12 +3274,12 @@
 
 <div class="grid" style="grid-template-columns: 60% 40%">
 <div>
-<p>This section describes the procedures for <strong>deploying Network Services into the VKS Namespace with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
+<p>This section describes the procedures for <strong>provisioning and managing Network Services within a VKS Namespace utilizing an "NSX + DTGW/VNA"</strong> architecture inside a vSphere environment.</p>
 <ul>
 <li><strong>Network Services(ToDO)</strong><ul>
 <li><a href="../2h1-network-subnet/">Subnets</a></li>
 <li><a href="../2h2-network-subnetset/">SubnetSets</a></li>
-<li><a href="#networkservices"><strong>Static Routes(ToDO)</strong></a></li>
+<li><a href="#networkservices"><strong>Static Routes</strong></a></li>
 <li><a href="../2h4-network-externalip/">External IPs(ToDO)</a></li>
 <li><a href="../2h5-network-lb/">VM Load Balancers(ToDO)</a></li>
 </ul>
@@ -3236,6 +3292,70 @@
 </div>
 <hr>
 <h2 id="networkservices">Network Services - Static Routes</h2>
+<p>The primary use case for configuring a <strong>Static Route</strong> is to enable direct, routable communication to individual K8s Pods residing on specific Worker Nodes.<br>
+Note: With the "NSX + DTGW/VNA" architecture, communication to individual K8s Pods is only from VMs within the VPC.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h3-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2h3-1-Topology.jpg" style="display: block; margin: 0 auto;" width="55%"></a></p>
+<h3 id="create-static-route">Create Static Route</h3>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Network - Go to Service</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Add Namespace Resources" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<ol>
+<li>
+<p><strong>Create New Static Route</strong><br>
+Navigate to <strong>Static Routes</strong>, and click <strong>New Static Route</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h3-1a-staticroutecreate.jpg" data-desc-position="bottom"><img alt="Create Subnet" src="../images/2h3-1a-staticroutecreate.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </p>
+<details class="info">
+<summary>How to find required IP information via kubectl</summary>
+<ol>
+<li>
+<p><strong>Find the Pod subnet (CIDR) of each K8s Node</strong> 
+</p><div class="highlight"><pre><span></span><code>kubectl get nodes -o custom-columns="NODE:.metadata.name,NODE-IP:.status.addresses[0].address,POD-CIDR:.spec.podCIDR"
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get nodes -o custom-columns="NODE:.metadata.name,NODE-IP:.status.addresses[0].address,POD-CIDR:.spec.podCIDR"</b>
+NODE                                   NODE-IP      POD-CIDR
+my-cluster-wglt6-dlpqm                 172.30.0.2   192.168.144.0/24
+my-cluster-wglt6-jv9t5                 172.30.0.6   192.168.148.0/24
+my-cluster-wglt6-n9m25                 172.30.0.7   192.168.149.0/24
+my-cluster-workers-qjq5s-xj695-2kt4z   172.30.0.4   192.168.147.0/24
+<b>my-cluster-workers-qjq5s-xj695-dff4g   172.30.0.5   192.168.146.0/24</b>
+my-cluster-workers-qjq5s-xj695-p55n8   172.30.0.3   192.168.145.0/24
+</code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Find the target Pod's IP address</strong><br>
+</p><div class="highlight"><pre><span></span><code>kubectl get pods -n &lt;namespace&gt; -o wide
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get pods -n ns1 -o wide</b>
+NAME                                 READY   STATUS    RESTARTS   AGE   IP              NODE                                   NOMINATED NODE   READINESS GATES
+<b>apache-deployment-58bf9564f6-c8gqc   1/1     Running   0          8d    192.168.146.3   my-cluster-workers-qjq5s-xj695-dff4g   &lt;none&gt;           &lt;none&gt;</b>
+apache-deployment-58bf9564f6-dpmcd   1/1     Running   0          8d    192.168.147.3   my-cluster-workers-qjq5s-xj695-2kt4z   &lt;none&gt;           &lt;none&gt;
+</code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Find the target Pod's listening port</strong><br>
+</p><div class="highlight"><pre><span></span><code>kubectl describe pod &lt;pod&gt; -n &lt;namespace&gt; | Select-String "Port" | Select-String -NotMatch "Host"
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl describe pod apache-deployment-58bf9564f6-c8gqc -n ns1 | Select-String "Port" | Select-String -NotMatch "Host"</b>
+    Port:          <b>8080/TCP</b>
+</code></pre><p></p>
+</details>
+</li>
+</ol>
+</details>
+</li>
+</ol>
+<h3 id="validate-the-static-route-direct-access-to-pod">Validate the Static Route (Direct Access to Pod)</h3>
+<p>To verify connectivity, connect to a VM within the VPC and use <code>curl</code> to directly access the Pod's IP and port (assuming the application is web).
+</p><div class="highlight"><pre><span></span><code>root@vm-public:~# curl http://192.168.146.3:8080
+&lt;h1&gt;It works - Pod: apache-deployment-58bf9564f6-c8gqc&lt;/h1&gt;
+</code></pre></div><p></p>
 
 
 
