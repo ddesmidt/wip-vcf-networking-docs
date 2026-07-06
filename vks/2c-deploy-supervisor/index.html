@@ -2708,7 +2708,7 @@
   <span class="md-ellipsis">
     
   
-    Subnets(ToDO)
+    Subnets
   
 
     
@@ -2736,7 +2736,7 @@
   <span class="md-ellipsis">
     
   
-    SubnetSets(ToDO)
+    SubnetSets
   
 
     
@@ -3421,37 +3421,37 @@
 </div>
 <hr>
 <h2 id="supervisordeployment">Supervisor Deployment</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-0-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2b-0-Topology.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-0-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2c-0-Topology.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <h3 id="create-supervisor">Create Supervisor</h3>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, and click <strong>ADD SUPERVISOR</strong>.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1-AddSupervisor.jpg" data-desc-position="bottom"><img alt="Add Supervisor Wizard" src="../images/2b-1-AddSupervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1-AddSupervisor.jpg" data-desc-position="bottom"><img alt="Add Supervisor Wizard" src="../images/2c-1-AddSupervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ol>
 <li>
 <p><strong>vCenter Server and Network</strong>  </p>
 <ul>
 <li>Select the network stack <strong>VCF Networking with VPC (recommended)</strong>, and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1a-vCenter.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-1a-vCenter.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1a-vCenter.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-1a-vCenter.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
 </ul>
 </li>
 <li>
 <p><strong>Supervisor Location</strong>  </p>
 <ul>
 <li>Select the <strong>Cluster Deployment</strong>, and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1b-Supervisor.jpg" data-desc-position="bottom"><img alt="Supervisor Location Settings" src="../images/2b-1b-Supervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1b-Supervisor.jpg" data-desc-position="bottom"><img alt="Supervisor Location Settings" src="../images/2c-1b-Supervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
 </ul>
 </li>
 <li>
 <p><strong>Storage</strong>  </p>
 <ul>
 <li>Select the different <strong>Storage Policies</strong>, and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1c-Storage.jpg" data-desc-position="bottom"><img alt="Storage Policy Selection" src="../images/2b-1c-Storage.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1c-Storage.jpg" data-desc-position="bottom"><img alt="Storage Policy Selection" src="../images/2c-1c-Storage.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
 </ul>
 </li>
 <li>
 <p><strong>Management Network</strong>  </p>
 <ul>
 <li>Configure the <strong>Supervisor Management IP Settings</strong>, and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1d-Management.jpg" data-desc-position="bottom"><img alt="Management Network IP Settings" src="../images/2b-1d-Management.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1d-Management.jpg" data-desc-position="bottom"><img alt="Management Network IP Settings" src="../images/2c-1d-Management.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
 </ul>
 </li>
 <li>
@@ -3459,7 +3459,7 @@
 <ul>
 <li>
 <p>Configure the <strong>Workload Network</strong> (fields are pre-populated, except for DNS and NTP Servers), and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1e-Workload.jpg" data-desc-position="bottom"><img alt="Workload Network Configuration" src="../images/2b-1e-Workload.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1e-Workload.jpg" data-desc-position="bottom"><img alt="Workload Network Configuration" src="../images/2c-1e-Workload.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 <details class="warning">
 <summary>Troubleshooting: Auto SNAT Error</summary>
 <p>If you receive the error <em>"Auto SNAT must be enabled for VPC Connectivity Profile Default"</em>, refer back to the <strong><a href="../2a-requirements/#nsx">"DTGW + VNA" Requirements</a></strong> page and ensure <strong>Default Outbound NAT</strong> is enabled in the Connectivity Profile.</p>
@@ -3471,14 +3471,14 @@
 <p><strong>Advanced Settings</strong>  </p>
 <ul>
 <li>Select the <strong>Supervisor Control Plane Size</strong>, and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1f-Advanced.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/2b-1f-Advanced.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1f-Advanced.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/2c-1f-Advanced.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
 </ul>
 </li>
 <li>
 <p><strong>Ready to Complete</strong>  </p>
 <ul>
 <li>Review your configuration and click <strong>Finish</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-1g-Ready.jpg" data-desc-position="bottom"><img alt="Review and Complete" src="../images/2b-1g-Ready.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1g-Ready.jpg" data-desc-position="bottom"><img alt="Review and Complete" src="../images/2c-1g-Ready.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
 </ul>
 </li>
 </ol>
@@ -3487,12 +3487,12 @@
 <h4 id="create-a-content-library-for-future-kubernetes-clusters"><strong>Create a Content Library for future Kubernetes Clusters</strong></h4>
 <p>If you plan to deploy Kubernetes Clusters, create a Content Library with VKS images.<br>
 Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt; and click <strong>Create</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-2a-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-2a-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-2a-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-2a-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 <ol>
 <li>
 <p><strong>Name and Location</strong><br>
     Give it a <strong>Name</strong> and select the <strong>vCenter</strong> hosting that Content Library, and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3a-Name.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3a-Name.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-3a-Name.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-3a-Name.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
 </li>
 <li>
 <p><strong>Configure Content Library</strong><br>
@@ -3502,38 +3502,38 @@ Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt
       <li style="margin-bottom: 2px;"><i>the public repository: https://wp-content.vmware.com/v2/latest/lib.json</i></li>
       <li style="margin-bottom: 2px;"><i>the option to download content when needed to save storage space</i></li>
     </ul>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3b-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3b-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  <p></p>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-3b-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-3b-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  <p></p>
 </li>
 <li>
 <p><strong>Apply Security Policy</strong><br>
   Apply <strong>security policy</strong> if you choose to, and click <strong>Next</strong>.<br>
 <em>I'm using here no security policy.</em><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3c-SecurityPolicy.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3c-SecurityPolicy.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-3c-SecurityPolicy.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-3c-SecurityPolicy.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
 </li>
 <li>
 <p><strong>Add Storage</strong><br>
   Select a <strong>storage</strong> to host the content library images, and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3d-Storage.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3d-Storage.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-3d-Storage.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-3d-Storage.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
 </li>
 <li>
 <p><strong>Ready to complete</strong><br>
   Review the content library, and click <strong>Finish</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-3e-Review.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-3e-Review.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-3e-Review.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-3e-Review.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
 </li>
 </ol>
 <h4 id="associate-the-content-library-to-the-supervisor"><strong>Associate the Content Library to the Supervisor</strong></h4>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, and click on <strong>Kubernetes Service - Manage</strong>.
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-4a-Supervisor.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-4a-Supervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-4a-Supervisor.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-4a-Supervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 <ol>
 <li>
 <p><strong>Add Content Library</strong><br>
     Click <strong>ADD</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-4b-AddContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-4b-AddContentLibrary.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-4b-AddContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-4b-AddContentLibrary.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
 </li>
 <li>
 <p><strong>Select Content Library</strong><br>
     Select <strong>Content Library with VKS images</strong>, and click <strong>ADD</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-4c-SelectContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2b-4c-SelectContentLibrary.jpg" style="display: block; margin: 0 auto;" width="65%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-4c-SelectContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-4c-SelectContentLibrary.jpg" style="display: block; margin: 0 auto;" width="65%"></a>  </p>
 </li>
 </ol>
 <hr>
@@ -3546,10 +3546,10 @@ Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt
   <li style="margin-bottom: 2px;">Host Config Status</li>
   <li style="margin-bottom: 2px;">Control Plane Node Address</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-5a-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/2b-5a-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-5a-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/2c-5a-Validation.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <h4 id="validate-supervisor-content-library"><strong>Validate Supervisor Content Library</strong></h4>
 <p>Validate Supervisor Content Library by navigating to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2b-5b-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/2b-5b-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-5b-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/2c-5b-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
 
 
 

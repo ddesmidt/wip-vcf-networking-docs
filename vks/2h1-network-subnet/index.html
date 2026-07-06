@@ -22,7 +22,7 @@
     
     
       
-        <title>Subnets(ToDO) - VCF Networking Encyclopedia</title>
+        <title>Subnets - VCF Networking Encyclopedia</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Subnets(ToDO)
+              Subnets
             
           </span>
         </div>
@@ -2564,7 +2564,7 @@
   <span class="md-ellipsis">
     
   
-    Subnets(ToDO)
+    Subnets
   
 
     
@@ -2582,7 +2582,7 @@
   <span class="md-ellipsis">
     
   
-    Subnets(ToDO)
+    Subnets
   
 
     
@@ -2614,6 +2614,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Network Services - Subnets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-subnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Subnet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2639,7 +2656,7 @@
   <span class="md-ellipsis">
     
   
-    SubnetSets(ToDO)
+    SubnetSets
   
 
     
@@ -3193,6 +3210,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Network Services - Subnets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-subnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Subnet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3221,8 +3255,8 @@
 <p>This section describes the procedures for <strong>deploying Network Services into the VKS Namespace with "NSX + DTGW/VNA"</strong> within a vSphere environment.</p>
 <ul>
 <li><strong>Network Services(ToDO)</strong><ul>
-<li><a href="#networkservices"><strong>Subnets(ToDO)</strong></a></li>
-<li><a href="../2h2-network-subnetset/">SubnetSets(ToDO)</a></li>
+<li><a href="#networkservices"><strong>Subnets</strong></a></li>
+<li><a href="../2h2-network-subnetset/">SubnetSets</a></li>
 <li><a href="../2h3-network-staticroute/">Static Routes(ToDO)</a></li>
 <li><a href="../2h4-network-externalip/">External IPs(ToDO)</a></li>
 <li><a href="../2h5-network-lb/">VM Load Balancers(ToDO)</a></li>
@@ -3231,11 +3265,21 @@
 </ul>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2g1-0-k8s.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2g1-0-k8s.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-0-subnet.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2h1-0-subnet.jpg" width="100%"></a></p>
 </div>
 </div>
 <hr>
 <h2 id="networkservices">Network Services - Subnets</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2h1-1-Topology.jpg" style="display: block; margin: 0 auto;" width="55%"></a></p>
+<h3 id="create-subnet">Create Subnet</h3>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Network - Go to Service</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Add Namespace Resources" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<ol>
+<li><strong>Create New Subnet</strong><br>
+Navigate to <strong>Subnets</strong>, and click <strong>New Subnet</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1a-subnetcreate.jpg" data-desc-position="bottom"><img alt="Create Subnet" src="../images/2h1-1a-subnetcreate.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </li>
+</ol>
+<p>For more information about Subnets settings review the <a href="../../vcenter/1b-vpc_subnet/#overlay" target="_blank">VPC Subnet Overlay page</a>.</p>
 
 
 
