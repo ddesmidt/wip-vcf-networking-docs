@@ -67,15 +67,9 @@ By default the VM is connected to the Private-VPC subnetset `vm-default`.
 To offer direct access to the VM, there are several options:
 
 * **Create a Public Subnet and plug the VM on it**  
-Under **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Network - Go to Service**  
-
-    !!! warning "XXX PERSONAL Drafting Note"
-        xxx Provide the steps xxx  
+See [Network Services - Subnets](2h1-network-subnet.md#networkservices)
 
 * **Create a Load Balancer in front of the VM**  
-Under **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Network - Go to Service**  
-  
-    !!! warning "XXX PERSONAL Drafting Note"
-        xxx Provide the steps xxx  
+See [Network Services - VM Load Balancers](2h5-network-lb.md#networkservices)
 
 

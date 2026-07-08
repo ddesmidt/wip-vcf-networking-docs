@@ -79,8 +79,15 @@ Navigate to **Static Routes**, and click **New Static Route**.
                     Port:          <b>8080/TCP</b>
                 </code></pre>
 
+---
 
-### Validate the Static Route (Direct Access to Pod)
+### Validate Static Route 
+
+1. **Static Route Configuration**  
+Expand the newly created Static Route to view its routes.
+![Created StaticRoute](images/2h3-2a-staticroutecreated.jpg){ width="90%" style="display: block; margin: 0 auto;" }  
+
+1. **Static Route Validation**  
 To verify connectivity, connect to a VM within the VPC and use `curl` to directly access the Pod's IP and port (assuming the application is web).
 ```text
 root@vm-public:~# curl http://192.168.146.3:8080

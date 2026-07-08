@@ -44,5 +44,11 @@ Under the **Resources** card, click **Network - Go to Service**.
 
 1. **Create New SubnetSet**  
 Navigate to **SubnetSets**, and click **New SubnetSet**.  
-![Create Subnet](images/2h2-1a-subnetsetcreate.jpg){ width="50%" style="display: block; margin: 0 auto;" }  
+![Create Subnet](images/2h2-1a-subnetsetcreate.jpg){ width="70%" style="display: block; margin: 0 auto;" }  
+
+---
+
+### Validate Subnetset
+Click on the newly created Subnetset, and navigate to **Subnets** to view its current subnets CIDR and VPC Gateway.
+![Created Subnet](images/2h2-2a-subnetsetcreated.jpg){ width="90%" style="display: block; margin: 0 auto;" }  
 

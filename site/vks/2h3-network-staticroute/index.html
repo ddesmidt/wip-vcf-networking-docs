@@ -2685,10 +2685,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#validate-the-static-route-direct-access-to-pod" class="md-nav__link">
+  <a href="#validate-static-route" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validate the Static Route (Direct Access to Pod)
+        Validate Static Route
       
     </span>
   </a>
@@ -3236,10 +3236,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#validate-the-static-route-direct-access-to-pod" class="md-nav__link">
+  <a href="#validate-static-route" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validate the Static Route (Direct Access to Pod)
+        Validate Static Route
       
     </span>
   </a>
@@ -3352,11 +3352,22 @@ apache-deployment-58bf9564f6-dpmcd   1/1     Running   0          8d    192.168.
 </details>
 </li>
 </ol>
-<h3 id="validate-the-static-route-direct-access-to-pod">Validate the Static Route (Direct Access to Pod)</h3>
-<p>To verify connectivity, connect to a VM within the VPC and use <code>curl</code> to directly access the Pod's IP and port (assuming the application is web).
+<hr>
+<h3 id="validate-static-route">Validate Static Route</h3>
+<ol>
+<li>
+<p><strong>Static Route Configuration</strong><br>
+Expand the newly created Static Route to view its routes.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h3-2a-staticroutecreated.jpg" data-desc-position="bottom"><img alt="Created StaticRoute" src="../images/2h3-2a-staticroutecreated.jpg" style="display: block; margin: 0 auto;" width="90%"></a>  </p>
+</li>
+<li>
+<p><strong>Static Route Validation</strong><br>
+To verify connectivity, connect to a VM within the VPC and use <code>curl</code> to directly access the Pod's IP and port (assuming the application is web).
 </p><div class="highlight"><pre><span></span><code>root@vm-public:~# curl http://192.168.146.3:8080
 &lt;h1&gt;It works - Pod: apache-deployment-58bf9564f6-c8gqc&lt;/h1&gt;
 </code></pre></div><p></p>
+</li>
+</ol>
 
 
 

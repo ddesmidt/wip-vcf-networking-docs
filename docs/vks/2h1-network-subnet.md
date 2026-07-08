@@ -36,8 +36,14 @@ Under the **Resources** card, click **Network - Go to Service**.
 
 1. **Create New Subnet**  
 Navigate to **Subnets**, and click **New Subnet**.  
-![Create Subnet](images/2h1-1a-subnetcreate.jpg){ width="50%" style="display: block; margin: 0 auto;" }  
+![Create Subnet](images/2h1-1a-subnetcreate.jpg){ width="70%" style="display: block; margin: 0 auto;" }  
 
 For more information about Subnets settings review the [VPC Subnet Overlay page](../../vcenter/1b-vpc_subnet/#overlay){target="_blank"}.
 
+
+---
+
+### Validate Subnet Creation
+Expand the newly created Subnet to view its assigned CIDR and VPC Gateway.
+![Created Subnet](images/2h1-2a-subnetcreated.jpg){ width="90%" style="display: block; margin: 0 auto;" }  
 

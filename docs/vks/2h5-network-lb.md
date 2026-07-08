@@ -68,14 +68,17 @@ The load balancer identifies which VMs to send traffic to based on Kubernetes la
         virtualmachine.vmoperator.vmware.com/web-vm-1 labeled
         </code></pre>
 
-### Validate the VM Load Balancer
 
-**1. Locate the Load Balancer VIP**  
+---
+
+### Validate VM Load Balancer
+
+1. **Locate the Load Balancer VIP**  
 Navigate back to **vCenter** > **Supervisor Management** > **Supervisors** > target Supervisor > **Namespaces** > specific Namespace > **Resources** > **Network - Go to Service**.  
 Go to the **VM Load Balancers** tab and expand the newly created VM Load Balancer to view its assigned IP address.  
 ![Check LB](images/2h5-2a-lbvip.jpg){ width="50%" style="display: block; margin: 0 auto;" }  
 
-**2. Test Connectivity**  
+1. **Test Connectivity**  
 To verify connectivity, connect to a VM within the VPC and use `curl` to directly access the Load Balancer's Virtual IP (VIP).
 ```text
 root@vm-public:~# curl [http://10.1.7.140](http://10.1.7.140)
