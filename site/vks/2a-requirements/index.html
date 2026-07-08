@@ -3038,7 +3038,7 @@
   <span class="md-ellipsis">
     
   
-    E/W pod to pod
+    E/W Pod to Pod
   
 
     
@@ -3126,7 +3126,7 @@
   <span class="md-ellipsis">
     
   
-    App Access broken(ToDO)
+    App Access broken
   
 
     
@@ -3142,7 +3142,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    App Access broken(ToDO)
+    App Access broken
   
 
           </label>
@@ -3162,7 +3162,7 @@
   <span class="md-ellipsis">
     
   
-    VIP access down(ToDO)
+    VIP access down
   
 
     
@@ -3190,7 +3190,7 @@
   <span class="md-ellipsis">
     
   
-    VM access down(ToDO)
+    VM access down
   
 
     
@@ -3218,7 +3218,7 @@
   <span class="md-ellipsis">
     
   
-    Pod access down(ToDO)
+    Pod access down
   
 
     
@@ -3488,9 +3488,11 @@ Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
 <details class="info">
 <summary>Status Validation</summary>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Host and Clusters</strong> &gt; <strong>[your vCenter Cluster]</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>Network Configuration</strong>.<br>
-Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:<br>
-<em>Note: If no workloads are deployed on logical networks yet, it is expected to have no Tunnels established on the ESXi hosts.</em>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3a-NSX-Prep.jpg" data-desc-position="bottom"><img alt="NSX Host Preparation Status" src="../images/2a-3a-NSX-Prep.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  </p>
+<blockquote>
+<p><strong>Note:</strong> If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESXi hosts.  </p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3a-NSX-Prep.jpg" data-desc-position="bottom"><img alt="NSX Host Preparation Status" src="../images/2a-3a-NSX-Prep.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 </details>
 </li>
 </ul>

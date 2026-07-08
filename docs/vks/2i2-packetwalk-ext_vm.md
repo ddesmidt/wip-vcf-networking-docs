@@ -11,7 +11,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 * **Packet Walk**  
     * [N/S External to VIP](2i1-packetwalk-ext_vip.md)  
     * [**N/S External to VM**](#packetwalk)  
-    * [E/W pod to pod](2i3-packetwalk-pod_pod.md)  
+    * [E/W Pod to Pod](2i3-packetwalk-pod_pod.md)  
     * [E/W VM to VM](2i4-packetwalk-vm_vm.md)  
 * App Access broken(ToDO)  
     * [VIP access down](2j1-troubleshooting-vip.md)  
@@ -50,7 +50,7 @@ In this case, external clients can't reach that subnet, and so can't reach VMs o
 ### Packet Walk
 
 * **Step1: External Client accesses the VM**  
-`Client-IP => VM (10.1.7.147)`  
+`Client-IP => VM (10.1.7.146)`  
 
     The traffic enters the ESX hosting the VM.
 

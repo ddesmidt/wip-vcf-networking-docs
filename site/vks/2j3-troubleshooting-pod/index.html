@@ -20,7 +20,7 @@
     
     
       
-        <title>Pod access down(ToDO) - VCF Networking Encyclopedia</title>
+        <title>Pod access down - VCF Networking Encyclopedia</title>
       
     
     
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pod access down(ToDO)
+              Pod access down
             
           </span>
         </div>
@@ -2879,7 +2879,7 @@
   <span class="md-ellipsis">
     
   
-    E/W pod to pod
+    E/W Pod to Pod
   
 
     
@@ -2969,7 +2969,7 @@
   <span class="md-ellipsis">
     
   
-    App Access broken(ToDO)
+    App Access broken
   
 
     
@@ -2985,7 +2985,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    App Access broken(ToDO)
+    App Access broken
   
 
           </label>
@@ -3005,7 +3005,7 @@
   <span class="md-ellipsis">
     
   
-    VIP access down(ToDO)
+    VIP access down
   
 
     
@@ -3033,7 +3033,7 @@
   <span class="md-ellipsis">
     
   
-    VM access down(ToDO)
+    VM access down
   
 
     
@@ -3068,7 +3068,7 @@
   <span class="md-ellipsis">
     
   
-    Pod access down(ToDO)
+    Pod access down
   
 
     
@@ -3086,7 +3086,7 @@
   <span class="md-ellipsis">
     
   
-    Pod access down(ToDO)
+    Pod access down
   
 
     
@@ -3117,6 +3117,56 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting - Pod access down">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step1-traffic-leaves-the-source-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step1: Traffic leaves the Source Pod
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step2-cross-node-encapsulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step2: Cross-Node Encapsulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3193,6 +3243,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Troubleshooting - Pod access down">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step1-traffic-leaves-the-source-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step1: Traffic leaves the Source Pod
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step2-cross-node-encapsulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step2: Cross-Node Encapsulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3227,10 +3327,10 @@
 <li><a href="../2i4-packetwalk-vm_vm/">E/W VM to VM</a>  </li>
 </ul>
 </li>
-<li><strong>App Access broken(ToDO)</strong>   <ul>
-<li><a href="../2j1-troubleshooting-vip/">VIP access down(ToDO)</a>  </li>
-<li><a href="../2j2-troubleshooting-vm/">VM access down(ToDO)</a>  </li>
-<li><a href="./"><strong>Pod access down(ToDO)</strong></a>  </li>
+<li><strong>App Access broken</strong>   <ul>
+<li><a href="../2j1-troubleshooting-vip/">VIP access down</a>  </li>
+<li><a href="../2j2-troubleshooting-vm/">VM access down</a>  </li>
+<li><a href="#troubleshooting"><strong>Pod access down</strong></a>  </li>
 </ul>
 </li>
 </ul>
@@ -3241,6 +3341,51 @@
 </div>
 <hr>
 <h2 id="troubleshooting">Troubleshooting - Pod access down</h2>
+<p>As described in the <a href="../2i3-packetwalk-pod_pod/">Packet Walk - E/W Pod to Pod</a> section, Pod accessing a Pod traverse the following path:</p>
+<h4 id="logical-view">Logical View</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i3-0-LogicalView.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i3-0-LogicalView.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
+<h4 id="physical-view">Physical View</h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i3-0-PhysicalView.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i3-0-PhysicalView.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<h3 id="step1-traffic-leaves-the-source-pod">Step1: Traffic leaves the Source Pod</h3>
+<p>This one is internal to the K8s Node and should not be blocked.</p>
+<h3 id="step2-cross-node-encapsulation">Step2: Cross-Node Encapsulation</h3>
+<ul>
+<li><strong>Validate the ESXi host tunnels are UP</strong></li>
+</ul>
+<details class="info">
+<summary>Status Validation</summary>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Host and Clusters</strong> &gt; <strong>[your vCenter Cluster]</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>Network Configuration</strong>.<br>
+Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  </p>
+<blockquote>
+<p><strong>Note:</strong> If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESXi hosts.  </p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3a-NSX-Prep.jpg" data-desc-position="bottom"><img alt="NSX Host Preparation Status" src="../images/2a-3a-NSX-Prep.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+</details>
+<ul>
+<li><strong>Validate the ESXi host tunnels accept large packets (MTU)</strong>   </li>
+</ul>
+<details class="info">
+<summary>Status Validation</summary>
+<div class="highlight"><pre><span></span><code>vmkping ++netstack=vxlan &lt;remote-TEP-IP&gt; -d -s 8900
+</code></pre></div>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>[root@esxi-01a:~] <b>vmkping ++netstack=vxlan 10.1.3.207 -d -s 8900</b>
+    PING 10.1.3.207 (10.1.3.207): 8900 data bytes
+    8908 bytes from 10.1.3.207: icmp_seq=0 ttl=64 time=1.234 ms
+    8908 bytes from 10.1.3.207: icmp_seq=1 ttl=64 time=1.102 ms
+    8908 bytes from 10.1.3.207: icmp_seq=2 ttl=64 time=1.098 ms
+    --- 10.1.3.207 ping statistics ---
+    3 packets transmitted, 3 packets received, 0% packet loss
+    round-trip min/avg/max = 1.098/1.144/1.234 ms
+</code></pre>
+Consult with your Network Team to determine why routing does not reach the destination.  <p></p>
+<ul>
+<li>If standard "small" pings fail, the issue is typically related to routing misconfigurations or firewall blockages.  </li>
+<li>If "large" pings fail, the issue is typically related to Jumbo Frames (MTU) not being enabled across the physical fabric.</li>
+</ul>
+</details>
+</details>
 
 
 

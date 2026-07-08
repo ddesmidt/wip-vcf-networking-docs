@@ -22,7 +22,7 @@
     
     
       
-        <title>VM access down(ToDO) - VCF Networking Encyclopedia</title>
+        <title>VM access down - VCF Networking Encyclopedia</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VM access down(ToDO)
+              VM access down
             
           </span>
         </div>
@@ -2881,7 +2881,7 @@
   <span class="md-ellipsis">
     
   
-    E/W pod to pod
+    E/W Pod to Pod
   
 
     
@@ -2971,7 +2971,7 @@
   <span class="md-ellipsis">
     
   
-    App Access broken(ToDO)
+    App Access broken
   
 
     
@@ -2987,7 +2987,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    App Access broken(ToDO)
+    App Access broken
   
 
           </label>
@@ -3007,7 +3007,7 @@
   <span class="md-ellipsis">
     
   
-    VIP access down(ToDO)
+    VIP access down
   
 
     
@@ -3042,7 +3042,7 @@
   <span class="md-ellipsis">
     
   
-    VM access down(ToDO)
+    VM access down
   
 
     
@@ -3060,7 +3060,7 @@
   <span class="md-ellipsis">
     
   
-    VM access down(ToDO)
+    VM access down
   
 
     
@@ -3092,6 +3092,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Troubleshooting - VM access down">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step1-physical-fabric-to-the-esx-node-hosting-the-vip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step1: Physical fabric to the ESX Node hosting the VIP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3117,7 +3156,7 @@
   <span class="md-ellipsis">
     
   
-    Pod access down(ToDO)
+    Pod access down
   
 
     
@@ -3195,6 +3234,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Troubleshooting - VM access down">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step1-physical-fabric-to-the-esx-node-hosting-the-vip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step1: Physical fabric to the ESX Node hosting the VIP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3229,10 +3307,10 @@
 <li><a href="../2i4-packetwalk-vm_vm/">E/W VM to VM</a>  </li>
 </ul>
 </li>
-<li><strong>App Access broken(ToDO)</strong>  <ul>
-<li><a href="../2j1-troubleshooting-vip/">VIP access down(ToDO)</a>  </li>
-<li><a href="./"><strong>VM access down(ToDO)</strong></a>  </li>
-<li><a href="../2j3-troubleshooting-pod/">Pod access down(ToDO)</a>  </li>
+<li><strong>App Access broken</strong>  <ul>
+<li><a href="../2j1-troubleshooting-vip/">VIP access down</a>  </li>
+<li><a href="#troubleshooting"><strong>VM access down</strong></a>  </li>
+<li><a href="../2j3-troubleshooting-pod/">Pod access down</a>  </li>
 </ul>
 </li>
 </ul>
@@ -3243,6 +3321,47 @@
 </div>
 <hr>
 <h2 id="troubleshooting">Troubleshooting - VM access down</h2>
+<p>As described in the <a href="../2i2-packetwalk-ext_vm/">Packet Walk - N/S External to VM</a> section, clients accessing a VM traverse the following path:</p>
+<h4 id="logical-view">Logical View</h4>
+<ul>
+<li>
+<p><strong>Use case: VM connected to Private Subnet (Private-VPC or Private-TGW)</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-LogicalView1.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i2-0-LogicalView1.jpg" style="display: block; margin: 0 auto;" width="75%"></a>
+In this case, external clients can't reach that subnet, and so can't reach VMs on it.</p>
+</li>
+<li>
+<p><strong>Use case: VM connected to Public Subnet</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-LogicalView2.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i2-0-LogicalView2.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
+</li>
+</ul>
+<h4 id="physical-view">Physical View</h4>
+<ul>
+<li><strong>Use case: VM connected to Public Subnet</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-PhysicalView2.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i2-0-PhysicalView2.jpg" style="display: block; margin: 0 auto;" width="95%"></a></li>
+</ul>
+<h3 id="step1-physical-fabric-to-the-esx-node-hosting-the-vip">Step1: Physical fabric to the ESX Node hosting the VIP</h3>
+<ul>
+<li>
+<p><strong>Validate communication to the VM</strong><br>
+    Validate IP reachability to the VIP with a small and large <code>ping</code>.  </p>
+<details class="info">
+<summary>Status Validation</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>ping 10.1.7.146</b>
+Pinging 10.1.7.146 with 32 bytes of data:
+Reply from 10.1.7.146: bytes=32 time=6ms TTL=61
+Reply from 10.1.7.146: bytes=32 time=1ms TTL=61<p></p>
+</code><p><code>PS C:\Users\Administrator\Documents&gt; <b>ping 10.1.7.146 -l 1400</b>
+Pinging 10.1.7.146 with 1400 bytes of data:
+Reply from 10.1.7.146: bytes=1400 time=2ms TTL=61
+Reply from 10.1.7.146: bytes=1400 time=1ms TTL=61
+</code></p></pre><p></p>
+<blockquote>
+<p><strong>Note:</strong> Depending on your Operating System, the exact command for large ping may vary (e.g., <code>-l</code>, <code>-s</code>).  </p>
+</blockquote>
+<p>Consult with your Network Team to determine why routing does not reach the destination.  The issue is typically related to routing misconfigurations or firewall blockages.</p>
+</details>
+</li>
+</ul>
 
 
 

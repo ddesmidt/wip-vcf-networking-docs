@@ -11,7 +11,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 * **Packet Walk** 
     * [N/S External to VIP](2i1-packetwalk-ext_vip.md)  
     * [N/S External to VM](2i2-packetwalk-ext_vm.md)  
-    * [**E/W pod to pod**](#packetwalk)  
+    * [**E/W Pod to Pod**](#packetwalk)  
     * [E/W VM to VM](2i4-packetwalk-vm_vm.md)  
 * **App Access broken(ToDO)**
     * [VIP access down](2j1-troubleshooting-vip.md)  
@@ -48,17 +48,23 @@ A Full Application (Load Balancer + Pods) has been deployed (see [Deploy App (K8
 
     The traffic exits the source pod and hits the Worker Node's local routing engine (managed by `kube-proxy` and the CNI agent, such as Antrea).  
 
-* **Step 2: Cross-Node Encapsulation (Underlay Transit)**  
+* **Step 2: Cross-Node Encapsulation**  
 ```text
 WorkerNode1-IP (172.30.0.5) => WorkerNode2-IP (172.30.0.6)
-[Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)]
+  [Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)]
 ```
-
     The destination pod is on a different node, so the Worker Node encapsulates the original packet inside a node-to-node tunnel packet.  
-    If the Worker Nodes reside on a different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  
+
+    > **Note:** If the Worker Nodes reside on a different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  
+    ```text
+    ESX1-TEP_IP (10.1.3.203) => ESX2-TEP_IP (10.1.3.207)
+      [WorkerNode1-IP (172.30.0.5) => WorkerNode2-IP (172.30.0.6)]
+        [[Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)]]
+    ```
 
 
-* **Step 3: Destination Node Decapsulation and Delivery**  
-`Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)`
+
+* **Step 3: Destination Node Decapsulation and Delivery (encapsulation2)**    
+    `Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)`
 
     The destination Worker Node receives the node-to-node packet and strips away the encapsulation header. The local routing rules then deliver the unencapsulated packet directly into the destination Pod's network interface.

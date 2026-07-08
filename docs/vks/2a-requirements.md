@@ -72,7 +72,8 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
         Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
-        *Note: If no workloads are deployed on logical networks yet, it is expected to have no Tunnels established on the ESXi hosts.*
+        > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESXi hosts.  
+    
         ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 #### **vCenter with "DTGW + VNA ready"**  {: #dtgw-vna-ready }
