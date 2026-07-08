@@ -8,7 +8,7 @@
 
 This section describes the procedures for **Troubleshooting Network Services into the VKS Namespace utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
-* Packet Walk(ToDO)  
+* Packet Walk  
     * [N/S External to VIP](2i1-packetwalk-ext_vip.md)  
     * [N/S External to VM](2i2-packetwalk-ext_vm.md)  
     * [E/W pod to pod](2i3-packetwalk-pod_pod.md)  
