@@ -12,8 +12,8 @@ This section describes the procedures for **provisioning and managing Network Se
     * [**Subnets**](#networkservices)
     * [SubnetSets](2h2-network-subnetset.md)
     * [Static Routes](2h3-network-staticroute.md)
-    * [External IPs(ToDO)](2h4-network-externalip.md)
-    * [VM Load Balancers(ToDO)](2h5-network-lb.md)
+    * [External IPs](2h4-network-externalip.md)
+    * [VM Load Balancers](2h5-network-lb.md)
 
 </div>
 
@@ -30,11 +30,12 @@ This section describes the procedures for **provisioning and managing Network Se
 
 ### Create Subnet
 
-Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Network - Go to Service**  
-![Add Namespace Resources](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select your target Supervisor, click the **Namespaces** tab, and select your specific Namespace.  
+Under the **Resources** card, click **Network - Go to Service**.  
+![Network Service](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 1. **Create New Subnet**  
-Navigate to **Subnets**, and click **New Subnet**  
+Navigate to **Subnets**, and click **New Subnet**.  
 ![Create Subnet](images/2h1-1a-subnetcreate.jpg){ width="50%" style="display: block; margin: 0 auto;" }  
 
 For more information about Subnets settings review the [VPC Subnet Overlay page](../../vcenter/1b-vpc_subnet/#overlay){target="_blank"}.

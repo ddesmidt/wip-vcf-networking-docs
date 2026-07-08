@@ -139,7 +139,7 @@ Create file "my-web-farm.yaml"
 kubectl apply -f my-web-farm.yaml
 ```
 
-??? info "Output example"
+??? abstract "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl apply -f my-web-vm.yaml</b>
     secret/ubuntu-cloud-init created
     virtualmachine.vmoperator.vmware.com/web-vm-1 created
@@ -155,7 +155,7 @@ kubectl apply -f my-web-farm.yaml
 kubectl get service web-lb-vip
 ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get service web-lb-vip</b>
         NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
         web-lb-vip   LoadBalancer   172.29.143.82   <b>10.1.7.137</b>    80/TCP    24s
@@ -171,7 +171,7 @@ kubectl get service web-lb-vip
 kubectl get virtualmachines -o wide
 ```
     
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get virtualmachines -o wide</b>
         NAME       POWER-STATE   CLASS                IMAGE                   PRIMARY-IP4   AGE
         <b>web-vm-1</b>   PoweredOn     best-effort-xsmall   vmi-4143a3379f59e4a48   <b>172.30.0.3</b>    46s
@@ -185,7 +185,7 @@ kubectl get virtualmachines -o wide
 curl http://10.1.7.137
 ```
 
-??? info "Output example"
+??? abstract "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>curl http://10.1.7.137</b>
     &lt;h1&gt;Hello from <b>web-vm-1</b>&lt;/h1&gt;
     &nbsp;

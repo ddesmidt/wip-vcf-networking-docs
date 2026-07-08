@@ -57,10 +57,6 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
 
 ### NSX {: #nsx }
 
-!!! warning "XXX PERSONAL Drafting Note"
-    xxx REDO SCREENSHOTS BEFORE THE DEPLOYMENT OF THE SUPERVISOR xxx  
-
-
 !!! warning "Missing NSX Requirements?"
     If your environment is not yet configured with the NSX prerequisites below, please refer to:  
 
@@ -85,23 +81,31 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     The VNA Cluster hosts the Load Balancing and Outbound-NAT services (providing NAT for Supervisor / K8s Clusters communicating with the physical network).  
 
     ??? info "Status Validation"
-        Navigate to **vCenter** > **Networking** > **vCenter** > **Configure** > **VNA Clusters**.  
+        Navigate to **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **VNA Clusters**.  
         Ensure the VNA Cluster with its Nodes is deployed and shows a Green status.
         ![VNA Cluster Status](images/2a-3b-VNA-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+
+* **Distributed External Connection**  
+    A Distributed External Connection is the VLAN and physical router used by logical networks (such as Transit Gateways and VPCs) to connect to the physical network.  
+
+    ??? info "Status Validation"
+        Navigate to **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **External Connection**.  
+        Ensure you have at least 1 Distributed External Connection configured:
+        ![IP Blocks Properties](images/2a-3c-ExternalConnection.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **IP Blocks**  
     The External IP Block is for the future K8s VIPs (IPs in the Dataplane subnet).  
 
     ??? info "Status Validation"
-        Navigate to **vCenter** > **Networking** > **Virtual Private Clouds** > **Configure** > **IP Blocks**.  
+        Navigate to **vCenter** > **Networking** > **Virtual Private Clouds** > **Configure** > **Settings** > **IP Blocks**.  
         Ensure you have at least 1 External IP Block configured:
-        ![IP Blocks Properties](images/2a-3c-IPBlocks.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![IP Blocks Properties](images/2a-3d-IPBlocks.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **Connectivity Profile**  
     The Connectivity Profile binds the DTGW configuration (VNA Cluster, Outbound-NAT, and N-S Services for Load Balancing).  
 
     ??? info "Status Validation"
-        Navigate to **vCenter** > **Networking** > **Virtual Private Clouds** > **Configure** > **Connectivity Profiles**.  
+        Navigate to **vCenter** > **Networking** > **Virtual Private Clouds** > **Configure** > **Settings** > **Connectivity Profiles**.  
         Ensure the Connectivity Profile has the following configured:
         <ul style="margin-top: -5px; margin-bottom: 15px; line-height: 1.3;">
           <li style="margin-bottom: 2px;">External and Private Transit Gateway IP Blocks selected</li>
@@ -109,12 +113,12 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
           <li style="margin-bottom: 2px;">N-S Services enabled (for the LB service)</li>
           <li style="margin-bottom: 2px;">Default Outbound NAT enabled (for NAT)</li>
         </ul>
-        ![Connectivity Profile Properties](images/2a-3d-ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![Connectivity Profile Properties](images/2a-3e-ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **Distributed Transit Gateway (DTGW)**  
     The Distributed Transit Gateway is the distributed logical router responsible for routing traffic between the logical and physical networks.  
 
     ??? info "Status Validation"
-        Navigate to **vCenter** > **Networking** > **Default Transit Gateway** > **Configure** > **Properties**.  
-        Ensure the DTGW has a Connection Type of "Distributed VLAN". 
+        Navigate to **vCenter** > **Networking** > **Default Transit Gateway** > **Configure** > **Settings** > **Properties**.  
+        Ensure the DTGW has a Connection Type of "Distributed VLAN", and an External Connection configured. 
         ![DTGW Properties](images/2a-3e-DTGW.jpg){ width="95%" style="display: block; margin: 0 auto;" }

@@ -35,7 +35,7 @@ This section describes the procedures for **deploying a K8s Cluster in a Namespa
     vcf context list
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context list</b>
         NAME                             CURRENT  TYPE
         supervisor-mgt                   false    kubernetes
@@ -51,7 +51,7 @@ If the current context is not the good one, connect to the Supervisor Namespace
     vcf context use supervisor-mgt:demo-space
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context use supervisor-mgt:demo-space</b>
         [ok] Token is still active. Skipped the token refresh for context "supervisor-mgt:demo-space"
         </b>[i] Successfully activated context 'supervisor-mgt:demo-space' (Type: kubernetes)</b>
@@ -70,7 +70,7 @@ If the current context is not the good one, connect to the Supervisor Namespace
     kubectl get kubernetesreleases
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get kubernetesreleases</b>
         NAME                                      VERSION                                 READY   COMPATIBLE   CREATED   TYPE
         <snip>
@@ -83,7 +83,7 @@ If the current context is not the good one, connect to the Supervisor Namespace
     kubectl get virtualmachineclass
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get virtualmachineclass</b>
         NAME                 CPU   MEMORY
         best-effort-medium   2     8Gi
@@ -97,7 +97,7 @@ If the current context is not the good one, connect to the Supervisor Namespace
     kubectl get storageclass
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get storageclass</b>
         NAME                                                   PROVISIONER              RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
         <snip>
@@ -149,7 +149,7 @@ Create file "my-cluster.yaml"
 kubectl apply -f my-cluster.yaml
 ```
 
-??? info "Output example"
+??? abstract "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl apply -f my-cluster.yaml</b>
     cluster.cluster.x-k8s.io/my-cluster created
     </code></pre>
@@ -165,7 +165,7 @@ It takes around 5 minutes to get the K8s Cluster ready
 kubectl get cluster
 ```
 
-??? info "Output example"
+??? abstract "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get cluster</b>
     NAME         CLUSTERCLASS             <b>AVAILABLE</b>   CP DESIRED   <b>CP AVAILABLE</b>   CP UP-TO-DATE   <b>W DESIRED</b>   W AVAILABLE   W UP-TO-DATE   <b>PHASE</b>         AGE    VERSION
     my-cluster   builtin-generic-v3.6.0   <b>True</b>        3            <b>3</b>              3               <b>3</b>           3             3              <b>Provisioned</b>   7m32s   v1.35.5+vmware.1
@@ -176,7 +176,7 @@ kubectl get cluster
 kubectl get machines
 ```
 
-??? info "Output example"
+??? abstract "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get machines</b>
     NAME                                   CLUSTER      NODE NAME                              <b>READY</b>   AVAILABLE   UP-TO-DATE   PHASE     AGE     VERSION
     my-cluster-wglt6-dlpqm                 my-cluster   my-cluster-wglt6-dlpqm                 <b>True</b>    True        True         Running   5m57s   v1.35.5+vmware.1
@@ -195,7 +195,7 @@ kubectl get machines
 <pre><code>[System.IO.File]::WriteAllBytes("$pwd\my-cluster-kubeconfig.yaml", [System.Convert]::FromBase64String((kubectl get secret <b>my-cluster-kubeconfig</b> -n <b>demo-space</b> -o jsonpath='{.data.value}')))
 </code></pre>
 
-??? info "Output example"
+??? abstract "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>[System.IO.File]::WriteAllBytes("$pwd\my-cluster-kubeconfig.yaml", [System.Convert]::FromBase64String((kubectl get secret my-cluster-kubeconfig -n demo-space -o jsonpath='{.data.value}')))</b>
     </code></pre>
 
@@ -228,7 +228,7 @@ kubectl get machines
     $env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"</b>
         </code></pre>
         Note: To connect back to the Supervisor Namespace (demo-space)
@@ -240,7 +240,7 @@ kubectl get machines
     kubectl config use-context my-cluster-admin@my-cluster
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl config use-context my-cluster-admin@my-cluster</b>
         Switched to context "my-cluster-admin@my-cluster".
         </code></pre>
@@ -250,7 +250,7 @@ kubectl get machines
     kubectl config get-contexts
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         The current context is:  
         . **Cluster: my-cluster**  
         . **Namespace: default (empty)**  
@@ -264,7 +264,7 @@ kubectl get machines
     kubectl get nodes
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get nodes</b>
         NAME                                   STATUS   ROLES           AGE   VERSION
         my-cluster-wglt6-dlpqm                 Ready    control-plane   49m   v1.35.5+vmware.1

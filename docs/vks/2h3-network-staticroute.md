@@ -12,8 +12,8 @@ This section describes the procedures for **provisioning and managing Network Se
     * [Subnets](2h1-network-subnet.md)
     * [SubnetSets](2h2-network-subnetset.md)
     * [**Static Routes**](#networkservices)
-    * [External IPs(ToDO)](2h4-network-externalip.md)
-    * [VM Load Balancers(ToDO)](2h5-network-lb.md)
+    * [External IPs](2h4-network-externalip.md)
+    * [VM Load Balancers](2h5-network-lb.md)
 </div>
 
 <div markdown>
@@ -32,11 +32,12 @@ Note: With the "NSX + DTGW/VNA" architecture, communication to individual K8s Po
 
 ### Create Static Route
 
-Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Network - Go to Service**  
-![Add Namespace Resources](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select your target Supervisor, click the **Namespaces** tab, and select your specific Namespace.  
+Under the **Resources** card, click **Network - Go to Service**.  
+![Network Service](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 1. **Create New Static Route**  
-Navigate to **Static Routes**, and click **New Static Route**  
+Navigate to **Static Routes**, and click **New Static Route**.  
 ![Create Subnet](images/2h3-1a-staticroutecreate.jpg){ width="50%" style="display: block; margin: 0 auto;" }  
 
     ??? info "How to find required IP information via kubectl"

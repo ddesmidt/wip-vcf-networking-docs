@@ -22,7 +22,7 @@
     
     
       
-        <title>External IPs(ToDO) - VCF Networking Encyclopedia</title>
+        <title>External IPs - VCF Networking Encyclopedia</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              External IPs(ToDO)
+              External IPs
             
           </span>
         </div>
@@ -2648,7 +2648,7 @@
   <span class="md-ellipsis">
     
   
-    External IPs(ToDO)
+    External IPs
   
 
     
@@ -2666,7 +2666,7 @@
   <span class="md-ellipsis">
     
   
-    External IPs(ToDO)
+    External IPs
   
 
     
@@ -2693,7 +2693,7 @@
   <a href="#networkservices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Services - Exernal IPs
+        Network Services - External IPs
       
     </span>
   </a>
@@ -2723,7 +2723,7 @@
   <span class="md-ellipsis">
     
   
-    VM Load Balancers(ToDO)
+    VM Load Balancers
   
 
     
@@ -3188,7 +3188,7 @@
   <a href="#networkservices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Services - Exernal IPs
+        Network Services - External IPs
       
     </span>
   </a>
@@ -3224,18 +3224,25 @@
 <li><a href="../2h1-network-subnet/">Subnets</a></li>
 <li><a href="../2h2-network-subnetset/">SubnetSets</a></li>
 <li><a href="../2h3-network-staticroute/">Static Routes</a></li>
-<li><a href="#networkservices"><strong>External IPs(ToDO)</strong></a></li>
-<li><a href="../2h5-network-lb/">VM Load Balancers(ToDO)</a></li>
+<li><a href="#networkservices"><strong>External IPs</strong></a></li>
+<li><a href="../2h5-network-lb/">VM Load Balancers</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2g1-0-k8s.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2g1-0-k8s.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h4-0-externalip.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2h4-0-externalip.jpg" width="100%"></a></p>
 </div>
 </div>
 <hr>
-<h2 id="networkservices">Network Services - Exernal IPs</h2>
+<h2 id="networkservices">Network Services - External IPs</h2>
+<p>The primary use case for configuring an <strong>External IP</strong> is to provide 1:1 Network Address Translation (NAT) for VMs residing on Private Subnets, enabling direct inbound and outbound connectivity with the physical upstream network.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h4-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2h4-1-Topology.jpg" style="display: block; margin: 0 auto;" width="55%"></a></p>
+<details class="warning">
+<summary>vCenter Namespace External IPs currently Unsupported</summary>
+<p>Due to a current limitation within vCenter Namespaces, the provisioning of External IPs is <strong>not presently supported</strong> in this architecture.<br>
+This section will be updated once the capability becomes officially available.</p>
+</details>
 
 
 

@@ -2753,7 +2753,7 @@
   <span class="md-ellipsis">
     
   
-    External IPs(ToDO)
+    External IPs
   
 
     
@@ -2781,7 +2781,7 @@
   <span class="md-ellipsis">
     
   
-    VM Load Balancers(ToDO)
+    VM Load Balancers
   
 
     
@@ -3363,7 +3363,7 @@
 <p><strong>Create once the VCF Context</strong><br>
     </p><div class="highlight"><pre><span></span><code>vcf context create supervisor-mgt --endpoint=10.1.7.134 --type k8s --username administrator@vsphere.local --insecure-skip-tls-verify
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>vcf context create supervisor-mgt --endpoint=10.1.7.134 --type k8s --username administrator@vsphere.local --insecure-skip-tls-verify</b>
 [i] Some initialization of the CLI is required.
@@ -3409,7 +3409,7 @@ If the namespace context you wish to use is not in this list, you may need to re
 <p><strong>List the Supervisor Namespaces</strong><br>
     </p><div class="highlight"><pre><span></span><code>vcf context list
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>vcf context list</b>
 NAME                             CURRENT  TYPE
@@ -3425,7 +3425,7 @@ supervisor-mgt:svc-velero-t234z  false    kubernetes
 <p><strong>Connect to the Supervisor Namespace</strong><br>
     </p><div class="highlight"><pre><span></span><code>vcf context use supervisor-mgt:demo-space
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>vcf context use supervisor-mgt:demo-space</b>
 [ok] Token is still active. Skipped the token refresh for context "supervisor-mgt:demo-space"
@@ -3452,7 +3452,7 @@ supervisor-mgt:svc-velero-t234z  false    kubernetes
 <p><strong>Validate the current Supervisor Namespace context</strong><br>
     </p><div class="highlight"><pre><span></span><code>vcf context list
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>vcf context list</b>
   NAME                             CURRENT  TYPE
@@ -3471,7 +3471,7 @@ supervisor-mgt:svc-velero-t234z  false    kubernetes
     To test the connection, you can check the worker nodes on that Supervisor Namespace (these are the ESXi hosts).
     </p><div class="highlight"><pre><span></span><code>kubectl get nodes
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get nodes</b>
 NAME                               STATUS   ROLES                  AGE   VERSION

@@ -2712,7 +2712,7 @@
   <span class="md-ellipsis">
     
   
-    External IPs(ToDO)
+    External IPs
   
 
     
@@ -2740,7 +2740,7 @@
   <span class="md-ellipsis">
     
   
-    VM Load Balancers(ToDO)
+    VM Load Balancers
   
 
     
@@ -3258,8 +3258,8 @@
 <li><a href="../2h1-network-subnet/">Subnets</a></li>
 <li><a href="#networkservices"><strong>SubnetSets</strong></a></li>
 <li><a href="../2h3-network-staticroute/">Static Routes</a></li>
-<li><a href="../2h4-network-externalip/">External IPs(ToDO)</a></li>
-<li><a href="../2h5-network-lb/">VM Load Balancers(ToDO)</a></li>
+<li><a href="../2h4-network-externalip/">External IPs</a></li>
+<li><a href="../2h5-network-lb/">VM Load Balancers</a></li>
 </ul>
 </li>
 </ul>
@@ -3270,21 +3270,23 @@
 </div>
 <hr>
 <h2 id="networkservices">Network Services - Subnetsets</h2>
+<p>A <strong>SubnetSet</strong> provides dynamic, automated scaling functionality for subnets:  </p>
+<ul style="margin-left: 1rem; padding-left: 1rem;">
+  <li style="margin-bottom: 0.5rem;"><b>Scale Out:</b> As soon as a subnet within the SubnetSet consumes its available IP capacity, a new subnet is automatically provisioned.</li>
+  <li><b>Scale In:</b> Conversely, when a subnet becomes completely empty (no workload attached to it), it is automatically deleted.</li>
+</ul>
+
+<p>For more information about Subnets settings review the <a href="../../vcenter/1b-vpc_subnet/#overlay" target="_blank">VPC Subnet Overlay page</a>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h2-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2h2-1-Topology.jpg" style="display: block; margin: 0 auto;" width="55%"></a></p>
 <h3 id="create-subnetset">Create SubnetSet</h3>
-<p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Network - Go to Service</strong><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Add Namespace Resources" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select your target Supervisor, click the <strong>Namespaces</strong> tab, and select your specific Namespace.<br>
+Under the <strong>Resources</strong> card, click <strong>Network - Go to Service</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Network Service" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ol>
 <li><strong>Create New SubnetSet</strong><br>
-Navigate to <strong>SubnetSets</strong>, and click <strong>New SubnetSet</strong><br>
+Navigate to <strong>SubnetSets</strong>, and click <strong>New SubnetSet</strong>.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h2-1a-subnetsetcreate.jpg" data-desc-position="bottom"><img alt="Create Subnet" src="../images/2h2-1a-subnetsetcreate.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </li>
 </ol>
-<p>A <strong>SubnetSet</strong> provides dynamic, automated scaling functionality for subnets:  </p>
-<ul>
-<li><strong>Scale Out</strong>: As soon as a subnet within the SubnetSet consumes its available IP capacity, a new subnet is automatically provisioned.  </li>
-<li><strong>Scale In</strong>: Conversely, when a subnet becomes completely empty (no workload attached to it), it is automatically deleted.</li>
-</ul>
-<p>For more information about Subnets settings review the <a href="../../vcenter/1b-vpc_subnet/#overlay" target="_blank">VPC Subnet Overlay page</a>.</p>
 
 
 

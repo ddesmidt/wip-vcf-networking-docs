@@ -2797,7 +2797,7 @@
   <span class="md-ellipsis">
     
   
-    External IPs(ToDO)
+    External IPs
   
 
     
@@ -2825,7 +2825,7 @@
   <span class="md-ellipsis">
     
   
-    VM Load Balancers(ToDO)
+    VM Load Balancers
   
 
     
@@ -3451,7 +3451,7 @@
 <p>Create a Namespace if you want to deploy the application (pod) in a specific K8s Cluster Namespace (not default).<br>
 </p><div class="highlight"><pre><span></span><code>kubectl create namespace ns1
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl create namespace ns1</b>
 namespace/ns1 created
@@ -3460,7 +3460,7 @@ namespace/ns1 created
 <h4 id="allow-the-deployment-of-applications-in-the-namespace">Allow the deployment of applications in the Namespace.</h4>
 <div class="highlight"><pre><span></span><code>kubectl label ns [default|namespace] pod-security.kubernetes.io/enforce=baseline
 </code></pre></div>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl label ns ns1 pod-security.kubernetes.io/enforce=baseline</b>
 namespace/ns1 labeled
@@ -3514,7 +3514,7 @@ spec:
 <h4 id="deploy-the-application-lb-2-pods-apache">Deploy the application (LB + 2 Pods apache)</h4>
 <div class="highlight"><pre><span></span><code>kubectl apply -f apache-k8s.yaml
 </code></pre></div>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl apply -f apache-k8s.yaml</b>
 service/apache-vip-service created
@@ -3528,7 +3528,7 @@ deployment.apps/apache-deployment created
 <p><strong>Check application VIP</strong><br>
 </p><div class="highlight"><pre><span></span><code>kubectl get service apache-vip-service -n ns1
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get service apache-vip-service -n ns1</b>
 NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
@@ -3540,7 +3540,7 @@ apache-vip-service   LoadBalancer   10.107.238.63   10.1.7.138    80:31147/TCP  
 <p><strong>Check application Pods</strong><br>
 </p><div class="highlight"><pre><span></span><code>kubectl get pods -n ns1
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get pods -n ns1</b>
 NAME                                 READY   STATUS    RESTARTS   AGE
@@ -3554,7 +3554,7 @@ apache-deployment-58bf9564f6-dpmcd   1/1     Running   0          28s
 <h3 id="access-the-application-lb-2-pods-apache">Access the application (LB + 2 Pods apache)</h3>
 <div class="highlight"><pre><span></span><code>curl http://10.1.7.138
 </code></pre></div>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>curl http://10.1.7.138</b>
 &lt;h1&gt;It works - Pod: <b>apache-deployment-58bf9564f6-dpmcd</b>&lt;/h1&gt;

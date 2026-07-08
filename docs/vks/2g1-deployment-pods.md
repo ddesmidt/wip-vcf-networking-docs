@@ -40,7 +40,7 @@ Create a Namespace if you want to deploy the application (pod) in a specific K8s
 kubectl create namespace ns1
 ```  
 
-??? info "Output example"
+??? abstract "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl create namespace ns1</b>
     namespace/ns1 created
     </code></pre>
@@ -49,7 +49,7 @@ kubectl create namespace ns1
 kubectl label ns [default|namespace] pod-security.kubernetes.io/enforce=baseline
 ```  
 
-??? info "Output example"
+??? abstract "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl label ns ns1 pod-security.kubernetes.io/enforce=baseline</b>
     namespace/ns1 labeled
     </code></pre>
@@ -105,7 +105,7 @@ Create file "apache-k8s.yaml"
 kubectl apply -f apache-k8s.yaml
 ```
 
-??? info "Output example"
+??? abstract "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl apply -f apache-k8s.yaml</b>
     service/apache-vip-service created
     deployment.apps/apache-deployment created
@@ -119,7 +119,7 @@ kubectl apply -f apache-k8s.yaml
 kubectl get service apache-vip-service -n ns1
 ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get service apache-vip-service -n ns1</b>
         NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
         apache-vip-service   LoadBalancer   10.107.238.63   10.1.7.138    80:31147/TCP   53s
@@ -131,7 +131,7 @@ kubectl get service apache-vip-service -n ns1
 kubectl get pods -n ns1
 ```
     
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get pods -n ns1</b>
         NAME                                 READY   STATUS    RESTARTS   AGE
         apache-deployment-58bf9564f6-c8gqc   1/1     Running   0          28s
@@ -145,7 +145,7 @@ kubectl get pods -n ns1
 curl http://10.1.7.138
 ```
 
-??? info "Output example"
+??? abstract "Output example"
     <pre><code>PS C:\Users\Administrator\Documents> <b>curl http://10.1.7.138</b>
     &lt;h1&gt;It works - Pod: <b>apache-deployment-58bf9564f6-dpmcd</b>&lt;/h1&gt;
     &nbsp;

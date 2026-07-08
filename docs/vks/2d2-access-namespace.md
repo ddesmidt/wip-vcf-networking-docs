@@ -44,7 +44,7 @@ From your K8s client:
     vcf context create supervisor-mgt --endpoint=10.1.7.134 --type k8s --username administrator@vsphere.local --insecure-skip-tls-verify
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context create supervisor-mgt --endpoint=10.1.7.134 --type k8s --username administrator@vsphere.local --insecure-skip-tls-verify</b>
         [i] Some initialization of the CLI is required.
         [i] Let's set things up for you.  This will just take a few seconds.
@@ -88,7 +88,7 @@ When the VCF Context has been created once (see above):
     vcf context list
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context list</b>
         NAME                             CURRENT  TYPE
         <b>supervisor-mgt                   false    kubernetes</b>
@@ -103,7 +103,7 @@ When the VCF Context has been created once (see above):
     vcf context use supervisor-mgt:demo-space
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context use supervisor-mgt:demo-space</b>
         [ok] Token is still active. Skipped the token refresh for context "supervisor-mgt:demo-space"
         [i] Successfully activated context 'supervisor-mgt:demo-space' (Type: kubernetes)
@@ -129,7 +129,7 @@ When the VCF Context has been created once (see above):
     vcf context list
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context list</b>
           NAME                             CURRENT  TYPE
           supervisor-mgt                   false    kubernetes
@@ -147,7 +147,7 @@ When the VCF Context has been created once (see above):
     kubectl get nodes
     ```
 
-    ??? info "Output example"
+    ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get nodes</b>
         NAME                               STATUS   ROLES                  AGE   VERSION
         421f48f14806296b0758c9ac24c29cf1   Ready    control-plane,master   2d    v1.32.9+vmware.2-fips

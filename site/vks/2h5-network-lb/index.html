@@ -22,7 +22,7 @@
     
     
       
-        <title>VM Load Balancers(ToDO) - VCF Networking Encyclopedia</title>
+        <title>VM Load Balancers - VCF Networking Encyclopedia</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VM Load Balancers(ToDO)
+              VM Load Balancers
             
           </span>
         </div>
@@ -2641,7 +2641,7 @@
   <span class="md-ellipsis">
     
   
-    External IPs(ToDO)
+    External IPs
   
 
     
@@ -2676,7 +2676,7 @@
   <span class="md-ellipsis">
     
   
-    VM Load Balancers(ToDO)
+    VM Load Balancers
   
 
     
@@ -2694,7 +2694,7 @@
   <span class="md-ellipsis">
     
   
-    VM Load Balancers(ToDO)
+    VM Load Balancers
   
 
     
@@ -2721,10 +2721,38 @@
   <a href="#networkservices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Services - Load Balancers
+        Network Services: VM Load Balancers
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Network Services: VM Load Balancers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-vm-load-balancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a VM Load Balancer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-the-vm-load-balancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate the VM Load Balancer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3188,10 +3216,38 @@
   <a href="#networkservices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network Services - Load Balancers
+        Network Services: VM Load Balancers
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Network Services: VM Load Balancers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-vm-load-balancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a VM Load Balancer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-the-vm-load-balancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate the VM Load Balancer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3224,18 +3280,66 @@
 <li><a href="../2h1-network-subnet/">Subnets</a></li>
 <li><a href="../2h2-network-subnetset/">SubnetSets</a></li>
 <li><a href="../2h3-network-staticroute/">Static Routes</a></li>
-<li><a href="../2h4-network-externalip/">External IPs(ToDO)</a></li>
-<li><a href="#networkservices"><strong>VM Load Balancers(ToDO)</strong></a></li>
+<li><a href="../2h4-network-externalip/">External IPs</a></li>
+<li><a href="#networkservices"><strong>VM Load Balancers</strong></a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2g1-0-k8s.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2g1-0-k8s.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h5-0-lb.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2h5-0-lb.jpg" width="100%"></a></p>
 </div>
 </div>
 <hr>
-<h2 id="networkservices">Network Services - Load Balancers</h2>
+<h2 id="networkservices">Network Services: VM Load Balancers</h2>
+<p>The primary use case for configuring a <strong>VM Load Balancer</strong> is to efficiently distribute inbound network traffic across a designated pool of backend Virtual Machines.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h5-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2h5-1-Topology.jpg" style="display: block; margin: 0 auto;" width="55%"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Current Limitation: No Application Health Checks</p>
+<p>Currently, the vCenter Namespace VM Load Balancer does not perform application-level health checks on backend VMs.<br>
+If a backend VM goes down, the load balancer VIP will continue forwarding traffic to it.<br>
+This section will be updated once active health monitoring becomes officially available.</p>
+</div>
+<h3 id="create-a-vm-load-balancer">Create a VM Load Balancer</h3>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select your target Supervisor, click the <strong>Namespaces</strong> tab, and select your specific Namespace.<br>
+Under the <strong>Resources</strong> card, click <strong>Network - Go to Service</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Network Service" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<p><strong>1. Create New VM Load Balancer</strong><br>
+Navigate to the <strong>VM Load Balancers</strong> tab, and click <strong>Create</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h5-1a-lbcreate.jpg" data-desc-position="bottom"><img alt="Create LB" src="../images/2h5-1a-lbcreate.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </p>
+<p><strong>2. Apply Selectors (Labels) to the Backend VMs</strong><br>
+The load balancer identifies which VMs to send traffic to based on Kubernetes labels.  If you deploy a new VM from the vCenter UI, you can apply this label during creation.  If the VM is already deployed, you can apply the label using <code>kubectl</code>:  </p>
+<details class="info">
+<summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 19h9l-2 2H4c-.5 0-1.03-.21-1.41-.59S2 19.5 2 19V9h2zM17.63 5.84C17.27 5.33 16.67 5 16 5H8c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h8c.67 0 1.27-.34 1.63-.85L22 11z"></path></svg></span> How to label an existing VM via kubectl</summary>
+<p><strong>Step A: Connect to Supervisor Namespace</strong><br>
+</p><div class="highlight"><pre><span></span><code>vcf context use &lt;supervisor&gt;:&lt;namespace&gt;
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>vcf context use supervisor-mgt:demo-space</b>
+Logged in successfully.
+</code></pre><p></p>
+</details>
+<p><strong>Step B: Add the label to the VM</strong><br>
+</p><div class="highlight"><pre><span></span><code>kubectl label virtualmachine &lt;vm&gt; &lt;label_key&gt;=&lt;label_value&gt; -n &lt;namespace&gt;
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl label virtualmachine web-vm-1 vm-lb1=vm-lb-selector -n demo-space</b>
+virtualmachine.vmoperator.vmware.com/web-vm-1 labeled
+</code></pre><p></p>
+</details>
+</details>
+<h3 id="validate-the-vm-load-balancer">Validate the VM Load Balancer</h3>
+<p><strong>1. Locate the Load Balancer VIP</strong><br>
+Navigate back to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong> &gt; target Supervisor &gt; <strong>Namespaces</strong> &gt; specific Namespace &gt; <strong>Resources</strong> &gt; <strong>Network - Go to Service</strong>.<br>
+Go to the <strong>VM Load Balancers</strong> tab and expand the newly created VM Load Balancer to view its assigned IP address.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h5-2a-lbvip.jpg" data-desc-position="bottom"><img alt="Check LB" src="../images/2h5-2a-lbvip.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </p>
+<p><strong>2. Test Connectivity</strong><br>
+To verify connectivity, connect to a VM within the VPC and use <code>curl</code> to directly access the Load Balancer's Virtual IP (VIP).
+</p><div class="highlight"><pre><span></span><code>root@vm-public:~# curl [http://10.1.7.140](http://10.1.7.140)
+&lt;h1&gt;It works - web-vm-1&lt;/h1&gt;
+</code></pre></div><p></p>
 
 
 
