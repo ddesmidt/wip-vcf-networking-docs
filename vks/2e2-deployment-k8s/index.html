@@ -2842,7 +2842,7 @@
   <span class="md-ellipsis">
     
   
-    External IPs(ToDO)
+    External IPs
   
 
     
@@ -2870,7 +2870,7 @@
   <span class="md-ellipsis">
     
   
-    VM Load Balancers(ToDO)
+    VM Load Balancers
   
 
     
@@ -3536,7 +3536,7 @@
 <p><strong>List the Supervisor Namespaces</strong><br>
     </p><div class="highlight"><pre><span></span><code>vcf context list
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>vcf context list</b>
 NAME                             CURRENT  TYPE
@@ -3553,7 +3553,7 @@ supervisor-mgt:svc-velero-t234z  false    kubernetes
 If the current context is not the good one, connect to the Supervisor Namespace
     </p><div class="highlight"><pre><span></span><code>vcf context use supervisor-mgt:demo-space
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>vcf context use supervisor-mgt:demo-space</b>
 [ok] Token is still active. Skipped the token refresh for context "supervisor-mgt:demo-space"
@@ -3571,7 +3571,7 @@ If the current context is not the good one, connect to the Supervisor Namespace
 <p><strong>Check TKR releases available</strong>
     </p><div class="highlight"><pre><span></span><code>kubectl get kubernetesreleases
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get kubernetesreleases</b>
 NAME                                      VERSION                                 READY   COMPATIBLE   CREATED   TYPE
@@ -3585,7 +3585,7 @@ v1.35.5---vmware.1-vkr.1                  v1.35.5+vmware.1-vkr.1                
 <p><strong>Check VM Class available</strong>
     </p><div class="highlight"><pre><span></span><code>kubectl get virtualmachineclass
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get virtualmachineclass</b>
 NAME                 CPU   MEMORY
@@ -3600,7 +3600,7 @@ guaranteed-small     2     4Gi
 <p><strong>Check Storage Class availablee</strong>
     </p><div class="highlight"><pre><span></span><code>kubectl get storageclass
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get storageclass</b>
 NAME                                                   PROVISIONER              RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
@@ -3651,7 +3651,7 @@ spec:
 <h4 id="deploy-the-k8s-cluster-yaml-file">Deploy the K8s Cluster yaml file</h4>
 <div class="highlight"><pre><span></span><code>kubectl apply -f my-cluster.yaml
 </code></pre></div>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl apply -f my-cluster.yaml</b>
 cluster.cluster.x-k8s.io/my-cluster created
@@ -3663,7 +3663,7 @@ cluster.cluster.x-k8s.io/my-cluster created
 <p>It takes around 5 minutes to get the K8s Cluster ready
 </p><div class="highlight"><pre><span></span><code>kubectl get cluster
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get cluster</b>
 NAME         CLUSTERCLASS             <b>AVAILABLE</b>   CP DESIRED   <b>CP AVAILABLE</b>   CP UP-TO-DATE   <b>W DESIRED</b>   W AVAILABLE   W UP-TO-DATE   <b>PHASE</b>         AGE    VERSION
@@ -3673,7 +3673,7 @@ my-cluster   builtin-generic-v3.6.0   <b>True</b>        3            <b>3</b>  
 <h4 id="validate-k8s-nodes-status"><strong>Validate K8s Nodes Status</strong></h4>
 <div class="highlight"><pre><span></span><code>kubectl get machines
 </code></pre></div>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get machines</b>
 NAME                                   CLUSTER      NODE NAME                              <b>READY</b>   AVAILABLE   UP-TO-DATE   PHASE     AGE     VERSION
@@ -3691,7 +3691,7 @@ my-cluster-workers-qjq5s-xj695-p55n8   my-cluster   my-cluster-workers-qjq5s-xj6
 <pre><code>[System.IO.File]::WriteAllBytes("$pwd\my-cluster-kubeconfig.yaml", [System.Convert]::FromBase64String((kubectl get secret <b>my-cluster-kubeconfig</b> -n <b>demo-space</b> -o jsonpath='{.data.value}')))
 </code></pre>
 
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>[System.IO.File]::WriteAllBytes("$pwd\my-cluster-kubeconfig.yaml", [System.Convert]::FromBase64String((kubectl get secret my-cluster-kubeconfig -n demo-space -o jsonpath='{.data.value}')))</b>
 </code></pre><p></p>
@@ -3724,7 +3724,7 @@ users:
 <p><strong>Create KUBECONFIG variable</strong>
     </p><div class="highlight"><pre><span></span><code>$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"</b>
 </code></pre>
@@ -3737,7 +3737,7 @@ Note: To connect back to the Supervisor Namespace (demo-space)
 <p><strong>Change context to my K8s Cluster</strong>
     </p><div class="highlight"><pre><span></span><code>kubectl config use-context my-cluster-admin@my-cluster
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl config use-context my-cluster-admin@my-cluster</b>
 Switched to context "my-cluster-admin@my-cluster".
@@ -3748,7 +3748,7 @@ Switched to context "my-cluster-admin@my-cluster".
 <p><strong>Validate Context is the K8s Cluster</strong>
     </p><div class="highlight"><pre><span></span><code>kubectl config get-contexts
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p>The current context is:<br>
 . <strong>Cluster: my-cluster</strong><br>
@@ -3763,7 +3763,7 @@ CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPAC
 <p><strong>Validate K8s Cluster connection</strong>
     </p><div class="highlight"><pre><span></span><code>kubectl get nodes
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get nodes</b>
 NAME                                   STATUS   ROLES           AGE   VERSION

@@ -2775,7 +2775,7 @@
   <span class="md-ellipsis">
     
   
-    External IPs(ToDO)
+    External IPs
   
 
     
@@ -2803,7 +2803,7 @@
   <span class="md-ellipsis">
     
   
-    VM Load Balancers(ToDO)
+    VM Load Balancers
   
 
     
@@ -3505,7 +3505,7 @@ spec:
 <h4 id="deploy-the-application-lb-2-vms-apache">Deploy the application (LB + 2 VMs apache)</h4>
 <div class="highlight"><pre><span></span><code>kubectl apply -f my-web-farm.yaml
 </code></pre></div>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl apply -f my-web-vm.yaml</b>
 secret/ubuntu-cloud-init created
@@ -3521,7 +3521,7 @@ virtualmachineservice.vmoperator.vmware.com/web-lb-vip created
 <p><strong>Check application VIP</strong><br>
 </p><div class="highlight"><pre><span></span><code>kubectl get service web-lb-vip
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get service web-lb-vip</b>
 NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
@@ -3538,7 +3538,7 @@ If the VM or the application within the VM crashes, the load balancer will still
 <p><strong>Check application VMs</strong><br>
 </p><div class="highlight"><pre><span></span><code>kubectl get virtualmachines -o wide
 </code></pre></div><p></p>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get virtualmachines -o wide</b>
 NAME       POWER-STATE   CLASS                IMAGE                   PRIMARY-IP4   AGE
@@ -3552,7 +3552,7 @@ NAME       POWER-STATE   CLASS                IMAGE                   PRIMARY-IP
 <h3 id="access-the-application-lb-2-vms-apache">Access the application (LB + 2 VMs apache)</h3>
 <div class="highlight"><pre><span></span><code>curl http://10.1.7.137
 </code></pre></div>
-<details class="info">
+<details class="abstract">
 <summary>Output example</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>curl http://10.1.7.137</b>
 &lt;h1&gt;Hello from <b>web-vm-1</b>&lt;/h1&gt;

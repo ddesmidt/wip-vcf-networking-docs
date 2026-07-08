@@ -2723,7 +2723,7 @@
   <span class="md-ellipsis">
     
   
-    External IPs(ToDO)
+    External IPs
   
 
     
@@ -2751,7 +2751,7 @@
   <span class="md-ellipsis">
     
   
-    VM Load Balancers(ToDO)
+    VM Load Balancers
   
 
     
@@ -3280,8 +3280,8 @@
 <li><a href="../2h1-network-subnet/">Subnets</a></li>
 <li><a href="../2h2-network-subnetset/">SubnetSets</a></li>
 <li><a href="#networkservices"><strong>Static Routes</strong></a></li>
-<li><a href="../2h4-network-externalip/">External IPs(ToDO)</a></li>
-<li><a href="../2h5-network-lb/">VM Load Balancers(ToDO)</a></li>
+<li><a href="../2h4-network-externalip/">External IPs</a></li>
+<li><a href="../2h5-network-lb/">VM Load Balancers</a></li>
 </ul>
 </li>
 </ul>
@@ -3296,12 +3296,13 @@
 Note: With the "NSX + DTGW/VNA" architecture, communication to individual K8s Pods is only from VMs within the VPC.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h3-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2h3-1-Topology.jpg" style="display: block; margin: 0 auto;" width="55%"></a></p>
 <h3 id="create-static-route">Create Static Route</h3>
-<p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Network - Go to Service</strong><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Add Namespace Resources" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select your target Supervisor, click the <strong>Namespaces</strong> tab, and select your specific Namespace.<br>
+Under the <strong>Resources</strong> card, click <strong>Network - Go to Service</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Network Service" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ol>
 <li>
 <p><strong>Create New Static Route</strong><br>
-Navigate to <strong>Static Routes</strong>, and click <strong>New Static Route</strong><br>
+Navigate to <strong>Static Routes</strong>, and click <strong>New Static Route</strong>.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h3-1a-staticroutecreate.jpg" data-desc-position="bottom"><img alt="Create Subnet" src="../images/2h3-1a-staticroutecreate.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </p>
 <details class="info">
 <summary>How to find required IP information via kubectl</summary>

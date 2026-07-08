@@ -2798,7 +2798,7 @@
   <span class="md-ellipsis">
     
   
-    External IPs(ToDO)
+    External IPs
   
 
     
@@ -2826,7 +2826,7 @@
   <span class="md-ellipsis">
     
   
-    VM Load Balancers(ToDO)
+    VM Load Balancers
   
 
     
@@ -3473,10 +3473,6 @@ Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
 <hr>
 <h3 id="nsx">NSX</h3>
 <div class="admonition warning">
-<p class="admonition-title">XXX PERSONAL Drafting Note</p>
-<p>xxx REDO SCREENSHOTS BEFORE THE DEPLOYMENT OF THE SUPERVISOR xxx  </p>
-</div>
-<div class="admonition warning">
 <p class="admonition-title">Missing NSX Requirements?</p>
 <p>If your environment is not yet configured with the NSX prerequisites below, please refer to:  </p>
 <ul>
@@ -3505,9 +3501,19 @@ Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 T
     The VNA Cluster hosts the Load Balancing and Outbound-NAT services (providing NAT for Supervisor / K8s Clusters communicating with the physical network).  </p>
 <details class="info">
 <summary>Status Validation</summary>
-<p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>vCenter</strong> &gt; <strong>Configure</strong> &gt; <strong>VNA Clusters</strong>.<br>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>vCenter</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>VNA Clusters</strong>.<br>
 Ensure the VNA Cluster with its Nodes is deployed and shows a Green status.
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3b-VNA-Cluster.jpg" data-desc-position="bottom"><img alt="VNA Cluster Status" src="../images/2a-3b-VNA-Cluster.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+</details>
+</li>
+<li>
+<p><strong>Distributed External Connection</strong><br>
+    A Distributed External Connection is the VLAN and physical router used by logical networks (such as Transit Gateways and VPCs) to connect to the physical network.  </p>
+<details class="info">
+<summary>Status Validation</summary>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>vCenter</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>External Connection</strong>.<br>
+Ensure you have at least 1 Distributed External Connection configured:
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3c-ExternalConnection.jpg" data-desc-position="bottom"><img alt="IP Blocks Properties" src="../images/2a-3c-ExternalConnection.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 </details>
 </li>
 <li>
@@ -3515,9 +3521,9 @@ Ensure the VNA Cluster with its Nodes is deployed and shows a Green status.
     The External IP Block is for the future K8s VIPs (IPs in the Dataplane subnet).  </p>
 <details class="info">
 <summary>Status Validation</summary>
-<p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>Virtual Private Clouds</strong> &gt; <strong>Configure</strong> &gt; <strong>IP Blocks</strong>.<br>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>Virtual Private Clouds</strong> &gt; <strong>Configure</strong> &gt; <strong>Settings</strong> &gt; <strong>IP Blocks</strong>.<br>
 Ensure you have at least 1 External IP Block configured:
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3c-IPBlocks.jpg" data-desc-position="bottom"><img alt="IP Blocks Properties" src="../images/2a-3c-IPBlocks.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3d-IPBlocks.jpg" data-desc-position="bottom"><img alt="IP Blocks Properties" src="../images/2a-3d-IPBlocks.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 </details>
 </li>
 <li>
@@ -3525,7 +3531,7 @@ Ensure you have at least 1 External IP Block configured:
     The Connectivity Profile binds the DTGW configuration (VNA Cluster, Outbound-NAT, and N-S Services for Load Balancing).  </p>
 <details class="info">
 <summary>Status Validation</summary>
-<p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>Virtual Private Clouds</strong> &gt; <strong>Configure</strong> &gt; <strong>Connectivity Profiles</strong>.<br>
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>Virtual Private Clouds</strong> &gt; <strong>Configure</strong> &gt; <strong>Settings</strong> &gt; <strong>Connectivity Profiles</strong>.<br>
 Ensure the Connectivity Profile has the following configured:
 </p><ul style="margin-top: -5px; margin-bottom: 15px; line-height: 1.3;">
   <li style="margin-bottom: 2px;">External and Private Transit Gateway IP Blocks selected</li>
@@ -3533,7 +3539,7 @@ Ensure the Connectivity Profile has the following configured:
   <li style="margin-bottom: 2px;">N-S Services enabled (for the LB service)</li>
   <li style="margin-bottom: 2px;">Default Outbound NAT enabled (for NAT)</li>
 </ul>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3d-ConnProf.jpg" data-desc-position="bottom"><img alt="Connectivity Profile Properties" src="../images/2a-3d-ConnProf.jpg" style="display: block; margin: 0 auto;" width="95%"></a><p></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3e-ConnProf.jpg" data-desc-position="bottom"><img alt="Connectivity Profile Properties" src="../images/2a-3e-ConnProf.jpg" style="display: block; margin: 0 auto;" width="95%"></a><p></p>
 </details>
 </li>
 <li>
@@ -3541,8 +3547,8 @@ Ensure the Connectivity Profile has the following configured:
     The Distributed Transit Gateway is the distributed logical router responsible for routing traffic between the logical and physical networks.  </p>
 <details class="info">
 <summary>Status Validation</summary>
-<p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>Default Transit Gateway</strong> &gt; <strong>Configure</strong> &gt; <strong>Properties</strong>.<br>
-Ensure the DTGW has a Connection Type of "Distributed VLAN". 
+<p>Navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>Default Transit Gateway</strong> &gt; <strong>Configure</strong> &gt; <strong>Settings</strong> &gt; <strong>Properties</strong>.<br>
+Ensure the DTGW has a Connection Type of "Distributed VLAN", and an External Connection configured. 
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3e-DTGW.jpg" data-desc-position="bottom"><img alt="DTGW Properties" src="../images/2a-3e-DTGW.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 </details>
 </li>
