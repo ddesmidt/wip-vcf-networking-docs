@@ -2741,10 +2741,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#validate-the-vm-load-balancer" class="md-nav__link">
+  <a href="#validate-vm-load-balancer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validate the VM Load Balancer
+        Validate VM Load Balancer
       
     </span>
   </a>
@@ -3236,10 +3236,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#validate-the-vm-load-balancer" class="md-nav__link">
+  <a href="#validate-vm-load-balancer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validate the VM Load Balancer
+        Validate VM Load Balancer
       
     </span>
   </a>
@@ -3330,16 +3330,23 @@ virtualmachine.vmoperator.vmware.com/web-vm-1 labeled
 </code></pre><p></p>
 </details>
 </details>
-<h3 id="validate-the-vm-load-balancer">Validate the VM Load Balancer</h3>
-<p><strong>1. Locate the Load Balancer VIP</strong><br>
+<hr>
+<h3 id="validate-vm-load-balancer">Validate VM Load Balancer</h3>
+<ol>
+<li>
+<p><strong>Locate the Load Balancer VIP</strong><br>
 Navigate back to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong> &gt; target Supervisor &gt; <strong>Namespaces</strong> &gt; specific Namespace &gt; <strong>Resources</strong> &gt; <strong>Network - Go to Service</strong>.<br>
 Go to the <strong>VM Load Balancers</strong> tab and expand the newly created VM Load Balancer to view its assigned IP address.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h5-2a-lbvip.jpg" data-desc-position="bottom"><img alt="Check LB" src="../images/2h5-2a-lbvip.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </p>
-<p><strong>2. Test Connectivity</strong><br>
+</li>
+<li>
+<p><strong>Test Connectivity</strong><br>
 To verify connectivity, connect to a VM within the VPC and use <code>curl</code> to directly access the Load Balancer's Virtual IP (VIP).
 </p><div class="highlight"><pre><span></span><code>root@vm-public:~# curl [http://10.1.7.140](http://10.1.7.140)
 &lt;h1&gt;It works - web-vm-1&lt;/h1&gt;
 </code></pre></div><p></p>
+</li>
+</ol>
 
 
 
