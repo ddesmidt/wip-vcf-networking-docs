@@ -22,7 +22,7 @@
     
     
       
-        <title>E/W pod to pod - VCF Networking Encyclopedia</title>
+        <title>E/W Pod to Pod - VCF Networking Encyclopedia</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              E/W pod to pod
+              E/W Pod to Pod
             
           </span>
         </div>
@@ -2890,7 +2890,7 @@
   <span class="md-ellipsis">
     
   
-    E/W pod to pod
+    E/W Pod to Pod
   
 
     
@@ -2908,7 +2908,7 @@
   <span class="md-ellipsis">
     
   
-    E/W pod to pod
+    E/W Pod to Pod
   
 
     
@@ -3081,7 +3081,7 @@
   <span class="md-ellipsis">
     
   
-    App Access broken(ToDO)
+    App Access broken
   
 
     
@@ -3097,7 +3097,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    App Access broken(ToDO)
+    App Access broken
   
 
           </label>
@@ -3117,7 +3117,7 @@
   <span class="md-ellipsis">
     
   
-    VIP access down(ToDO)
+    VIP access down
   
 
     
@@ -3145,7 +3145,7 @@
   <span class="md-ellipsis">
     
   
-    VM access down(ToDO)
+    VM access down
   
 
     
@@ -3173,7 +3173,7 @@
   <span class="md-ellipsis">
     
   
-    Pod access down(ToDO)
+    Pod access down
   
 
     
@@ -3337,7 +3337,7 @@
 <li><strong>Packet Walk</strong> <ul>
 <li><a href="../2i1-packetwalk-ext_vip/">N/S External to VIP</a>  </li>
 <li><a href="../2i2-packetwalk-ext_vm/">N/S External to VM</a>  </li>
-<li><a href="#packetwalk"><strong>E/W pod to pod</strong></a>  </li>
+<li><a href="#packetwalk"><strong>E/W Pod to Pod</strong></a>  </li>
 <li><a href="../2i4-packetwalk-vm_vm/">E/W VM to VM</a>  </li>
 </ul>
 </li>
@@ -3370,15 +3370,21 @@
 <p>The traffic exits the source pod and hits the Worker Node's local routing engine (managed by <code>kube-proxy</code> and the CNI agent, such as Antrea).  </p>
 </li>
 <li>
-<p><strong>Step 2: Cross-Node Encapsulation (Underlay Transit)</strong><br>
+<p><strong>Step 2: Cross-Node Encapsulation</strong><br>
 </p><div class="highlight"><pre><span></span><code>WorkerNode1-IP (172.30.0.5) =&gt; WorkerNode2-IP (172.30.0.6)
-[Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)]
+  [Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)]
+</code></pre></div>
+    The destination pod is on a different node, so the Worker Node encapsulates the original packet inside a node-to-node tunnel packet.  <p></p>
+<blockquote>
+<p><strong>Note:</strong> If the Worker Nodes reside on a different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.<br>
+</p><div class="highlight"><pre><span></span><code>ESX1-TEP_IP (10.1.3.203) =&gt; ESX2-TEP_IP (10.1.3.207)
+  [WorkerNode1-IP (172.30.0.5) =&gt; WorkerNode2-IP (172.30.0.6)]
+    [[Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)]]
 </code></pre></div><p></p>
-<p>The destination pod is on a different node, so the Worker Node encapsulates the original packet inside a node-to-node tunnel packet.<br>
-If the Worker Nodes reside on a different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  </p>
+</blockquote>
 </li>
 <li>
-<p><strong>Step 3: Destination Node Decapsulation and Delivery</strong><br>
+<p><strong>Step 3: Destination Node Decapsulation and Delivery (encapsulation2)</strong>  <br>
 <code>Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)</code></p>
 <p>The destination Worker Node receives the node-to-node packet and strips away the encapsulation header. The local routing rules then deliver the unencapsulated packet directly into the destination Pod's network interface.</p>
 </li>

@@ -2993,7 +2993,7 @@
   <span class="md-ellipsis">
     
   
-    E/W pod to pod
+    E/W Pod to Pod
   
 
     
@@ -3081,7 +3081,7 @@
   <span class="md-ellipsis">
     
   
-    App Access broken(ToDO)
+    App Access broken
   
 
     
@@ -3097,7 +3097,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    App Access broken(ToDO)
+    App Access broken
   
 
           </label>
@@ -3117,7 +3117,7 @@
   <span class="md-ellipsis">
     
   
-    VIP access down(ToDO)
+    VIP access down
   
 
     
@@ -3145,7 +3145,7 @@
   <span class="md-ellipsis">
     
   
-    VM access down(ToDO)
+    VM access down
   
 
     
@@ -3173,7 +3173,7 @@
   <span class="md-ellipsis">
     
   
-    Pod access down(ToDO)
+    Pod access down
   
 
     
@@ -3337,7 +3337,7 @@
 <li><strong>Packet Walk</strong>  <ul>
 <li><a href="#packetwalk"><strong>N/S External to VIP</strong></a>  </li>
 <li><a href="../2i2-packetwalk-ext_vm/">N/S External to VM</a>  </li>
-<li><a href="../2i3-packetwalk-pod_pod/">E/W pod to pod</a>  </li>
+<li><a href="../2i3-packetwalk-pod_pod/">E/W Pod to Pod</a>  </li>
 <li><a href="../2i4-packetwalk-vm_vm/">E/W VM to VM</a>  </li>
 </ul>
 </li>
@@ -3377,11 +3377,11 @@ If the Worker Nodes reside on a different ESX than the Active VPC-SR, the cross-
 <p><em>Note: You can find the dynamically assigned Worker Node TCP port (<code>31147</code>) by running the command <code>kubectl get service apache-vip-service -n ns1</code> and looking under the PORT(S) column (see <a href="../2g1-deployment-pods/#deployment_pods">Application Deployment &gt; App Deployment (K8s) &gt; via CLI</a>).</em></p>
 </li>
 <li>
-<p><strong>Step 3: The K8s Worker Node intercepts the traffic</strong>
+<p><strong>Step 3: The K8s Worker Node intercepts the traffic</strong><br>
     Once the traffic arrives at the Worker Node's network interface on the NodePort (<code>31147</code>), it is intercepted by the node's local routing rules (which are continuously programmed by the local <code>kube-proxy</code> pod).</p>
 </li>
 <li>
-<p><strong>Step 4 (not represented): The Worker Node load balances traffic to the Pods</strong>
+<p><strong>Step 4 (not represented): The Worker Node load balances traffic to the Pods</strong><br>
     Based on those <code>kube-proxy</code> rules, the Worker Node load balances the traffic to the different pods across the K8s cluster.<br>
     See <a href="../2i3-packetwalk-pod_pod/#packetwalk">Packet Walk - E/W pod to pod</a> for cross-pod communication.</p>
 </li>
