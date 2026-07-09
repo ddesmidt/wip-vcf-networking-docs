@@ -3525,11 +3525,11 @@
 <ul>
 <li>
 <p>Configure the <strong>Workload Network</strong>, and click <strong>Next</strong>.<br>
-Choose the <strong>Port Group</strong> to host the K8s Nodes and FLB, and specify IP Range for the K8s Nodes.  </p>
+    Choose the <strong>Port Group</strong> to host the K8s Nodes and configure the <strong>Layer3 Routing Configuration</strong> for the Supervisor and future K8s Nodes and VMs.  </p>
 <blockquote>
-<p>Note: The Internal Network for Kubernetes Services is pre-populated with the subnet 10.96.0.0.0/23.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1e-Workload.jpg" data-desc-position="bottom"><img alt="Workload Network Configuration" src="../images/1b-1e-Workload.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+<p>Note: The Internal Network for Kubernetes Services is pre-populated with the subnet 10.96.0.0.0/23.  </p>
 </blockquote>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1e-Workload.jpg" data-desc-position="bottom"><img alt="Workload Network Configuration" src="../images/1b-1e-Workload.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 <details class="warning">
 <summary>Troubleshooting: Auto SNAT Error</summary>
 <p>If you receive the error <em>"Auto SNAT must be enabled for VPC Connectivity Profile Default"</em>, refer back to the <strong><a href="../2a-requirements/#nsx">"DTGW + VNA" Requirements</a></strong> page and ensure <strong>Default Outbound NAT</strong> is enabled in the Connectivity Profile.</p>
@@ -3540,15 +3540,25 @@ Choose the <strong>Port Group</strong> to host the K8s Nodes and FLB, and specif
 <li>
 <p><strong>Load Balancer</strong>  </p>
 <ul>
+<li>Configure the <strong>Foundation Load Balancer</strong>, and click <strong>Next</strong>.<br>
+Choose its <strong>Network Topology</strong> (One Arm or Two Arm), its <strong>Size</strong>, <strong>High-Availabilty</strong> (1 FLB Active or 2 FLB Active/Standby VMs), its <strong>Management Network</strong> (see picture below "1" to choose the <strong>Port Group</strong> to host the FLB Node(s) Management vNIC and specify its <strong>Layer3 Routing Configuration</strong>), its <strong>Virtual Server Network</strong> (see picture below "2" to choose the <strong>Port Group</strong> to host the FLB Node(s) VIP vNIC and specify its <strong>Layer3 Routing Configuration</strong>), its <strong>Transit Network</strong> (by default the same Port Group used by the Supervisor and future K8s Nodes and VMs is selected, but it can be changed. That's the FLB(s) vNIC used to talk to the Supervisor and future K8s Nodes and VMs).<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1f-LoadBalancer.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/1b-1f-LoadBalancer.jpg" style="display: block; margin: 0 auto;" width="95%"></a><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1f1-LoadBalancer.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/1b-1f1-LoadBalancer.jpg" style="display: block; margin: 0 auto;" width="75%"></a><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1f2-LoadBalancer.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/1b-1f2-LoadBalancer.jpg" style="display: block; margin: 0 auto;" width="75%"></a>  </li>
+</ul>
+</li>
+<li>
+<p><strong>Advanced Settings</strong>  </p>
+<ul>
 <li>Select the <strong>Supervisor Control Plane Size</strong>, and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1f-Advanced.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/2c-1f-Advanced.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1g-Advanced.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/1b-1g-Advanced.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
 </ul>
 </li>
 <li>
 <p><strong>Ready to Complete</strong>  </p>
 <ul>
 <li>Review your configuration and click <strong>Finish</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1g-Ready.jpg" data-desc-position="bottom"><img alt="Review and Complete" src="../images/2c-1g-Ready.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1h-Ready.jpg" data-desc-position="bottom"><img alt="Review and Complete" src="../images/1b-1h-Ready.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
 </ul>
 </li>
 </ol>

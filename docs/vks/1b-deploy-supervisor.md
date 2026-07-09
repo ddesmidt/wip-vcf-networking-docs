@@ -46,20 +46,29 @@ Navigate to **vCenter** > **Supervisor Management**, and click **Get Started**.
 
 5. **Workload Network**  
     * Configure the **Workload Network**, and click **Next**.  
-    Choose the **Port Group** to host the K8s Nodes and FLB, and specify IP Range for the K8s Nodes.  
-    > Note: The Internal Network for Kubernetes Services is pre-populated with the subnet 10.96.0.0.0/23.  
-    ![Workload Network Configuration](images/1b-1e-Workload.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+        Choose the **Port Group** to host the K8s Nodes and configure the **Layer3 Routing Configuration** for the Supervisor and future K8s Nodes and VMs.  
+
+        > Note: The Internal Network for Kubernetes Services is pre-populated with the subnet 10.96.0.0.0/23.  
+
+        ![Workload Network Configuration](images/1b-1e-Workload.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
         ??? warning "Troubleshooting: Auto SNAT Error"
             If you receive the error *"Auto SNAT must be enabled for VPC Connectivity Profile Default"*, refer back to the **["DTGW + VNA" Requirements](2a-requirements.md#nsx)** page and ensure **Default Outbound NAT** is enabled in the Connectivity Profile.
 
 6. **Load Balancer**  
+    * Configure the **Foundation Load Balancer**, and click **Next**.  
+    Choose its **Network Topology** (One Arm or Two Arm), its **Size**, **High-Availabilty** (1 FLB Active or 2 FLB Active/Standby VMs), its **Management Network** (see picture below "1" to choose the **Port Group** to host the FLB Node(s) Management vNIC and specify its **Layer3 Routing Configuration**), its **Virtual Server Network** (see picture below "2" to choose the **Port Group** to host the FLB Node(s) VIP vNIC and specify its **Layer3 Routing Configuration**), its **Transit Network** (by default the same Port Group used by the Supervisor and future K8s Nodes and VMs is selected, but it can be changed. That's the FLB(s) vNIC used to talk to the Supervisor and future K8s Nodes and VMs).  
+    ![Advanced Settings and Sizing](images/1b-1f-LoadBalancer.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Advanced Settings and Sizing](images/1b-1f1-LoadBalancer.jpg){ width="75%" style="display: block; margin: 0 auto;" }  
+    ![Advanced Settings and Sizing](images/1b-1f2-LoadBalancer.jpg){ width="75%" style="display: block; margin: 0 auto;" }  
+
+6. **Advanced Settings**  
     * Select the **Supervisor Control Plane Size**, and click **Next**.  
-    ![Advanced Settings and Sizing](images/2c-1f-Advanced.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Advanced Settings and Sizing](images/1b-1g-Advanced.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 7. **Ready to Complete**  
     * Review your configuration and click **Finish**.  
-    ![Review and Complete](images/2c-1g-Ready.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Review and Complete](images/1b-1h-Ready.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 
 ---
