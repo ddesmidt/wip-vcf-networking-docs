@@ -72,27 +72,24 @@ Navigate to **vCenter** > **Content Libraries** > and click **Create**.
     Give it a **Name** and select the **vCenter** hosting that Content Library, and click **Next**.  
     ![vCenter Server and Network Configuration](images/2c-3a-Name.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
-  1. **Configure Content Library**  
-  Choose between **Local content library** (you upload VKS images) and **Subscribed content library** (vCenter downloads VKS images from a repository), and click **Next**.  
-  *I'm using here Subscribed content library with:*
-    <ul style="margin-top: -10px; margin-bottom: 5px; line-height: 1.3;">
-      <li style="margin-bottom: 2px;"><i>the public repository: https://wp-content.vmware.com/v2/latest/lib.json</i></li>
-      <li style="margin-bottom: 2px;"><i>the option to download content when needed to save storage space</i></li>
-    </ul>
-  ![vCenter Server and Network Configuration](images/2c-3b-ContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+  2. **Configure Content Library**  
+    Choose between **Local content library** (you manually upload VKS images) and **Subscribed content library** (vCenter automatically downloads VKS images from a repository), and click **Next**.  
+    > *Note: This example uses a Subscribed content library pointing to the public repository `https://wp-content.vmware.com/v2/latest/lib.json`, with the option to "download content when needed" to save local storage space.*  
+  
+    ![vCenter Server and Network Configuration](images/2c-3b-ContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }   
 
-  1. **Apply Security Policy**  
-  Apply **security policy** if you choose to, and click **Next**.  
-  *I'm using here no security policy.*  
-  ![vCenter Server and Network Configuration](images/2c-3c-SecurityPolicy.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+  3. **Apply Security Policy**  
+    Apply a **security policy** if required by your organization, and click **Next**.  
+    *(This example uses no security policy).*  
+    ![vCenter Server and Network Configuration](images/2c-3c-SecurityPolicy.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
-  1. **Add Storage**  
-  Select a **storage** to host the content library images, and click **Next**.  
-  ![vCenter Server and Network Configuration](images/2c-3d-Storage.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+  4. **Add Storage**  
+    Select a **storage** to host the content library images, and click **Next**.  
+    ![vCenter Server and Network Configuration](images/2c-3d-Storage.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
-  1. **Ready to complete**  
-  Review the content library, and click **Finish**.  
-  ![vCenter Server and Network Configuration](images/2c-3e-Review.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+  5. **Ready to complete**  
+    Review the content library, and click **Finish**.  
+    ![vCenter Server and Network Configuration](images/2c-3e-Review.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
 
 #### **Associate the Content Library to the Supervisor**  

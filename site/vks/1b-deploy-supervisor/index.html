@@ -3495,8 +3495,7 @@
 <li>
 <p><strong>vCenter Server and Network</strong>  </p>
 <ul>
-<li>Select the network stack <strong>vSphere Distributed Switch (VDS) with Load Balancer Type "Foundation Load Balancer"</strong>, and click <strong>Next</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1a-vCenter.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/1b-1a-vCenter.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
+<li>Select the network stack <strong>vSphere Distributed Switch (VDS) with Load Balancer Type "Foundation Load Balancer"</strong>, and click <strong>Next</strong>.  </li>
 </ul>
 </li>
 <li>
@@ -3525,14 +3524,15 @@
 <ul>
 <li>
 <p>Configure the <strong>Workload Network</strong>, and click <strong>Next</strong>.<br>
-    Choose the <strong>Port Group</strong> to host the K8s Nodes and configure the <strong>Layer3 Routing Configuration</strong> for the Supervisor and future K8s Nodes and VMs.  </p>
+    Choose the <strong>Port Group</strong> to host the K8s Nodes and configure the <strong>Layer 3 Routing Configuration</strong> for the Supervisor and future K8s Nodes and VMs.  </p>
 <blockquote>
-<p>Note: The Internal Network for Kubernetes Services is pre-populated with the subnet 10.96.0.0.0/23.  </p>
+<p><strong>Note:</strong> The Internal Network for Kubernetes Services is pre-populated with the subnet <code>10.96.0.0/23</code>.  </p>
 </blockquote>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1e-Workload.jpg" data-desc-position="bottom"><img alt="Workload Network Configuration" src="../images/1b-1e-Workload.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 <details class="warning">
 <summary>Troubleshooting: Auto SNAT Error</summary>
-<p>If you receive the error <em>"Auto SNAT must be enabled for VPC Connectivity Profile Default"</em>, refer back to the <strong><a href="../2a-requirements/#nsx">"DTGW + VNA" Requirements</a></strong> page and ensure <strong>Default Outbound NAT</strong> is enabled in the Connectivity Profile.</p>
+<p>If you receive the error <em>"Auto SNAT must be enabled for VPC Connectivity Profile Default"</em>, refer back to the <strong>["DTGW + VNA" Requirements]
+(2a-requirements.md#nsx)</strong> page and ensure <strong>Default Outbound NAT</strong> is enabled in the Connectivity Profile.</p>
 </details>
 </li>
 </ul>
@@ -3541,11 +3541,19 @@
 <p><strong>Load Balancer</strong>  </p>
 <ul>
 <li>Configure the <strong>Foundation Load Balancer</strong>, and click <strong>Next</strong>.<br>
-Choose its <strong>Network Topology</strong> (One Arm or Two Arm), its <strong>Size</strong>, <strong>High-Availabilty</strong> (1 FLB Active or 2 FLB Active/Standby VMs), its <strong>Management Network</strong> (see picture below "1" to choose the <strong>Port Group</strong> to host the FLB Node(s) Management vNIC and specify its <strong>Layer3 Routing Configuration</strong>), its <strong>Virtual Server Network</strong> (see picture below "2" to choose the <strong>Port Group</strong> to host the FLB Node(s) VIP vNIC and specify its <strong>Layer3 Routing Configuration</strong>), its <strong>Transit Network</strong> (by default the same Port Group used by the Supervisor and future K8s Nodes and VMs is selected, but it can be changed. That's the FLB(s) vNIC used to talk to the Supervisor and future K8s Nodes and VMs).<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1f-LoadBalancer.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/1b-1f-LoadBalancer.jpg" style="display: block; margin: 0 auto;" width="95%"></a><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1f1-LoadBalancer.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/1b-1f1-LoadBalancer.jpg" style="display: block; margin: 0 auto;" width="75%"></a><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1f2-LoadBalancer.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/1b-1f2-LoadBalancer.jpg" style="display: block; margin: 0 auto;" width="75%"></a>  </li>
+Choose its <strong>Network Topology</strong> (One-Arm or Two-Arm), its <strong>Size</strong>, <strong>High-Availability</strong> architecture (1 FLB Active, or 2 FLB Active/Standby VMs), and configure the following networks:  <ul>
+<li><strong>Management Network</strong> (see picture "1" below)<br>
+Choose the <strong>Port Group</strong> to host the FLB Node(s) Management vNIC and specify its Layer 3 routing configuration.</li>
+<li><strong>Virtual Server Network</strong> (see picture "2" below)<br>
+Choose the <strong>Port Group</strong> to host the FLB Node(s) VIP vNIC and specify its Layer 3 routing configuration.</li>
+<li><strong>Transit Network</strong>
+By default, the same Port Group used by the Supervisor and future K8s Nodes/VMs is selected, but this can be changed. This is the FLB(s) vNIC used to communicate with the Supervisor and workloads.</li>
 </ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1f-LoadBalancer.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/1b-1f-LoadBalancer.jpg" style="display: block; margin: 0 auto;" width="95%"></a><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1f1-LoadBalancer.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/1b-1f1-LoadBalancer.jpg" style="display: block; margin: 0 auto;" width="75%"></a><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-1f2-LoadBalancer.jpg" data-desc-position="bottom"><img alt="Advanced Settings and Sizing" src="../images/1b-1f2-LoadBalancer.jpg" style="display: block; margin: 0 auto;" width="75%"></a>  </p>
 </li>
 <li>
 <p><strong>Advanced Settings</strong>  </p>
@@ -3576,34 +3584,30 @@ Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt
 </li>
 <li>
 <p><strong>Configure Content Library</strong><br>
-  Choose between <strong>Local content library</strong> (you upload VKS images) and <strong>Subscribed content library</strong> (vCenter downloads VKS images from a repository), and click <strong>Next</strong>.<br>
-<em>I'm using here Subscribed content library with:</em>
-    </p><ul style="margin-top: -10px; margin-bottom: 5px; line-height: 1.3;">
-      <li style="margin-bottom: 2px;"><i>the public repository: https://wp-content.vmware.com/v2/latest/lib.json</i></li>
-      <li style="margin-bottom: 2px;"><i>the option to download content when needed to save storage space</i></li>
-    </ul>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-3b-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-3b-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  <p></p>
+    Choose between <strong>Local content library</strong> (you manually upload VKS images) and <strong>Subscribed content library</strong> (vCenter automatically downloads VKS images from a repository), and click <strong>Next</strong>.<br>
+    &gt; <em>Note: This example uses a Subscribed content library pointing to the public repository <code>https://wp-content.vmware.com/v2/latest/lib.json</code>, with the option to "download content when needed" to save local storage space.</em>  </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-3b-ContentLibrary.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-3b-ContentLibrary.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
 </li>
 <li>
 <p><strong>Apply Security Policy</strong><br>
-  Apply <strong>security policy</strong> if you choose to, and click <strong>Next</strong>.<br>
-<em>I'm using here no security policy.</em><br>
+    Apply a <strong>security policy</strong> if required by your organization, and click <strong>Next</strong>.<br>
+<em>(This example uses no security policy).</em><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-3c-SecurityPolicy.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-3c-SecurityPolicy.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
 </li>
 <li>
 <p><strong>Add Storage</strong><br>
-  Select a <strong>storage</strong> to host the content library images, and click <strong>Next</strong>.<br>
+    Select a <strong>storage</strong> to host the content library images, and click <strong>Next</strong>.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-3d-Storage.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-3d-Storage.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
 </li>
 <li>
 <p><strong>Ready to complete</strong><br>
-  Review the content library, and click <strong>Finish</strong>.<br>
+    Review the content library, and click <strong>Finish</strong>.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-3e-Review.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-3e-Review.jpg" style="display: block; margin: 0 auto;" width="85%"></a>  </p>
 </li>
 </ol>
 <h4 id="associate-the-content-library-to-the-supervisor"><strong>Associate the Content Library to the Supervisor</strong></h4>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, and click on <strong>Kubernetes Service - Manage</strong>.
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-4a-Supervisor.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c-4a-Supervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-4a-Supervisor.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/1b-4a-Supervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 <ol>
 <li>
 <p><strong>Add Content Library</strong><br>
@@ -3626,10 +3630,17 @@ Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt
   <li style="margin-bottom: 2px;">Host Config Status</li>
   <li style="margin-bottom: 2px;">Control Plane Node Address</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-5a-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/2c-5a-Validation.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-5a-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/1b-5a-Validation.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <h4 id="validate-supervisor-content-library"><strong>Validate Supervisor Content Library</strong></h4>
 <p>Validate Supervisor Content Library by navigating to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-5b-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/2c-5b-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-5b-Validation.jpg" data-desc-position="bottom"><img alt="Supervisor Validation Status" src="../images/1b-5b-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
+<details class="info">
+<summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"></path></svg></span> Ignore Kubernetes Status Warning</summary>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1b-5b1-Warning.jpg" data-desc-position="bottom"><img alt="Supervisor Warning" src="../images/1b-5b1-Warning.jpg" style="display: block; margin: 0 auto;" width="85%"></a>
+A Supervisor utilizing the "VDS + FLB" architecture supports a maximum of 2 FLB VMs, meaning it only requires 2 IP addresses within the Management and Virtual Server Networks (configured during Step 6).<br>
+If exactly 2 IPs are allocated to those networks, the pool is fully consumed immediately upon deployment, triggering a low-IP warning in the UI.<br>
+<strong>This warning is expected behavior in this specific architecture and can be safely ignored.</strong></p>
+</details>
 
 
 
