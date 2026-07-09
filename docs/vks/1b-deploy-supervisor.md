@@ -53,7 +53,7 @@ Navigate to **vCenter** > **Supervisor Management**, and click **Get Started**.
         ??? warning "Troubleshooting: Auto SNAT Error"
             If you receive the error *"Auto SNAT must be enabled for VPC Connectivity Profile Default"*, refer back to the **["DTGW + VNA" Requirements](2a-requirements.md#nsx)** page and ensure **Default Outbound NAT** is enabled in the Connectivity Profile.
 
-6. **Advanced Settings**  
+6. **Load Balancer**  
     * Select the **Supervisor Control Plane Size**, and click **Next**.  
     ![Advanced Settings and Sizing](images/2c-1f-Advanced.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
