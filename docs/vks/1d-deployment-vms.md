@@ -5,7 +5,7 @@
 <div class="grid" markdown style="grid-template-columns: 60% 40%">
 
 <div markdown>
-This section describes the procedures for **deploying the VKS Supervisor with "VDS + FLB"** within a vSphere environment.
+This section describes the procedures for **deploying the Supervisor utilizing a "VDS + FLB" architecture** inside a vSphere environment.
 
 * [**Deployment App (VMs)**](1d-deployment-vms.md#deployment_vms )
 * [Deployment App (k8s)](1e-deployment-k8s.md)

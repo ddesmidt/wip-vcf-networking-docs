@@ -83,7 +83,8 @@ nav:
           - Installation:
               - Requirements:
                   - Check Requirements: vks/1a-requirements.md
-              - Supervisor Installation(ToDO): vks/1b-deploy-supervisor.md
+              - Supervisor Deployment:
+                - Create Supervisor: vks/1b-deploy-supervisor.md
               - Namespace Installation(ToDO): vks/1c-deploy-namespace.md
           - Application Deployment:
               - App Deployment (VMs)(ToDO): vks/1d-deployment-vms.md

@@ -24,37 +24,37 @@ This section describes the procedures for **deploying the Supervisor utilizing a
 ![Topology](images/2c-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 ### Create Supervisor
-Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, and click **ADD SUPERVISOR**.
-![Add Supervisor Wizard](images/2c-1-AddSupervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+Navigate to **vCenter** > **Supervisor Management**, and click **Get Started**.
+![Add Supervisor Wizard](images/2c-1-AddSupervisor.jpg){ width="65%" style="display: block; margin: 0 auto;" }
 
 1. **vCenter Server and Network**  
     * Select the network stack **VCF Networking with VPC (recommended)**, and click **Next**.  
     ![vCenter Server and Network Configuration](images/2c-1a-vCenter.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-1. **Supervisor Location**  
+2. **Supervisor Location**  
     * Select the **Cluster Deployment**, and click **Next**.  
     ![Supervisor Location Settings](images/2c-1b-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-1. **Storage**  
+3. **Storage**  
     * Select the different **Storage Policies**, and click **Next**.  
     ![Storage Policy Selection](images/2c-1c-Storage.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-1. **Management Network**  
+4. **Management Network**  
     * Configure the **Supervisor Management IP Settings**, and click **Next**.  
     ![Management Network IP Settings](images/2c-1d-Management.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-1. **Workload Network**  
+5. **Workload Network**  
     * Configure the **Workload Network** (fields are pre-populated, except for DNS and NTP Servers), and click **Next**.  
     ![Workload Network Configuration](images/2c-1e-Workload.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
         ??? warning "Troubleshooting: Auto SNAT Error"
             If you receive the error *"Auto SNAT must be enabled for VPC Connectivity Profile Default"*, refer back to the **["DTGW + VNA" Requirements](2a-requirements.md#nsx)** page and ensure **Default Outbound NAT** is enabled in the Connectivity Profile.
 
-1. **Advanced Settings**  
+6. **Advanced Settings**  
     * Select the **Supervisor Control Plane Size**, and click **Next**.  
     ![Advanced Settings and Sizing](images/2c-1f-Advanced.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-1. **Ready to Complete**  
+7. **Ready to Complete**  
     * Review your configuration and click **Finish**.  
     ![Review and Complete](images/2c-1g-Ready.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
