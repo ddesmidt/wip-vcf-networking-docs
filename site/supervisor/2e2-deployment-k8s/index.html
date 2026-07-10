@@ -1,0 +1,4002 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Technical configuration guide for VCF Networking services in VCF">
+      
+      
+      
+      
+        <link rel="prev" href="../2e1-deployment-k8s/">
+      
+      
+        <link rel="next" href="../2f1-deployment-vms/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/VMware_by_Broadcom_White.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>via CLI - VCF Networking Encyclopedia</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deployment_k8s" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="VCF Networking Encyclopedia" class="md-header__button md-logo" aria-label="VCF Networking Encyclopedia" data-md-component="logo">
+      
+  <img src="../../assets/VMware_by_Broadcom_White.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VCF Networking Encyclopedia
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              via CLI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="light-blue" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  VCF Networking Encyclopedia
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../vcenter/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  vCenter Server
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Supervisor
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="VCF Networking Encyclopedia" class="md-nav__button md-logo" aria-label="VCF Networking Encyclopedia" data-md-component="logo">
+      
+  <img src="../../assets/VMware_by_Broadcom_White.png" alt="logo">
+
+    </a>
+    VCF Networking Encyclopedia
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VCF Networking Encyclopedia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../vcenter/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    vCenter Server
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    vCenter Server
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPC Network Services
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VPC Network Services
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/1a-vpc_gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPC Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/1b-vpc_subnet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPC Subnet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/1c-vpc_nat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NAT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/1d-vpc_DHCP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DHCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPC Northbound Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VPC Northbound Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VCF Network Infrastructure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VCF Network Infrastructure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/2a-edge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edge Cluster / Node
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/2b-vna/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VNA Cluster / Node
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External Connectivity &amp; Services
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    External Connectivity &amp; Services
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/3a-external_connection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External Connection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/3b-transit_gateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transit Gateway
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/3c-ip_block/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IP Block
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/3d-network_span/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Span
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/3e-connectivity_profile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connectivity Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vcenter/3f-connectivity_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connectivity Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supervisor
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Supervisor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VDS + FLB
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VDS + FLB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_1" id="__nav_3_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Requirements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1a-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Check Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_2" id="__nav_3_2_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supervisor Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Supervisor Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1b-deploy-supervisor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create Supervisor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_3" id="__nav_3_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Namespace Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Namespace Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1c1-deploy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create Namespace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1c2-access-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Namespace Access via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Application Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1d-deployment-vms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    App Deployment (VMs)(ToDO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1e-deployment-k8s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    App Deployment (K8s)(ToDO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NSX + DTGW/VNA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NSX + DTGW/VNA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_1">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_1" id="__nav_3_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Requirements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2a-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Check Requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_1_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_1_2" id="__nav_3_3_1_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install Requirements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_3_3_1_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Install Requirements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2b1-deploy-NSXOverlay/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NSX Overlay
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2b2-deploy-DTGW_VNA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DTGW + VNA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_2" id="__nav_3_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supervisor Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Supervisor Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2c-deploy-supervisor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create Supervisor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_3" id="__nav_3_3_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Namespace Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Namespace Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2d1-deploy-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create Namespace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2d2-access-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Namespace Access via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_4" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1_4" id="__nav_3_3_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K8s Cluster Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    K8s Cluster Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2e1-deployment-k8s/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via vCenter UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via CLI
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#deployment_k8s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        K8s Cluster Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="K8s Cluster Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-supervisor-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to the Supervisor Namespace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-k8s-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create K8s Cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create K8s Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-all-k8s-cluster-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check all K8s Cluster resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-k8s-cluster-yaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create the K8s Cluster yaml file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-k8s-cluster-yaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy the K8s Cluster yaml file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validate Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validate-k8s-cluster-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate K8s Cluster Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-k8s-nodes-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate K8s Nodes Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect_k8s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to the K8s Cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connect to the K8s Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-k8s-cluster-kubeconfig-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create K8s Cluster kubeconfig file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-k8s-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to the K8s Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Application Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Application Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2_1">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2_1" id="__nav_3_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    App Deployment (VMs)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    App Deployment (VMs)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2f1-deployment-vms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via vCenter UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2f2-deployment-vms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2_2" id="__nav_3_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    App Deployment (K8s)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    App Deployment (K8s)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2g1-deployment-pods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Services
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Network Services
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2h1-network-subnet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subnets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2h2-network-subnetset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SubnetSets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2h3-network-staticroute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Static Routes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2h4-network-externalip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External IPs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2h5-network-lb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VM Load Balancers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Troubleshooting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4_1">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4_1" id="__nav_3_3_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packet Walk
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Packet Walk
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2i1-packetwalk-ext_vip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    N/S External to VIP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2i2-packetwalk-ext_vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    N/S External to VM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2i3-packetwalk-pod_pod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E/W Pod to Pod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2i4-packetwalk-vm_vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E/W VM to VM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4_2" id="__nav_3_3_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    App Access broken
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    App Access broken
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2j1-troubleshooting-vip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VIP access down
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2j2-troubleshooting-vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VM access down
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2j3-troubleshooting-pod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pod access down
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#deployment_k8s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        K8s Cluster Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="K8s Cluster Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-supervisor-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to the Supervisor Namespace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-k8s-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create K8s Cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create K8s Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-all-k8s-cluster-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check all K8s Cluster resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-k8s-cluster-yaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create the K8s Cluster yaml file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-the-k8s-cluster-yaml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy the K8s Cluster yaml file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validate Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validate-k8s-cluster-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate K8s Cluster Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-k8s-nodes-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate K8s Nodes Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect_k8s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to the K8s Cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connect to the K8s Cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-k8s-cluster-kubeconfig-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create K8s Cluster kubeconfig file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-the-k8s-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to the K8s Cluster
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/VKS.png" data-desc-position="bottom"><img src="../../assets/VKS.png" style="height:30px; vertical-align:middle;"></a> Supervisor with "NSX + DTGW/VNA"
+</h1>
+
+<div class="grid" style="grid-template-columns: 60% 40%">
+<div>
+<p>This section describes the procedures for <strong>deploying a K8s Cluster in a Namespace utilizing an "NSX + DTGW/VNA" architecture</strong> inside a vSphere environment.</p>
+<ul>
+<li><strong>K8s Cluster Deployment</strong><ul>
+<li><a href="../2e1-deployment-k8s/">via vCenter UI</a></li>
+<li><a href="#deployment_k8s"><strong>via CLI</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2e1-0-k8s.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2e1-0-k8s.jpg" width="100%"></a></p>
+</div>
+</div>
+<hr>
+<h2 id="deployment_k8s">K8s Cluster Deployment</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2e2-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2e2-1-Topology.jpg" style="display: block; margin: 0 auto;" width="55%"></a></p>
+<details class="info">
+<summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6h16v10H4m16 2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2H0v2h24v-2z"></path></svg></span> Client Operating System</summary>
+<p>While the command outputs below are captured from a <strong>Windows client</strong>, the <code>vcf</code> and <code>kubectl</code> CLI tools operate identically across <strong>Linux</strong> and <strong>macOS</strong> environments.</p>
+</details>
+<h3 id="connect-to-the-supervisor-namespace">Connect to the Supervisor Namespace</h3>
+<ul>
+<li>
+<p><strong>List the Supervisor Namespaces</strong><br>
+    </p><div class="highlight"><pre><span></span><code>vcf context list
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>vcf context list</b>
+NAME                             CURRENT  TYPE
+supervisor-mgt                   false    kubernetes
+<b>supervisor-mgt:demo-space        true     kubernetes</b>
+supervisor-mgt:svc-cci-ns-whl2t  false    kubernetes
+supervisor-mgt:svc-tkg-f0cpi     false    kubernetes
+supervisor-mgt:svc-velero-t234z  false    kubernetes
+</code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Connect to the Supervisor Namespace</strong><br>
+If the current context is not the good one, connect to the Supervisor Namespace
+    </p><div class="highlight"><pre><span></span><code>vcf context use supervisor-mgt:demo-space
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>vcf context use supervisor-mgt:demo-space</b>
+[ok] Token is still active. Skipped the token refresh for context "supervisor-mgt:demo-space"
+[i] Successfully activated context 'supervisor-mgt:demo-space' (Type: kubernetes)
+[i] Fetching recommended plugins for active context 'supervisor-mgt:demo-space'...
+</code></pre><p></p>
+</details>
+</li>
+</ul>
+<hr>
+<h3 id="create-k8s-cluster">Create K8s Cluster</h3>
+<h4 id="check-all-k8s-cluster-resources">Check all K8s Cluster resources</h4>
+<ul>
+<li>
+<p><strong>Check TKR releases available</strong>
+    </p><div class="highlight"><pre><span></span><code>kubectl get kubernetesreleases
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get kubernetesreleases</b>
+NAME                                      VERSION                                 READY   COMPATIBLE   CREATED   TYPE
+<snip>
+v1.35.5---vmware.1-vkr.1                  v1.35.5+vmware.1-vkr.1                  True    True         4d8h&lt;
+<snip>
+</snip></snip></code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Check VM Class available</strong>
+    </p><div class="highlight"><pre><span></span><code>kubectl get virtualmachineclass
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get virtualmachineclass</b>
+NAME                 CPU   MEMORY
+best-effort-medium   2     8Gi
+best-effort-small    2     4Gi
+guaranteed-medium    2     8Gi
+guaranteed-small     2     4Gi
+</code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Check Storage Class availablee</strong>
+    </p><div class="highlight"><pre><span></span><code>kubectl get storageclass
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get storageclass</b>
+NAME                                                   PROVISIONER              RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION   AGE
+<snip>
+vsan-default-storage-policy                            csi.vsphere.vmware.com   Delete          Immediate              true                   22h
+<snip>
+</snip></snip></code></pre><p></p>
+</details>
+</li>
+</ul>
+<h4 id="create-the-k8s-cluster-yaml-file">Create the K8s Cluster yaml file</h4>
+<p>Create file "my-cluster.yaml"</p>
+<details class="info">
+<summary>my-cluster.yaml file</summary>
+<div class="highlight"><pre><span></span><code>apiVersion: cluster.x-k8s.io/v1beta2
+kind: Cluster
+metadata:
+  name: my-cluster
+  namespace: demo-space
+spec:
+  clusterNetwork:
+    services:
+      cidrBlocks: ["10.96.0.0/12"]
+    pods:
+      cidrBlocks: ["192.168.156.0/20"]
+    serviceDomain: "cluster.local"
+  topology:
+    classRef:
+      name: builtin-generic-v3.6.0
+    version: v1.35.5---vmware.1-vkr.1
+    controlPlane:
+      replicas: 3
+    workers:
+      machineDeployments:
+        - class: node-pool
+          name: workers
+          metadata:
+            annotations:
+              cluster.x-k8s.io/cluster-api-autoscaler-node-group-min-size: "3"
+              cluster.x-k8s.io/cluster-api-autoscaler-node-group-max-size: "5"
+    variables:
+      - name: vmClass
+        value: best-effort-small
+      - name: storageClass
+        value: vsan-default-storage-policy
+</code></pre></div>
+</details>
+<h4 id="deploy-the-k8s-cluster-yaml-file">Deploy the K8s Cluster yaml file</h4>
+<div class="highlight"><pre><span></span><code>kubectl apply -f my-cluster.yaml
+</code></pre></div>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl apply -f my-cluster.yaml</b>
+cluster.cluster.x-k8s.io/my-cluster created
+</code></pre><p></p>
+</details>
+<hr>
+<h3 id="validate-deployment">Validate Deployment</h3>
+<h4 id="validate-k8s-cluster-status"><strong>Validate K8s Cluster Status</strong></h4>
+<p>It takes around 5 minutes to get the K8s Cluster ready
+</p><div class="highlight"><pre><span></span><code>kubectl get cluster
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get cluster</b>
+NAME         CLUSTERCLASS             <b>AVAILABLE</b>   CP DESIRED   <b>CP AVAILABLE</b>   CP UP-TO-DATE   <b>W DESIRED</b>   W AVAILABLE   W UP-TO-DATE   <b>PHASE</b>         AGE    VERSION
+my-cluster   builtin-generic-v3.6.0   <b>True</b>        3            <b>3</b>              3               <b>3</b>           3             3              <b>Provisioned</b>   7m32s   v1.35.5+vmware.1
+</code></pre><p></p>
+</details>
+<h4 id="validate-k8s-nodes-status"><strong>Validate K8s Nodes Status</strong></h4>
+<div class="highlight"><pre><span></span><code>kubectl get machines
+</code></pre></div>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get machines</b>
+NAME                                   CLUSTER      NODE NAME                              <b>READY</b>   AVAILABLE   UP-TO-DATE   PHASE     AGE     VERSION
+my-cluster-wglt6-dlpqm                 my-cluster   my-cluster-wglt6-dlpqm                 <b>True</b>    True        True         Running   5m57s   v1.35.5+vmware.1
+my-cluster-wglt6-jv9t5                 my-cluster   my-cluster-wglt6-jv9t5                 <b>True</b>    True        True         Running   3m47s   v1.35.5+vmware.1
+my-cluster-wglt6-n9m25                 my-cluster   my-cluster-wglt6-n9m25                 <b>True</b>    True        True         Running   109s    v1.35.5+vmware.1
+my-cluster-workers-qjq5s-xj695-2kt4z   my-cluster   my-cluster-workers-qjq5s-xj695-2kt4z   <b>True</b>    True        True         Running   5m47s   v1.35.5+vmware.1
+my-cluster-workers-qjq5s-xj695-dff4g   my-cluster   my-cluster-workers-qjq5s-xj695-dff4g   <b>True</b>    True        True         Running   5m47s   v1.35.5+vmware.1
+my-cluster-workers-qjq5s-xj695-p55n8   my-cluster   my-cluster-workers-qjq5s-xj695-p55n8   <b>True</b>    True        True         Running   5m47s   v1.35.5+vmware.1
+</code></pre><p></p>
+</details>
+<hr>
+<h3 id="connect_k8s">Connect to the K8s Cluster</h3>
+<h4 id="create-k8s-cluster-kubeconfig-file"><strong>Create K8s Cluster kubeconfig file</strong></h4>
+<pre><code>[System.IO.File]::WriteAllBytes("$pwd\my-cluster-kubeconfig.yaml", [System.Convert]::FromBase64String((kubectl get secret <b>my-cluster-kubeconfig</b> -n <b>demo-space</b> -o jsonpath='{.data.value}')))
+</code></pre>
+
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>[System.IO.File]::WriteAllBytes("$pwd\my-cluster-kubeconfig.yaml", [System.Convert]::FromBase64String((kubectl get secret my-cluster-kubeconfig -n demo-space -o jsonpath='{.data.value}')))</b>
+</code></pre><p></p>
+</details>
+<details class="info">
+<summary>File "my-cluster-kubeconfig.yaml" created</summary>
+<div class="highlight"><pre><span></span><code>apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM2akNDQWRLZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJMk1EWXlPREUyTXpZeE9Gb1hEVE0yTURZeU5URTJOREV4T0Zvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTE43Cjd2Z0ttTGxlYnVYd3FxNGUrUXJHTWhQWHEwMVhCcnpLc0tySjRqWEc1Zkc3TU8xalltaFk0cmxMMHNqeDl6U2oKcStZcnZKQ1I5TWFTRFJpZWxSU3craDQ3ejFuQ20yYjMzN1grSmxCYStYT0ZhZXFYTFZybHBlSy9FejNaM01HZApSWERMeENQS2tFN2VaZmRmVVA2Mld2K3JmVDYvai82T2RBOTY1ZmpxdVU3aTVaa2ZMQnRmRDFlZTRpSUJ6TjBTCnhxK2pmSml6ZUZDVFdmV296cjJXREpPM0pQNWZ2Q0J2b0xoeHVRMm92MWdyR3p3VHpYMytSekxZV00raGJXeXUKZFdyMnBqWGx4eUl4dDgrVzdWeHJiaU9PTVc2Z254N0V3RTNXTXB1UjNBM2R6TE5yblVHRC9HWVdjbVhVUkcrcQpYNnpxTDdpZGJURll3OTJlWElVQ0F3RUFBYU5GTUVNd0RnWURWUjBQQVFIL0JBUURBZ0trTUJJR0ExVWRFd0VCCi93UUlNQVlCQWY4Q0FRQXdIUVlEVlIwT0JCWUVGSUlwR3ljNTUzNTRyQ0h6ckE1R1NsT1VIclRpTUEwR0NTcUcKU0liM0RRRUJDd1VBQTRJQkFRQ1RWN1kvRjNhS21vMVRKN2E4WUdsN3lYNVRiRHlERjRydTJEMitUL2FjN1dyKwptd0tGcVIyQnJYdENxeFM1d0JhclRYQklpb1V5aGhlVFBkYUxuNit0Q0twVzFlanVpckNyT3pONUN1YXEvdVdWCkVVMzhEcS9raVdOTlE0ajA0Sm9tRERBZlRsd2tTdzVSZWZqbXFVL0k3ZDgwNjRseDRacDZjSkJEREN3NmRkYisKUXFTN0F3UWpnL0tUUmUxbjhJNjlERGZ1NmRSUDEvKzlmall0ajUzYWR3RnJ6R0ZIWXhtQmdEeENBUGdpM1Y0Ngp6M2UwOVJjUWdRVzdRblRWWXdoRjhFTThEMUl2T2RKNnkzeWtoN2JYTCtWc1BLY2JsYnFIczFicXU2TUFDekY2Cmx3dWY2STQ3WUpHQ1dzQnJ0UnNXSXhxUy9ISjRlZC9iRkZ2S3o0Rm4KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://10.1.7.137:6443
+  name: my-cluster
+contexts:
+- context:
+    cluster: my-cluster
+    user: my-cluster-admin
+  name: my-cluster-admin@my-cluster
+current-context: my-cluster-admin@my-cluster
+kind: Config
+users:
+- name: my-cluster-admin
+  user:
+    client-certificate-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFekNDQWZ1Z0F3SUJBZ0lJWFBEQU5XVFAzQ3N3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TmpBMk1qZ3hOak0yTVRoYUZ3MHlOekEyTWpneE5qUXhNVGxhTURReApGekFWQmdOVkJBb1REbk41YzNSbGJUcHRZWE4wWlhKek1Sa3dGd1lEVlFRREV4QnJkV0psY201bGRHVnpMV0ZrCmJXbHVNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQTRMeHpKL1hCRExIWE85d0gKSk1Zem5IcXd6Vm1hd1M1bWdMQ0luUFB6dkNscUtjS3RRemZZRnNjMnQreVBTTHpoTkkyMko0SGU3Q1ptM2p2eQpqYitwemhMenQ2cUh0ZnBTZUdVRTlGaWU0NmJ0UDJXdFBNS2dkd3ZYNkR1ZnNxMDlDZzJLTWRTVXFTa2hGOVdMCndoWUMwTldwNHh0MHRtOFlWc09hM3JPMmpnR1pzcVVjclJSMkFEOVgwaUlKa3d5YVd0Ky9BbW94M3IvTzkxQVMKTU82eElIVmsyVUwwdUh5QkJZUFVTUFFFbTFOVHRYODRBeHZYakZCNDMyK3FUUkNBcXptK3B6RmJHWllCSUtNegp0QklLSmpUK3hoYXJlR1o4OWhyK1F0WTZ3dW9VN2RsRjdCZFBzaWlIalQwQlIyU0E2L1hmSEJnTGQ0SExQb1dhCmlPM2NxUUlEQVFBQm8wZ3dSakFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJS3dZQkJRVUgKQXdJd0h3WURWUjBqQkJnd0ZvQVVnaWtiSnpubmZuaXNJZk9zRGtaS1U1UWV0T0l3RFFZSktvWklodmNOQVFFTApCUUFEZ2dFQkFBdk40bU5ZUzFDTzZhSGNxd3cxTElySWNNaEQ3T0pHTjc1ZGVETFc3bTRJUUsxa2tXK2dzbFpLCkROaUtOTkx3ak45bVBaUzZIVlViTDQ2MkNXemZCMGVPMWorR1NzR2lYVzJFSzNlUmNiYmpka2RYblZEcWdhNzYKWndWVkUrMEZaaVVmVmJLck00QnNzSjJheWl5QmNFUmFyMVArMVpFNUczQ1hQd3VpeVZpUG9IVW92YmVqalBPSwo1QjVBZ3ZNb0I0QlFPZUdlRmR5ZW5EQnlDUHhLczJRR25qOEFYbGxma2J0NnZMQ1RUYTZNZUIvVWMvb284TU5JClNXZDdjc2MxcUlaWFozTm5DMjlHdFZpaUROTUFNVFplWm1qTEgrNzRmZmsyVzJXZzlCNWJObnFVK3BVTzgxblUKSVNmeWpONVNpSWlVc2k5c2Zuek5xWko4OW1uQ2IrYz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    client-key-data: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb2dJQkFBS0NBUUVBNEx4ekovWEJETEhYTzl3SEpNWXpuSHF3elZtYXdTNW1nTENJblBQenZDbHFLY0t0ClF6ZllGc2MydCt5UFNMemhOSTIySjRIZTdDWm0zanZ5amIrcHpoTHp0NnFIdGZwU2VHVUU5RmllNDZidFAyV3QKUE1LZ2R3dlg2RHVmc3EwOUNnMktNZFNVcVNraEY5V0x3aFlDME5XcDR4dDB0bThZVnNPYTNyTzJqZ0dac3FVYwpyUlIyQUQ5WDBpSUprd3lhV3QrL0Ftb3gzci9POTFBU01PNnhJSFZrMlVMMHVIeUJCWVBVU1BRRW0xTlR0WDg0CkF4dlhqRkI0MzIrcVRSQ0Fxem0rcHpGYkdaWUJJS016dEJJS0pqVCt4aGFyZUdaODlocitRdFk2d3VvVTdkbEYKN0JkUHNpaUhqVDBCUjJTQTYvWGZIQmdMZDRITFBvV2FpTzNjcVFJREFRQUJBb0lCQUE3Q0JxU05kek9ZaTNRZwpoYzQ4dnhvNzFhMFdnUEFiVmtYYkp6Z2tybEVoUGNSODhVTWthLzlLN21WSTYrYUY2TVZsRFBJdWpXOWYzTjk1CkpsRE5VUFJQRUV3ZVdiSng1c1V3aW1acXIyY1pzM2kzVDVkWmh6b1V3QVU5d25DZS93N1FSczZia1haRHFpc0EKMktCU2htQWxEU0ZKMEp5WS9Rc3RrSUpSWU4vcTlzYXFxVVZzb0RzY1N2bnk0bllsN2RWZTN4S0ZSeDdiaW9FWAo4cWFBaUpqOTNSYWtlb2N6eThuaHhEN01UZ2NMMkczSEh5RmgzSjZUa2k5cjhKVzJ3amJDNFI5VUtZWnlrRVpUCkpIRlhWKyt2K1hkRW1INzBGbjFmWUkxR3lOK1o0MXEveWwrV1F1a2RSWDNXbk5EQVE3YXROWXQ5TjAxU2dGdVUKL0l3d1U5RUNnWUVBL0hXYzJzaGpZeDdQWlZpcHRYTUpVVll1R3p6TjFFajZrVytvMWIzeWN1aEgrNDcwT2trdgpUL2NsQzI5OVh0dDJ4emdEd2VrMEFyQVl0K0daNldLQysydDBiUkp3TjZtTUR5NU1PTFNvaEtERi9qckRKVFpxCkliZ0hzK3FsL2lqZkNTeER5OE00YnBMZFlJRnpYaFlud0hTMHBudU12K2JDRndadGZCMmJqVDBDZ1lFQTQrTk4KMjRrcjZNTDlha2Z5cEs4Nk90ZmhWdW8yWHgraW5tNTI3aTVQVVJDRGYvdXM1ci9uTWxnaklsdi9uRFlMVmFYNgpZdHViTnoya09qMlRJWVR1OWJqNVg4NGp4WmhJMWgxY2xmYi9mQVdSV3VMaUh6ejVaVCtDeWIyUnJzUy9SQWVxCjNVY0g3dnJDYkFCaFhNMEttVThXZFhBWlBKOXAyUVBZdlp1MW05MENnWUJLR0s3djI2Nm44ZXdISDgyM2pzcm0KVDNmNjBJN014cHFjUXZ4M3QyZElhSHB3RDlZSW9XQThoUm9mVUJxbzA1cjUvNnZDcHhKMzAzMTl3cjRzckpncQorSy9VTDN3MktoSU1ocGNpY1l1Z1dadWk4VlpEUHNSSm56ekxob3d2bTRsU3BPWkZFTWdvVS95YmpZTHgwMmpaCmFLZDQwWHhPK29odXY1azB1Mi9qTlFLQmdFRTJVSmRjSDRhU0ZmYU45QytRUFRlTmcxeGQxWVZQQmpnVUlGQjAKVEJwRWdYemtSa3daNmswTHo3SUxaWkFNSHg0NVN2ZHpKRzJnWkJpT2VrWURSbVptc21YcUZXNTc3NHZtQnhLYgpCZTAxb3F6QmREZkFPUlh5SUxrZVdFd00zVGJZZ3RxamN1KytMbGk5bXg3MVJlMHRKcDRnbi9nckhoME43cjRECml1cTVBb0dBSWpyRXdySVFJVDh6a1llSy9XcUVFTlJTSlBkT3RXWjArdXhabTZOd2ZLY1Nzb1Nud1FFeVFLSjgKTW8zSjd4dVlmNEZnbkhsMFlXODhTTXVRVEN0ZzF3OW9IVkhxaEh0a2s4b043YUFaTmhNeXlSSTNoRUIyOXE3ZQprQk5xYTc5WVFkQzBtSlE2UkVKeEZNQ3NKdlhsZHFGM0pSS0NlMTZ5cjM2c1ZsSHJoa1E9Ci0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
+</code></pre></div>
+</details>
+<h4 id="connect-to-the-k8s-cluster"><strong>Connect to the K8s Cluster</strong></h4>
+<ul>
+<li>
+<p><strong>Create KUBECONFIG variable</strong>
+    </p><div class="highlight"><pre><span></span><code>$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>$env:KUBECONFIG="$pwd\my-cluster-kubeconfig.yaml"</b>
+</code></pre>
+Note: To connect back to the Supervisor Namespace (demo-space)
+<pre><code>PS C:\Users\Administrator\Documents&gt; <b>$env:KUBECONFIG = $null</b>
+</code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Change context to my K8s Cluster</strong>
+    </p><div class="highlight"><pre><span></span><code>kubectl config use-context my-cluster-admin@my-cluster
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl config use-context my-cluster-admin@my-cluster</b>
+Switched to context "my-cluster-admin@my-cluster".
+</code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Validate Context is the K8s Cluster</strong>
+    </p><div class="highlight"><pre><span></span><code>kubectl config get-contexts
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p>The current context is:<br>
+. <strong>Cluster: my-cluster</strong><br>
+. <strong>Namespace: default (empty)</strong><br>
+</p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl config get-contexts</b>
+CURRENT   NAME                          CLUSTER      AUTHINFO           NAMESPACE
+*         my-cluster-admin@my-cluster   my-cluster   my-cluster-admin
+</code></pre><p></p>
+</details>
+</li>
+<li>
+<p><strong>Validate K8s Cluster connection</strong>
+    </p><div class="highlight"><pre><span></span><code>kubectl get nodes
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>kubectl get nodes</b>
+NAME                                   STATUS   ROLES           AGE   VERSION
+my-cluster-wglt6-dlpqm                 Ready    control-plane   49m   v1.35.5+vmware.1
+my-cluster-wglt6-jv9t5                 Ready    control-plane   47m   v1.35.5+vmware.1
+my-cluster-wglt6-n9m25                 Ready    control-plane   45m   v1.35.5+vmware.1
+my-cluster-workers-qjq5s-xj695-2kt4z   Ready    <none>          48m   v1.35.5+vmware.1
+my-cluster-workers-qjq5s-xj695-dff4g   Ready    <none>          48m   v1.35.5+vmware.1
+my-cluster-workers-qjq5s-xj695-p55n8   Ready    <none>          48m   v1.35.5+vmware.1
+</none></none></none></code></pre><p></p>
+</details>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "content.code.copy", "navigation.grid", "lightbox", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
