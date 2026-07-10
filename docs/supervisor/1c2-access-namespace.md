@@ -64,19 +64,19 @@ From your K8s client:
         <b>Logged in successfully.</b>
         &nbsp;
         You have access to the following contexts:
-          supervisor-mgt
-          supervisor-mgt:demo-space
-          supervisor-mgt:svc-cci-ns-whl2t
-          supervisor-mgt:svc-tkg-f0cpi
-          supervisor-mgt:svc-velero-t234z
+            supervisor-mgt
+            supervisor-mgt:demo-space
+            supervisor-mgt:svc-cci-ns-hzbv0
+            supervisor-mgt:svc-tkg-m829h
+            supervisor-mgt:svc-velero-xqgz5
         &nbsp;
         If the namespace context you wish to use is not in this list, you may need to refresh the context again, or contact your cluster administrator.
         &nbsp;
         <b>To change context, use vcf context use &lt;context_name&gt;
         [ok] successfully saved context: supervisor-mgt
-        [ok] successfully saved context: supervisor-mgt:svc-cci-ns-whl2t
-        [ok] successfully saved context: supervisor-mgt:svc-tkg-f0cpi
-        [ok] successfully saved context: supervisor-mgt:svc-velero-t234z
+        [ok] successfully saved context: supervisor-mgt:svc-tkg-m829h
+        [ok] successfully saved context: supervisor-mgt:svc-velero-xqgz5
+        [ok] successfully saved context: supervisor-mgt:svc-cci-ns-hzbv0
         [ok] successfully saved context: supervisor-mgt:demo-space</b>
         </code></pre>
 
@@ -91,11 +91,11 @@ When the VCF Context has been created once (see above):
     ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context list</b>
         NAME                             CURRENT  TYPE
-        <b>supervisor-mgt                   false    kubernetes</b>
-        supervisor-mgt:demo-space        true     kubernetes
-        supervisor-mgt:svc-cci-ns-whl2t  false    kubernetes
-        supervisor-mgt:svc-tkg-f0cpi     false    kubernetes
-        supervisor-mgt:svc-velero-t234z  false    kubernetes
+        <b>supervisor-mgt                   true    kubernetes</b>
+        supervisor-mgt:demo-space        false    kubernetes
+        supervisor-mgt:svc-cci-ns-hzbv0  false    kubernetes
+        supervisor-mgt:svc-tkg-m829h     false    kubernetes
+        supervisor-mgt:svc-velero-xqgz5  false    kubernetes
         </code></pre>
 
 * **Connect to the Supervisor Namespace**  
@@ -131,12 +131,12 @@ When the VCF Context has been created once (see above):
 
     ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context list</b>
-          NAME                             CURRENT  TYPE
-          supervisor-mgt                   false    kubernetes
-          <b>supervisor-mgt:demo-space        true     kubernetes</b>
-          supervisor-mgt:svc-cci-ns-whl2t  false    kubernetes
-          supervisor-mgt:svc-tkg-f0cpi     false    kubernetes
-          supervisor-mgt:svc-velero-t234z  false    kubernetes
+        NAME                             CURRENT  TYPE
+        supervisor-mgt                   true    kubernetes
+        <b>supervisor-mgt:demo-space        false    kubernetes</b>
+        supervisor-mgt:svc-cci-ns-hzbv0  false    kubernetes
+        supervisor-mgt:svc-tkg-m829h     false    kubernetes
+        supervisor-mgt:svc-velero-xqgz5  false    kubernetes
         &nbsp;
         [i] Use '--wide' to view additional columns.
         </code></pre>
@@ -150,7 +150,7 @@ When the VCF Context has been created once (see above):
     ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get nodes</b>
         NAME                               STATUS   ROLES                  AGE   VERSION
-        421f48f14806296b0758c9ac24c29cf1   Ready    control-plane,master   2d    v1.32.9+vmware.2-fips
+        421fc1eaaae9d72dee945e941a9d76e9   Ready    control-plane,master   2d    v1.32.9+vmware.2-fips
         esx-01a.site-a.vcf.lab             Ready    agent                  2d    v1.32.5-sph-f4e887d
         esx-02a.site-a.vcf.lab             Ready    agent                  2d    v1.32.5-sph-f4e887d
         esx-03a.site-a.vcf.lab             Ready    agent                  2d    v1.32.5-sph-f4e887d

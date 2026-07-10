@@ -10,7 +10,7 @@ This section describes the procedures for **deploying a Supervisor Namespace uti
 
 * **Namespace**
     * [Deployment](2d1-deploy-namespace.md)
-    * [**Accesss via CLI**](#namespaceaccess)
+    * [**Access via CLI**](#namespaceaccess)
 
 </div>
 
@@ -91,8 +91,8 @@ When the VCF Context has been created once (see above):
     ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context list</b>
         NAME                             CURRENT  TYPE
-        <b>supervisor-mgt                   false    kubernetes</b>
-        supervisor-mgt:demo-space        true     kubernetes
+        <b>supervisor-mgt                   true    kubernetes</b>
+        supervisor-mgt:demo-space        false     kubernetes
         supervisor-mgt:svc-cci-ns-whl2t  false    kubernetes
         supervisor-mgt:svc-tkg-f0cpi     false    kubernetes
         supervisor-mgt:svc-velero-t234z  false    kubernetes
