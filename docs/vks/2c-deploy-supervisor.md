@@ -100,7 +100,7 @@ Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **
     Click **ADD**.  
     ![vCenter Server and Network Configuration](images/2c-4b-AddContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
 
-  1. **Select Content Library**  
+  2. **Select Content Library**  
     Select **Content Library with VKS images**, and click **ADD**.  
     ![vCenter Server and Network Configuration](images/2c-4c-SelectContentLibrary.jpg){ width="65%" style="display: block; margin: 0 auto;" }  
 

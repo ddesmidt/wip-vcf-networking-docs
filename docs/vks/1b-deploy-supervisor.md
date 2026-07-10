@@ -8,9 +8,7 @@
 
 This section describes the procedures for **deploying the Supervisor utilizing a "VDS + FLB" architecture** inside a vSphere environment.
 
-* [Requirements](1a-requirements.md)
 * [**Supervisor Deployment**](#supervisordeployment)
-* [Namespace Deployment](1c-deploy-namespace.md)
 </div>
 
 <div markdown>

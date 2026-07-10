@@ -10,7 +10,7 @@ This section describes the procedures for **deploying a Supervisor Namespace uti
 
 * **Namespace**
     * [**Deployment**](#namespacedeployment)
-    * [Accesss via CLI](2d2-access-namespace.md)
+    * [Access via CLI](2d2-access-namespace.md)
 
 </div>
 
@@ -30,16 +30,20 @@ This section describes the procedures for **deploying a Supervisor Namespace uti
 Navigate to **vCenter** > **Supervisor Management** > **Namespaces**, and click **NEW NAMESPACE**.
 ![Add Namespace](images/2c-1-AddSupervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
-1. **Location** Select the **Supervisor**, and click **Next**.  
+1. **Location**  
+   Select the **Supervisor**, and click **Next**.  
     ![Select Supervisor Location](images/2d1-1a-SupervisorNamespace.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-1. **Configuration** Give a name to the **Namespace**, and click **Next**.  
+2. **Configuration**  
+   Give a name to the **Namespace**, and click **Next**.  
     ![Name the Namespace](images/2d1-1b-SupervisorNamespace.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-1. **Add Zones** Select the **Workload Zone** (one or more vCenter Clusters), and click **Next**.  
+3. **Add Zones**  
+   Select the **Workload Zone** (one or more vCenter Clusters), and click **Next**.  
     ![Add Workload Zones](images/2d1-1c-SupervisorNamespace.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
-1. **Review** Review the Namespace settings, and click **Finish**.  
+4. **Review**  
+   Review the Namespace settings, and click **Finish**.  
     ![Review Namespace Settings](images/2d1-1d-SupervisorNamespace.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 
@@ -108,7 +112,7 @@ Once the wizard completes, verify the deployment was successful by navigating to
 
 ![Validate Namespace Status](images/2d1-6a-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
 
-#### **Validate Namespace Content Library** 
+#### **Validate Namespace Storage and Content Library** 
 Verify the Namespace has at least a **Content Library**, **VM Classes**, and **Storage** by navigating to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, and select **[your namespace]**.
 ![Validate Namespace Resources](images/2d1-6b-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
 

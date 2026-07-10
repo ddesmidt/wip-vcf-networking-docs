@@ -6,11 +6,9 @@
 
 <div markdown>
 
-This section describes the procedures for **deploying the Supervisor utilizing a "VDS + FLB" architecture** inside a vSphere environment.
+This section describes the requirements for **deploying the Supervisor utilizing a "VDS + FLB" architecture** inside a vSphere environment.
 
 * [**Requirements**](#requirements)
-* [Supervisor Deployment](1b-deploy-supervisor.md)
-* [Namespace Deployment](1c-deploy-namespace.md)
 </div>
 
 <div markdown>
