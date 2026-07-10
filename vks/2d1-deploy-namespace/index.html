@@ -1412,15 +1412,73 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_3" id="__nav_3_2_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Namespace Deployment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Namespace Deployment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../1c-deploy-namespace/" class="md-nav__link">
+      <a href="../1c1-deploy-namespace/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Namespace Installation(ToDO)
+    Create Namespace
   
 
     
@@ -1429,6 +1487,42 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1c2-access-namespace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Namespace Access via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2241,10 +2335,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#validate-namespace-content-library" class="md-nav__link">
+  <a href="#validate-namespace-storage-and-content-library" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validate Namespace Content Library
+        Validate Namespace Storage and Content Library
       
     </span>
   </a>
@@ -3475,10 +3569,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#validate-namespace-content-library" class="md-nav__link">
+  <a href="#validate-namespace-storage-and-content-library" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Validate Namespace Content Library
+        Validate Namespace Storage and Content Library
       
     </span>
   </a>
@@ -3522,7 +3616,7 @@
 <ul>
 <li><strong>Namespace</strong><ul>
 <li><a href="#namespacedeployment"><strong>Deployment</strong></a></li>
-<li><a href="../2d2-access-namespace/">Accesss via CLI</a></li>
+<li><a href="../2d2-access-namespace/">Access via CLI</a></li>
 </ul>
 </li>
 </ul>
@@ -3539,19 +3633,23 @@
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c-1-AddSupervisor.jpg" data-desc-position="bottom"><img alt="Add Namespace" src="../images/2c-1-AddSupervisor.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <ol>
 <li>
-<p><strong>Location</strong> Select the <strong>Supervisor</strong>, and click <strong>Next</strong>.<br>
+<p><strong>Location</strong><br>
+   Select the <strong>Supervisor</strong>, and click <strong>Next</strong>.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-1a-SupervisorNamespace.jpg" data-desc-position="bottom"><img alt="Select Supervisor Location" src="../images/2d1-1a-SupervisorNamespace.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 </li>
 <li>
-<p><strong>Configuration</strong> Give a name to the <strong>Namespace</strong>, and click <strong>Next</strong>.<br>
+<p><strong>Configuration</strong><br>
+   Give a name to the <strong>Namespace</strong>, and click <strong>Next</strong>.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-1b-SupervisorNamespace.jpg" data-desc-position="bottom"><img alt="Name the Namespace" src="../images/2d1-1b-SupervisorNamespace.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 </li>
 <li>
-<p><strong>Add Zones</strong> Select the <strong>Workload Zone</strong> (one or more vCenter Clusters), and click <strong>Next</strong>.<br>
+<p><strong>Add Zones</strong><br>
+   Select the <strong>Workload Zone</strong> (one or more vCenter Clusters), and click <strong>Next</strong>.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-1c-SupervisorNamespace.jpg" data-desc-position="bottom"><img alt="Add Workload Zones" src="../images/2d1-1c-SupervisorNamespace.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 </li>
 <li>
-<p><strong>Review</strong> Review the Namespace settings, and click <strong>Finish</strong>.<br>
+<p><strong>Review</strong><br>
+   Review the Namespace settings, and click <strong>Finish</strong>.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-1d-SupervisorNamespace.jpg" data-desc-position="bottom"><img alt="Review Namespace Settings" src="../images/2d1-1d-SupervisorNamespace.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
 </li>
 </ol>
@@ -3618,7 +3716,7 @@ Navigate to <strong>vCenter</strong> &gt; <strong>Content Libraries</strong> &gt
 <h4 id="validate-namespace-status"><strong>Validate Namespace Status</strong></h4>
 <p>Once the wizard completes, verify the deployment was successful by navigating to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, and navigate to <strong>Namespaces</strong>.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-6a-Validation.jpg" data-desc-position="bottom"><img alt="Validate Namespace Status" src="../images/2d1-6a-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
-<h4 id="validate-namespace-content-library"><strong>Validate Namespace Content Library</strong></h4>
+<h4 id="validate-namespace-storage-and-content-library"><strong>Validate Namespace Storage and Content Library</strong></h4>
 <p>Verify the Namespace has at least a <strong>Content Library</strong>, <strong>VM Classes</strong>, and <strong>Storage</strong> by navigating to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, and select <strong>[your namespace]</strong>.
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-6b-Validation.jpg" data-desc-position="bottom"><img alt="Validate Namespace Resources" src="../images/2d1-6b-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
 
