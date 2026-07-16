@@ -132,8 +132,8 @@ When the VCF Context has been created once (see above):
     ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>vcf context list</b>
         NAME                             CURRENT  TYPE
-        supervisor-mgt                   true    kubernetes
-        <b>supervisor-mgt:demo-space        false    kubernetes</b>
+        supervisor-mgt                   false    kubernetes
+        <b>supervisor-mgt:demo-space        true     kubernetes</b>
         supervisor-mgt:svc-cci-ns-hzbv0  false    kubernetes
         supervisor-mgt:svc-tkg-m829h     false    kubernetes
         supervisor-mgt:svc-velero-xqgz5  false    kubernetes

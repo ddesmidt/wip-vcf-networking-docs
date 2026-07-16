@@ -46,7 +46,7 @@ kubectl create namespace ns1
     </code></pre>
 #### Allow the deployment of applications in the Namespace.  
 ```text
-kubectl label ns [default|namespace] pod-security.kubernetes.io/enforce=baseline
+kubectl label ns ns1 pod-security.kubernetes.io/enforce=baseline
 ```  
 
 ??? abstract "Output example"

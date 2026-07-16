@@ -88,9 +88,13 @@ nav:
               - Namespace Deployment:
                 - Create Namespace: supervisor/1c1-deploy-namespace.md
                 - Namespace Access via CLI: supervisor/1c2-access-namespace.md
+              - K8s Cluster Deployment:
+                - via CLI: supervisor/1d2-deployment-k8s.md
           - Application Deployment:
-              - App Deployment (VMs)(ToDO): supervisor/1d-deployment-vms.md
-              - App Deployment (K8s)(ToDO): supervisor/1e-deployment-k8s.md
+              - App Deployment (VMs):
+                - via CLI: supervisor/1e2-deployment-vms.md
+              - App Deployment (K8s): 
+                - via CLI: supervisor/1f1-deployment-pods.md
       - NSX + DTGW/VNA:
           - Installation:
               - Requirements:
