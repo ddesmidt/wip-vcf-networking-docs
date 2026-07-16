@@ -95,6 +95,14 @@ nav:
                 - via CLI: supervisor/1e2-deployment-vms.md
               - App Deployment (K8s): 
                 - via CLI: supervisor/1f1-deployment-pods.md
+          - Network Services: 
+              - VM Load Balancers: supervisor/1g1-network-lb.md
+          - Troubleshooting:
+              - Packet Walk:
+                - N/S External to VIP: supervisor/1h1-packetwalk-ext_vip.md
+                - N/S External to VM: supervisor/1h2-packetwalk-ext_vm.md
+                - E/W Pod to Pod: supervisor/1h3-packetwalk-pod_pod.md
+                - E/W VM to VM: supervisor/1h4-packetwalk-vm_vm.md
       - NSX + DTGW/VNA:
           - Installation:
               - Requirements:
