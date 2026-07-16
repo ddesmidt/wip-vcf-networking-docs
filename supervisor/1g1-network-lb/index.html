@@ -8,10 +8,10 @@
       
       
       
-        <link rel="prev" href="../1c-vpc_nat/">
+        <link rel="prev" href="../1f1-deployment-pods/">
       
       
-        <link rel="next" href="../2a-edge/">
+        <link rel="next" href="../1h1-packetwalk-ext_vip/">
       
       
         
@@ -22,7 +22,7 @@
     
     
       
-        <title>DHCP - VCF Networking Encyclopedia</title>
+        <title>VM Load Balancers - VCF Networking Encyclopedia</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview-of-dhcp-types" class="md-skip">
+        <a href="#networkservices" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DHCP
+              VM Load Balancers
             
           </span>
         </div>
@@ -234,13 +234,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../vcenter/" class="md-tabs__link">
           
   
   
@@ -258,11 +256,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../supervisor/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -339,8 +339,6 @@
       
   
   
-    
-  
   
   
     
@@ -358,23 +356,20 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../vcenter/" class="md-nav__link ">
               
   
   
@@ -392,13 +387,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -415,10 +410,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -435,21 +428,18 @@
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked="">
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
   
@@ -467,7 +457,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -485,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1a-vpc_gateway/" class="md-nav__link">
+      <a href="../../vcenter/1a-vpc_gateway/" class="md-nav__link">
         
   
   
@@ -513,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1b-vpc_subnet/" class="md-nav__link">
+      <a href="../../vcenter/1b-vpc_subnet/" class="md-nav__link">
         
   
   
@@ -541,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1c-vpc_nat/" class="md-nav__link">
+      <a href="../../vcenter/1c-vpc_nat/" class="md-nav__link">
         
   
   
@@ -566,35 +556,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    DHCP
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../vcenter/1d-vpc_DHCP/" class="md-nav__link">
         
   
   
@@ -610,113 +575,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#overview-of-dhcp-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Overview of DHCP Types
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dhcp-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DHCP Server
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DHCP Server">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dhcp-relay" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DHCP Relay Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DHCP Relay Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoring_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,20 +607,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
   
   
@@ -856,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2a-edge/" class="md-nav__link">
+      <a href="../../vcenter/2a-edge/" class="md-nav__link">
         
   
   
@@ -884,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2b-vna/" class="md-nav__link">
+      <a href="../../vcenter/2b-vna/" class="md-nav__link">
         
   
   
@@ -986,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3a-external_connection/" class="md-nav__link">
+      <a href="../../vcenter/3a-external_connection/" class="md-nav__link">
         
   
   
@@ -1014,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3b-transit_gateway/" class="md-nav__link">
+      <a href="../../vcenter/3b-transit_gateway/" class="md-nav__link">
         
   
   
@@ -1042,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3c-ip_block/" class="md-nav__link">
+      <a href="../../vcenter/3c-ip_block/" class="md-nav__link">
         
   
   
@@ -1070,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3d-network_span/" class="md-nav__link">
+      <a href="../../vcenter/3d-network_span/" class="md-nav__link">
         
   
   
@@ -1098,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3e-connectivity_profile/" class="md-nav__link">
+      <a href="../../vcenter/3e-connectivity_profile/" class="md-nav__link">
         
   
   
@@ -1126,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3f-connectivity_policy/" class="md-nav__link">
+      <a href="../../vcenter/3f-connectivity_policy/" class="md-nav__link">
         
   
   
@@ -1174,6 +1029,8 @@
       
   
   
+    
+  
   
   
     
@@ -1191,20 +1048,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../supervisor/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1222,13 +1082,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1245,8 +1105,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1263,18 +1125,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
             
   
   
@@ -1292,7 +1157,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1428,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1a-requirements/" class="md-nav__link">
+      <a href="../1a-requirements/" class="md-nav__link">
         
   
   
@@ -1520,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1b-deploy-supervisor/" class="md-nav__link">
+      <a href="../1b-deploy-supervisor/" class="md-nav__link">
         
   
   
@@ -1614,7 +1479,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1c1-deploy-namespace/" class="md-nav__link">
+      <a href="../1c1-deploy-namespace/" class="md-nav__link">
         
   
   
@@ -1642,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1c2-access-namespace/" class="md-nav__link">
+      <a href="../1c2-access-namespace/" class="md-nav__link">
         
   
   
@@ -1734,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1d2-deployment-k8s/" class="md-nav__link">
+      <a href="../1d2-deployment-k8s/" class="md-nav__link">
         
   
   
@@ -1892,7 +1757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1e2-deployment-vms/" class="md-nav__link">
+      <a href="../1e2-deployment-vms/" class="md-nav__link">
         
   
   
@@ -1984,7 +1849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1f1-deployment-pods/" class="md-nav__link">
+      <a href="../1f1-deployment-pods/" class="md-nav__link">
         
   
   
@@ -2025,8 +1890,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2041,11 +1908,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" checked="">
         
           
           <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
@@ -2066,7 +1933,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2081,10 +1948,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../supervisor/1g1-network-lb/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VM Load Balancers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2100,6 +1992,63 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#networkservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Services: VM Load Balancers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Services: VM Load Balancers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-vm-load-balancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a VM Load Balancer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validate-vm-load-balancer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validate VM Load Balancer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2238,7 +2187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1h1-packetwalk-ext_vip/" class="md-nav__link">
+      <a href="../1h1-packetwalk-ext_vip/" class="md-nav__link">
         
   
   
@@ -2266,7 +2215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1h2-packetwalk-ext_vm/" class="md-nav__link">
+      <a href="../1h2-packetwalk-ext_vm/" class="md-nav__link">
         
   
   
@@ -2294,7 +2243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1h3-packetwalk-pod_pod/" class="md-nav__link">
+      <a href="../1h3-packetwalk-pod_pod/" class="md-nav__link">
         
   
   
@@ -2322,7 +2271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/1h4-packetwalk-vm_vm/" class="md-nav__link">
+      <a href="../1h4-packetwalk-vm_vm/" class="md-nav__link">
         
   
   
@@ -2390,17 +2339,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3">
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
             
   
   
@@ -2556,7 +2508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2a-requirements/" class="md-nav__link">
+      <a href="../2a-requirements/" class="md-nav__link">
         
   
   
@@ -2642,7 +2594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2b1-deploy-NSXOverlay/" class="md-nav__link">
+      <a href="../2b1-deploy-NSXOverlay/" class="md-nav__link">
         
   
   
@@ -2670,7 +2622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2b2-deploy-DTGW_VNA/" class="md-nav__link">
+      <a href="../2b2-deploy-DTGW_VNA/" class="md-nav__link">
         
   
   
@@ -2770,7 +2722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2c-deploy-supervisor/" class="md-nav__link">
+      <a href="../2c-deploy-supervisor/" class="md-nav__link">
         
   
   
@@ -2864,7 +2816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2d1-deploy-namespace/" class="md-nav__link">
+      <a href="../2d1-deploy-namespace/" class="md-nav__link">
         
   
   
@@ -2892,7 +2844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2d2-access-namespace/" class="md-nav__link">
+      <a href="../2d2-access-namespace/" class="md-nav__link">
         
   
   
@@ -2986,7 +2938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2e1-deployment-k8s/" class="md-nav__link">
+      <a href="../2e1-deployment-k8s/" class="md-nav__link">
         
   
   
@@ -3014,7 +2966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2e2-deployment-k8s/" class="md-nav__link">
+      <a href="../2e2-deployment-k8s/" class="md-nav__link">
         
   
   
@@ -3174,7 +3126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2f1-deployment-vms/" class="md-nav__link">
+      <a href="../2f1-deployment-vms/" class="md-nav__link">
         
   
   
@@ -3202,7 +3154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2f2-deployment-vms/" class="md-nav__link">
+      <a href="../2f2-deployment-vms/" class="md-nav__link">
         
   
   
@@ -3294,7 +3246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2g1-deployment-pods/" class="md-nav__link">
+      <a href="../2g1-deployment-pods/" class="md-nav__link">
         
   
   
@@ -3402,7 +3354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2h1-network-subnet/" class="md-nav__link">
+      <a href="../2h1-network-subnet/" class="md-nav__link">
         
   
   
@@ -3430,7 +3382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2h2-network-subnetset/" class="md-nav__link">
+      <a href="../2h2-network-subnetset/" class="md-nav__link">
         
   
   
@@ -3458,7 +3410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2h3-network-staticroute/" class="md-nav__link">
+      <a href="../2h3-network-staticroute/" class="md-nav__link">
         
   
   
@@ -3486,7 +3438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2h4-network-externalip/" class="md-nav__link">
+      <a href="../2h4-network-externalip/" class="md-nav__link">
         
   
   
@@ -3514,7 +3466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2h5-network-lb/" class="md-nav__link">
+      <a href="../2h5-network-lb/" class="md-nav__link">
         
   
   
@@ -3670,7 +3622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2i1-packetwalk-ext_vip.md" class="md-nav__link">
+      <a href="../2i1-packetwalk-ext_vip.md" class="md-nav__link">
         
   
   
@@ -3698,7 +3650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2i2-packetwalk-ext_vm/" class="md-nav__link">
+      <a href="../2i2-packetwalk-ext_vm/" class="md-nav__link">
         
   
   
@@ -3726,7 +3678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2i3-packetwalk-pod_pod/" class="md-nav__link">
+      <a href="../2i3-packetwalk-pod_pod/" class="md-nav__link">
         
   
   
@@ -3754,7 +3706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2i4-packetwalk-vm_vm/" class="md-nav__link">
+      <a href="../2i4-packetwalk-vm_vm/" class="md-nav__link">
         
   
   
@@ -3850,7 +3802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2j1-troubleshooting-vip/" class="md-nav__link">
+      <a href="../2j1-troubleshooting-vip/" class="md-nav__link">
         
   
   
@@ -3878,7 +3830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2j2-troubleshooting-vm/" class="md-nav__link">
+      <a href="../2j2-troubleshooting-vm/" class="md-nav__link">
         
   
   
@@ -3906,7 +3858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../supervisor/2j3-troubleshooting-pod/" class="md-nav__link">
+      <a href="../2j3-troubleshooting-pod/" class="md-nav__link">
         
   
   
@@ -3983,33 +3935,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview-of-dhcp-types" class="md-nav__link">
+  <a href="#networkservices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview of DHCP Types
+        Network Services: VM Load Balancers
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dhcp-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DHCP Server
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DHCP Server">
+    <nav class="md-nav" aria-label="Network Services: VM Load Balancers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#create-a-vm-load-balancer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration
+        Create a VM Load Balancer
       
     </span>
   </a>
@@ -4017,49 +3958,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#monitoring" class="md-nav__link">
+  <a href="#validate-vm-load-balancer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Monitoring
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dhcp-relay" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        DHCP Relay Configuration
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="DHCP Relay Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoring_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Monitoring
+        Validate VM Load Balancer
       
     </span>
   </a>
@@ -4089,157 +3991,39 @@
 
 
 <h1>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/vCenter.png" data-desc-position="bottom"><img src="../../assets/vCenter.png" style="height:30px" ;="" vertical-align:middle;=""></a> VPC DHCP Configuration in vCenter
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/VKS.png" data-desc-position="bottom"><img src="../../assets/VKS.png" style="height:30px; vertical-align:middle;"></a> Supervisor with "NSX + DTGW/VNA"
 </h1>
 
-<div class="grid" style="grid-template-columns: 80% 20%">
+<div class="grid" style="grid-template-columns: 60% 40%">
 <div>
-<p>This section describes the procedures for configuring Dynamic Host Configuration Protocol (DHCP) for your VPC workloads in VPC subnets.
-<br><br>
-<strong>DHCP</strong> is used to dynamically assign IP addresses to workloads.  </p>
+<p>This section describes the procedures for <strong>provisioning and managing Network Services within a VKS Namespace utilizing a "VDS + FLB" architecture"</strong> inside a vSphere environment.</p>
+<ul>
+<li><strong>Network Services</strong><ul>
+<li><a href="#networkservices"><strong>VM Load Balancers</strong></a></li>
+</ul>
+</li>
+</ul>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0-VPC_DHCP.jpg" data-desc-position="bottom"><img alt="vCenter VPC Connectivity" src="../images/1d-0-VPC_DHCP.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1g1-0-lb.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/1g1-0-lb.jpg" width="100%"></a></p>
 </div>
 </div>
 <hr>
-<h2 id="overview-of-dhcp-types">Overview of DHCP Types</h2>
-<p>Different DHCP types are available:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Type</th>
-<th style="text-align: left;">Use Case</th>
-<th style="text-align: left;">Routing Logic</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a href="#dhcp-server"><strong>DHCP Server</strong></a></td>
-<td style="text-align: left;">DHCP services provided natively by the VPC Gateway.</td>
-<td style="text-align: left;">Workload IP addressing is managed directly within the VCF networking stack.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="#dhcp-relay"><strong>DHCP Relay</strong></a></td>
-<td style="text-align: left;">DHCP requests are forwarded to an external IPAM solution (e.g., Infoblox).</td>
-<td style="text-align: left;">Workload IP addressing is managed by an external third-party service provider.</td>
-</tr>
-</tbody>
-</table>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0-VPC_DHCP_Types.jpg" data-desc-position="bottom"><img alt="VPC DHCP Types" class="center" src="../images/1d-0-VPC_DHCP_Types.jpg" style="width:60%"></a></p>
-<hr>
-<h2 id="dhcp-server">DHCP Server</h2>
-<h3 id="configuration">Configuration</h3>
-<ul>
-<li>
-<p><strong>Step0. Edit Global DHCP Server Configuration</strong>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0a-Edit_DHCP_Server_Config.jpg" data-desc-position="bottom"><img alt="vCenter Edit Gloabl DHCP Server" src="../images/1d-0a-Edit_DHCP_Server_Config.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
-<ul>
-<li>
-<p><strong>Enable DHCP Server Config</strong><br>
-  "Yes" to enable native DHCP services across all subnets within the VPC.</p>
-</li>
-<li>
-<p><strong>DNS Server IPs</strong><br>
-  Specifies the IP addresses of the DNS servers to be assigned to the DHCP clients for name resolution.</p>
-</li>
-<li>
-<p><strong>Lease Time (Seconds)</strong><br>
-  Defines the duration for which an IP address remains valid for a DHCP client before renewal is required.<br>
-  (default = 86400 seconds / 1 day).</p>
-</li>
-<li>
-<p><strong>NTP Server IPs</strong><br>
-  Specifies the IP addresses of the NTP servers to be provided to the DHCP clients for time synchronization.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Step1. Enable DHCP Server in the VPC subnet</strong>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-1a-Enable_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter Enable DHCP Server" src="../images/1d-1a-Enable_DHCP_Server.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-</li>
-<li>
-<p><strong>Step2. (Optional) Configure Advanced DHCP Server Settings</strong>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter Configure DHCP Server settings" src="../images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
-<ul>
-<li>
-<p><strong>DNS Server IPs / Lease Time (Seconds) / NTP Server IPs</strong><br>
-  These values are pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.</p>
-</li>
-<li>
-<p><strong>Reserved IP Ranges</strong><br>
-  Specific IP ranges excluded from the DHCP pool to prevent address conflicts with statically assigned workloads.</p>
-</li>
-<li>
-<p><strong>Classless Static Routes</strong><br>
-  Defines additional static routes to be pushed to clients (supplementing the default gateway provided by the VPC Gateway).</p>
-</li>
-<li>
-<p><strong>Generic DHCP Options</strong><br>
-  Allows configuration of specialized DHCP options, such as TFTP (66/67) or PXE boot parameters (209/210).</p>
-</li>
-<li>
-<p><strong>Static Bindings</strong><br>
-  Creates fixed MAC-to-IP address mappings to ensure specific workloads always receive the same IP address.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="monitoring">Monitoring</h3>
-<ul>
-<li><strong>Configuration</strong>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-3a-Validation_VPC_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1d-3a-Validation_VPC_DHCP_Server.jpg" style="display: block; margin: 0 auto;" width="60%"></a></li>
-</ul>
-<div style="margin-left: 40px; margin-right: 40px;">
-<div class="admonition info">
-<p class="admonition-title">DHCP Lease Monitoring</p>
-<p>Active DHCP lease information is unavailable in vCenter (only NSX).</p>
-</div>
-</div>
-<hr>
-<h2 id="dhcp-relay">DHCP Relay Configuration</h2>
-<div style="margin-left: 40px; margin-right: 40px;">
+<h2 id="networkservices">Network Services: VM Load Balancers</h2>
+<p>The primary use case for configuring a <strong>VM Load Balancer</strong> is to efficiently distribute inbound network traffic across a designated pool of backend Virtual Machines.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1g1-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/1g1-1-Topology.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <div class="admonition warning">
-<p class="admonition-title">External DHCP Server Connectivity</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0b-External_DHCP_Server.jpg" data-desc-position="bottom"><img alt="vCenter External DHCP Server" class="center" src="../images/1d-0b-External_DHCP_Server.jpg" style="width:40%"></a></p>
-<p>When a 3rd-party DHCP server is located on the physical network (outside the VPC subnet), DHCP Relay is supported exclusively on:</p>
-<ul>
-<li><a href="../1b-vpc_subnet/#overlay"><strong>VPC Public Subnets</strong></a></li>
-<li><a href="../3b-transit_gateway/"><strong>Centralized Transit Gateways</strong></a></li>
-</ul>
+<p class="admonition-title">Current Limitation: No Application Health Checks</p>
+<p>Currently, the vCenter Namespace VM Load Balancer does not perform application-level health checks on backend VMs.<br>
+If a backend VM goes down, the load balancer VIP will continue forwarding traffic to it.<br>
+This section will be updated once active health monitoring becomes officially available.</p>
 </div>
-</div>
-<h3 id="configuration_1">Configuration</h3>
-<ul>
-<li>
-<p><strong>Step0. Edit Global DHCP Server Configuration</strong>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-0b-Edit_DHCP_Relay_Config.jpg" data-desc-position="bottom"><img alt="vCenter Edit Gloabl DHCP Server" src="../images/1d-0b-Edit_DHCP_Relay_Config.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
-<ul>
-<li>
-<p><strong>Enable DHCP Replay Config</strong><br>
-  "Yes" to enable DHCP Relay service across all subnets within the VPC.</p>
-</li>
-<li>
-<p><strong>External DHCP Server Addresses</strong><br>
-  Specifies the external IP addresses of the 3rd party DNS servers.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Step1. Enable DHCP Relay in the VPC subnet</strong>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-1b-Enable_DHCP_Relay.jpg" data-desc-position="bottom"><img alt="vCenter Enable DHCP Server" src="../images/1d-1b-Enable_DHCP_Relay.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
-<ul>
-<li><strong>External DHCP Server Addresses</strong><br>
-  This value is pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.</li>
-</ul>
-</li>
-</ul>
-<h3 id="monitoring_1">Monitoring</h3>
-<ul>
-<li><strong>Configuration</strong>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1d-2b-Validation_VPC_DHCP_Relay.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="../images/1d-2b-Validation_VPC_DHCP_Relay.jpg" style="display: block; margin: 0 auto;" width="60%"></a></li>
-</ul>
+<h3 id="create-a-vm-load-balancer">Create a VM Load Balancer</h3>
+<p>In the "VDS + FLB" architecture", the load balancer service is only available via CLI.<br>
+See <a href="../1e2-deployment-vms/#deployment_vms">Deploy App (VMs)</a>.</p>
 <hr>
+<h3 id="validate-vm-load-balancer">Validate VM Load Balancer</h3>
+<p>See <a href="../1e2-deployment-vms/#deployment_vms">Deploy App (VMs)</a>.</p>
 
 
 
