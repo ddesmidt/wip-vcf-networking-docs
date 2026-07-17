@@ -13,7 +13,7 @@ This section describes the procedures for **Troubleshooting Network Services int
     * [N/S External to VM](2i2-packetwalk-ext_vm.md)  
     * [E/W Pod to Pod](2i3-packetwalk-pod_pod.md)  
     * [**E/W VM to VM**](#packetwalk)  
-* App Access broken(ToDO)  
+* App Access broken  
     * [VIP access down](2j1-troubleshooting-vip.md)  
     * [VM access down](2j2-troubleshooting-vm.md)  
     * [Pod access down](2j3-troubleshooting-pod.md)  
@@ -21,7 +21,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 </div>
 
 <div markdown>
-![VDS Architecture](images/2g1-0-k8s.jpg){ width="100%" }
+![VDS Architecture](images/2f1-0-VM.jpg){ width="100%" }
 </div>
 </div>
 

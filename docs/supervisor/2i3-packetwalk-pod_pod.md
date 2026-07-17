@@ -13,7 +13,7 @@ This section describes the procedures for **Troubleshooting Network Services int
     * [N/S External to VM](2i2-packetwalk-ext_vm.md)  
     * [**E/W Pod to Pod**](#packetwalk)  
     * [E/W VM to VM](2i4-packetwalk-vm_vm.md)  
-* **App Access broken(ToDO)**
+* **App Access broken**
     * [VIP access down](2j1-troubleshooting-vip.md)  
     * [VM access down](2j2-troubleshooting-vm.md)  
     * [Pod access down](2j3-troubleshooting-pod.md)  
@@ -29,7 +29,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 
 ## Packet Walk - E/W pod to pod {: #packetwalk }
 
-A Full Application (Load Balancer + Pods) has been deployed (see [Deploy App (K8s) > via CLI](2g1-deployment-pods.md#deployment_pods)).
+A Full Application (Load Balancer + Pods) has been deployed (see [Application Deployment > App Deployment (K8s) > via CLI](2g1-deployment-pods.md#deployment_pods)).
 
 ### View
 

@@ -33,13 +33,13 @@ The primary use case for configuring a **VM Load Balancer** is to efficiently di
 ### Create a VM Load Balancer
 
 In the "VDS + FLB" architecture", the load balancer service is only available via CLI.  
-See [Deploy App (VMs)](1e2-deployment-vms.md#deployment_vms).
+See [Application Deployment > App Deployment (VMs) > via CLI](1e2-deployment-vms.md#deployment_vms).
 
 
 ---
 
 ### Validate VM Load Balancer
 
-See [Deploy App (VMs)](1e2-deployment-vms.md#deployment_vms).
+See [Application Deployment > App Deployment (VMs) > via CLI](1e2-deployment-vms.md#deployment_vms).
 
 
