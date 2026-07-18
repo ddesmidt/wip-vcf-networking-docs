@@ -3652,7 +3652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2i1-packetwalk-ext_vip.md" class="md-nav__link">
+      <a href="../2i1-packetwalk-ext_vip/" class="md-nav__link">
         
   
   
@@ -4049,59 +4049,43 @@
 
 
 <h1>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/VKS.png" data-desc-position="bottom"><img src="../../assets/VKS.png" style="height:30px; vertical-align:middle;"></a> Supervisor with "NSX + DTGW/VNA"
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../assets/VKS.png" data-desc-position="bottom"><img src="../../assets/VKS.png" style="height:30px; vertical-align:middle;"></a> Supervisor with "VDS + FLB"
 </h1>
 
 <div class="grid" style="grid-template-columns: 60% 40%">
 <div>
-<p>This section describes the procedures for <strong>Troubleshooting Network Services into the VKS Namespace utilizing an "NSX + DTGW/VNA" architecture</strong> inside a vSphere environment.</p>
+<p>This section describes the procedures for <strong>Troubleshooting Network Services into the VKS Namespace utilizing a "VDS + FLB" architecture"</strong> inside a vSphere environment.</p>
 <ul>
 <li><strong>Packet Walk</strong>  <ul>
-<li><a href="2i1-packetwalk-ext_vip.md">N/S External to VIP</a>  </li>
+<li><a href="../1h1-packetwalk-ext_vip/">N/S External to VIP</a>  </li>
 <li><a href="#packetwalk"><strong>N/S External to VM</strong></a>  </li>
-<li><a href="../2i3-packetwalk-pod_pod/">E/W Pod to Pod</a>  </li>
-<li><a href="../2i4-packetwalk-vm_vm/">E/W VM to VM</a>  </li>
-</ul>
-</li>
-<li>App Access broken(ToDO)  <ul>
-<li><a href="../2j1-troubleshooting-vip/">VIP access down</a>  </li>
-<li><a href="../2j2-troubleshooting-vm/">VM access down</a>  </li>
-<li><a href="../2j3-troubleshooting-pod/">Pod access down</a>  </li>
+<li><a href="../1h3-packetwalk-pod_pod/">E/W Pod to Pod</a>  </li>
+<li><a href="../1h4-packetwalk-vm_vm/">E/W VM to VM</a>  </li>
 </ul>
 </li>
 </ul>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2f1-0-VM.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/2f1-0-VM.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1e2-0-VM.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/1e2-0-VM.jpg" width="100%"></a></p>
 </div>
 </div>
 <hr>
 <h2 id="packetwalk">Packet Walk - N/S External to VM</h2>
-<p>One or a few VMs have been deployed (see <a href="../2f1-deployment-vms/#deployment_vms">Application Deployment &gt; App Deployment (VMs) &gt; via vCenter UI</a> or <a href="../2f2-deployment-vms/#deployment_vms">Application Deployment &gt; App Deployment (VMs) &gt; via vCenter UI | via CLI</a>).</p>
+<p>One or a few VMs have been deployed (see <a href="../1e2-deployment-vms/#deployment_vms">Application Deployment &gt; App Deployment (VMs) &gt; via CLI</a>).</p>
 <h3 id="view">View</h3>
 <h4 id="logical-view">Logical View</h4>
-<ul>
-<li>
-<p><strong>Use case: VM connected to Private Subnet (Private-VPC or Private-TGW)</strong><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-LogicalView1.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i2-0-LogicalView1.jpg" style="display: block; margin: 0 auto;" width="75%"></a>
-In this case, external clients can't reach that subnet, and so can't reach VMs on it.</p>
-</li>
-<li>
-<p><strong>Use case: VM connected to Public Subnet</strong><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-LogicalView2.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i2-0-LogicalView2.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
-</li>
-</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1h2-0-LogicalView.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/1h2-0-LogicalView.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <h4 id="physical-view">Physical View</h4>
 <ul>
 <li><strong>Use case: VM connected to Public Subnet</strong><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-PhysicalView2.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i2-0-PhysicalView2.jpg" style="display: block; margin: 0 auto;" width="95%"></a></li>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/1h2-0-PhysicalView.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/1h2-0-PhysicalView.jpg" style="display: block; margin: 0 auto;" width="90%"></a></li>
 </ul>
 <hr>
 <h3 id="packet-walk">Packet Walk</h3>
 <ul>
 <li>
 <p><strong>Step1: External Client accesses the VM</strong><br>
-<code>Client-IP =&gt; VM (10.1.7.146)</code>  </p>
+<code>Client-IP =&gt; VM (10.1.11.141)</code>  </p>
 <p>The traffic enters the ESX hosting the VM.</p>
 </li>
 </ul>
