@@ -25,9 +25,9 @@ Different Connectivity Policy types are available:
 
 | Type | Use Case | Routing Logic |
 | :--- | :--- | :--- |
-| [**Community**](#community) | Permits communication between VPCs within the same defined group. Ideal for application-tier connectivity within a specific division. | VPCs can communicate with other **Community** peers in their group and all **Promiscuous** VPCs. |
-| [**Isolated**](#isolated)| Strictly blocks communication to all other VPCs. Best for highly sensitive or standalone application workloads. | VPCs are restricted to communicating only with **Promiscuous** VPCs (Shared Services). |
-| [**Promiscuous**](#promiscuous)| Provides universal connectivity across the environment. Ideal for shared  services (e.g., Backup, DNS, NTP). | VPCs have unrestricted communication with **all** other VPCs in the environment. |
+| [**Community**] | Permits communication between VPCs within the same defined group. Ideal for application-tier connectivity within a specific division. | VPCs can communicate with other **Community** peers in their group and all **Promiscuous** VPCs. |
+| [**Isolated**]| Strictly blocks communication to all other VPCs. Best for highly sensitive or sta ndalone application workloads. | VPCs are restricted to communicating only with **Promiscuous** VPCs (Shared Services). |
+| [**Promiscuous**] | Provides universal connectivity across the environment. Ideal for shared  services (e.g., Backup, DNS, NTP). | VPCs have unrestricted communication with **all** other VPCs in the environment. |
 
 ![vCenter Conn Policy Types](images/3f-0-Conn_Policy_Types.jpg){: .center style="width:80%" }
 

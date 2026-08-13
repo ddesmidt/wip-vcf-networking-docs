@@ -32,7 +32,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 ### Deploy a Full Application (Load Balancer + Pods)
 
 #### Connect to the K8s Cluster  
-See [Connect to the K8s Cluster](2e2-deployment-k8s.md#connect_k8s)
+See [Connect to the K8s Cluster](2e3-access-k8s.md##access_k8s)
 
 #### (Optional) Create a Namespace in the K8s Cluster  
 Create a Namespace if you want to deploy the application (pod) in a specific K8s Cluster Namespace (not default).  
@@ -122,7 +122,7 @@ kubectl get service apache-vip-service -n ns1
     ??? abstract "Output example"
         <pre><code>PS C:\Users\Administrator\Documents> <b>kubectl get service apache-vip-service -n ns1</b>
         NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
-        apache-vip-service   LoadBalancer   10.107.238.63   10.1.7.138    80:31147/TCP   53s
+        apache-vip-service   LoadBalancer   10.107.238.63   <b>10.1.7.138</b>    80:31147/TCP   53s
         </code></pre>
 
 

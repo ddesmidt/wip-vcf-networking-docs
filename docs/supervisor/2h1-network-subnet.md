@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for **provisioning and managing Network Services within a VKS Namespace utilizing an "NSX + DTGW/VNA"** architecture inside a vSphere environment.
+This section describes the procedures for **provisioning and managing Network Services within a VKS Namespace utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
 * **Network Services**
     * [**Subnets**](#networkservices)
@@ -38,7 +38,7 @@ Under the **Resources** card, click **Network - Go to Service**.
 Navigate to **Subnets**, and click **New Subnet**.  
 ![Create Subnet](images/2h1-1a-subnetcreate.jpg){ width="70%" style="display: block; margin: 0 auto;" }  
 
-For more information about Subnets settings review the [VPC Subnet Overlay page](../../vcenter/1b-vpc_subnet/#overlay){target="_blank"}.
+For more information about Subnets settings review the [VPC Subnet Overlay page](../vcenter/1b-vpc_subnet.md#overlay){target="_blank"}.
 
 
 ---

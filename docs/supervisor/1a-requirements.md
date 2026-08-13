@@ -20,7 +20,7 @@ This section describes the requirements for **deploying the Supervisor utilizing
 
 ## Requirements {: #requirements }
 
-VKS Supervisor with "VDS + FLB" has the following networking requirements:  
+Supervisor with "VDS + FLB" has the following networking requirements:  
 ![Topology](images/1a-1-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 ### Physical Fabric {: #physical_fabric }

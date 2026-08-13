@@ -9,7 +9,7 @@
 This section describes the procedures for **deploying an application (VMs/K8s) into the VKS Namespace utilizing a "VDS + FLB" architecture** inside a vSphere environment.
 
 * [Deployment App (VMs)](1e2-deployment-vms.md)
-* [**Deployment App (k8s)**](#deployment_k8s)
+* [**Deployment App (k8s)**](#deployment_pods)
 </div>
 
 <div markdown>
@@ -19,7 +19,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ---
 
-## Deployment App (k8s) {: #deployment_k8s }
+## Deployment App (k8s) {: #deployment_pods}
 
 ![Topology](images/1f1-1-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 

@@ -8,9 +8,10 @@
 
 This section describes the procedures for **deploying a K8s Cluster in a Namespace utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
-* **K8s Cluster Deployment**
-    * [**via vCenter UI**](#deployment_k8s)
-    * [via CLI](2e2-deployment-k8s.md)
+* **K8s Cluster**
+    * [**Deployment via vCenter UI**](#deployment_k8s)
+    * [Deployment via CLI](2e2-deployment-k8s.md)
+    * [Access via CLI](2e3-access-k8s.md)
 
 
 </div>
@@ -40,7 +41,7 @@ Review and click **Finish** to deploy the k8s cluster.
 ![Select VM Deployment Source](images/2e1-1b-Deploy.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 ??? info "More k8s cluster options"
-    To get more options, such as **replicas** and **OS images**, select at step1 **Customer configuration**.
+    To get more options, such as **replicas** and **OS images**, select at step1 **Custom configuration**.
 
 
 
@@ -48,12 +49,17 @@ Review and click **Finish** to deploy the k8s cluster.
 
 ### Validate Deployment
 
-#### **Validate K8s Cluster Status** 
+#### Validate K8s Cluster Status
 Once the wizard completes, verify the deployment was successful by navigating to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Kubernetes - Go to Service**.  
 
 ![Validate K8s Cluster Status](images/2e1-2a-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
 
-#### **Check K8s Cluster VMs in vCenter Inventory** 
+#### Retrieve K8s Cluster Controller VIP
+Once the wizard completes, look at the K8s Cluster YAML file by navigating to the K8s Cluster Status (see above), click on **View YAML**, and find the **controlPlaneEndpoint** configuration.
+
+![Find K8s Cluster VIP](images/2e1-2b-K8sVIP.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+
+#### Check K8s Cluster VMs in vCenter Inventory
 Verify the K8s Cluster VMs are running by navigating to **vCenter** > **Inventory**, select the **K8s VM in the Namespace**.
-![Validate K8s Cluster VMs](images/2e1-2b-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
+![Validate K8s Cluster VMs](images/2e1-2c-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
 

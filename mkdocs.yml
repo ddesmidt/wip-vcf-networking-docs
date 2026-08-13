@@ -84,12 +84,14 @@ nav:
               - Requirements:
                   - Check Requirements: supervisor/1a-requirements.md
               - Supervisor Deployment:
-                - Create Supervisor: supervisor/1b-deploy-supervisor.md
+                - Create Supervisor: supervisor/1b1-deploy-supervisor.md
+                - Supervisor Access via CLI: supervisor/1b2-access-supervisor.md
               - Namespace Deployment:
                 - Create Namespace: supervisor/1c1-deploy-namespace.md
                 - Namespace Access via CLI: supervisor/1c2-access-namespace.md
               - K8s Cluster Deployment:
-                - via CLI: supervisor/1d2-deployment-k8s.md
+                - Create K8s (CLI): supervisor/1d2-deployment-k8s.md
+                - K8s Access via CLI: supervisor/1d3-access-k8s.md
           - Application Deployment:
               - App Deployment (VMs):
                 - via CLI: supervisor/1e2-deployment-vms.md
@@ -111,13 +113,15 @@ nav:
                       - NSX Overlay: supervisor/2b1-deploy-NSXOverlay.md
                       - DTGW + VNA: supervisor/2b2-deploy-DTGW_VNA.md
               - Supervisor Deployment:
-                - Create Supervisor: supervisor/2c-deploy-supervisor.md
+                - Create Supervisor: supervisor/2c1-deploy-supervisor.md
+                - Supervisor Access via CLI: supervisor/2c2-access-supervisor.md
               - Namespace Deployment:
                 - Create Namespace: supervisor/2d1-deploy-namespace.md
                 - Namespace Access via CLI: supervisor/2d2-access-namespace.md
               - K8s Cluster Deployment:
-                - via vCenter UI: supervisor/2e1-deployment-k8s.md
-                - via CLI: supervisor/2e2-deployment-k8s.md
+                - Create K8s (vCenter UI): supervisor/2e1-deployment-k8s.md
+                - Create K8s (CLI): supervisor/2e2-deployment-k8s.md
+                - K8s Access via CLI: supervisor/2e3-access-k8s.md
           - Application Deployment:
               - App Deployment (VMs):
                 - via vCenter UI: supervisor/2f1-deployment-vms.md
@@ -136,8 +140,47 @@ nav:
                 - N/S External to VM: supervisor/2i2-packetwalk-ext_vm.md
                 - E/W Pod to Pod: supervisor/2i3-packetwalk-pod_pod.md
                 - E/W VM to VM: supervisor/2i4-packetwalk-vm_vm.md
-              - App Access broken:
+              - App Access Broken:
                 - VIP access down: supervisor/2j1-troubleshooting-vip.md
                 - VM access down: supervisor/2j2-troubleshooting-vm.md
                 - Pod access down: supervisor/2j3-troubleshooting-pod.md
+      - NSX + CTGW/Edge/T0:
+          - Installation:
+              - Requirements:
+                  - Check Requirements: supervisor/3a-requirements.md
+                  - Install Requirements:
+                      - NSX Overlay: supervisor/3b1-deploy-NSXOverlay.md
+                      - CTGW + Edge + T0: supervisor/3b2-deploy-CTGW_Edge_T0.md
+              - Supervisor Deployment:
+                - Create Supervisor: supervisor/3c1-deploy-supervisor.md
+                - Supervisor Access via CLI: supervisor/3c2-access-supervisor.md
+              - Namespace Deployment:
+                - Create Namespace: supervisor/3d1-deploy-namespace.md
+                - Namespace Access via CLI: supervisor/3d2-access-namespace.md
+              - K8s Cluster Deployment:
+                - Create K8s (vCenter UI): supervisor/3e1-deployment-k8s.md
+                - Create K8s (CLI): supervisor/3e2-deployment-k8s.md
+                - K8s Access via CLI: supervisor/3e3-access-k8s.md
+          - Application Deployment:
+              - App Deployment (VMs):
+                - via vCenter UI: supervisor/3f1-deployment-vms.md
+                - via CLI: supervisor/3f2-deployment-vms.md
+              - App Deployment (K8s): 
+                - via CLI: supervisor/3g1-deployment-pods.md
+          - Network Services: 
+              - Subnets: supervisor/3h1-network-subnet.md
+              - SubnetSets: supervisor/3h2-network-subnetset.md
+              - Static Routes: supervisor/3h3-network-staticroute.md
+              - External IPs: supervisor/3h4-network-externalip.md
+              - VM Load Balancers: supervisor/3h5-network-lb.md
+          - Troubleshooting:
+              - Packet Walk:
+                - N/S External to VIP: supervisor/3i1-packetwalk-ext_vip.md
+                - N/S External to VM: supervisor/3i2-packetwalk-ext_vm.md
+                - E/W Pod to Pod: supervisor/3i3-packetwalk-pod_pod.md
+                - E/W VM to VM: supervisor/3i4-packetwalk-vm_vm.md
+              - App Access Broken:
+                - VIP access down: supervisor/3j1-troubleshooting-vip.md
+                - VM access down: supervisor/3j2-troubleshooting-vm.md
+                - Pod access down: supervisor/3j3-troubleshooting-pod.md
 

@@ -6,7 +6,7 @@
 
 <div markdown>
 
-This section describes the procedures for **provisioning and managing Network Services within a VKS Namespace utilizing an "NSX + DTGW/VNA"** architecture inside a vSphere environment.
+This section describes the procedures for **provisioning and managing Network Services within a VKS Namespace utilizing an "NSX + DTGW/VNA" architecture** inside a vSphere environment.
 
 * **Network Services**
     * [Subnets](2h1-network-subnet.md)
@@ -45,7 +45,7 @@ Navigate to the **VM Load Balancers** tab, and click **Create**.
 ![Create LB](images/2h5-1a-lbcreate.jpg){ width="50%" style="display: block; margin: 0 auto;" }  
 
 **2. Apply Selectors (Labels) to the Backend VMs**  
-The load balancer identifies which VMs to send traffic to based on Kubernetes labels.  If you deploy a new VM from the vCenter UI, you can apply this label during creation.  If the VM is already deployed, you can apply the label using `kubectl`:  
+The load balancer identifies which VMs to send traffic to based on Kubernetes labels.  If you deploy a new VM from the vCenter UI, you can apply this label during creation.  If the VM is already deployed, you can apply the label using `kubectl`.  
 
 ??? info ":material-label-multiple: How to label an existing VM via kubectl"
     **Step A: Connect to Supervisor Namespace**  
@@ -81,7 +81,7 @@ Go to the **VM Load Balancers** tab and expand the newly created VM Load Balance
 1. **Test Connectivity**  
 To verify connectivity, connect to a VM within the VPC and use `curl` to directly access the Load Balancer's Virtual IP (VIP).
 ```text
-root@vm-public:~# curl [http://10.1.7.140](http://10.1.7.140)
+root@vm-public:~# curl http://10.1.7.140
 <h1>It works - web-vm-1</h1>
 ```
 

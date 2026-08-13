@@ -9,25 +9,28 @@ This section describes the procedures for **deploying the Supervisor** within a 
 ## Different network options for Supervisor deployment  
 Explore the specific network architectures available for your Supervisor cluster:
 
-| <div style="width: 30%;">Architecture Option</div> | <div style="width: 70%;">Description & Use Case</div> |
+| <div style="width: 15%;">Architecture</div> | <div style="width: 85%;">Description & Use Case</div> |
 | :--- | :--- |
-| **[1. VDS + FLB](1a-requirements.md)** | ![VDS Architecture](images/0-VDS.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 300px;" } <br><br> <ul><li>**Architecture:** Uses **VDS port groups** for the Supervisor Cluster and deploys **FLB virtual appliances** to handle load balancing traffic.</li><li>**Best for:** VMware vSphere Foundation (VVF), lab environments, Proof of Concepts (PoC), or smaller environments.</li><li>**Limitation:** Limited Network Services (only LB) and limited VCF Automation support (such as namespace create/delete/update from VCFA).</li></ul> |
-| **[2. NSX + DTGW/VNA](2a-requirements.md)** | ![DTGW Architecture](images/0-DTGW.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 300px;" } <br><br> <ul><li>**Architecture:** Uses **NSX Distributed Transit Gateways + VNA** for the Supervisor Cluster.</li><li>**Best for:** Fully integrated VCF architecture for better scale and security.</li><li>**Consideration:** Requires fully deployed NSX overlay infrastructure.</li></ul> |
+| **1. [VDS + FLB](1a-requirements.md)** | ![VDS Architecture](images/0-VDS.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 250px;" } <br><br> <ul><li>**Architecture:** Uses **VDS port groups** and deploys **FLB virtual appliances** to handle load balancing traffic.</li><li>**Best for:** VMware vSphere Foundation (VVF), lab environments, Proof of Concepts (PoC), or smaller environments.</li><li>**Limitation:** Limited Network Services (only LB) and limited VCF Automation support (no namespace create/delete/update from VCFA).</li></ul> |
+| **2. [NSX + DTGW](2a-requirements.md)** <br>or **[NSX + CTGW](3a-requirements.md)**| ![NSX Architecture](images/0-NSX.jpg){ width="100%" style="display: block; margin: 0 auto;" } <br><br> <ul><li>**Architecture:** Uses **NSX Distributed or Centralized Transit Gateways** and **VNA or Edge Cluster** to handle load balancing traffic.</li><li>**Best for:** Fully integrated VCF architecture for better scale and security.</li><li>**Consideration:** Requires fully deployed NSX overlay infrastructure with DTGW+VNA or CTGW+Edge+T0.</li></ul> |
+
 
 ??? info "Detailed Architecture Pros & Cons"
-    **[1. Supervisor with "VDS + FLB"](1a-requirements.md)**
+    **1. Supervisor with ["VDS + FLB"](1a-requirements.md)**
     
     * **Pros:**
         * **Footprint:** Slightly smaller overall footprint (the FLB appliance is slightly smaller than a VNA)
         * **VMware Editions:** Available in VMware vSphere Foundation (VVF) and VMware Cloud Foundation (VCF)
     * **Cons:**
-        * **Network Services Limitations:** Lacks full support of Network Services such as Subnets, Static Routes, NAT)
+        * **Network Services Limitations:** Lacks full support of Network Services such as Subnets, Static Routes, NAT
         * **VCF Integration Limitations:** Lacks full support for other VCF components, specifically VCF Automation (VCF-A)
         * **Scale:** All VIPs are managed by a single FLB's Active/Standby (A/S)
+    * **Requirements:**
+        * **L2 Connectivity:** L2/VLAN connectivity required across vCenter cluster(s)
 
     ---
 
-    **[2. Supervisor with "NSX + DTGW/VNA"](2a-requirements.md)**
+    **2. Supervisor with ["NSX + DTGW"](2a-requirements.md) or ["NSX + CTGW"](3a-requirements.md)**
 
     * **Pros:**
         * **Security:**  
@@ -42,11 +45,14 @@ Explore the specific network architectures available for your Supervisor cluster
         * **VMware Editions:** Only available in VMware Cloud Foundation (VCF) (not VMware vSphere Foundation (VVF))
         * **Operations:** Requires NSX (though installation and management remain very simple)
         * **Footprint:** Slightly larger footprint (the VNA is slightly larger than the FLB)
+    * **Requirements:**
+        * **For both DTGW/CTGW:** Large MTU (min 1700 - recommended 9000)
+        * **For DTGW:** L2/VLAN connectivity required across vCenter cluster(s)
+        * **For CTGW:** Physical network with BGP routing protocol
 
 ??? note "Upcoming Architectures"
     The following architectures will be covered in future updates:  
 
-    * NSX + CTGW/Edge  
     * Avi Load Balancer  
 
 ---

@@ -13,10 +13,10 @@ This section describes the procedures for **Troubleshooting Network Services int
     * [N/S External to VM](2i2-packetwalk-ext_vm.md)  
     * [E/W pod to pod](2i3-packetwalk-pod_pod.md)  
     * [E/W VM to VM](2i4-packetwalk-vm_vm.md)  
-* **App Access broken**  
-    * [VIP access down](2j1-troubleshooting-vip.md)  
-    * [**VM access down**](#troubleshooting)  
-    * [Pod access down](2j3-troubleshooting-pod.md)  
+* **App Access Broken**  
+    * [VIP Access Down](2j1-troubleshooting-vip.md)  
+    * [**VM Access Down**](#troubleshooting)  
+    * [Pod Access Down](2j3-troubleshooting-pod.md)  
 
 </div>
 
@@ -44,23 +44,26 @@ In this case, external clients can't reach that subnet, and so can't reach VMs o
 ![Physical](images/2i2-0-PhysicalView2.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 
-### Step1: Physical fabric to the ESX Node hosting the VIP
+### Step1: Physical fabric to the ESX Node hosting the VM
 * **Validate communication to the VM**  
     Validate IP reachability to the VIP with a small and large `ping`.  
 
     ??? info "Status Validation"
-        <pre><code>PS C:\Users\Administrator\Documents> <b>ping 10.1.7.146</b>
-        Pinging 10.1.7.146 with 32 bytes of data:
-        Reply from 10.1.7.146: bytes=32 time=6ms TTL=61
-        Reply from 10.1.7.146: bytes=32 time=1ms TTL=61
-
-        PS C:\Users\Administrator\Documents> <b>ping 10.1.7.146 -l 1400</b>
-        Pinging 10.1.7.146 with 1400 bytes of data:
-        Reply from 10.1.7.146: bytes=1400 time=2ms TTL=61
-        Reply from 10.1.7.146: bytes=1400 time=1ms TTL=61
+        <pre><code>PS C:\Users\Administrator\Documents> <b>ping 10.1.7.147</b>
+        Pinging 10.1.7.147 with 32 bytes of data:
+        Reply from 10.1.7.147: bytes=32 time=6ms TTL=61
+        Reply from 10.1.7.147: bytes=32 time=1ms TTL=61
         </code></pre>
 
-        > **Note:** Depending on your Operating System, the exact command for large ping may vary (e.g., `-l`, `-s`).  
+    In case of failure, check the routing breaking point with `traceroute`.  
+    
+    ??? info "Status Validation"
+        <pre><code>PS C:\Users\Administrator\Documents> <b>tracert 10.1.7.147</b>
+        1    &lt;1 ms    &lt;1 ms    &lt;1 ms  router.site-a.vcf.lab [10.1.10.129]
+        2     2 ms     1 ms    &lt;1 ms  10.1.7.147
+        </code></pre>
+        
+        > **Note:** Depending on your Operating System, the exact command may vary (e.g., `traceroute`, `tracert`, `tracepath`).  
 
-        Consult with your Network Team to determine why routing does not reach the destination.  The issue is typically related to routing misconfigurations or firewall blockages.
+        Consult with your Network Team to determine why routing does not reach the destination. The issue is typically related to routing misconfigurations or firewall blockages.
 

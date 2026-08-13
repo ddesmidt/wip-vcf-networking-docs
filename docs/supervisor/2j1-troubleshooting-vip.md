@@ -13,10 +13,10 @@ This section describes the procedures for **Troubleshooting Network Services int
     * [N/S External to VM](2i2-packetwalk-ext_vm.md)  
     * [E/W pod to pod](2i3-packetwalk-pod_pod.md)  
     * [E/W VM to VM](2i4-packetwalk-vm_vm.md)  
-* **App Access broken**  
-    * [**VIP access down**](#troubleshooting)  
-    * [VM access down](2j2-troubleshooting-vm.md)  
-    * [Pod access down](2j3-troubleshooting-pod.md)  
+* **App Access Broken**  
+    * [**VIP Access Down**](#troubleshooting)  
+    * [VM Access Down](2j2-troubleshooting-vm.md)  
+    * [Pod Access Down](2j3-troubleshooting-pod.md)  
 
 </div>
 
@@ -62,16 +62,16 @@ Validate IP reachability to the VIP with `ping`.
         Consult with your Network Team to determine why routing does not reach the destination. The issue is typically related to routing misconfigurations or firewall blockages.
 
 ### Step2: VNA Node hosting the VIP to the ESX hosting the K8s Node (Overlay)  
-* **Validate the ESXi host tunnels are UP**
+* **Validate the ESX host tunnels are UP**
 
 ??? info "Status Validation"
     Navigate to **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
     Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
-    > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESXi hosts.  
+    > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  
 
     ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
-* **Validate the ESXi host tunnels accept large packets (MTU)**   
+* **Validate the ESX host tunnels accept large packets (MTU)**   
 
 ??? info "Status Validation"
     ```text
@@ -79,7 +79,7 @@ Validate IP reachability to the VIP with `ping`.
     ```
 
     ??? abstract "Output example"
-        <pre><code>[root@esxi-01a:~] <b>vmkping ++netstack=vxlan 10.1.3.207 -d -s 8900</b>
+        <pre><code>[root@esx-01a:~] <b>vmkping ++netstack=vxlan 10.1.3.207 -d -s 8900</b>
             PING 10.1.3.207 (10.1.3.207): 8900 data bytes
             8908 bytes from 10.1.3.207: icmp_seq=0 ttl=64 time=1.234 ms
             8908 bytes from 10.1.3.207: icmp_seq=1 ttl=64 time=1.102 ms
@@ -93,7 +93,7 @@ Validate IP reachability to the VIP with `ping`.
         * If standard "small" pings fail, the issue is typically related to routing misconfigurations or firewall blockages.  
         * If "large" pings fail, the issue is typically related to Jumbo Frames (MTU) not being enabled across the physical fabric.
 
-### Step3+4(not represented): K8s Node load balances traffic to the different Pods
+### Step3+4 (not represented): K8s Node load balances traffic to the different Pods
 See [Troubleshooting - Pod access down](2j3-troubleshooting-pod.md).
 
 

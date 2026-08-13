@@ -25,8 +25,8 @@ This section describes the procedures for configuring NSX Edge Clusters and Node
 ### Configuration
 
 <div style="margin-left: 20px; margin-right: 20px;" markdown="1">
-??? info ":material-information-outline: Deep Dive: Blogs & Video Demonstrations"
-    * **Video Walkthrough:** Watch the step-by-step Edge Cluster & Edge Node deployment guide [<span style="color: #FF0000;">:fontawesome-brands-youtube:</span> on YouTube](https://www.youtube.com/watch?v=ruoprGnf_v8){ target="_blank" }.
+??? info "Deep Dive: Blogs & Video Demonstrations"
+    * **Video Walkthrough:** Watch the step-by-step CTGW + Edge + T0 deployment [<span style="color: #FF0000;">:fontawesome-brands-youtube:</span> on YouTube](https://www.youtube.com/watch?v=ruoprGnf_v8){ target="_blank" }.
     * **Technical Blog:** Read the detailed architectural breakdown on the [<span style="color: #007cbb;">:material-newspaper-variant-outline:</span> VMware Cloud Foundation Blog](https://blogs.vmware.com/cloud-foundation/2025/06/25/vpc-centralized-network-connectivity-with-guided-edge-deployment/){ target="_blank" }.
 </div>
 
@@ -56,7 +56,7 @@ This section describes the procedures for configuring NSX Edge Clusters and Node
 
     * **Uplinks (Edge Node Uplink Mapping / TEP VLAN)**  
       Defines vNIC connectivity and Overlay TEP configuration.  
-      Note: To share the same VLAN for both ESXi TEPs and Edge Node TEPs, you must enable "Use the host overlay network configuration from the selected vSphere Cluster."  
+      Note: To share the same VLAN for both ESX TEPs and Edge Node TEPs, you must enable "Use the host overlay network configuration from the selected vSphere Cluster."  
 
         <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
         ??? info "In case "Use the host overlay network configuration from the selected vSphere Cluster" is greyed out"

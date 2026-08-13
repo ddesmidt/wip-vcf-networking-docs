@@ -24,7 +24,7 @@ This section describes the requirements for **deploying the Supervisor utilizing
 
 ## Requirements {: #requirements }
 
-VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:  
+Supervisor with "NSX + DTGW/VNA" has the following networking requirements:  
 
 ![Topology](images/2a-1-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
@@ -35,10 +35,10 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     Can be an existing Management subnet/VLAN that already hosts other components (such as vCenter).  
     **Requires 5 consecutive IPs** (for the Supervisor Cluster).
 * **Dataplane**:  
-    Can be an existing subnet/VLAN that already hosts other components (such as Physical Servers).  
-    **A large pool of IPs is required** (for future K8s VIPs and VPC Outbound-NAT).
+    Can be a **new dedicated subnet/VLAN (recommended)** or an **existing subnet/VLAN** that already hosts other components (such as Physical Servers).  
+    **The subnet needs to be large** (to host future K8s VIPs and VPC Outbound-NAT).
 
-* **Note:** No requirement for dynamic routing (such as BGP).
+!!! info "No requirement for dynamic routing (such as BGP)"
 
 ---
 
@@ -72,7 +72,7 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
         Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
-        > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESXi hosts.  
+        > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  
     
         ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
@@ -92,10 +92,10 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **External Connection**.  
         Ensure you have at least 1 Distributed External Connection configured:
-        ![IP Blocks Properties](images/2a-3c-ExternalConnection.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![Ext Conn Properties](images/2a-3c-ExternalConnection.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 * **IP Blocks**  
-    The External IP Block is for the future K8s VIPs (IPs in the Dataplane subnet).  
+    The External IP Block is for the future K8s VIPs, VPC Outbound-NAT, and VPC Public Subnet (IP Block is the full Dataplane subnet or part of it).   
 
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **Virtual Private Clouds** > **Configure** > **Settings** > **IP Blocks**.  
@@ -122,4 +122,4 @@ VKS Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **Default Transit Gateway** > **Configure** > **Settings** > **Properties**.  
         Ensure the DTGW has a Connection Type of "Distributed VLAN", and an External Connection configured. 
-        ![DTGW Properties](images/2a-3e-DTGW.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![DTGW Properties](images/2a-3f-DTGW.jpg){ width="95%" style="display: block; margin: 0 auto;" }

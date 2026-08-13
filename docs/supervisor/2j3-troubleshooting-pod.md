@@ -13,10 +13,10 @@ This section describes the procedures for **Troubleshooting Network Services int
     * [N/S External to VM](2i2-packetwalk-ext_vm.md)  
     * [E/W pod to pod](2i3-packetwalk-pod_pod.md)  
     * [E/W VM to VM](2i4-packetwalk-vm_vm.md)  
-* **App Access broken**   
-    * [VIP access down](2j1-troubleshooting-vip.md)  
-    * [VM access down](2j2-troubleshooting-vm.md)  
-    * [**Pod access down**](#troubleshooting)  
+* **App Access Broken**   
+    * [VIP Access Down](2j1-troubleshooting-vip.md)  
+    * [VM Access Down](2j2-troubleshooting-vm.md)  
+    * [**Pod Access Down**](#troubleshooting)  
 
 </div>
 
@@ -43,16 +43,16 @@ As described in the [Packet Walk - E/W Pod to Pod](2i3-packetwalk-pod_pod.md) se
 This one is internal to the K8s Node and should not be blocked.
 
 ### Step2: Cross-Node Encapsulation
-* **Validate the ESXi host tunnels are UP**
+* **Validate the ESX host tunnels are UP**
 
 ??? info "Status Validation"
     Navigate to **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
     Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
-    > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESXi hosts.  
+    > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  
 
     ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
-* **Validate the ESXi host tunnels accept large packets (MTU)**   
+* **Validate the ESX host tunnels accept large packets (MTU)**   
 
 ??? info "Status Validation"
     ```text
@@ -60,7 +60,7 @@ This one is internal to the K8s Node and should not be blocked.
     ```
 
     ??? abstract "Output example"
-        <pre><code>[root@esxi-01a:~] <b>vmkping ++netstack=vxlan 10.1.3.207 -d -s 8900</b>
+        <pre><code>[root@esx-01a:~] <b>vmkping ++netstack=vxlan 10.1.3.207 -d -s 8900</b>
             PING 10.1.3.207 (10.1.3.207): 8900 data bytes
             8908 bytes from 10.1.3.207: icmp_seq=0 ttl=64 time=1.234 ms
             8908 bytes from 10.1.3.207: icmp_seq=1 ttl=64 time=1.102 ms
