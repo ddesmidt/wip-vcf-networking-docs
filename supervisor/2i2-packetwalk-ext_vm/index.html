@@ -3807,6 +3807,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Packet Walk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#northsouth-external-client-to-the-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        North/South: External Client to the VM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#southnorth-vm-replies-to-the-external-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        South/North: VM replies to the External Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -5793,6 +5821,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Packet Walk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#northsouth-external-client-to-the-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        North/South: External Client to the VM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#southnorth-vm-replies-to-the-external-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        South/North: VM replies to the External Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -5851,32 +5907,36 @@
 <h4 id="logical-view">Logical View</h4>
 <ul>
 <li>
-<p><strong>Use case: VM connected to Private Subnet (Private-VPC or Private-TGW)</strong><br>
+<p><strong>Scenario A: VM connected to Private Subnet (Private-VPC or Private-TGW)</strong><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-LogicalView1.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i2-0-LogicalView1.jpg" style="display: block; margin: 0 auto;" width="75%"></a>
 In this case, external clients can't reach that subnet, and so can't reach VMs on it.</p>
 </li>
 <li>
-<p><strong>Use case: VM connected to Public Subnet</strong><br>
+<p><strong>Scenario B: VM connected to Public Subnet</strong><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-LogicalView2.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i2-0-LogicalView2.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
 </li>
 </ul>
 <h4 id="physical-view">Physical View</h4>
 <ul>
-<li><strong>Use case: VM connected to Public Subnet</strong><br>
+<li><strong>Scenario B: VM connected to Public Subnet</strong><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-PhysicalView2.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i2-0-PhysicalView2.jpg" style="display: block; margin: 0 auto;" width="95%"></a></li>
 </ul>
 <hr>
 <h3 id="packet-walk">Packet Walk</h3>
+<h4 id="northsouth-external-client-to-the-vm">North/South: External Client to the VM</h4>
 <ul>
 <li>
 <p><strong>Step1: External Client accesses the VM</strong><br>
-<code>Client-IP =&gt; VM (10.1.7.146)</code>  </p>
+<code>Client-IP =&gt; VM1 (10.1.7.146)</code>  </p>
 <p>Traffic enters the  host where the VM resides.<br>
 Because the external Physical Router considers the VM to be on its local subnet, it forwards the traffic directly to the VM, completely bypassing the DTGW and VPC logical routers.</p>
 </li>
+</ul>
+<h4 id="southnorth-vm-replies-to-the-external-client">South/North: VM replies to the External Client</h4>
+<ul>
 <li>
 <p><strong>Step2: VM replies to the External Client</strong><br>
-<code>VM (10.1.7.146) =&gt; Client-IP</code>  </p>
+<code>VM1 (10.1.7.146) =&gt; Client-IP</code>  </p>
 <p>The return traffic follows a different path.<br>
 The VM sends the packet to its default gateway (VPC), which forwards it to its default gateway (DTGW), which finally routes it to the external Physical Router.</p>
 </li>

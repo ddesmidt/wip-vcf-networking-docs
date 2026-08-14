@@ -3940,10 +3940,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logical-view" class="md-nav__link">
+  <a href="#logical-and-physical-view" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logical View
+        Logical and Physical View
       
     </span>
   </a>
@@ -3951,24 +3951,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#physical-view" class="md-nav__link">
+  <a href="#troubleshooting-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Physical View
+        Troubleshooting Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-external-client-accesses-the-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step1: External Client accesses the VM
       
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#step1-physical-fabric-to-the-esx-node-hosting-the-vm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step1: Physical fabric to the ESX Node hosting the VM
-      
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -5729,10 +5735,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logical-view" class="md-nav__link">
+  <a href="#logical-and-physical-view" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logical View
+        Logical and Physical View
       
     </span>
   </a>
@@ -5740,24 +5746,30 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#physical-view" class="md-nav__link">
+  <a href="#troubleshooting-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Physical View
+        Troubleshooting Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-external-client-accesses-the-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step1: External Client accesses the VM
       
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#step1-physical-fabric-to-the-esx-node-hosting-the-vm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step1: Physical fabric to the ESX Node hosting the VM
-      
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -5813,47 +5825,42 @@
 <hr>
 <h2 id="troubleshooting">Troubleshooting - VM access down</h2>
 <p>As described in the <a href="../2i2-packetwalk-ext_vm/">Packet Walk - N/S External to VM</a> section, clients accessing a VM traverse the following path:</p>
-<h4 id="logical-view">Logical View</h4>
+<h3 id="logical-and-physical-view">Logical and Physical View</h3>
 <ul>
 <li>
-<p><strong>Use case: VM connected to Private Subnet (Private-VPC or Private-TGW)</strong><br>
+<p><strong>Scenario A: VM connected to Private Subnet (Private-VPC or Private-TGW)</strong><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-LogicalView1.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i2-0-LogicalView1.jpg" style="display: block; margin: 0 auto;" width="75%"></a>
 In this case, external clients can't reach that subnet, and so can't reach VMs on it.</p>
 </li>
 <li>
-<p><strong>Use case: VM connected to Public Subnet</strong><br>
+<p><strong>Scenario B: VM connected to Public Subnet</strong><br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-LogicalView2.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i2-0-LogicalView2.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
 </li>
 </ul>
-<h4 id="physical-view">Physical View</h4>
-<ul>
-<li><strong>Use case: VM connected to Public Subnet</strong><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-PhysicalView2.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i2-0-PhysicalView2.jpg" style="display: block; margin: 0 auto;" width="95%"></a></li>
-</ul>
-<h3 id="step1-physical-fabric-to-the-esx-node-hosting-the-vm">Step1: Physical fabric to the ESX Node hosting the VM</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-PhysicalView2.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i2-0-PhysicalView2.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<h3 id="troubleshooting-steps">Troubleshooting Steps</h3>
+<h4 id="step1-external-client-accesses-the-vm">Step1: External Client accesses the VM</h4>
 <ul>
 <li>
-<p><strong>Validate communication to the VM</strong><br>
-    Validate IP reachability to the VIP with a small and large <code>ping</code>.  </p>
+<p><strong>Validate communication to the VM</strong>  </p>
 <details class="info">
-<summary>Status Validation</summary>
+<summary>Status Validation: Ping</summary>
 <p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>ping 10.1.7.147</b>
 Pinging 10.1.7.147 with 32 bytes of data:
 Reply from 10.1.7.147: bytes=32 time=6ms TTL=61
 Reply from 10.1.7.147: bytes=32 time=1ms TTL=61
 </code></pre><p></p>
-</details>
 <p>In case of failure, check the routing breaking point with <code>traceroute</code>.  </p>
-<details class="info">
-<summary>Status Validation</summary>
-<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>tracert 10.1.7.147</b>
-1    &lt;1 ms    &lt;1 ms    &lt;1 ms  router.site-a.vcf.lab [10.1.10.129]
-2     2 ms     1 ms    &lt;1 ms  10.1.7.147
-</code></pre><p></p>
-<blockquote>
-<p><strong>Note:</strong> Depending on your Operating System, the exact command may vary (e.g., <code>traceroute</code>, <code>tracert</code>, <code>tracepath</code>).  </p>
-</blockquote>
-<p>Consult with your Network Team to determine why routing does not reach the destination. The issue is typically related to routing misconfigurations or firewall blockages.</p>
+<p>??? info "Status Validation: Traceroute
+    </p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>tracert 10.1.7.147</b>
+    1    &lt;1 ms    &lt;1 ms    &lt;1 ms  router.site-a.vcf.lab [10.1.10.129]
+    2     2 ms     1 ms    &lt;1 ms  10.1.7.147
+    </code></pre><p></p>
+<pre><code>&gt; **Note:** Depending on your Operating System, the exact command may vary (e.g., `traceroute`, `tracert`, `tracepath`).
+
+Consult with your Network Team to determine why routing does not reach the destination.  
+The issue is typically related to routing misconfigurations or firewall blockages.
+</code></pre>
 </details>
 </li>
 </ul>

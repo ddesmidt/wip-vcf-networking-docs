@@ -5862,17 +5862,17 @@
 </li>
 <li>
 <p><strong>Step 2: Cross-WorkerNode Encapsulation</strong><br>
-</p><div class="highlight"><pre><span></span><code>WorkerNode1-IP (172.30.0.5) =&gt; WorkerNode2-IP (172.30.0.6)
-  [Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)]
-</code></pre></div>
-    Because the destination Pod resides on a different node, the source Worker Node encapsulates the original packet inside a node-to-node tunnel packet.  <p></p>
+<code>WorkerNode1-IP (172.30.0.5) =&gt; WorkerNode2-IP (172.30.0.6)<br>
+&nbsp;&nbsp;[Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)]
+</code></p>
+<p>Because the destination Pod resides on a different node, the source Worker Node encapsulates the original packet inside a node-to-node tunnel packet.  </p>
 <div class="admonition note">
 <p class="admonition-title">Encapsulation for Cross-ESX Traffic</p>
-<p>If the Worker Nodes reside on a different ESX host, the cross-ESX traffic undergoes a second layer of encapsulation using the ESX TEP IPs.
-</p><div class="highlight"><pre><span></span><code>ESX1-TEP_IP (10.1.3.203) =&gt; ESX2-TEP_IP (10.1.3.207)
-  [WorkerNode1-IP (172.30.0.5) =&gt; WorkerNode2-IP (172.30.0.6)]
-    [[Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)]]
-</code></pre></div><p></p>
+<p>If the Worker Nodes reside on a different ESX host, the cross-ESX traffic undergoes a second layer of encapsulation using the ESX TEP IPs.<br>
+<code>ESX-TEP_IP (10.1.3.x) =&gt; ESX2-TEP_IP (10.1.3.x)<br>
+&nbsp;&nbsp;[WorkerNode1-IP (172.30.0.5) =&gt; WorkerNode2-IP (172.30.0.6)]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[[Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)]]
+</code></p>
 </div>
 </li>
 <li>
