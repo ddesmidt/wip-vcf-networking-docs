@@ -5859,13 +5859,14 @@ In the example below, the VMs are connected to different subnets.</p>
 <ul>
 <li>
 <p><strong>Step1: External Client accesses the VM</strong><br>
-<code>VM1 (10.1.7.147) =&gt; VM (172.30.0.2)</code>  </p>
+<code>VM1 (10.1.7.147) =&gt; VM2 (172.30.0.2)</code>  </p>
+<p>The routing is always done on the source-ESX.</p>
 <div class="admonition note">
 <p class="admonition-title">Encapsulation for Cross-ESX Traffic</p>
-<p>If the VMs reside on a different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.<br>
-</p><div class="highlight"><pre><span></span><code>ESX-TEP_IP (10.1.3.x) =&gt; ESX-TEP_IP (10.1.3.x)
-  [VM1 (10.1.7.147) =&gt; VM (172.30.0.2)]
-</code></pre></div><p></p>
+<p>If the VMs reside on different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.<br>
+<code>ESX-TEP_IP (10.1.3.x) =&gt; ESX-TEP_IP (10.1.3.x)<br>
+&nbsp;&nbsp;[VM1 (10.1.7.147) =&gt; VM2 (172.30.0.2)]
+</code></p>
 </div>
 </li>
 </ul>

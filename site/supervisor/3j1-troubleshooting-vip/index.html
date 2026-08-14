@@ -5559,10 +5559,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logical-view" class="md-nav__link">
+  <a href="#logical-and-physical-view" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logical View
+        Logical and Physical View
       
     </span>
   </a>
@@ -5570,10 +5570,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#physical-view" class="md-nav__link">
+  <a href="#troubleshooting-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Physical View
+        Troubleshooting Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-external-client-enters-the-logical-networks-via-t0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step1: External Client enters the logical Networks via T0
       
     </span>
   </a>
@@ -5581,10 +5593,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step1-physical-fabric-to-the-vna-node-hosting-the-vip" class="md-nav__link">
+  <a href="#step2-t0-routes-the-traffic-to-the-lb-vip" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step1: Physical fabric to the VNA Node hosting the VIP
+        Step2: T0 routes the traffic to the LB-VIP
       
     </span>
   </a>
@@ -5592,10 +5604,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step2-vna-node-hosting-the-vip-to-the-esx-hosting-the-k8s-node-overlay" class="md-nav__link">
+  <a href="#step3-vip-load-balances-traffic-to-the-k8s-worker-nodes-kube-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step2: VNA Node hosting the VIP to the ESX hosting the K8s Node (Overlay)
+        Step3: VIP load balances traffic to the K8s Worker Nodes (kube-proxy)
       
     </span>
   </a>
@@ -5603,13 +5615,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step34not-represented-k8s-node-load-balances-traffic-to-the-different-pods" class="md-nav__link">
+  <a href="#step45not-represented-the-worker-node-load-balances-traffic-to-the-pods" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step3+4(not represented): K8s Node load balances traffic to the different Pods
+        Step4+5(not represented): The Worker Node load balances traffic to the Pods
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -5751,10 +5768,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#logical-view" class="md-nav__link">
+  <a href="#logical-and-physical-view" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logical View
+        Logical and Physical View
       
     </span>
   </a>
@@ -5762,10 +5779,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#physical-view" class="md-nav__link">
+  <a href="#troubleshooting-steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Physical View
+        Troubleshooting Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step1-external-client-enters-the-logical-networks-via-t0" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step1: External Client enters the logical Networks via T0
       
     </span>
   </a>
@@ -5773,10 +5802,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step1-physical-fabric-to-the-vna-node-hosting-the-vip" class="md-nav__link">
+  <a href="#step2-t0-routes-the-traffic-to-the-lb-vip" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step1: Physical fabric to the VNA Node hosting the VIP
+        Step2: T0 routes the traffic to the LB-VIP
       
     </span>
   </a>
@@ -5784,10 +5813,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step2-vna-node-hosting-the-vip-to-the-esx-hosting-the-k8s-node-overlay" class="md-nav__link">
+  <a href="#step3-vip-load-balances-traffic-to-the-k8s-worker-nodes-kube-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step2: VNA Node hosting the VIP to the ESX hosting the K8s Node (Overlay)
+        Step3: VIP load balances traffic to the K8s Worker Nodes (kube-proxy)
       
     </span>
   </a>
@@ -5795,13 +5824,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step34not-represented-k8s-node-load-balances-traffic-to-the-different-pods" class="md-nav__link">
+  <a href="#step45not-represented-the-worker-node-load-balances-traffic-to-the-pods" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step3+4(not represented): K8s Node load balances traffic to the different Pods
+        Step4+5(not represented): The Worker Node load balances traffic to the Pods
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -5856,61 +5890,89 @@
 </div>
 <hr>
 <h2 id="troubleshooting">Troubleshooting - VIP access down</h2>
-<p>As described in the <a href="../2i1-packetwalk-ext_vip/">Packet Walk: N/S External to VIP</a> section, clients accessing a VIP traverse the following path:</p>
-<h4 id="logical-view">Logical View</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i1-0-LogicalView.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i1-0-LogicalView.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
-<h4 id="physical-view">Physical View</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i1-0-PhysicalView.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i1-0-PhysicalView.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
-<h3 id="step1-physical-fabric-to-the-vna-node-hosting-the-vip">Step1: Physical fabric to the VNA Node hosting the VIP</h3>
+<p>As described in the <a href="../3i1-packetwalk-ext_vip/">Packet Walk: N/S External to VIP</a> section, clients accessing a VIP traverse the following path:</p>
+<h3 id="logical-and-physical-view">Logical and Physical View</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3i1-0-LogicalView.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/3i1-0-LogicalView.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3i1-0-PhysicalView.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/3i1-0-PhysicalView.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<h3 id="troubleshooting-steps">Troubleshooting Steps</h3>
+<h4 id="step1-external-client-enters-the-logical-networks-via-t0">Step1: External Client enters the logical Networks via T0</h4>
 <ul>
 <li>
-<p><strong>Validate communication to the VIP</strong><br>
-Validate IP reachability to the VIP with <code>ping</code>.  </p>
+<p><strong>Validate BGP communication between the T0 and the physical routers</strong>  </p>
 <details class="info">
-<summary>Status Validation</summary>
-<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>ping 10.1.7.138</b>
-Pinging 10.1.7.138 with 32 bytes of data:
-Reply from 10.1.7.138: bytes=32 time=6ms TTL=61
-Reply from 10.1.7.138: bytes=32 time=1ms TTL=61
-</code></pre><p></p>
+<summary>Status Validation: BGP</summary>
+<p>The T0 status is only available from NSX.<br>
+Navigate to <strong>NSX</strong> &gt; <strong>Networking</strong> &gt; <strong>Tier-0 Gateways</strong>.<br>
+Ensure the T0 has a Green status and no Alarms.
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-3g-T0.jpg" data-desc-position="bottom"><img alt="T0 Status" src="../images/3a-3g-T0.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<blockquote>
+<p><strong>Note:</strong> In the event of a BGP connection issue, the T0 status will show as Red, and the Alarms section will display BGP-related errors.</p>
+</blockquote>
 </details>
-<p>In case of failure, check the routing breaking point with <code>traceroute</code>.  </p>
+</li>
+</ul>
+<h4 id="step2-t0-routes-the-traffic-to-the-lb-vip">Step2: T0 routes the traffic to the LB-VIP</h4>
+<ul>
+<li>
+<p><strong>Validate external communication to the VIP</strong>  </p>
 <details class="info">
-<summary>Status Validation</summary>
-<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>tracert 10.1.7.138</b>
+<summary>Status Validation: Ping</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>ping 10.150.0.7</b>
+Pinging 10.150.0.7 with 32 bytes of data:
+Reply from 10.150.0.7: bytes=32 time=6ms TTL=61
+Reply from 10.150.0.7: bytes=32 time=1ms TTL=61
+</code></pre><p></p>
+<p>In the event of a failure, check the routing breaking point with <code>traceroute</code>.  </p>
+<details class="info">
+<summary>Status Validation: Traceroute</summary>
+<p></p><pre><code>PS C:\Users\Administrator\Documents&gt; <b>tracert 10.150.0.7</b>
 1    &lt;1 ms    &lt;1 ms    &lt;1 ms  router.site-a.vcf.lab [10.1.10.129]
-2     2 ms     1 ms    &lt;1 ms  10.1.7.138
+2     2 ms     1 ms    &lt;1 ms  edge-uplink02-wld01-02a.site-a.vcf.lab [10.1.6.135]
+3     2 ms     1 ms     1 ms  169.254.64.3
+4     1 ms     1 ms     1 ms  10.150.0.7
 </code></pre><p></p>
 <blockquote>
 <p><strong>Note:</strong> Depending on your Operating System, the exact command may vary (e.g., <code>traceroute</code>, <code>tracert</code>, <code>tracepath</code>).  </p>
 </blockquote>
-<p>Consult with your Network Team to determine why routing does not reach the destination. The issue is typically related to routing misconfigurations or firewall blockages.</p>
+<p>Consult with your Network Team to determine why routing does not reach the destination.<br>
+The issue is typically related to routing misconfigurations (such as the BGP connectivity between the T0 and physical routers) or firewall blockages.</p>
+</details>
 </details>
 </li>
 </ul>
-<h3 id="step2-vna-node-hosting-the-vip-to-the-esx-hosting-the-k8s-node-overlay">Step2: VNA Node hosting the VIP to the ESX hosting the K8s Node (Overlay)</h3>
+<h4 id="step3-vip-load-balances-traffic-to-the-k8s-worker-nodes-kube-proxy">Step3: VIP load balances traffic to the K8s Worker Nodes (kube-proxy)</h4>
 <ul>
-<li><strong>Validate the  host tunnels are UP</strong></li>
-</ul>
+<li>
+<p><strong>Validate the ESX host and Edge tunnels are UP</strong></p>
 <details class="info">
-<summary>Status Validation</summary>
-<p>Navigate to <strong>vCenter</strong> &gt; <strong>Host and Clusters</strong> &gt; <strong>[your vCenter Cluster]</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>Network Configuration</strong>.<br>
-Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  </p>
+<summary>Status Validation: TEP Tunnels</summary>
+<p>ESX host tunnels status, navigate to <strong>vCenter</strong> &gt; <strong>Host and Clusters</strong> &gt; <strong>[your vCenter Cluster]</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>Network Configuration</strong>.<br>
+Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-3a-NSX-Prep.jpg" data-desc-position="bottom"><img alt="NSX Host Preparation Status" src="../images/3a-3a-NSX-Prep.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<p>Edge tunnels status, navigate to <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>vCenter</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>Edge Clusters</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-3b-Edge-Cluster.jpg" data-desc-position="bottom"><img alt="Edge Cluster Status" src="../images/3a-3b-Edge-Cluster.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <blockquote>
 <p><strong>Note:</strong> If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  </p>
 </blockquote>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3a-NSX-Prep.jpg" data-desc-position="bottom"><img alt="NSX Host Preparation Status" src="../images/2a-3a-NSX-Prep.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 </details>
-<ul>
-<li><strong>Validate the ESX host tunnels accept large packets (MTU)</strong>   </li>
-</ul>
+</li>
+<li>
+<p><strong>Validate the ESX host and Edge tunnels accept large packets (MTU)</strong>   </p>
 <details class="info">
-<summary>Status Validation</summary>
-<div class="highlight"><pre><span></span><code>vmkping ++netstack=vxlan &lt;remote-TEP-IP&gt; -d -s 8900
+<summary>Status Validation: Jumbo Frames</summary>
+<div class="highlight"><pre><span></span><code>vmkping ++netstack=vxlan &lt;remote-ESX-TEP-IP &amp; Edge-TEP-IP&gt; -d -s 8900
 </code></pre></div>
+<details class="info">
+<summary><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg></span> How to find remote-ESX-TEP-IP and Edge-TEP-IP</summary>
+<p>remote-ESX-TEP-IP are available on <strong>vCenter</strong> &gt; <strong>Host and Clusters</strong> &gt; <strong>[your vCenter Cluster]</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>Network Configuration</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-3a-NSX-Prep.jpg" data-desc-position="bottom"><img alt="NSX Host Preparation Status" src="../images/2a-3a-NSX-Prep.jpg" style="display: block; margin: 0 auto;" width="95%"></a>
+Edge-TEP-IP are available on <strong>vCenter</strong> &gt; <strong>Networking</strong> &gt; <strong>vCenter</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>Edge Clusters</strong>.<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3a-3b-Edge-Cluster.jpg" data-desc-position="bottom"><img alt="Edge Cluster Status" src="../images/3a-3b-Edge-Cluster.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+</details>
 <details class="abstract">
-<summary>Output example</summary>
-<p></p><pre><code>[root@esx-01a:~] <b>vmkping ++netstack=vxlan 10.1.3.207 -d -s 8900</b>
+<summary>Output example: vmkping</summary>
+<p>From the ESX CLI:<br>
+</p><pre><code>[root@esx-01a:~] <b>vmkping ++netstack=vxlan 10.1.3.207 -d -s 8900</b>
     PING 10.1.3.207 (10.1.3.207): 8900 data bytes
     8908 bytes from 10.1.3.207: icmp_seq=0 ttl=64 time=1.234 ms
     8908 bytes from 10.1.3.207: icmp_seq=1 ttl=64 time=1.102 ms
@@ -5919,15 +5981,17 @@ Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 T
     3 packets transmitted, 3 packets received, 0% packet loss
     round-trip min/avg/max = 1.098/1.144/1.234 ms
 </code></pre>
-Consult with your Network Team to determine why routing does not reach the destination.  <p></p>
+If vmkping doesn't work, consult with your Network Team to determine why routing does not reach the destination.  <p></p>
 <ul>
 <li>If standard "small" pings fail, the issue is typically related to routing misconfigurations or firewall blockages.  </li>
 <li>If "large" pings fail, the issue is typically related to Jumbo Frames (MTU) not being enabled across the physical fabric.</li>
 </ul>
 </details>
 </details>
-<h3 id="step34not-represented-k8s-node-load-balances-traffic-to-the-different-pods">Step3+4(not represented): K8s Node load balances traffic to the different Pods</h3>
-<p>See <a href="../2j3-troubleshooting-pod/">Troubleshooting - Pod access down</a>.</p>
+</li>
+</ul>
+<h4 id="step45not-represented-the-worker-node-load-balances-traffic-to-the-pods">Step4+5(not represented): The Worker Node load balances traffic to the Pods</h4>
+<p>See <a href="../3j3-troubleshooting-pod/">Troubleshooting - Pod access down</a>.</p>
 
 
 

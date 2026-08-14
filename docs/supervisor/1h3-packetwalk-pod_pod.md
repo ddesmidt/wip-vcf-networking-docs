@@ -45,10 +45,10 @@ A Full Application (Load Balancer + Pods) has been deployed (see [Application De
     The traffic exits the source pod and hits the Worker Node's local routing engine (managed by `kube-proxy` and the CNI agent, such as Antrea).  
 
 * **Step 2: Cross-Node Encapsulation**  
-```text
-WorkerNode1-IP (10.1.11.138) => WorkerNode2-IP (10.1.11.139)
-  [Source-Pod-IP (192.168.145.2) => Destination-Pod-IP (192.168.146.2)]
-```
+<code>WorkerNode1-IP (10.1.11.138) => WorkerNode2-IP (10.1.11.139)<br>
+&nbsp;&nbsp;[Source-Pod-IP (192.168.145.2) => Destination-Pod-IP (192.168.146.2)]
+</code>
+
     The destination pod is on a different node, so the Worker Node encapsulates the original packet inside a node-to-node tunnel packet.  
 
 

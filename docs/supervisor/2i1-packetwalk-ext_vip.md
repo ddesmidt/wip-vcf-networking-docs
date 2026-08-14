@@ -54,10 +54,9 @@ A Full Application (Load Balancer + Pods) has been deployed (see [Application De
 
     !!! note "Encapsulation for Cross-ESX Traffic"
         If the Worker Nodes reside on a different ESX than the Active VPC-SR, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  
-        ```text
-        ESX-TEP_IP (10.1.3.x) => ESX-TEP_IP (10.1.3.x)
-          [VPC-SR-Internal-IP => K8s WorkerNode[1-3]:31147 (172.30.0.[x])]
-        ``` 
+        <code>ESX-TEP_IP (10.1.3.x) => ESX-TEP_IP (10.1.3.x)<br>
+        &nbsp;&nbsp;[VPC-SR-Internal-IP => K8s WorkerNode[1-3]:31147 (172.30.0.[x])]
+        </code>
 
     ??? info ":material-magnify: Find the dynamically assigned Worker Node TCP port (`31147`)"
         You can find the dynamically assigned Worker Node TCP port (`31147`) by running the command `kubectl get service apache-vip-service -n ns1` and looking under the PORT(S) column (see [Application Deployment > App Deployment (K8s) > via CLI](2g1-deployment-pods.md#deployment_pods)) 

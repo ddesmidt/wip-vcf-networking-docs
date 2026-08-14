@@ -47,14 +47,15 @@ In the example below, the VMs are connected to different subnets.
 ### Packet Walk
 
 * **Step1: External Client accesses the VM**  
-`VM1 (10.1.7.147) => VM (172.30.0.2)`  
+`VM1 (10.1.7.147) => VM2 (172.30.0.2)`  
+
+    The routing is always done on the source-ESX.
 
     !!! note "Encapsulation for Cross-ESX Traffic"
-        If the VMs reside on a different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  
-        ```text
-        ESX-TEP_IP (10.1.3.x) => ESX-TEP_IP (10.1.3.x)
-          [VM1 (10.1.7.147) => VM (172.30.0.2)]
-        ``` 
+        If the VMs reside on different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  
+        <code>ESX-TEP_IP (10.1.3.x) => ESX-TEP_IP (10.1.3.x)<br>
+        &nbsp;&nbsp;[VM1 (10.1.7.147) => VM2 (172.30.0.2)]
+        </code>
 
 
 

@@ -46,17 +46,21 @@ A Full Application (Load Balancer + Pods) has been deployed (see [Application De
 
 ### Packet Walk
 
-* **Step1: External Client accesses the VIP**  
+* **Step1: External Client enters the logical Networks via T0**  
 `Client-IP => VIP:80 (10.150.0.7)`  
 
     The traffic enters the ESX where the Edge Node (hosting the Active T0) resides.  
-    *Note: In an Active/Active T0 configuration (not represented here), client traffic would be distributed across all Edge Nodes hosting the T0.*
+    *Note: In an Active/Active T0 configuration (not represented here), client traffic would be distributed across all Edge Nodes hosting the T0.*  
 
-* **Step2: VIP load balances traffic to the K8s Worker Nodes (kube-proxy)**  
-```text
-Edge-TEP_IP (10.1.3.x) => ESX-TEP_IP (10.1.3.x)
-  [VPC-SR-Internal-IP => K8s WorkerNode[1-3]:31147 (172.30.0.[x])]
-```
+* **Step2: T0 routes the traffic to the LB-VIP**  
+`Client-IP => VIP:80 (10.150.0.7)`  
+    The T0 routes the traffic to the Active CTGW, which then routes to the Active VPC-SR.  
+    *Note: The Active CTGW and VPC-SR could be in different Edge Nodes. In such cases, cross-Edge Node traffic would occur (which is not represented in these diagrams).*
+
+* **Step3: VIP load balances traffic to the K8s Worker Nodes (kube-proxy)**  
+<code>Edge-TEP_IP (10.1.3.x) => ESX-TEP_IP (10.1.3.x)<br>
+&nbsp;&nbsp;[VPC-SR-Internal-IP => K8s WorkerNode[1-3]:31147 (172.30.0.[x])]
+</code>
 
     The load balancer (VPC-SR) hosted on the Edge Node forwards the traffic to the dynamically assigned NodePort on the K8s Worker Nodes hosted on the different ESX.  
     The traffic from the Edge Node to the ESX hosting the Worker Node is encapsulated between the Edge-TEP and ESX-TEP.
@@ -65,10 +69,10 @@ Edge-TEP_IP (10.1.3.x) => ESX-TEP_IP (10.1.3.x)
         You can find the dynamically assigned Worker Node TCP port (`31147`) by running the command `kubectl get service apache-vip-service -n ns1` and looking under the PORT(S) column (see [Application Deployment > App Deployment (K8s) > via CLI](2g1-deployment-pods.md#deployment_pods)) 
 
 
-* **Step 3: The K8s Worker Node intercepts the traffic**  
+* **Step 4: The K8s Worker Node intercepts the traffic**  
     Once the traffic arrives at the Worker Node's network interface on the NodePort (`31147`), it is intercepted by the node's local routing rules (which are continuously programmed by the local `kube-proxy` pod).
 
-* **Step 4 (not represented): The Worker Node load balances traffic to the Pods**  
+* **Step 5 (not represented): The Worker Node load balances traffic to the Pods**  
     Based on those `kube-proxy` rules, the Worker Node load balances the traffic to the different pods across the K8s cluster.  
     See [Packet Walk - E/W pod to pod](3i3-packetwalk-pod_pod.md#packetwalk) for cross-pod communication.
 

@@ -34,29 +34,34 @@ One or a few VMs have been deployed (see [Application Deployment > App Deploymen
 ### View
 
 #### Logical View
-* **Use case: VM connected to Private Subnet (Private-VPC or Private-TGW)**  
+* **Scenario A: VM connected to Private Subnet (Private-VPC or Private-TGW)**  
 ![Logical](images/2i2-0-LogicalView1.jpg){ width="75%" style="display: block; margin: 0 auto;" }
 In this case, external clients can't reach that subnet, and so can't reach VMs on it.
 
-* **Use case: VM connected to Public Subnet**  
+* **Scenario B: VM connected to Public Subnet**  
 ![Logical](images/2i2-0-LogicalView2.jpg){ width="75%" style="display: block; margin: 0 auto;" }
 
 #### Physical View
-* **Use case: VM connected to Public Subnet**  
+* **Scenario B: VM connected to Public Subnet**  
 ![Physical](images/2i2-0-PhysicalView2.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 ---
 
 ### Packet Walk
 
+#### North/South: External Client to the VM
+
 * **Step1: External Client accesses the VM**  
-`Client-IP => VM (10.1.7.146)`  
+`Client-IP => VM1 (10.1.7.146)`  
 
     Traffic enters the  host where the VM resides.  
     Because the external Physical Router considers the VM to be on its local subnet, it forwards the traffic directly to the VM, completely bypassing the DTGW and VPC logical routers.
 
+
+#### South/North: VM replies to the External Client
+
 * **Step2: VM replies to the External Client**  
-` VM (10.1.7.146) => Client-IP`  
+` VM1 (10.1.7.146) => Client-IP`  
 
     The return traffic follows a different path.  
     The VM sends the packet to its default gateway (VPC), which forwards it to its default gateway (DTGW), which finally routes it to the external Physical Router.

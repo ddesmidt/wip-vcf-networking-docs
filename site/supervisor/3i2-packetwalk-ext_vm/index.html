@@ -5454,6 +5454,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Packet Walk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#northsouth-external-client-to-the-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        North/South: External Client to the VM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#southnorth-vm-replies-to-the-external-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        South/North: VM replies to the External Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -5793,6 +5821,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Packet Walk">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#northsouth-external-client-to-the-vm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        North/South: External Client to the VM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#southnorth-vm-replies-to-the-external-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        South/North: VM replies to the External Client
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -5833,7 +5889,7 @@
 </ul>
 </li>
 <li>App Access Broken  <ul>
-<li><a href="../3j1-troubleshooting-vip/">VIP aAccess Down</a>  </li>
+<li><a href="../3j1-troubleshooting-vip/">VIP Access Down</a>  </li>
 <li><a href="../3j2-troubleshooting-vm/">VM Access Down</a>  </li>
 <li><a href="../3j3-troubleshooting-pod/">Pod Access Down</a>  </li>
 </ul>
@@ -5846,34 +5902,85 @@
 </div>
 <hr>
 <h2 id="packetwalk">Packet Walk - N/S External to VM</h2>
-<p>One or a few VMs have been deployed (see <a href="../2f1-deployment-vms/#deployment_vms">Application Deployment &gt; App Deployment (VMs) &gt; via vCenter UI</a> or <a href="../2f2-deployment-vms/#deployment_vms">Application Deployment &gt; App Deployment (VMs) &gt; via CLI</a>).</p>
+<p>One or a few VMs have been deployed (see <a href="../3f1-deployment-vms/#deployment_vms">Application Deployment &gt; App Deployment (VMs) &gt; via vCenter UI</a> or <a href="../3f2-deployment-vms/#deployment_vms">Application Deployment &gt; App Deployment (VMs) &gt; via CLI</a>).</p>
 <h3 id="view">View</h3>
 <h4 id="logical-view">Logical View</h4>
 <ul>
 <li>
-<p><strong>Use case: VM connected to Private Subnet (Private-VPC or Private-TGW)</strong><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-LogicalView1.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i2-0-LogicalView1.jpg" style="display: block; margin: 0 auto;" width="75%"></a>
+<p><strong>Scenario A: VM connected to Private Subnet (Private-VPC or Private-TGW)</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3i2-0-LogicalView1.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/3i2-0-LogicalView1.jpg" style="display: block; margin: 0 auto;" width="75%"></a>
 In this case, external clients can't reach that subnet, and so can't reach VMs on it.</p>
 </li>
 <li>
-<p><strong>Use case: VM connected to Public Subnet</strong><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-LogicalView2.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i2-0-LogicalView2.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
+<p><strong>Scenario B: VM connected to Public Subnet</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3i2-0-LogicalView2.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/3i2-0-LogicalView2.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
 </li>
 </ul>
 <h4 id="physical-view">Physical View</h4>
 <ul>
-<li><strong>Use case: VM connected to Public Subnet</strong><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i2-0-PhysicalView2.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i2-0-PhysicalView2.jpg" style="display: block; margin: 0 auto;" width="95%"></a></li>
+<li><strong>Scenario B: VM connected to Public Subnet</strong><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3i2-0-PhysicalView2a.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/3i2-0-PhysicalView2a.jpg" style="display: block; margin: 0 auto;" width="95%"></a></li>
 </ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3i2-0-PhysicalView2b.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/3i2-0-PhysicalView2b.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <hr>
 <h3 id="packet-walk">Packet Walk</h3>
+<h4 id="northsouth-external-client-to-the-vm">North/South: External Client to the VM</h4>
 <ul>
 <li>
-<p><strong>Step1: External Client accesses the VM</strong><br>
-<code>Client-IP =&gt; VM (10.1.7.146)</code>  </p>
-<p>The traffic enters the ESX hosting the VM.</p>
+<p><strong>Step1: External Client enters the logical Networks via T0</strong><br>
+<code>Client-IP =&gt; VM1 (10.150.0.18)</code>  </p>
+<p>The traffic enters the ESX where the Edge Node (hosting the Active T0) resides.<br>
+<em>Note: In an Active/Active T0 configuration (not represented here), client traffic would be distributed across all Edge Nodes hosting the T0.</em>  </p>
+</li>
+<li>
+<p><strong>Step2: T0 routes the traffic to the VPC</strong><br>
+<code>Client-IP =&gt; VM1 (10.150.0.18)</code>  </p>
+<p>The T0 routes the traffic to the Active CTGW, which then routes it to the Active VPC-SR.<br>
+<em>Note: The Active CTGW and VPC-SR could reside on different Edge Nodes. In such cases, cross-Edge Node traffic would occur (which is not represented in these diagrams).</em></p>
+</li>
+<li>
+<p><strong>Step3: VPC forwards the traffic to the VM</strong><br>
+<code>Client-IP =&gt; VM1 (10.150.0.18)</code>  </p>
+<p>The Active VPC-SR routes the traffic to its VPC-DR and forwards it directly to the VM.<br>
+The traffic passing from the Edge Node to the ESXi host where the VM resides is encapsulated between the Edge TEP and the ESXi TEP.</p>
 </li>
 </ul>
+<h4 id="southnorth-vm-replies-to-the-external-client">South/North: VM replies to the External Client</h4>
+<div class="admonition info">
+<p class="admonition-title">The return traffic follows a different path!</p>
+</div>
+<ul>
+<li>
+<p><strong>Step4: VM sends traffic to its default gateway</strong><br>
+<code>VM1 (10.150.0.18) =&gt; Client-IP</code><br>
+    The VM sends the packet to its default gateway (VPC-DR) hosted on its local ESX.</p>
+</li>
+<li>
+<p><strong>Step5: VPC routes traffic up to T0</strong><br>
+<code>VM1 (10.150.0.18) =&gt; Client-IP</code>  </p>
+<p>VPC-DR routes to its default gateway: VPC-SR.<br>
+VPC-SR routes to the default gateway: CTGW-Active.<br>
+CTGW routes to the default gateway: T0-Active.<br>
+<em>Note: The Active CTGW and VPC-SR could be on different Edge Nodes, initiating cross-Edge Node traffic.<br>
+Also, in an Active/Active T0 configuration, client traffic would be distributed across all Edge Nodes hosting the T0.</em></p>
+</li>
+<li>
+<p><strong>Step6: T0 routes to the physical fabric</strong><br>
+<code>VM1 (10.150.0.18) =&gt; Client-IP</code>  </p>
+<p>T0-Active routes to its default gateway: Physical Router.<br>
+<em>Note: In the case of multiple physical routers configured in Active/Active (as represented), the T0 routes traffic among all available physical routers.</em></p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Architectural Note: Asymmetric Routing</p>
+<p>As represented in the diagrams, the North/South traffic is processed in an Active/Active fashion across the physical routers and the T0-Active.<br>
+Consequently, a specific flow can be asymmetric: processed by one physical router inbound, and a different physical router outbound. This asymmetric routing is completely transparent to the communication flow and the applications.</p>
+<div class="admonition warning">
+<p class="admonition-title">Stateless Physical Routing Required</p>
+<p>Because the traffic path can be asymmetric, the upstream physical network devices must operate as standard routers, not stateful firewalls.<br>
+A stateful firewall will flag asymmetric return traffic as invalid and drop the packets.</p>
+</div>
+</div>
 
 
 

@@ -5846,12 +5846,12 @@
 </div>
 <hr>
 <h2 id="packetwalk">Packet Walk - E/W pod to pod</h2>
-<p>A Full Application (Load Balancer + Pods) has been deployed (see <a href="../2g1-deployment-pods/#deployment_pods">Application Deployment &gt; App Deployment (K8s) &gt; via CLI</a>).</p>
+<p>A Full Application (Load Balancer + Pods) has been deployed (see <a href="../3g1-deployment-pods/#deployment_pods">Application Deployment &gt; App Deployment (K8s) &gt; via CLI</a>).</p>
 <h3 id="view">View</h3>
 <h4 id="logical-view">Logical View</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i3-0-LogicalView.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/2i3-0-LogicalView.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3i3-0-LogicalView.jpg" data-desc-position="bottom"><img alt="Logical" src="../images/3i3-0-LogicalView.jpg" style="display: block; margin: 0 auto;" width="75%"></a></p>
 <h4 id="physical-view">Physical View</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2i3-0-PhysicalView.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/2i3-0-PhysicalView.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3i3-0-PhysicalView.jpg" data-desc-position="bottom"><img alt="Physical" src="../images/3i3-0-PhysicalView.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
 <hr>
 <h3 id="packet-walk-explanation">Packet Walk Explanation</h3>
 <ul>
@@ -5865,19 +5865,21 @@
 </p><div class="highlight"><pre><span></span><code>WorkerNode1-IP (172.30.0.5) =&gt; WorkerNode2-IP (172.30.0.6)
   [Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)]
 </code></pre></div>
-    The destination pod is on a different node, so the Worker Node encapsulates the original packet inside a node-to-node tunnel packet.  <p></p>
-<blockquote>
-<p><strong>Note:</strong> If the Worker Nodes reside on a different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.<br>
-</p><div class="highlight"><pre><span></span><code>ESX1-TEP_IP (10.1.3.203) =&gt; ESX2-TEP_IP (10.1.3.207)
-  [WorkerNode1-IP (172.30.0.5) =&gt; WorkerNode2-IP (172.30.0.6)]
-    [[Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)]]
-</code></pre></div><p></p>
-</blockquote>
+    Because the destination Pod resides on a different node, the source Worker Node encapsulates the original packet inside a node-to-node tunnel packet. <p></p>
+<div class="admonition note">
+<p class="admonition-title">Encapsulation for Cross-ESX Traffic</p>
+<p>If the Worker Nodes reside on a different ESX host, the cross-ESX traffic undergoes a second layer of encapsulation using the ESX TEP IPs.<br>
+<code>ESX-TEP_IP (10.1.3.x) =&gt; ESX2-TEP_IP (10.1.3.x)<br>
+&nbsp;&nbsp;[WorkerNode1-IP (172.30.0.5) =&gt; WorkerNode2-IP (172.30.0.6)]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[[Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)]]
+</code></p>
+</div>
 </li>
 <li>
 <p><strong>Step 3: Destination Node Decapsulation and Delivery (encapsulation2)</strong>  <br>
 <code>Source-Pod-IP (192.168.147.3) =&gt; Destination-Pod-IP (192.168.148.3)</code></p>
-<p>The destination Worker Node receives the node-to-node packet and strips away the encapsulation header. The local routing rules then deliver the unencapsulated packet directly into the destination Pod's network interface.</p>
+<p>The destination Worker Node receives the node-to-node packet and strips away the K8s encapsulation header.<br>
+The local routing rules then deliver the unencapsulated packet directly into the destination Pod's network interface.</p>
 </li>
 </ul>
 

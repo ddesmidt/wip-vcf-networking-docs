@@ -31,39 +31,38 @@ This section describes the procedures for **Troubleshooting Network Services int
 
 As described in the [Packet Walk - N/S External to VM](2i2-packetwalk-ext_vm.md) section, clients accessing a VM traverse the following path:
 
-#### Logical View
-* **Use case: VM connected to Private Subnet (Private-VPC or Private-TGW)**  
+### Logical and Physical View
+* **Scenario A: VM connected to Private Subnet (Private-VPC or Private-TGW)**  
 ![Logical](images/2i2-0-LogicalView1.jpg){ width="75%" style="display: block; margin: 0 auto;" }
 In this case, external clients can't reach that subnet, and so can't reach VMs on it.
 
-* **Use case: VM connected to Public Subnet**  
+* **Scenario B: VM connected to Public Subnet**  
 ![Logical](images/2i2-0-LogicalView2.jpg){ width="75%" style="display: block; margin: 0 auto;" }
 
-#### Physical View
-* **Use case: VM connected to Public Subnet**  
 ![Physical](images/2i2-0-PhysicalView2.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 
-### Step1: Physical fabric to the ESX Node hosting the VM
+### Troubleshooting Steps
+#### Step1: External Client accesses the VM
 * **Validate communication to the VM**  
-    Validate IP reachability to the VIP with a small and large `ping`.  
 
-    ??? info "Status Validation"
+    ??? info "Status Validation: Ping"
         <pre><code>PS C:\Users\Administrator\Documents> <b>ping 10.1.7.147</b>
         Pinging 10.1.7.147 with 32 bytes of data:
         Reply from 10.1.7.147: bytes=32 time=6ms TTL=61
         Reply from 10.1.7.147: bytes=32 time=1ms TTL=61
         </code></pre>
 
-    In case of failure, check the routing breaking point with `traceroute`.  
-    
-    ??? info "Status Validation"
-        <pre><code>PS C:\Users\Administrator\Documents> <b>tracert 10.1.7.147</b>
-        1    &lt;1 ms    &lt;1 ms    &lt;1 ms  router.site-a.vcf.lab [10.1.10.129]
-        2     2 ms     1 ms    &lt;1 ms  10.1.7.147
-        </code></pre>
+        In case of failure, check the routing breaking point with `traceroute`.  
         
-        > **Note:** Depending on your Operating System, the exact command may vary (e.g., `traceroute`, `tracert`, `tracepath`).  
-
-        Consult with your Network Team to determine why routing does not reach the destination. The issue is typically related to routing misconfigurations or firewall blockages.
+        ??? info "Status Validation: Traceroute
+            <pre><code>PS C:\Users\Administrator\Documents> <b>tracert 10.1.7.147</b>
+            1    &lt;1 ms    &lt;1 ms    &lt;1 ms  router.site-a.vcf.lab [10.1.10.129]
+            2     2 ms     1 ms    &lt;1 ms  10.1.7.147
+            </code></pre>
+            
+            > **Note:** Depending on your Operating System, the exact command may vary (e.g., `traceroute`, `tracert`, `tracepath`).  
+    
+            Consult with your Network Team to determine why routing does not reach the destination.  
+            The issue is typically related to routing misconfigurations or firewall blockages.
 

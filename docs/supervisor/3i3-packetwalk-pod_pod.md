@@ -29,15 +29,15 @@ This section describes the procedures for **Troubleshooting Network Services int
 
 ## Packet Walk - E/W pod to pod {: #packetwalk }
 
-A Full Application (Load Balancer + Pods) has been deployed (see [Application Deployment > App Deployment (K8s) > via CLI](2g1-deployment-pods.md#deployment_pods)).
+A Full Application (Load Balancer + Pods) has been deployed (see [Application Deployment > App Deployment (K8s) > via CLI](3g1-deployment-pods.md#deployment_pods)).
 
 ### View
 
 #### Logical View
-![Logical](images/2i3-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto;" }
+![Logical](images/3i3-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto;" }
 
 #### Physical View
-![Physical](images/2i3-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Physical](images/3i3-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 ---
 
@@ -53,18 +53,19 @@ A Full Application (Load Balancer + Pods) has been deployed (see [Application De
 WorkerNode1-IP (172.30.0.5) => WorkerNode2-IP (172.30.0.6)
   [Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)]
 ```
-    The destination pod is on a different node, so the Worker Node encapsulates the original packet inside a node-to-node tunnel packet.  
+    Because the destination Pod resides on a different node, the source Worker Node encapsulates the original packet inside a node-to-node tunnel packet. 
 
-    > **Note:** If the Worker Nodes reside on a different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  
-    ```text
-    ESX1-TEP_IP (10.1.3.203) => ESX2-TEP_IP (10.1.3.207)
-      [WorkerNode1-IP (172.30.0.5) => WorkerNode2-IP (172.30.0.6)]
-        [[Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)]]
-    ```
+    !!! note "Encapsulation for Cross-ESX Traffic"
+        If the Worker Nodes reside on a different ESX host, the cross-ESX traffic undergoes a second layer of encapsulation using the ESX TEP IPs.  
+        <code>ESX-TEP_IP (10.1.3.x) => ESX2-TEP_IP (10.1.3.x)<br>
+        &nbsp;&nbsp;[WorkerNode1-IP (172.30.0.5) => WorkerNode2-IP (172.30.0.6)]<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;[[Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)]]
+        </code>
 
 
 
 * **Step 3: Destination Node Decapsulation and Delivery (encapsulation2)**    
     `Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)`
 
-    The destination Worker Node receives the node-to-node packet and strips away the encapsulation header. The local routing rules then deliver the unencapsulated packet directly into the destination Pod's network interface.
+    The destination Worker Node receives the node-to-node packet and strips away the K8s encapsulation header.  
+    The local routing rules then deliver the unencapsulated packet directly into the destination Pod's network interface.

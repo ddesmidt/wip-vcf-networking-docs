@@ -49,19 +49,18 @@ A Full Application (Load Balancer + Pods) has been deployed (see [Application De
     The traffic exits the source pod and hits the Worker Node's local routing engine (managed by `kube-proxy` and the CNI agent, such as Antrea).  
 
 * **Step 2: Cross-WorkerNode Encapsulation**  
-```text
-WorkerNode1-IP (172.30.0.5) => WorkerNode2-IP (172.30.0.6)
-  [Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)]
-```
+<code>WorkerNode1-IP (172.30.0.5) => WorkerNode2-IP (172.30.0.6)<br>
+&nbsp;&nbsp;[Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)]
+</code>
+
     Because the destination Pod resides on a different node, the source Worker Node encapsulates the original packet inside a node-to-node tunnel packet.  
 
     !!! note "Encapsulation for Cross-ESX Traffic"
-        If the Worker Nodes reside on a different ESX host, the cross-ESX traffic undergoes a second layer of encapsulation using the ESX TEP IPs.
-        ```text
-        ESX1-TEP_IP (10.1.3.203) => ESX2-TEP_IP (10.1.3.207)
-          [WorkerNode1-IP (172.30.0.5) => WorkerNode2-IP (172.30.0.6)]
-            [[Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)]]
-        ```
+        If the Worker Nodes reside on a different ESX host, the cross-ESX traffic undergoes a second layer of encapsulation using the ESX TEP IPs.  
+        <code>ESX-TEP_IP (10.1.3.x) => ESX2-TEP_IP (10.1.3.x)<br>
+        &nbsp;&nbsp;[WorkerNode1-IP (172.30.0.5) => WorkerNode2-IP (172.30.0.6)]<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;[[Source-Pod-IP (192.168.147.3) => Destination-Pod-IP (192.168.148.3)]]
+        </code>
 
 
 

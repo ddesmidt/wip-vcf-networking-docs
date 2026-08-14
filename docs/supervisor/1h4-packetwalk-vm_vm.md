@@ -40,7 +40,7 @@ Multiple VMs have been deployed (see [Application Deployment > App Deployment (V
 ### Packet Walk
 
 * **Step1: External Client accesses the VM**  
-`VM1 (10.1.11.141) => VM (10.1.11.142)`  
+`VM1 (10.1.11.141) => VM2 (10.1.11.142)`  
 
 
 

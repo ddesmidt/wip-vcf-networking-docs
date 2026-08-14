@@ -21,7 +21,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 </div>
 
 <div markdown>
-![VDS Architecture](images/231-0-VM.jpg){ width="100%" }
+![VDS Architecture](images/3f1-0-VM.jpg){ width="100%" }
 </div>
 </div>
 
@@ -29,7 +29,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 
 ## Packet Walk - E/W VM to VM {: #packetwalk }
 
-Multiple VMs have been deployed (see [Application Deployment > App Deployment (VMs) > via vCenter UI](2f1-deployment-vms.md#deployment_vms) or [Application Deployment > App Deployment (VMs) > via vCenter UI | via CLI](2f2-deployment-vms.md#deployment_vms)).
+Multiple VMs have been deployed (see [Application Deployment > App Deployment (VMs) > via vCenter UI](3f1-deployment-vms.md#deployment_vms) or [Application Deployment > App Deployment (VMs) > via vCenter UI | via CLI](3f2-deployment-vms.md#deployment_vms)).
 
 ### View
 
@@ -37,20 +37,24 @@ The VMs can be connected to the same or different subnets.
 In the example below, the VMs are connected to different subnets.
 
 #### Logical View
-![Logical](images/2i4-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto;" }
+![Logical](images/3i4-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto;" }
 
 #### Physical View
-![Physical](images/2i4-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Physical](images/3i4-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
 ---
 
 ### Packet Walk
 
 * **Step1: External Client accesses the VM**  
-`VM1 (10.1.7.147) => VM (172.30.0.2)`  
+`VM1 (10.150.0.18) => VM2 (172.30.0.2)`  
 
-    If the VMs are on different subnets, the traffic is first routed by the local distributed VPC gateway.  
-    Then if the VMs reside on a different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  
+    The routing is always done on the source-ESX.
 
+    !!! note "Encapsulation for Cross-ESX Traffic"
+        If the VMs reside on different ESX, the cross-ESX traffic is encapsulated using the ESX TEP IPs.  
+        <code>ESX-TEP_IP (10.1.3.x) => ESX-TEP_IP (10.1.3.x)<br>
+        &nbsp;&nbsp;[VM1 (10.150.0.18) => VM2 (172.30.0.2)]
+        </code>
 
 

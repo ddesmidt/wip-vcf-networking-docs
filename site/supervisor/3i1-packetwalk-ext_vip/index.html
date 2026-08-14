@@ -5861,16 +5861,22 @@ In a production environment, these will most likely be distributed among multipl
 <h3 id="packet-walk">Packet Walk</h3>
 <ul>
 <li>
-<p><strong>Step1: External Client accesses the VIP</strong><br>
+<p><strong>Step1: External Client enters the logical Networks via T0</strong><br>
 <code>Client-IP =&gt; VIP:80 (10.150.0.7)</code>  </p>
 <p>The traffic enters the ESX where the Edge Node (hosting the Active T0) resides.<br>
-<em>Note: In an Active/Active T0 configuration (not represented here), client traffic would be distributed across all Edge Nodes hosting the T0.</em></p>
+<em>Note: In an Active/Active T0 configuration (not represented here), client traffic would be distributed across all Edge Nodes hosting the T0.</em>  </p>
 </li>
 <li>
-<p><strong>Step2: VIP load balances traffic to the K8s Worker Nodes (kube-proxy)</strong><br>
-</p><div class="highlight"><pre><span></span><code>Edge-TEP_IP (10.1.3.x) =&gt; ESX-TEP_IP (10.1.3.x)
-  [VPC-SR-Internal-IP =&gt; K8s WorkerNode[1-3]:31147 (172.30.0.[x])]
-</code></pre></div><p></p>
+<p><strong>Step2: T0 routes the traffic to the LB-VIP</strong><br>
+<code>Client-IP =&gt; VIP:80 (10.150.0.7)</code><br>
+    The T0 routes the traffic to the Active CTGW, which then routes to the Active VPC-SR.<br>
+<em>Note: The Active CTGW and VPC-SR could be in different Edge Nodes. In such cases, cross-Edge Node traffic would occur (which is not represented in these diagrams).</em></p>
+</li>
+<li>
+<p><strong>Step3: VIP load balances traffic to the K8s Worker Nodes (kube-proxy)</strong><br>
+<code>Edge-TEP_IP (10.1.3.x) =&gt; ESX-TEP_IP (10.1.3.x)<br>
+&nbsp;&nbsp;[VPC-SR-Internal-IP =&gt; K8s WorkerNode[1-3]:31147 (172.30.0.[x])]
+</code></p>
 <p>The load balancer (VPC-SR) hosted on the Edge Node forwards the traffic to the dynamically assigned NodePort on the K8s Worker Nodes hosted on the different ESX.<br>
 The traffic from the Edge Node to the ESX hosting the Worker Node is encapsulated between the Edge-TEP and ESX-TEP.</p>
 <details class="info">
@@ -5879,11 +5885,11 @@ The traffic from the Edge Node to the ESX hosting the Worker Node is encapsulate
 </details>
 </li>
 <li>
-<p><strong>Step 3: The K8s Worker Node intercepts the traffic</strong><br>
+<p><strong>Step 4: The K8s Worker Node intercepts the traffic</strong><br>
     Once the traffic arrives at the Worker Node's network interface on the NodePort (<code>31147</code>), it is intercepted by the node's local routing rules (which are continuously programmed by the local <code>kube-proxy</code> pod).</p>
 </li>
 <li>
-<p><strong>Step 4 (not represented): The Worker Node load balances traffic to the Pods</strong><br>
+<p><strong>Step 5 (not represented): The Worker Node load balances traffic to the Pods</strong><br>
     Based on those <code>kube-proxy</code> rules, the Worker Node load balances the traffic to the different pods across the K8s cluster.<br>
     See <a href="../3i3-packetwalk-pod_pod/#packetwalk">Packet Walk - E/W pod to pod</a> for cross-pod communication.</p>
 </li>

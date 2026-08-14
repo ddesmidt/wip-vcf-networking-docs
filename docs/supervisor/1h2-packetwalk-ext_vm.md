@@ -41,7 +41,7 @@ One or a few VMs have been deployed (see [Application Deployment > App Deploymen
 ### Packet Walk
 
 * **Step1: External Client accesses the VM**  
-`Client-IP => VM (10.1.11.141)`  
+`Client-IP => VM1 (10.1.11.141)`  
 
     The traffic enters the ESX hosting the VM.
 
