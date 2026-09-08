@@ -1,5 +1,5 @@
 <h1>
-  <img src="../assets/VKS.png" style="height:30px; vertical-align:middle;"> VKS Network Services
+  <img src="../assets/VKS.png" style="height:30px; vertical-align:middle;"> Supervisor Network Services
 </h1>
 
 This section describes the procedures for **deploying the Supervisor** within a vSphere environment.

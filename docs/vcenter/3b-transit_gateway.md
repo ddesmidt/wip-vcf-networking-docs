@@ -59,7 +59,7 @@ Different Transit Gateway types are available:
     * **High Availability Mode**:  
       Select the operational redundancy and service support:  
       . Active/Active: Maximizes throughput and scalability by distributing the Transit Gateway load across multiple Edge Nodes simultaneously.  
-      Active/Standby: Required for stateful network services (NAT and VPN). In this mode, this Transit Gateway North/South traffic is processed by a single "Active" Edge Node to maintain session state.
+      . Active/Standby: Required for stateful network services (NAT and VPN). In this mode, this Transit Gateway North/South traffic is processed by a single "Active" Edge Node to maintain session state.
 
     * **TGW Edge Cluster**:  
       Select the specific Edge Cluster that will host this Centralized Transit Gateway.
