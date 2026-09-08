@@ -187,26 +187,26 @@ nav:
       - Introduction: vcfa/index.md
       - VCF-A Tenant:
           - External Connectivity & Services:
-            - Transit Gateway: vcfa/wip-tgw.md
-            - Connectivity Profile: vcfa/wip-profile.md
-            - Tenant IP Block: vcfa/wip-block.md
-            - Tenant IP Quota: vcfa/wip-quota.md
+            - Transit Gateway: vcfa/1a-transit_gateway.md
+            - Connectivity Profile: vcfa/1b-connectivity_profile.md
+            - Tenant IP Block: vcfa/1d-ip_block_tenant.md
+            - Tenant IP Quota: vcfa/1e-ip_quota_tenant.md
           - Network Services:
-            - VPC Gateway: vcfa/wip-gateway.md
-            - VCF-A Namespace: vcfa/wip-namespace.md
-            - VPC Subnet: vcfa/wip-subnet.md
-            - NAT: vcfa/wip-nat.md
-            - DHCP: vcfa/wip-dhcp.md
-            - Load Balancer: vcfa/wip-lb.md
-            - VPN: vcfa/wip-vpn.md
+            - VPC Gateway: vcfa/2a-vpc_gateway.md
+            - VCF-A Namespace: vcfa/2b-namespace.md
+            - VPC Subnet: vcfa/2c-vpc_subnet.md
+            - NAT: vcfa/2d-vpc_nat.md
+            - DHCP: vcfa/2e-vpc_DHCP.md
+            - Load Balancer: vcfa/2f-vpc_lb.md
+            - VPN: vcfa/2g-vpc_vpn.md
       - VCF-A Provider:
           - Provider Infrastructure:
-            - Zone / Region: vcfa/wip-zone.md
-            - Edge Cluster / Node: vcfa/wip-edge.md
-            - VNA Cluster / Node: vcfa/wip-vna.md
+            - Zone / Region: vcfa/3a-region_zone.md
+            - Edge Cluster / Node: vcfa/3b-edge.md
+            - VNA Cluster / Node: vcfa/3c-vna.md
           - External Connectivity & Services:
-            - External Connection: vcfa/wip-extconn.md
-            - Subnet VLAN: vcfa/wip-subnet_vlan.md
-            - Provider IP Block: vcfa/wip-ipblock.md
-            - Provider IP Quota: vcfa/wip-ipquota.md
+            - External Connection: vcfa/4a-external_connection.md
+            - Subnet VLAN: vcfa/4b-vpc_subnet_vlan.md
+            - Provider IP Block: vcfa/4c-ip_block_provider.md
+            - Provider IP Quota: vcfa/4d-ip_quota_provider.md
 
