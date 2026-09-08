@@ -44,10 +44,10 @@ A Full Application (Load Balancer + Pods) has been deployed (see [Application De
     The traffic enters the ESX hosting the FLB Node Active.
 
 * **Step2: VIP load balances traffic to the K8s Worker Nodes (kube-proxy)**  
-`VPC-SR-Internal-IP => K8s WorkerNode[1-3]:32176 (10.1.11.[x])`  
+`FLB-Internal-IP => K8s WorkerNode[1-3]:32176 (10.1.11.[x])`  
 
     The load balancer (FLB) forwards the traffic to the dynamically assigned NodePort on the K8s Worker Nodes.  
-    If the Worker Nodes reside on a different ESX than the Active VPC-SR, the cross-ESX traffic is sent over the VLAN29 Dataplane.  
+    If the Worker Nodes reside on a different ESX than the Active FLB, the cross-ESX traffic is sent over the VLAN29 Dataplane.  
 
     *Note: You can find the dynamically assigned Worker Node TCP port (`32176`) by running the command `kubectl get service apache-vip-service -n ns1` and looking under the PORT(S) column (see [Application Deployment > App Deployment (K8s) > via CLI](1f1-deployment-pods.md#deployment_pods)).*
 
