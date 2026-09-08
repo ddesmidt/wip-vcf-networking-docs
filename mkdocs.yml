@@ -183,4 +183,30 @@ nav:
                 - VIP access down: supervisor/3j1-troubleshooting-vip.md
                 - VM access down: supervisor/3j2-troubleshooting-vm.md
                 - Pod access down: supervisor/3j3-troubleshooting-pod.md
+  - VCF Automation:
+      - Introduction: vcfa/index.md
+      - VCF-A Tenant:
+          - External Connectivity & Services:
+            - Transit Gateway: vcfa/wip-tgw.md
+            - Connectivity Profile: vcfa/wip-profile.md
+            - Tenant IP Block: vcfa/wip-block.md
+            - Tenant IP Quota: vcfa/wip-quota.md
+          - Network Services:
+            - VPC Gateway: vcfa/wip-gateway.md
+            - VCF-A Namespace: vcfa/wip-namespace.md
+            - VPC Subnet: vcfa/wip-subnet.md
+            - NAT: vcfa/wip-nat.md
+            - DHCP: vcfa/wip-dhcp.md
+            - Load Balancer: vcfa/wip-lb.md
+            - VPN: vcfa/wip-vpn.md
+      - VCF-A Provider:
+          - Provider Infrastructure:
+            - Zone / Region: vcfa/wip-zone.md
+            - Edge Cluster / Node: vcfa/wip-edge.md
+            - VNA Cluster / Node: vcfa/wip-vna.md
+          - External Connectivity & Services:
+            - External Connection: vcfa/wip-extconn.md
+            - Subnet VLAN: vcfa/wip-subnet_vlan.md
+            - Provider IP Block: vcfa/wip-ipblock.md
+            - Provider IP Quota: vcfa/wip-ipquota.md
 

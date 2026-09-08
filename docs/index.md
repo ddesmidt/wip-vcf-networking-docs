@@ -15,6 +15,9 @@ Select the VCF component you are using to configure your network services.
 
 -   [<img src="assets/VKS.png" style="height:20px; vertical-align:middle;"> __Supervisor and vSphere Kubernetes Service (VKS)__  
     Best for **K8s Admins**.  ](supervisor/index.md)
+    
+-   [<img src="assets/VCFA.png" style="height:20px; vertical-align:middle;"> __VCF Automation (VCF-A)__  
+    Best for **Cloud Admins**.  ](vcfa/index.md)
 
 </div>
 
