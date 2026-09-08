@@ -1,5 +1,5 @@
 <h1>
-  <img src="../../assets/VCFA.png" style="height:30px"; vertical-align:middle;> External Connection Configuration in in VCF-A Provider
+  <img src="../../assets/VCFA.png" style="height:30px; vertical-align:middle;"> External Connection Configuration in in VCF-A Provider
 </h1>
 
 <div class="grid" markdown style="grid-template-columns: 80% 20%">

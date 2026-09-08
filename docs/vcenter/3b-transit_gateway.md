@@ -1,5 +1,5 @@
 <h1>
-  <img src="../../assets/vCenter.png" style="height:30px"; vertical-align:middle;> Transit Gateway Configuration in vCenter
+  <img src="../../assets/vCenter.png" style="height:30px; vertical-align:middle;"> Transit Gateway Configuration in vCenter
 </h1>
 
 <div class="grid" markdown style="grid-template-columns: 80% 20%">

@@ -1,5 +1,5 @@
 <h1>
-  <img src="../../assets/VCFA.png" style="height:30px"; vertical-align:middle;> IP Blocks in VCF-A Tenant
+  <img src="../../assets/VCFA.png" style="height:30px; vertical-align:middle;"> IP Blocks in VCF-A Tenant
 </h1>
 
 <div class="grid" markdown style="grid-template-columns: 60% 40%">
