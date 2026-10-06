@@ -15,9 +15,8 @@ This section describes the procedures for **deploying the Supervisor** within a 
 **Limitation:** Limited Network Services (only LB) and limited VCF Automation support (no namespace create/delete/update from VCFA).
 
 * **1a. VDS + FLB**  
-![VDS Architecture](images/0-VDS.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 250px;" } 
 
-| <div style="width: 100px;">Metric /Feature</div> | <div style="min-width: 140px;">**1a. VDS + FLB** |
+| <div style="width: 100px;">Metric /Feature</div> | <div style="min-width: 140px;">**1a. VDS + FLB**<br>![VDS Architecture](images/0-VDS.jpg){ width="100" }|
 | :--- | :--- |
 | **Physical Fabric** | MTU ≥ 1500,<br> L2 Physical |
 | **VCF-A Support** | 🔴 Limited <br>(No Multi-Tenancy, no namespace CRUD) |
@@ -33,16 +32,7 @@ This section describes the procedures for **deploying the Supervisor** within a 
 **Best for:** Fully integrated VCF architecture for better scale and security.  
 **Consideration:** Requires fully deployed NSX overlay infrastructure with DTGW+VNA or CTGW+Edge+T0.
 
-* **2a. NSX + CTGW (TEP)**
-![NSX Architecture](images/0-NSX_CTGW.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 250px;" } 
-* **2b. NSX + DTGW VLAN (TEP)**
-![NSX Architecture](images/0-NSX_DTGW_VLAN.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 250px;" } 
-* **2c. NSX + DTGW VXLAN (TEP)** *(From VCF 9.1.1+)*
-![NSX Architecture](images/0-NSX_DTGW_VXLAN.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 250px;" } 
-* **2d. NSX + DTGW VLAN (TEP-Less)** *(From VCF 9.1.1+)*
-![NSX Architecture](images/0-NSX_DTGW_VLAN_TEP-Less.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 250px;" } 
-
-| <div style="width: 100px;">Metric /Feature</div> | <div style="min-width: 140px;">**2a. NSX +<br>CTGW(TEP)**</div> | <div style="min-width: 140px;">**2b. NSX +<br>DTGW VLAN(TEP)**</div> | <div style="min-width: 150px;">**2c. NSX +<br>DTGW VXLAN(TEP)**</div> | <div style="min-width: 140px;">**2d. NSX +<br>DTGW VLAN(TEP-Less)**</div> |
+| <div style="width: 100px;">Metric /Feature</div> | <div style="min-width: 140px;">**2a. NSX +<br>CTGW(TEP)**<br>![NSX Architecture](images/0-NSX_CTGW.jpg){ width="100" }</div> | <div style="min-width: 140px;">**2b. NSX +<br>DTGW VLAN(TEP)**<br>![NSX Architecture](images/0-NSX_DTGW_VLAN.jpg){ width="100" }</div> | <div style="min-width: 150px;">**2c. NSX +<br>DTGW VXLAN(TEP)**<br>![NSX Architecture](images/0-NSX_DTGW_VXLAN.jpg){ width="100" }</div> | <div style="min-width: 140px;">**2d. NSX +<br>DTGW VLAN(TEP-Less)**<br>![NSX Architecture](images/0-NSX_DTGW_VLAN_TEP-Less.jpg){ width="100" }</div> |
 | :--- | :--- | :--- | :--- | :--- |
 | **Physical Fabric** | MTU ≥ 1700,<br> BGP | MTU ≥ 1700,<br> L2 Physical | MTU ≥ 1700,<br> EVPN + BGP | MTU ≥ 1500,<br> L2 Physical |
 | **VCF-A Support** | 🟢 Yes | 🟢 Yes | 🟢 Yes | 🟢 Yes |
