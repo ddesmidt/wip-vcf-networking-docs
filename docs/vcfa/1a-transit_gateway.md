@@ -2,7 +2,7 @@
   <img src="../../assets/VCFA.png" style="height:30px; vertical-align:middle;"> Transit Gateway Configuration in VCF-A Tenant
 </h1>
 
-<div class="grid" markdown style="grid-template-columns: 80% 20%">
+<div class="grid" markdown style="grid-template-columns: 60% 40%">
 
 <div markdown>
 
@@ -99,7 +99,7 @@ The status reflects the successful application of the configuration.
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 !!! warning "Prerequisites"
     * **Organization Networking**: The VCF-A Provider configured the Tenant Organization with a Networking Connection Distributed.
-    * **[**VNA Cluster**](3b-edge.md) Provisioning**: A VNA Cluster must be pre-provisioned within the environment for VKS and Network Services NAT, LB, AVI Plugin. This task is performed by the VCF-A Provider directly in NSX Manager or vCenter.  
+    * **[**VNA Cluster**](3c-vna.md) Provisioning**: A VNA Cluster must be pre-provisioned within the environment. This task is performed by the VCF-A Provider directly in NSX Manager or vCenter.  
 </div>
 
 #### Step1. Create new Distributed Transit Gateway 
