@@ -19,10 +19,11 @@ This section describes the procedures for **deploying the Supervisor** within a 
 | <div style="width: 100px;">Metric /Feature</div> | <div style="min-width: 140px;">**1a. VDS + FLB**<br>![VDS Architecture](images/0-VDS.jpg){ width="100" }|
 | :--- | :--- |
 | **Physical Fabric** | MTU ≥ 1500,<br> L2 Physical |
-| **VCF-A Support** | 🔴 Limited <br>(No Multi-Tenancy, no namespace CRUD) |
+| **VCF-A Support** | 🔴 No |
 | **Network Services** | 🔴 Limited <br>(No Subnets, No NAT, No VPN) |
 | **Scale** | 🔴 Limited <br>(All VMs and K8s consume a Public IP, <br>all VIPs are managed by a single FLB A/S) |
 | **Security** | 🔴 Direct Access <br>(K8s Nodes reachable from external) |
+| **High Availability** | 🔴 Limited <br>(Supervisor VMs cross Clusters requires shared-VDS) |
 
 ---
 
@@ -39,6 +40,7 @@ This section describes the procedures for **deploying the Supervisor** within a 
 | **Network Services** | 🟢 All | 🟢 Most <br>(All but VPN) | 🟢 Most <br>(All but VPN) | 🔴 Limited <br>(No Subnets private, No NAT, No VPN, no Multicast/VRRP/HSRP/etc) |
 | **Scale** | 🟢 Large | 🟢 Large | 🟢 Large | 🔴 Limited <br>(All VMs and K8s consume a Public IP)|
 | **Security** | 🟢 Isolated | 🟢 Isolated | 🟢 Isolated | 🔴 Direct Access <br>(K8s Nodes reachable from external) |
+| **High Availability** | 🟢 Yes | 🟢 Yes | 🟢 Yes | 🟢 Yes |
 
 ---
 
