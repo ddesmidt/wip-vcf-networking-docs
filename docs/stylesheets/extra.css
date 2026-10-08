@@ -4,6 +4,11 @@
   --md-primary-fg-color--dark:  #005a8d;
 }
 
+/* Full-width layout: nav flush left, TOC flush right, content fills all space between */
+.md-grid {
+  max-width: 100%;
+}
+
 img.center {
   display: block;
   margin: 0 auto;
