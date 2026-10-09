@@ -24,13 +24,24 @@ This section describes the requirements for **deploying the Supervisor utilizing
 
 ## Requirements {: #requirements }
 
+!!! info "Supervisor Tool App"
+      As an option, you can go through the Supervisor requirements check with the **Supervisor Tool App web application** that guides you through:  
+
+    - **checking prerequisites** (and adding them if missing) ⬅️ ⬅️ ⬅️  
+    - **deploying vSphere Supervisor** in a friendly workflow  
+    - **validating Supervisor and VKS** environments  
+    
+    [GitHub Repository](https://github.com/ddesmidt/Supervisor_Install_Tool){:target="_blank"}: Product overview, installation guides (git pull or direct OVA), and recorded demos for all three use cases.  
+
+    Otherwise, you can also follow the steps below.
+
 Supervisor with "NSX + DTGW/VNA" has the following networking requirements:  
 
 ![Topology](images/2a-1-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 ### Physical Fabric {: #physical_fabric }
 
-#### **2 Subnets/VLANs**  
+#### 2 Subnets/VLANs  
 * **Management**:  
     Can be an existing Management subnet/VLAN that already hosts other components (such as vCenter).  
     **Requires 5 consecutive IPs** (for the Supervisor Cluster).
@@ -44,7 +55,7 @@ Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
 
 ### vCenter {: #vcenter }
 
-#### **VDS Port Group**  
+#### VDS Port Group  
 * **Management**:  
     VDS Port Group VLAN for the Management traffic.  
 
@@ -56,27 +67,27 @@ Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
 ---
 
 ### NSX {: #nsx }
-
 !!! warning "Missing NSX Requirements?"
-    If your environment is not yet configured with the NSX prerequisites below, please refer to:  
+    You can satisfy these requirements using either method:
 
-    *  [Make vCenter Cluster "VCF Networking ready (NSX Overlay)"](2b1-deploy-NSXOverlay.md)
-    *  [Make vCenter with "DTGW + VNA ready"](2b2-deploy-DTGW_VNA.md)
+    - **Automated**:  
+        - Use the [Supervisor Tool App](https://github.com/ddesmidt/Supervisor_Install_Tool){:target="_blank"}.
+    - **Manual**:
+        - [Make vCenter Cluster "VCF Networking ready (NSX Overlay)"](2b1-deploy-NSXOverlay.md){:target="_blank"}
+        - [Make vCenter with "DTGW + VNA ready"](2b2-deploy-DTGW_VNA.md){:target="_blank"}
 
-
-
-#### **vCenter Cluster "VCF Networking ready (NSX Overlay)"**  
+#### vCenter Cluster "VCF Networking ready (NSX Overlay)"  
 * **vCenter Cluster with NSX Prepared**  
     The vCenter Cluster must be prepared for VCF Networking so the future Supervisor Cluster can connect to the VPC.  
 
     ??? info "Status Validation"
         Navigate to **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
-        Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
+        Ensure "Cluster Status" and "Host Status" are "Green", and ESX hosts have at least 1 TEP IP Address:  
         > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  
     
         ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
 
-#### **vCenter with "DTGW + VNA ready"**  {: #dtgw-vna-ready }
+#### vCenter with "DTGW + VNA ready"  {: #dtgw-vna-ready }
 
 * **VNA Cluster**  
     The VNA Cluster hosts the Load Balancing and Outbound-NAT services (providing NAT for Supervisor / K8s Clusters communicating with the physical network).  

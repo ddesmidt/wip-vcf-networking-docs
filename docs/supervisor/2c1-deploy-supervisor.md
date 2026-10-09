@@ -22,6 +22,18 @@ This section describes the procedures for **deploying a Supervisor utilizing an 
 
 ## Supervisor Deployment {: #supervisordeployment }
 
+!!! info "Supervisor Tool App"
+    As an option, you can go through the Supervisor deployment with the **Supervisor Tool App web application** that guides you through:  
+
+    - **checking prerequisites** (and adding them if missing)
+    - **deploying vSphere Supervisor** in a friendly workflow ⬅️ ⬅️ ⬅️  
+    - **validating Supervisor and VKS** environments  
+    
+    [GitHub Repository](https://github.com/ddesmidt/Supervisor_Install_Tool){:target="_blank"}: Product overview, installation guides (git pull or direct OVA), and recorded demos for all three use cases.
+
+    
+    Otherwise, you can also follow the steps below.
+
 ![Topology](images/2c1-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
 
 ### Create Supervisor
@@ -30,6 +42,7 @@ Navigate to **vCenter** > **Supervisor Management**, and click **Get Started**.
 
 1. **vCenter Server and Network**  
     * Select the network stack **VCF Networking with VPC (recommended)**, and click **Next**.  
+      Note: You can choose a vSphere Cluster or a vSphere Zone (the screenshot below selects a vSphere Cluster)
     ![vCenter Server and Network Configuration](images/2c1-1a-vCenter.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 2. **Supervisor Location**  
