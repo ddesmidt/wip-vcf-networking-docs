@@ -9,6 +9,19 @@
   max-width: 100%;
 }
 
+/* Render each image at its natural width — max-width caps are already set per-image inline.
+   This makes narrow dialogs appear narrow and wide screenshots appear wide. */
+.md-typeset img {
+  width: auto !important;
+}
+
+/* Images inside admonitions/details boxes must not overflow their container,
+   overriding the per-image max-width: 900px set inline. */
+.md-typeset .admonition img,
+.md-typeset details img {
+  max-width: 100% !important;
+}
+
 img.center {
   display: block;
   margin: 0 auto;
