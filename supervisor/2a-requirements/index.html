@@ -6949,10 +6949,21 @@
 </div>
 <hr>
 <h2 id="requirements">Requirements</h2>
+<div class="admonition info">
+<p class="admonition-title">Supervisor Tool App</p>
+<p>As an option, you can go through the Supervisor requirements check with the <strong>Supervisor Tool App web application</strong> that guides you through:  </p>
+<ul>
+<li><strong>checking prerequisites</strong> (and adding them if missing) ⬅️ ⬅️ ⬅️  </li>
+<li><strong>deploying vSphere Supervisor</strong> in a friendly workflow  </li>
+<li><strong>validating Supervisor and VKS</strong> environments  </li>
+</ul>
+<p><a href="https://github.com/ddesmidt/Supervisor_Install_Tool" target="_blank">GitHub Repository</a>: Product overview, installation guides (git pull or direct OVA), and recorded demos for all three use cases.  </p>
+<p>Otherwise, you can also follow the steps below.</p>
+</div>
 <p>Supervisor with "NSX + DTGW/VNA" has the following networking requirements:  </p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2a-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2a-1-Topology.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <h3 id="physical_fabric">Physical Fabric</h3>
-<h4 id="2-subnetsvlans"><strong>2 Subnets/VLANs</strong></h4>
+<h4 id="2-subnetsvlans">2 Subnets/VLANs</h4>
 <ul>
 <li><strong>Management</strong>:<br>
     Can be an existing Management subnet/VLAN that already hosts other components (such as vCenter).<br>
@@ -6966,7 +6977,7 @@
 </div>
 <hr>
 <h3 id="vcenter">vCenter</h3>
-<h4 id="vds-port-group"><strong>VDS Port Group</strong></h4>
+<h4 id="vds-port-group">VDS Port Group</h4>
 <ul>
 <li>
 <p><strong>Management</strong>:<br>
@@ -6983,13 +6994,20 @@ Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
 <h3 id="nsx">NSX</h3>
 <div class="admonition warning">
 <p class="admonition-title">Missing NSX Requirements?</p>
-<p>If your environment is not yet configured with the NSX prerequisites below, please refer to:  </p>
+<p>You can satisfy these requirements using either method:</p>
 <ul>
-<li><a href="../2b1-deploy-NSXOverlay/">Make vCenter Cluster "VCF Networking ready (NSX Overlay)"</a></li>
-<li><a href="../2b2-deploy-DTGW_VNA/">Make vCenter with "DTGW + VNA ready"</a></li>
+<li><strong>Automated</strong>:  <ul>
+<li>Use the <a href="https://github.com/ddesmidt/Supervisor_Install_Tool" target="_blank">Supervisor Tool App</a>.</li>
+</ul>
+</li>
+<li><strong>Manual</strong>:<ul>
+<li><a href="../2b1-deploy-NSXOverlay/" target="_blank">Make vCenter Cluster "VCF Networking ready (NSX Overlay)"</a></li>
+<li><a href="../2b2-deploy-DTGW_VNA/" target="_blank">Make vCenter with "DTGW + VNA ready"</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<h4 id="vcenter-cluster-vcf-networking-ready-nsx-overlay"><strong>vCenter Cluster "VCF Networking ready (NSX Overlay)"</strong></h4>
+<h4 id="vcenter-cluster-vcf-networking-ready-nsx-overlay">vCenter Cluster "VCF Networking ready (NSX Overlay)"</h4>
 <ul>
 <li>
 <p><strong>vCenter Cluster with NSX Prepared</strong><br>
@@ -6997,7 +7015,7 @@ Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
 <details class="info">
 <summary>Status Validation</summary>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Host and Clusters</strong> &gt; <strong>[your vCenter Cluster]</strong> &gt; <strong>Configure</strong> &gt; <strong>Networking</strong> &gt; <strong>Network Configuration</strong>.<br>
-Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  </p>
+Ensure "Cluster Status" and "Host Status" are "Green", and ESX hosts have at least 1 TEP IP Address:  </p>
 <blockquote>
 <p><strong>Note:</strong> If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  </p>
 </blockquote>
@@ -7005,7 +7023,7 @@ Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 T
 </details>
 </li>
 </ul>
-<h4 id="dtgw-vna-ready"><strong>vCenter with "DTGW + VNA ready"</strong></h4>
+<h4 id="dtgw-vna-ready">vCenter with "DTGW + VNA ready"</h4>
 <ul>
 <li>
 <p><strong>VNA Cluster</strong><br>

@@ -6936,6 +6936,17 @@
 </div>
 <hr>
 <h2 id="supervisordeployment">Supervisor Deployment</h2>
+<div class="admonition info">
+<p class="admonition-title">Supervisor Tool App</p>
+<p>As an option, you can go through the Supervisor deployment with the <strong>Supervisor Tool App web application</strong> that guides you through:  </p>
+<ul>
+<li><strong>checking prerequisites</strong> (and adding them if missing)</li>
+<li><strong>deploying vSphere Supervisor</strong> in a friendly workflow ⬅️ ⬅️ ⬅️  </li>
+<li><strong>validating Supervisor and VKS</strong> environments  </li>
+</ul>
+<p><a href="https://github.com/ddesmidt/Supervisor_Install_Tool" target="_blank">GitHub Repository</a>: Product overview, installation guides (git pull or direct OVA), and recorded demos for all three use cases.</p>
+<p>Otherwise, you can also follow the steps below.</p>
+</div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c1-0-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/2c1-0-Topology.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
 <h3 id="create-supervisor">Create Supervisor</h3>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong>, and click <strong>Get Started</strong>.
@@ -6945,6 +6956,7 @@
 <p><strong>vCenter Server and Network</strong>  </p>
 <ul>
 <li>Select the network stack <strong>VCF Networking with VPC (recommended)</strong>, and click <strong>Next</strong>.<br>
+  Note: You can choose a vSphere Cluster or a vSphere Zone (the screenshot below selects a vSphere Cluster).
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2c1-1a-vCenter.jpg" data-desc-position="bottom"><img alt="vCenter Server and Network Configuration" src="../images/2c1-1a-vCenter.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </li>
 </ul>
 </li>
