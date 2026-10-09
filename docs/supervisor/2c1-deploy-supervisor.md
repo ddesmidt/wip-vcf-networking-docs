@@ -42,7 +42,7 @@ Navigate to **vCenter** > **Supervisor Management**, and click **Get Started**.
 
 1. **vCenter Server and Network**  
     * Select the network stack **VCF Networking with VPC (recommended)**, and click **Next**.  
-      Note: You can choose a vSphere Cluster or a vSphere Zone (the screenshot below selects a vSphere Cluster)
+      Note: You can choose a vSphere Cluster or a vSphere Zone (the screenshot below selects a vSphere Cluster).
     ![vCenter Server and Network Configuration](images/2c1-1a-vCenter.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
 
 2. **Supervisor Location**  
