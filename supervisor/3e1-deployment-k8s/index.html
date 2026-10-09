@@ -6876,25 +6876,25 @@
 </ul>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e1-0-k8s.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/3e1-0-k8s.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e1-0-k8s.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/3e1-0-k8s.jpg" style="max-width: 250px;" width="100%"></a></p>
 </div>
 </div>
 <hr>
 <h2 id="deployment_k8s">K8s Cluster Deployment</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e1-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/3e1-1-Topology.jpg" style="display: block; margin: 0 auto;" width="60%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e1-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/3e1-1-Topology.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="60%"></a></p>
 <h3 id="create-k8s-cluster">Create K8s Cluster</h3>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Kubernetes - Create Cluster</strong><br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2e1-1-kubernetes-create.jpg" data-desc-position="bottom"><img alt="Add Namespace Resources" src="../images/2e1-1-kubernetes-create.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2e1-1-kubernetes-create.jpg" data-desc-position="bottom"><img alt="Add Namespace Resources" src="../images/2e1-1-kubernetes-create.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="95%"></a></p>
 <ol>
 <li>
 <p><strong>Configuration Type</strong><br>
 Select the <strong>Cluster Type</strong> and <strong>Configuration Type</strong>.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2e1-1a-ConfType.jpg" data-desc-position="bottom"><img alt="Select VM Deployment Source" src="../images/2e1-1a-ConfType.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2e1-1a-ConfType.jpg" data-desc-position="bottom"><img alt="Select VM Deployment Source" src="../images/2e1-1a-ConfType.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="95%"></a>  </p>
 </li>
 <li>
 <p><strong>Review and Confirm</strong><br>
 Review and click <strong>Finish</strong> to deploy the k8s cluster.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2e1-1b-Deploy.jpg" data-desc-position="bottom"><img alt="Select VM Deployment Source" src="../images/2e1-1b-Deploy.jpg" style="display: block; margin: 0 auto;" width="95%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2e1-1b-Deploy.jpg" data-desc-position="bottom"><img alt="Select VM Deployment Source" src="../images/2e1-1b-Deploy.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="95%"></a>  </p>
 </li>
 </ol>
 <details class="info">
@@ -6905,13 +6905,13 @@ Review and click <strong>Finish</strong> to deploy the k8s cluster.
 <h3 id="validate-deployment">Validate Deployment</h3>
 <h4 id="validate-k8s-cluster-status">Validate K8s Cluster Status</h4>
 <p>Once the wizard completes, verify the deployment was successful by navigating to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select <strong>[your supervisor]</strong>, navigate to <strong>Namespaces</strong>, select <strong>[your namespace]</strong>, navigate to <strong>Resources</strong>, and click on <strong>Kubernetes - Go to Service</strong>.  </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e1-2a-Validation.jpg" data-desc-position="bottom"><img alt="Validate K8s Cluster Status" src="../images/3e1-2a-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e1-2a-Validation.jpg" data-desc-position="bottom"><img alt="Validate K8s Cluster Status" src="../images/3e1-2a-Validation.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="85%"></a></p>
 <h4 id="retrieve-k8s-cluster-controller-vip">Retrieve K8s Cluster Controller VIP</h4>
 <p>Once the wizard completes, look at the K8s Cluster YAML file by navigating to the K8s Cluster Status (see above), click on <strong>View YAML</strong>, and find the <strong>controlPlaneEndpoint</strong> configuration.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e1-2b-K8sVIP.jpg" data-desc-position="bottom"><img alt="Find K8s Cluster VIP" src="../images/3e1-2b-K8sVIP.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e1-2b-K8sVIP.jpg" data-desc-position="bottom"><img alt="Find K8s Cluster VIP" src="../images/3e1-2b-K8sVIP.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="70%"></a></p>
 <h4 id="check-k8s-cluster-vms-in-vcenter-inventory">Check K8s Cluster VMs in vCenter Inventory</h4>
 <p>Verify the K8s Cluster VMs are running by navigating to <strong>vCenter</strong> &gt; <strong>Inventory</strong>, select the <strong>K8s VM in the Namespace</strong>.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e1-2c-Validation.jpg" data-desc-position="bottom"><img alt="Validate K8s Cluster VMs" src="../images/3e1-2c-Validation.jpg" style="display: block; margin: 0 auto;" width="85%"></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3e1-2c-Validation.jpg" data-desc-position="bottom"><img alt="Validate K8s Cluster VMs" src="../images/3e1-2c-Validation.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="85%"></a></p>
 
 
 

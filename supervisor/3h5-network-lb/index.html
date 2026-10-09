@@ -6798,13 +6798,13 @@
 </ul>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3h5-0-lb.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/3h5-0-lb.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3h5-0-lb.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/3h5-0-lb.jpg" style="max-width: 250px;" width="100%"></a></p>
 </div>
 </div>
 <hr>
 <h2 id="networkservices">Network Services: VM Load Balancers</h2>
 <p>The primary use case for configuring a <strong>VM Load Balancer</strong> is to efficiently distribute inbound network traffic across a designated pool of backend Virtual Machines.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3h5-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/3h5-1-Topology.jpg" style="display: block; margin: 0 auto;" width="55%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3h5-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/3h5-1-Topology.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="55%"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Current Limitation: No Application Health Checks</p>
 <p>Currently, the vCenter Namespace VM Load Balancer does not perform application-level health checks on backend VMs.<br>
@@ -6814,10 +6814,10 @@ This section will be updated once active health monitoring becomes officially av
 <h3 id="create-a-vm-load-balancer">Create a VM Load Balancer</h3>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select your target Supervisor, click the <strong>Namespaces</strong> tab, and select your specific Namespace.<br>
 Under the <strong>Resources</strong> card, click <strong>Network - Go to Service</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Network Service" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Network Service" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="95%"></a></p>
 <p><strong>1. Create New VM Load Balancer</strong><br>
 Navigate to the <strong>VM Load Balancers</strong> tab, and click <strong>Create</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h5-1a-lbcreate.jpg" data-desc-position="bottom"><img alt="Create LB" src="../images/2h5-1a-lbcreate.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h5-1a-lbcreate.jpg" data-desc-position="bottom"><img alt="Create LB" src="../images/2h5-1a-lbcreate.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="50%"></a>  </p>
 <p><strong>2. Apply Selectors (Labels) to the Backend VMs</strong><br>
 The load balancer identifies which VMs to send traffic to based on Kubernetes labels.  If you deploy a new VM from the vCenter UI, you can apply this label during creation.  If the VM is already deployed, you can apply the label using <code>kubectl</code>.  </p>
 <details class="info">
@@ -6848,7 +6848,7 @@ virtualmachine.vmoperator.vmware.com/web-vm-1 labeled
 <p><strong>Locate the Load Balancer VIP</strong><br>
 Navigate back to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong> &gt; target Supervisor &gt; <strong>Namespaces</strong> &gt; specific Namespace &gt; <strong>Resources</strong> &gt; <strong>Network - Go to Service</strong>.<br>
 Go to the <strong>VM Load Balancers</strong> tab and expand the newly created VM Load Balancer to view its assigned IP address.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3h5-2a-lbvip.jpg" data-desc-position="bottom"><img alt="Check LB" src="../images/3h5-2a-lbvip.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3h5-2a-lbvip.jpg" data-desc-position="bottom"><img alt="Check LB" src="../images/3h5-2a-lbvip.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="50%"></a>  </p>
 </li>
 <li>
 <p><strong>Test Connectivity</strong><br>
