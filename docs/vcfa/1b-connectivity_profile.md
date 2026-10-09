@@ -12,7 +12,7 @@ This section describes the procedures for configuring  Connectivity Profile by t
 
 
 <div markdown>
-![VCFA Conn Profile](images/1b-0-Conn_Prof.jpg){ width="100%" }
+![VCFA Conn Profile](images/1b-0-Conn_Prof.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -30,7 +30,7 @@ This section describes the procedures for configuring  Connectivity Profile by t
 ### Configuration
 
 #### Step1. Create Connectivity Profile
-![Connectivity Prof config](images/1b-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Connectivity Prof config](images/1b-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Region**:  
   Select the [Region](3a-region_zone.md#region) for the Transit Gateway.  
@@ -64,7 +64,7 @@ The status reflects the successful application of the configuration.
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 
-![Connectivity Prof validation](images/1b-1b-Validation_ConProf.jpg){ width="60%" style="display: block; margin: 0 auto;" }
+![Connectivity Prof validation](images/1b-1b-Validation_ConProf.jpg){ width="60%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 ---

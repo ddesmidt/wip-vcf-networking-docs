@@ -12,7 +12,7 @@ This section describes the procedures for configuring a Zone & Region by the VCF
 </div>
 
 <div markdown>
-![VCFA VPC Connectivity](images/2a-0-VPC_Gateway.jpg){ width="100%" }
+![VCFA VPC Connectivity](images/2a-0-VPC_Gateway.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -37,7 +37,7 @@ This section describes the procedures for configuring a Zone & Region by the VCF
 **VPC Gateways** are always spanned within a VCF Automation Region.  
 
 
-![VCFA VPC](images/2a-0-VPC_Gateway_VCFA.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![VCFA VPC](images/2a-0-VPC_Gateway_VCFA.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 ??? info "VPC Automation Regions and Zones"
@@ -56,10 +56,10 @@ This section describes the procedures for configuring a Zone & Region by the VCF
 ### Configuration
 
 #### Step1. Create new VPC Gateway
-![VCFA Create VPC](images/2a-1-Create_VPC_Gateway.jpg){ width="50%" style="display: block; margin: 0 auto;" }
+![VCFA Create VPC](images/2a-1-Create_VPC_Gateway.jpg){ width="50%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Step2. Configure new VPC Gateway
-![VCFA Create VPC](images/2a-2-Create_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![VCFA Create VPC](images/2a-2-Create_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Region**  
   Select the Region for the VPC.  
@@ -94,7 +94,7 @@ This section describes the procedures for configuring a Zone & Region by the VCF
 
 ### Monitoring
 
-![VCFA Validation VPC Gateway](images/2a-3-Validation_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![VCFA Validation VPC Gateway](images/2a-3-Validation_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Status
 View the operational state and health status of the VPC Gateway at a glance.

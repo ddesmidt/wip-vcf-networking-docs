@@ -14,7 +14,7 @@ This section describes the requirements for **deploying a Supervisor utilizing a
 </div>
 
 <div markdown>
-![CTGW Architecture](images/0-CTGW.jpg){ width="100%" }
+![CTGW Architecture](images/0-CTGW.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -22,42 +22,42 @@ This section describes the requirements for **deploying a Supervisor utilizing a
 
 ## Supervisor Deployment {: #supervisordeployment }
 
-![Topology](images/3c1-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Topology](images/3c1-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Create Supervisor
 Navigate to **vCenter** > **Supervisor Management**, and click **Get Started**.
-![Add Supervisor Wizard](images/3c1-1-AddSupervisor.jpg){ width="65%" style="display: block; margin: 0 auto;" }
+![Add Supervisor Wizard](images/3c1-1-AddSupervisor.jpg){ width="65%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 1. **vCenter Server and Network**  
     * Select the network stack **VCF Networking with VPC (recommended)**, and click **Next**.  
-    ![vCenter Server and Network Configuration](images/3c1-1a-vCenter.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/3c1-1a-vCenter.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 2. **Supervisor Location**  
     * Select the **Cluster Deployment**, and click **Next**.  
-    ![Supervisor Location Settings](images/3c1-1b-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Supervisor Location Settings](images/3c1-1b-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 3. **Storage**  
     * Select the different **Storage Policies**, and click **Next**.  
-    ![Storage Policy Selection](images/3c1-1c-Storage.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Storage Policy Selection](images/3c1-1c-Storage.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 4. **Management Network**  
     * Configure the **Supervisor Management IP Settings**, and click **Next**.  
-    ![Management Network IP Settings](images/3c1-1d-Management.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Management Network IP Settings](images/3c1-1d-Management.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 5. **Workload Network**  
     * Configure the **Workload Network** (fields are pre-populated, except for DNS and NTP Servers), and click **Next**.  
-    ![Workload Network Configuration](images/3c1-1e-Workload.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Workload Network Configuration](images/3c1-1e-Workload.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
         ??? warning "Troubleshooting: Auto SNAT and External IP Block Errors"
             If you receive the error *"Auto SNAT must be enabled for VPC Connectivity Profile Default"* or *"External IP Block should not be empty for profile default"*, refer back to the **["CTGW + Edge + T0" Requirements](3a-requirements.md#nsx)** page and ensure **Default Outbound NAT** is enabled and **External Connection** is configured in the Connectivity Profile.
 
 6. **Advanced Settings**  
     * Select the **Supervisor Control Plane Size**, and click **Next**.  
-    ![Advanced Settings and Sizing](images/3c1-1f-Advanced.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Advanced Settings and Sizing](images/3c1-1f-Advanced.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 7. **Ready to Complete**  
     * Review your configuration and click **Finish**.  
-    ![Review and Complete](images/3c1-1g-Ready.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![Review and Complete](images/3c1-1g-Ready.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 
 ---
@@ -67,43 +67,43 @@ Navigate to **vCenter** > **Supervisor Management**, and click **Get Started**.
 #### **Create a Content Library for future Kubernetes Clusters**  
 If you plan to deploy Kubernetes Clusters, create a Content Library with VKS images.  
 Navigate to **vCenter** > **Content Libraries** > and click **Create**.  
-    ![vCenter Server and Network Configuration](images/2c1-2a-ContentLibrary.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c1-2a-ContentLibrary.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
   1. **Name and Location**  
     Give it a **Name** and select the **vCenter** hosting that Content Library, and click **Next**.  
-    ![vCenter Server and Network Configuration](images/2c1-3a-Name.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c1-3a-Name.jpg){ width="85%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
   2. **Configure Content Library**  
     Choose between **Local content library** (you manually upload VKS images) and **Subscribed content library** (vCenter automatically downloads VKS images from a repository), and click **Next**.  
     > *Note: This example uses a Subscribed content library pointing to the public repository `https://wp-content.vmware.com/v2/latest/lib.json`, with the option to "download content when needed" to save local storage space.*  
   
-    ![vCenter Server and Network Configuration](images/2c1-3b-ContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }   
+    ![vCenter Server and Network Configuration](images/2c1-3b-ContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto; max-width: 900px;" }   
 
   3. **Apply Security Policy**  
     Apply a **security policy** if required by your organization, and click **Next**.  
     *(This example uses no security policy).*  
-    ![vCenter Server and Network Configuration](images/2c1-3c-SecurityPolicy.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c1-3c-SecurityPolicy.jpg){ width="85%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
   4. **Add Storage**  
     Select a **storage** to host the content library images, and click **Next**.  
-    ![vCenter Server and Network Configuration](images/2c1-3d-Storage.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c1-3d-Storage.jpg){ width="85%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
   5. **Ready to complete**  
     Review the content library, and click **Finish**.  
-    ![vCenter Server and Network Configuration](images/2c1-3e-Review.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c1-3e-Review.jpg){ width="85%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 
 #### **Associate the Content Library to the Supervisor**  
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, and click on **Kubernetes Service - Manage**.
-    ![vCenter Server and Network Configuration](images/3c1-4a-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/3c1-4a-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
   1. **Add Content Library**  
     Click **ADD**.  
-    ![vCenter Server and Network Configuration](images/2c1-4b-AddContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c1-4b-AddContentLibrary.jpg){ width="85%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
   2. **Select Content Library**  
     Select **Content Library with VKS images**, and click **ADD**.  
-    ![vCenter Server and Network Configuration](images/2c1-4c-SelectContentLibrary.jpg){ width="65%" style="display: block; margin: 0 auto;" }  
+    ![vCenter Server and Network Configuration](images/2c1-4c-SelectContentLibrary.jpg){ width="65%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 ---
 
@@ -118,9 +118,9 @@ Check the following fields to ensure they reflect a healthy state:
   <li style="margin-bottom: 2px;">Host Config Status</li>
   <li style="margin-bottom: 2px;">Control Plane Node Address</li>
 </ul>
-![Supervisor Validation Status](images/3c1-5a-Validation.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Supervisor Validation Status](images/3c1-5a-Validation.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### **Validate Supervisor Content Library**  
 Validate Supervisor Content Library by navigating to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**
-![Supervisor Validation Status](images/3c1-5b-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
+![Supervisor Validation Status](images/3c1-5b-Validation.jpg){ width="85%" style="display: block; margin: 0 auto; max-width: 900px;" }
 

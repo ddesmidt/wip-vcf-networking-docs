@@ -16,7 +16,7 @@ This section describes the requirements for **deploying the Supervisor utilizing
 </div>
 
 <div markdown>
-![DTGW Architecture](images/0-DTGW.jpg){ width="100%" }
+![DTGW Architecture](images/0-DTGW.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -37,7 +37,7 @@ This section describes the requirements for **deploying the Supervisor utilizing
 
 Supervisor with "NSX + DTGW/VNA" has the following networking requirements:  
 
-![Topology](images/2a-1-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Topology](images/2a-1-Topology.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Physical Fabric {: #physical_fabric }
 
@@ -62,7 +62,7 @@ Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **VDS-PortGroup** > **Edit Settings** > **VLAN**.  
         Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
-        ![VDS Port Group Settings](images/1a-2a-VDS-PG.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![VDS Port Group Settings](images/1a-2a-VDS-PG.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 
@@ -85,7 +85,7 @@ Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
         Ensure "Cluster Status" and "Host Status" are "Green", and ESX hosts have at least 1 TEP IP Address:  
         > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  
     
-        ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### vCenter with "DTGW + VNA ready"  {: #dtgw-vna-ready }
 
@@ -95,7 +95,7 @@ Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **VNA Clusters**.  
         Ensure the VNA Cluster with its Nodes is deployed and shows a Green status.
-        ![VNA Cluster Status](images/2a-3b-VNA-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![VNA Cluster Status](images/2a-3b-VNA-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Distributed External Connection**  
     A Distributed External Connection is the VLAN and physical router used by logical networks (such as Transit Gateways and VPCs) to connect to the physical network.  
@@ -103,7 +103,7 @@ Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **External Connection**.  
         Ensure you have at least 1 Distributed External Connection configured:
-        ![Ext Conn Properties](images/2a-3c-ExternalConnection.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![Ext Conn Properties](images/2a-3c-ExternalConnection.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **IP Blocks**  
     The External IP Block is for the future K8s VIPs, VPC Outbound-NAT, and VPC Public Subnet (IP Block is the full Dataplane subnet or part of it).   
@@ -111,7 +111,7 @@ Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **Virtual Private Clouds** > **Configure** > **Settings** > **IP Blocks**.  
         Ensure you have at least 1 External IP Block configured:
-        ![IP Blocks Properties](images/2a-3d-IPBlocks.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![IP Blocks Properties](images/2a-3d-IPBlocks.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Connectivity Profile**  
     The Connectivity Profile binds the DTGW configuration (VNA Cluster, Outbound-NAT, and N-S Services for Load Balancing).  
@@ -125,7 +125,7 @@ Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
           <li style="margin-bottom: 2px;">N-S Services enabled (for the LB service)</li>
           <li style="margin-bottom: 2px;">Default Outbound NAT enabled (for NAT)</li>
         </ul>
-        ![Connectivity Profile Properties](images/2a-3e-ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![Connectivity Profile Properties](images/2a-3e-ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Distributed Transit Gateway (DTGW)**  
     The Distributed Transit Gateway is the distributed logical router responsible for routing traffic between the logical and physical networks.  
@@ -133,4 +133,4 @@ Supervisor with "NSX + DTGW/VNA" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **Default Transit Gateway** > **Configure** > **Settings** > **Properties**.  
         Ensure the DTGW has a Connection Type of "Distributed VLAN", and an External Connection configured. 
-        ![DTGW Properties](images/2a-3f-DTGW.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![DTGW Properties](images/2a-3f-DTGW.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }

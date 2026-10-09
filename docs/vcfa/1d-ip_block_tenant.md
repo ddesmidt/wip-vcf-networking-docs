@@ -12,7 +12,7 @@ This section describes the procedures for configuring IP Blocks by the VCF-A Ten
 </div>
 
 <div markdown>
-![VCFA IP Blocks](images/1d-0-IP_Block_Tenant.jpg){ width="100%" }
+![VCFA IP Blocks](images/1d-0-IP_Block_Tenant.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -48,7 +48,7 @@ For more information on VPC Subnets, refer to the [VPC Subnet](2c-vpc_subnet.md)
 This is the IP Block used for future VPC Subnets Private-TGW.
 
 #### Step1. Create new IP Block Private-TGW
-![IP Block Ext config](images/1d-1a-Create_IPBlock_Private_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![IP Block Ext config](images/1d-1a-Create_IPBlock_Private_TGW.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Region**:  
   Select the [Region](3a-region_zone.md#region) for the IP Block.  
@@ -75,7 +75,7 @@ This is the IP Block used for future VPC Subnets Private-TGW.
 #### Utilization
 Real-time utilization metrics for IP Blocks can be monitored via the following indicators:
 
-![IP Block Statistics](images/1d-1c-Statistics_IPBlock_Private.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![IP Block Statistics](images/1d-1c-Statistics_IPBlock_Private.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **IP Block Usage Summary**: Overall Usage.
 

@@ -12,7 +12,7 @@ This section describes the procedures for configuring Network Address Translatio
 </div>
 
 <div markdown>
-![vCenter VPC Connectivity](images/1c-0-VPC_NAT.jpg){ width="100%" }
+![vCenter VPC Connectivity](images/1c-0-VPC_NAT.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -42,11 +42,11 @@ Maps a single Public IP to a single Private IP for specific workloads.
 ### Configuration
 
 * **Step1. Create a new External IP**
-    ![vCenter Create External IP](images/1c-1a-Create_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+    ![vCenter Create External IP](images/1c-1a-Create_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Monitoring
 * ***Show External IPs**
-    ![vCenter Result VPC Subnet](images/1c-1b-Validation_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+    ![vCenter Result VPC Subnet](images/1c-1b-Validation_VPC_NAT_ExtIP.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 ## Outbound-NAT (N:1 SNAT) {: #outbound-nat }
@@ -63,17 +63,17 @@ Allows multiple workloads to share a single Public IP for external access.
 </div>
 
 * ***Step1. Check Outbound-NAT configuration in the VPC Gateway**
-    ![vCenter Check Outbound NAT Config](images/1c-2a-Check_VPC_ONAT_Config.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+    ![vCenter Check Outbound NAT Config](images/1c-2a-Check_VPC_ONAT_Config.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Step2. If disabled, Edit the VPC to find the Connectivity Profile used by the VPC**
-    ![vCenter Validation VPC Subnet](images/1c-2b-Find_Connectivity_Profile.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+    ![vCenter Validation VPC Subnet](images/1c-2b-Find_Connectivity_Profile.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Step3. Edit the Connectivity Profile and enable Outbound-NAT**
-    ![vCenter Validation VPC Subnet](images/1c-2c-Enable_ONAT.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+    ![vCenter Validation VPC Subnet](images/1c-2c-Enable_ONAT.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Monitoring
 * ***Show the Outbound-NAT IP used by the VPC**
-    ![vCenter Result VPC Subnet](images/1c-2d-Validation_VPC_ONAT.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+    ![vCenter Result VPC Subnet](images/1c-2d-Validation_VPC_ONAT.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 

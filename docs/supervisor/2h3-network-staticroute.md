@@ -17,7 +17,7 @@ This section describes the procedures for **provisioning and managing Network Se
 </div>
 
 <div markdown>
-![VDS Architecture](images/2h3-0-staticroute.jpg){ width="100%" }
+![VDS Architecture](images/2h3-0-staticroute.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -28,17 +28,17 @@ This section describes the procedures for **provisioning and managing Network Se
 The primary use case for configuring a **Static Route** is to enable direct, routable communication to individual K8s Pods residing on specific Worker Nodes.  
 Note: With the "NSX + DTGW/VNA" architecture, communication to individual K8s Pods is only from VMs within the VPC.
 
-![Topology](images/2h3-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
+![Topology](images/2h3-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Create Static Route
 
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select your target Supervisor, click the **Namespaces** tab, and select your specific Namespace.  
 Under the **Resources** card, click **Network - Go to Service**.  
-![Network Service](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Network Service](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 1. **Create New Static Route**  
 Navigate to **Static Routes**, and click **New Static Route**.  
-![Create Subnet](images/2h3-1a-staticroutecreate.jpg){ width="50%" style="display: block; margin: 0 auto;" }  
+![Create Subnet](images/2h3-1a-staticroutecreate.jpg){ width="50%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
     ??? info "How to find required IP information via kubectl"
         1. **Find the Pod subnet (CIDR) of each K8s Node** 
@@ -85,7 +85,7 @@ Navigate to **Static Routes**, and click **New Static Route**.
 
 1. **Static Route Configuration**  
 Expand the newly created Static Route to view its routes.
-![Created StaticRoute](images/2h3-2a-staticroutecreated.jpg){ width="90%" style="display: block; margin: 0 auto;" }  
+![Created StaticRoute](images/2h3-2a-staticroutecreated.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 1. **Static Route Validation**  
 To verify connectivity, connect to a VM within the VPC and use `curl` to directly access the Pod's IP and port (assuming the application is web).

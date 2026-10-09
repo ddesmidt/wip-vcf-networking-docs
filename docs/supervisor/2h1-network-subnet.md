@@ -18,7 +18,7 @@ This section describes the procedures for **provisioning and managing Network Se
 </div>
 
 <div markdown>
-![VDS Architecture](images/2h1-0-subnet.jpg){ width="100%" }
+![VDS Architecture](images/2h1-0-subnet.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -26,17 +26,17 @@ This section describes the procedures for **provisioning and managing Network Se
 
 ## Network Services - Subnets {: #networkservices }
 
-![Topology](images/2h1-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
+![Topology](images/2h1-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Create Subnet
 
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select your target Supervisor, click the **Namespaces** tab, and select your specific Namespace.  
 Under the **Resources** card, click **Network - Go to Service**.  
-![Network Service](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Network Service](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 1. **Create New Subnet**  
 Navigate to **Subnets**, and click **New Subnet**.  
-![Create Subnet](images/2h1-1a-subnetcreate.jpg){ width="70%" style="display: block; margin: 0 auto;" }  
+![Create Subnet](images/2h1-1a-subnetcreate.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 For more information about Subnets settings review the [VPC Subnet Overlay page](../vcenter/1b-vpc_subnet.md#overlay){target="_blank"}.
 
@@ -45,5 +45,5 @@ For more information about Subnets settings review the [VPC Subnet Overlay page]
 
 ### Validate Subnet Creation
 Expand the newly created Subnet to view its assigned CIDR and VPC Gateway.
-![Created Subnet](images/2h1-2a-subnetcreated.jpg){ width="90%" style="display: block; margin: 0 auto;" }  
+![Created Subnet](images/2h1-2a-subnetcreated.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 

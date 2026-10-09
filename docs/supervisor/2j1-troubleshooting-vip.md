@@ -21,7 +21,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 </div>
 
 <div markdown>
-![VDS Architecture](images/2g1-0-k8s.jpg){ width="100%" }
+![VDS Architecture](images/2g1-0-k8s.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -33,9 +33,9 @@ As described in the [Packet Walk: N/S External to VIP](2i1-packetwalk-ext_vip.md
 
 ### Logical and Physical View
 
-![Logical](images/2i1-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto;" }
+![Logical](images/2i1-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
-![Physical](images/2i1-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Physical](images/2i1-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Troubleshooting Steps
 #### Step1: External Client accesses the VIP
@@ -67,7 +67,7 @@ As described in the [Packet Walk: N/S External to VIP](2i1-packetwalk-ext_vip.md
     ??? info "Status Validation: TEP Tunnels"
         Navigate to **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
         Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
-        ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
         > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  
 
 * **Validate the ESX host tunnels accept large packets (MTU)**   
@@ -79,7 +79,7 @@ As described in the [Packet Walk: N/S External to VIP](2i1-packetwalk-ext_vip.md
 
         ??? info ":material-magnify: How to find remote-ESX-TEP-IP"
             remote-ESX-TEP-IP are available on **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
-            ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+            ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
     
         ??? abstract "Output example"
             From the ESX CLI:  

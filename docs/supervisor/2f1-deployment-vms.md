@@ -16,7 +16,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 </div>
 
 <div markdown>
-![VDS Architecture](images/2f1-0-VM.jpg){ width="100%" }
+![VDS Architecture](images/2f1-0-VM.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -24,24 +24,24 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ## Deploy App (VMs) {: #deployment_vms }
 
-![Topology](images/2f1-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
+![Topology](images/2f1-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Deploy a VM
 
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Virtual Machine - Create VM**  
-![Add Namespace Resources](images/2f1-1-namespace-resources.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Add Namespace Resources](images/2f1-1-namespace-resources.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 1. **Deploy VM from..**  
 Select between **OVF** or **ISO**, and click **Next**.  
-![Select VM Deployment Source](images/2f1-1a-VMFrom.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+![Select VM Deployment Source](images/2f1-1a-VMFrom.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 1. **Deploy a New VM**  
 Choose a **VM Name**, a **VM Image**, a **VM Class** (size and reservation of the VM), and click **Review and Confirm**.  
-![Configure New VM Settings](images/2f1-1b-NewVM.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+![Configure New VM Settings](images/2f1-1b-NewVM.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 1. **Review and Confirm**  
 Review the settings, and click **Deploy VM**.  
-![Review VM Deployment Details](images/2f1-1c-DeployVM.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+![Review VM Deployment Details](images/2f1-1c-DeployVM.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
     ??? info "More options"
         More options are available under **Advanced Settings (Optional)** and **Network Configuration (Optional)**, such as Persistent Volumes and Cloud-Init for Guest Customization.  
@@ -53,11 +53,11 @@ Review the settings, and click **Deploy VM**.
 
 #### via vCenter Supervisor Namespace  
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Virtual Machine - Go to Service**
-![View VM](images/2f1-1d-vm-info.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![View VM](images/2f1-1d-vm-info.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### via vCenter Inventory  
 Navigate to **vCenter** > **Inventory**, select the **VM in the Namespace**.
-![View VM](images/2f1-1e-vm-info.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![View VM](images/2f1-1e-vm-info.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 ---

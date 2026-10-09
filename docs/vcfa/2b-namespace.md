@@ -12,7 +12,7 @@ This section describes the procedures for configuring a VCF-A Namespace by the V
 </div>
 
 <div markdown>
-![VCFA Namespace](images/2b-0-Namespace.jpg){ width="100%" }
+![VCFA Namespace](images/2b-0-Namespace.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -31,10 +31,10 @@ Each VCF-A Namespace has:
 ### Configuration
 
 #### Step1. Create new VCF-A Namespaces
-![VCFA Create Namespace](images/2b-1-Create_Namespace.jpg){ width="50%" style="display: block; margin: 0 auto;" }
+![VCFA Create Namespace](images/2b-1-Create_Namespace.jpg){ width="50%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Step2. Configure new VCF-A Namespaces
-![VCFA Create Namespace](images/2b-2-Create_Namespace.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![VCFA Create Namespace](images/2b-2-Create_Namespace.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Project**  
   Select the Project.  
@@ -69,7 +69,7 @@ Each VCF-A Namespace has:
 
 ### Monitoring
 
-![VCFA Validation Namespace](images/2a-3-Validation_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![VCFA Validation Namespace](images/2a-3-Validation_VPC_Gateway.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Status
 View the operational state and health status of the VPC Gateway at a glance.

@@ -21,7 +21,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 </div>
 
 <div markdown>
-![VDS Architecture](images/3f1-0-VM.jpg){ width="100%" }
+![VDS Architecture](images/3f1-0-VM.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -33,13 +33,13 @@ As described in the [Packet Walk - N/S External to VM](3i2-packetwalk-ext_vm.md)
 
 ### Logical and Physical View
 * **Scenario A: VM connected to Private Subnet (Private-VPC or Private-TGW)**  
-![Logical](images/3i2-0-LogicalView1.jpg){ width="75%" style="display: block; margin: 0 auto;" }
+![Logical](images/3i2-0-LogicalView1.jpg){ width="75%" style="display: block; margin: 0 auto; max-width: 900px;" }
 In this case, external clients can't reach that subnet, and so can't reach VMs on it.
 
 * **Scenario B: VM connected to Public Subnet**  
-![Logical](images/3i2-0-LogicalView2.jpg){ width="75%" style="display: block; margin: 0 auto;" }
+![Logical](images/3i2-0-LogicalView2.jpg){ width="75%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
-![Physical](images/3i2-0-PhysicalView2a.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Physical](images/3i2-0-PhysicalView2a.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Troubleshooting Steps
 #### Step1: External Client enters the logical Networks via T0
@@ -49,7 +49,7 @@ In this case, external clients can't reach that subnet, and so can't reach VMs o
         The T0 status is only available from NSX.  
         Navigate to **NSX** > **Networking** > **Tier-0 Gateways**.  
         Ensure the T0 has a Green status and no Alarms.
-        ![T0 Status](images/3a-3g-T0.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![T0 Status](images/3a-3g-T0.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
         > **Note:** In the event of a BGP connection issue, the T0 status will show as Red, and the Alarms section will display BGP-related errors.
 
@@ -60,10 +60,10 @@ In this case, external clients can't reach that subnet, and so can't reach VMs o
     ??? info "Status Validation: TEP Tunnels"
         ESX host tunnels status, navigate to **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
         Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
-        ![NSX Host Preparation Status](images/3a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![NSX Host Preparation Status](images/3a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
         Edge tunnels status, navigate to **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **Edge Clusters**.  
-        ![Edge Cluster Status](images/3a-3b-Edge-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![Edge Cluster Status](images/3a-3b-Edge-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
         > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  
 
@@ -77,9 +77,9 @@ In this case, external clients can't reach that subnet, and so can't reach VMs o
 
         ??? info ":material-magnify: How to find remote-ESX-TEP-IP and Edge-TEP-IP"
             remote-ESX-TEP-IP are available on **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
-            ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+            ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
             Edge-TEP-IP are available on **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **Edge Clusters**.  
-            ![Edge Cluster Status](images/3a-3b-Edge-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+            ![Edge Cluster Status](images/3a-3b-Edge-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
         ??? abstract "Output example: vmkping"

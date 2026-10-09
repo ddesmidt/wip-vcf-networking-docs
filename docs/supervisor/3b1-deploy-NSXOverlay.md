@@ -16,7 +16,7 @@ This section describes the requirements for **deploying the Supervisor utilizing
 </div>
 
 <div markdown>
-![CTGW Architecture](images/0-CTGW.jpg){ width="100%" }
+![CTGW Architecture](images/0-CTGW.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -32,4 +32,4 @@ From VCF 9.0, all workload domains have NSX Overlay configured in vCenter Cluste
  Navigate to **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
 Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
 *Note: If no workloads are deployed on logical networks yet, it is expected to have no Tunnels established on the ESX hosts.*
-![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }

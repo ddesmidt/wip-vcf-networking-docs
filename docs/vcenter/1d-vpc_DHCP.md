@@ -13,7 +13,7 @@ This section describes the procedures for configuring Dynamic Host Configuration
 
 
 <div markdown>
-![vCenter VPC Connectivity](images/1d-0-VPC_DHCP.jpg){ width="100%" }
+![vCenter VPC Connectivity](images/1d-0-VPC_DHCP.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -37,7 +37,7 @@ Different DHCP types are available:
 ### Configuration
 
 * **Step0. Edit Global DHCP Server Configuration**
-    ![vCenter Edit Gloabl DHCP Server](images/1d-0a-Edit_DHCP_Server_Config.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+    ![vCenter Edit Gloabl DHCP Server](images/1d-0a-Edit_DHCP_Server_Config.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **Enable DHCP Server Config**  
       "Yes" to enable native DHCP services across all subnets within the VPC.
@@ -54,11 +54,11 @@ Different DHCP types are available:
 
 
 * **Step1. Enable DHCP Server in the VPC subnet**
-    ![vCenter Enable DHCP Server](images/1d-1a-Enable_DHCP_Server.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+    ![vCenter Enable DHCP Server](images/1d-1a-Enable_DHCP_Server.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 * **Step2. (Optional) Configure Advanced DHCP Server Settings**
-    ![vCenter Configure DHCP Server settings](images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+    ![vCenter Configure DHCP Server settings](images/1d-2a-Confnigure_Advanced_DHCP_Server.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **DNS Server IPs / Lease Time (Seconds) / NTP Server IPs**  
       These values are pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.
@@ -78,7 +78,7 @@ Different DHCP types are available:
 
 ### Monitoring
 * **Configuration**
-![vCenter Result VPC Subnet](images/1d-3a-Validation_VPC_DHCP_Server.jpg){ width="60%" style="display: block; margin: 0 auto;" }
+![vCenter Result VPC Subnet](images/1d-3a-Validation_VPC_DHCP_Server.jpg){ width="60%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 !!! info "DHCP Lease Monitoring"
@@ -104,7 +104,7 @@ Different DHCP types are available:
 ### Configuration
 
 * **Step0. Edit Global DHCP Server Configuration**
-    ![vCenter Edit Gloabl DHCP Server](images/1d-0b-Edit_DHCP_Relay_Config.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+    ![vCenter Edit Gloabl DHCP Server](images/1d-0b-Edit_DHCP_Relay_Config.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **Enable DHCP Replay Config**  
       "Yes" to enable DHCP Relay service across all subnets within the VPC.
@@ -114,14 +114,14 @@ Different DHCP types are available:
 
 
 * **Step1. Enable DHCP Relay in the VPC subnet**
-    ![vCenter Enable DHCP Server](images/1d-1b-Enable_DHCP_Relay.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+    ![vCenter Enable DHCP Server](images/1d-1b-Enable_DHCP_Relay.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **External DHCP Server Addresses**  
       This value is pulled from the Global Configuration (see Step O) and cannot be modified at the VPC subnet level.
 
 ### Monitoring
 * **Configuration**
-    ![vCenter Result VPC Subnet](images/1d-2b-Validation_VPC_DHCP_Relay.jpg){ width="60%" style="display: block; margin: 0 auto;" }
+    ![vCenter Result VPC Subnet](images/1d-2b-Validation_VPC_DHCP_Relay.jpg){ width="60%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 ---

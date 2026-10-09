@@ -21,7 +21,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 </div>
 
 <div markdown>
-![VDS Architecture](images/2f1-0-VM.jpg){ width="100%" }
+![VDS Architecture](images/2f1-0-VM.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -37,10 +37,10 @@ The VMs can be connected to the same or different subnets.
 In the example below, the VMs are connected to different subnets.
 
 #### Logical View
-![Logical](images/2i4-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto;" }
+![Logical](images/2i4-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Physical View
-![Physical](images/2i4-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Physical](images/2i4-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 

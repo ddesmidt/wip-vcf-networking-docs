@@ -21,7 +21,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 </div>
 
 <div markdown>
-![VDS Architecture](images/3g1-0-k8s.jpg){ width="100%" }
+![VDS Architecture](images/3g1-0-k8s.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -33,9 +33,9 @@ As described in the [Packet Walk: N/S External to VIP](3i1-packetwalk-ext_vip.md
 
 ### Logical and Physical View
 
-![Logical](images/3i1-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto;" }
+![Logical](images/3i1-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
-![Physical](images/3i1-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Physical](images/3i1-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Troubleshooting Steps
 #### Step1: External Client enters the logical Networks via T0
@@ -45,7 +45,7 @@ As described in the [Packet Walk: N/S External to VIP](3i1-packetwalk-ext_vip.md
         The T0 status is only available from NSX.  
         Navigate to **NSX** > **Networking** > **Tier-0 Gateways**.  
         Ensure the T0 has a Green status and no Alarms.
-        ![T0 Status](images/3a-3g-T0.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![T0 Status](images/3a-3g-T0.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
         > **Note:** In the event of a BGP connection issue, the T0 status will show as Red, and the Alarms section will display BGP-related errors.
 
@@ -82,10 +82,10 @@ As described in the [Packet Walk: N/S External to VIP](3i1-packetwalk-ext_vip.md
     ??? info "Status Validation: TEP Tunnels"
         ESX host tunnels status, navigate to **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
         Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
-        ![NSX Host Preparation Status](images/3a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![NSX Host Preparation Status](images/3a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
         Edge tunnels status, navigate to **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **Edge Clusters**.  
-        ![Edge Cluster Status](images/3a-3b-Edge-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![Edge Cluster Status](images/3a-3b-Edge-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
         > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  
 
@@ -99,9 +99,9 @@ As described in the [Packet Walk: N/S External to VIP](3i1-packetwalk-ext_vip.md
 
         ??? info ":material-magnify: How to find remote-ESX-TEP-IP and Edge-TEP-IP"
             remote-ESX-TEP-IP are available on **vCenter** > **Host and Clusters** > **[your vCenter Cluster]** > **Configure** > **Networking** > **Network Configuration**.  
-            ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+            ![NSX Host Preparation Status](images/2a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
             Edge-TEP-IP are available on **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **Edge Clusters**.  
-            ![Edge Cluster Status](images/3a-3b-Edge-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+            ![Edge Cluster Status](images/3a-3b-Edge-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
         ??? abstract "Output example: vmkping"

@@ -21,7 +21,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 </div>
 
 <div markdown>
-![VDS Architecture](images/2g1-0-k8s.jpg){ width="100%" }
+![VDS Architecture](images/2g1-0-k8s.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -34,10 +34,10 @@ A Full Application (Load Balancer + Pods) has been deployed (see [Application De
 ### View
 
 #### Logical View
-![Logical](images/2i3-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto;" }
+![Logical](images/2i3-0-LogicalView.jpg){ width="75%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Physical View
-![Physical](images/2i3-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Physical](images/2i3-0-PhysicalView.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 

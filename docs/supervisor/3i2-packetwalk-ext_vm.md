@@ -21,7 +21,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 </div>
 
 <div markdown>
-![VDS Architecture](images/3f1-0-VM.jpg){ width="100%" }
+![VDS Architecture](images/3f1-0-VM.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -35,17 +35,17 @@ One or a few VMs have been deployed (see [Application Deployment > App Deploymen
 
 #### Logical View
 * **Scenario A: VM connected to Private Subnet (Private-VPC or Private-TGW)**  
-![Logical](images/3i2-0-LogicalView1.jpg){ width="75%" style="display: block; margin: 0 auto;" }
+![Logical](images/3i2-0-LogicalView1.jpg){ width="75%" style="display: block; margin: 0 auto; max-width: 900px;" }
 In this case, external clients can't reach that subnet, and so can't reach VMs on it.
 
 * **Scenario B: VM connected to Public Subnet**  
-![Logical](images/3i2-0-LogicalView2.jpg){ width="75%" style="display: block; margin: 0 auto;" }
+![Logical](images/3i2-0-LogicalView2.jpg){ width="75%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Physical View
 * **Scenario B: VM connected to Public Subnet**  
-![Physical](images/3i2-0-PhysicalView2a.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Physical](images/3i2-0-PhysicalView2a.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
-![Physical](images/3i2-0-PhysicalView2b.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Physical](images/3i2-0-PhysicalView2b.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 ---

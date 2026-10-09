@@ -17,7 +17,7 @@ This section describes the procedures for **Troubleshooting Network Services int
 </div>
 
 <div markdown>
-![VDS Architecture](images/1e2-0-VM.jpg){ width="100%" }
+![VDS Architecture](images/1e2-0-VM.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -30,11 +30,11 @@ One or a few VMs have been deployed (see [Application Deployment > App Deploymen
 ### View
 
 #### Logical View
-![Logical](images/1h2-0-LogicalView.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Logical](images/1h2-0-LogicalView.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Physical View
 * **Use case: VM connected to Public Subnet**  
-![Physical](images/1h2-0-PhysicalView.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![Physical](images/1h2-0-PhysicalView.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 

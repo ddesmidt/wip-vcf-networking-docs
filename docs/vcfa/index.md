@@ -18,7 +18,7 @@ Explore the configuration guides for Tenant-Level Networking:
 <div class="grid" markdown style="grid-template-columns: 25% 75%">
 
 <div markdown>
-![VCFA VPC Network Services.](images/VCFA-Tenant.jpg){ width="100%" }
+![VCFA VPC Network Services.](images/VCFA-Tenant.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 <div markdown>
@@ -71,7 +71,7 @@ Explore the configuration guides for Provider-Level Networking:
 <div class="grid" markdown style="grid-template-columns: 25% 75%; gap: 10px;">
 
 <div markdown>
-![VCFA VPC Connectivity](images/VCFA-Provider.jpg){ width="100%" }
+![VCFA VPC Connectivity](images/VCFA-Provider.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 <div markdown>

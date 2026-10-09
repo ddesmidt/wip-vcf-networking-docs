@@ -15,7 +15,7 @@ This section describes the requirements for **deploying the Supervisor Namespace
 </div>
 
 <div markdown>
-![VDS Architecture](images/3d1-0-Namespace.jpg){ width="100%" }
+![VDS Architecture](images/3d1-0-Namespace.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -24,7 +24,7 @@ This section describes the requirements for **deploying the Supervisor Namespace
 
 ## Namespace Access {: #namespaceaccess }
 
-![Topology](images/3d1-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Topology](images/3d1-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ??? info ":material-laptop: Client Operating System"
     While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.

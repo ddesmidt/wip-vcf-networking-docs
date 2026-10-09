@@ -7123,7 +7123,7 @@
 <strong>NAT</strong> allows VPC Private subnets to communicate with external networks or provides a way for external users to reach private VPC workloads.</p>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-0-VPC_NAT.jpg" data-desc-position="bottom"><img alt="vCenter VPC Connectivity" src="images/1c-0-VPC_NAT.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-0-VPC_NAT.jpg" data-desc-position="bottom"><img alt="vCenter VPC Connectivity" src="images/1c-0-VPC_NAT.jpg" style="max-width: 250px;" width="100%"></a></p>
 </div>
 </div>
 <p>Attention if "#full-nat" used in 1d-ip_block_tenant.md</p>
@@ -7163,10 +7163,10 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-1-VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="VPC NAT Ext-IP" class="center" src="images/1c-1-VPC_NAT_ExtIP.jpg" style="width:70%"></a></p>
 <h3 id="configuration">Configuration</h3>
 <h4 id="step1-create-a-new-external-ip">Step1. Create a new External IP</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-1a-Create_VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="vCenter Create External IP" src="images/1c-1a-Create_VPC_NAT_ExtIP.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-1a-Create_VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="vCenter Create External IP" src="images/1c-1a-Create_VPC_NAT_ExtIP.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="90%"></a></p>
 <h3 id="monitoring">Monitoring</h3>
 <h4 id="show-external-ips">Show External IPs</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-1b-Validation_VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="images/1c-1b-Validation_VPC_NAT_ExtIP.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-1b-Validation_VPC_NAT_ExtIP.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="images/1c-1b-Validation_VPC_NAT_ExtIP.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="90%"></a></p>
 <hr>
 <h2 id="outbound-snat">Configuration Outbound-SNAT (N:1 SNAT)</h2>
 <p>Allows multiple workloads to share a single Public IP for external access.</p>
@@ -7180,14 +7180,14 @@
 </div>
 </div>
 <h4 id="step1-check-outbound-snat-configuration-in-the-vpc-gateway">Step1. Check Outbound-SNAT configuration in the VPC Gateway</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-2a-Check_VPC_ONAT_Config.jpg" data-desc-position="bottom"><img alt="vCenter Check Outbound SNAT Config" src="images/1c-2a-Check_VPC_ONAT_Config.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-2a-Check_VPC_ONAT_Config.jpg" data-desc-position="bottom"><img alt="vCenter Check Outbound SNAT Config" src="images/1c-2a-Check_VPC_ONAT_Config.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="70%"></a></p>
 <h4 id="step2-if-disabled-edit-the-vpc-to-find-the-connectivity-profile-used-by-the-vpc">Step2. If disabled, Edit the VPC to find the Connectivity Profile used by the VPC</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-2b-Find_Connectivity_Profile.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="images/1c-2b-Find_Connectivity_Profile.jpg" style="display: block; margin: 0 auto;" width="70%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-2b-Find_Connectivity_Profile.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="images/1c-2b-Find_Connectivity_Profile.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="70%"></a></p>
 <h4 id="step3-edit-the-connectivity-profile-and-enable-outbound-snat">Step3. Edit the Connectivity Profile and enable Outbound-SNAT</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-2c-Enable_ONAT.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="images/1c-2c-Enable_ONAT.jpg" style="display: block; margin: 0 auto;" width="90%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-2c-Enable_ONAT.jpg" data-desc-position="bottom"><img alt="vCenter Validation VPC Subnet" src="images/1c-2c-Enable_ONAT.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="90%"></a></p>
 <h3 id="monitoring_1">Monitoring</h3>
 <h4 id="show-the-outbound-snat-ip-used-by-the-vpc">Show the Outbound-SNAT IP used by the VPC</h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-2d-Validation_VPC_ONAT.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="images/1c-2d-Validation_VPC_ONAT.jpg" style="display: block; margin: 0 auto;" width="80%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="images/1c-2d-Validation_VPC_ONAT.jpg" data-desc-position="bottom"><img alt="vCenter Result VPC Subnet" src="images/1c-2d-Validation_VPC_ONAT.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="80%"></a></p>
 <hr>
 <h2 id="full-nat">NAT (SNAT/DNAT)</h2>
 <p>Provides stateful Layer 4 translation for granular traffic control.</p>

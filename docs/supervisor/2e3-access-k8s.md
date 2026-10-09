@@ -16,7 +16,7 @@ This section describes the procedures for **deploying a K8s Cluster in a Namespa
 </div>
 
 <div markdown>
-![VDS Architecture](images/2e1-0-k8s.jpg){ width="100%" }
+![VDS Architecture](images/2e1-0-k8s.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -24,7 +24,7 @@ This section describes the procedures for **deploying a K8s Cluster in a Namespa
 
 ##  K8s Cluster Access {: #access_k8s }
 
-![Topology](images/2e2-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
+![Topology](images/2e2-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ??? info ":material-laptop: Client Operating System"
     While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.
@@ -35,7 +35,7 @@ This section describes the procedures for **deploying a K8s Cluster in a Namespa
 * **Option1 vCenter UI**  
 Download the K8s Cluster kubeconfig file **"my-cluster-kubeconfig.yaml"** navigating to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, click on **Kubernetes - Go to Service**, click on **Download Kubeconfig File**.
 
-![Find K8s Kubeconfig](images/2e3-1-Kubeconfig.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![Find K8s Kubeconfig](images/2e3-1-Kubeconfig.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 * **Option2 CLI**  

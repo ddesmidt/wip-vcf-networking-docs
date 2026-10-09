@@ -13,7 +13,7 @@ This section describes the procedures for **provisioning and managing Network Se
 </div>
 
 <div markdown>
-![VDS Architecture](images/1g1-0-lb.jpg){ width="100%" }
+![VDS Architecture](images/1g1-0-lb.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -23,7 +23,7 @@ This section describes the procedures for **provisioning and managing Network Se
 
 The primary use case for configuring a **VM Load Balancer** is to efficiently distribute inbound network traffic across a designated pool of backend Virtual Machines.
 
-![Topology](images/1g1-1-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Topology](images/1g1-1-Topology.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 !!! warning "Current Limitation: No Application Health Checks"
     Currently, the vCenter Namespace VM Load Balancer does not perform application-level health checks on backend VMs.  

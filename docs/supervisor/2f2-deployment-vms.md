@@ -16,7 +16,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 </div>
 
 <div markdown>
-![VDS Architecture](images/2f1-0-VM.jpg){ width="100%" }
+![VDS Architecture](images/2f1-0-VM.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -24,7 +24,7 @@ This section describes the procedures for **deploying an application (VMs/K8s) i
 
 ## Deploy App (VMs) {: #deployment_vms }
 
-![Topology](images/2f2-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
+![Topology](images/2f2-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ??? info ":material-laptop: Client Operating System"
     While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.

@@ -12,7 +12,7 @@ This section describes the procedures for configuring Transit Gateways using the
 </div>
 
 <div markdown>
-![vCenter External Connection](images/3b-0-Transit_Gateway.jpg){ width="100%" }
+![vCenter External Connection](images/3b-0-Transit_Gateway.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -44,10 +44,10 @@ Different Transit Gateway types are available:
 </div>
 
 * **Step1. Create new Centralized Transit Gateway**  
-![Cent TGW config](images/3b-1a-Create_Cent_TGW.jpg){ width="60%" style="display: block; margin: 0 auto;" }
+![Cent TGW config](images/3b-1a-Create_Cent_TGW.jpg){ width="60%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Step2. Configure Centralized Transit Gateway Connectivity**  
-    ![Cent TGW connectivity](images/3b-1b-Configure_Cent_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+    ![Cent TGW connectivity](images/3b-1b-Configure_Cent_TGW.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **Span**:  
       Determines how VPC subnets below this Transit Gateway will extend across vCenter clusters.  
@@ -65,7 +65,7 @@ Different Transit Gateway types are available:
       Select the specific Edge Cluster that will host this Centralized Transit Gateway.
 
 * **Step3. Configure Workload Domain Connectivity**  
-    ![Cent WLD connectivity](images/3b-1c-Configure_WLD.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+    ![Cent WLD connectivity](images/3b-1c-Configure_WLD.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **External Connection**:  
       You can create a new or use an existing Centralized External Connection.  
@@ -90,7 +90,7 @@ Different Transit Gateway types are available:
         Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
     </div>
 
-![Cent TGW validation](images/3b-1d-Validation_Cent_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Cent TGW validation](images/3b-1d-Validation_Cent_TGW.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 
@@ -101,13 +101,13 @@ Different Transit Gateway types are available:
 ### Configuration
 
 * **Step1. Create new Distributed Transit Gateway**  
-    ![Dist TGW config](images/3b-2a-Create_Dist_TGW.jpg){ width="60%" style="display: block; margin: 0 auto;" }
+    ![Dist TGW config](images/3b-2a-Create_Dist_TGW.jpg){ width="60%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Step2. Configure Distributed Transit Gateway Connectivity**  
-    ![Dist TGW connectivity](images/3b-2b-Configure_Dist_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+    ![Dist TGW connectivity](images/3b-2b-Configure_Dist_TGW.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Step3. Configure External Network Connectivity**  
-    ![Dist WLD connectivity](images/3b-2c-Configure_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+    ![Dist WLD connectivity](images/3b-2c-Configure_Ext_Conn.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **External Connection**:  
       You can create a new or use an existing Distributed External Connection.  
@@ -123,7 +123,7 @@ Different Transit Gateway types are available:
 
 * **Step4. Configure VPC Service**   
     Option to offer Network Services NAT, AVI Plugin.
-    ![Dist WLD connectivity](images/3b-2d-Configure_VPC_Service.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+    ![Dist WLD connectivity](images/3b-2d-Configure_VPC_Service.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **Virtual Network Appliance Cluster**:  
       Select the VNA Cluster to host the future VPC-SR Gateways.  
@@ -143,5 +143,5 @@ Different Transit Gateway types are available:
         Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
     </div>
 
-    ![Dist TGW validation](images/3b-2e-Validation_Dist_TGW.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+    ![Dist TGW validation](images/3b-2e-Validation_Dist_TGW.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 ---

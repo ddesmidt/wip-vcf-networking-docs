@@ -16,7 +16,7 @@ This section describes the requirements for **deploying the Supervisor utilizing
 </div>
 
 <div markdown>
-![CTGW Architecture](images/0-CTGW.jpg){ width="100%" }
+![CTGW Architecture](images/0-CTGW.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -26,12 +26,12 @@ This section describes the requirements for **deploying the Supervisor utilizing
 
 When no Transit Gateway has been deployed, NSX offers a simple wizard to deploy the CTGW + Edge + T0.
 
-![Topology](images/3b2-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Topology](images/3b2-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Launch "Setup Network Connectivity"
 
 Navigate to **NSX** > **Networking** > **VPC Connectivity** > **Transit Gateways**.  
-![Setup Network Connectivity Wizard](images/2b2-0-SetupNetworkConnectivity.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Setup Network Connectivity Wizard](images/2b2-0-SetupNetworkConnectivity.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 <div style="margin-left: 20px; margin-right: 20px;" markdown="1">

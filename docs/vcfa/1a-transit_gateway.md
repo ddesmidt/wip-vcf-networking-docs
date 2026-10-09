@@ -13,7 +13,7 @@ This section describes the procedures for configuring Transit Gateways by the VC
 </div>
 
 <div markdown>
-![VCFA External Connection](images/1a-0-Transit_Gateway.jpg){ width="100%" }
+![VCFA External Connection](images/1a-0-Transit_Gateway.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -54,10 +54,10 @@ Different Transit Gateway types are available:
 </div>
 
 #### Step1. Create new Centralized Transit Gateway 
-![Cent TGW config](images/1a-1a-Create_Cent_TGW.jpg){ width="60%" style="display: block; margin: 0 auto;" }
+![Cent TGW config](images/1a-1a-Create_Cent_TGW.jpg){ width="60%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Step2. Configure Centralized Transit Gateway
-![Cent TGW connectivity](images/1a-1b-Configure_Cent_TGW.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![Cent TGW connectivity](images/1a-1b-Configure_Cent_TGW.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Region**:  
   Select the [Region](3a-region_zone.md#region) for the Transit Gateway.  
@@ -86,7 +86,7 @@ The status reflects the successful application of the configuration.
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 
-![Cent TGW validation](images/1a-1c-Validation_Cent_TGW.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![Cent TGW validation](images/1a-1c-Validation_Cent_TGW.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 
@@ -103,10 +103,10 @@ The status reflects the successful application of the configuration.
 </div>
 
 #### Step1. Create new Distributed Transit Gateway 
-![Dist TGW config](images/1a-2a-Create_Dist_TGW.jpg){ width="60%" style="display: block; margin: 0 auto;" }
+![Dist TGW config](images/1a-2a-Create_Dist_TGW.jpg){ width="60%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Step2. Configure Distributed Transit Gateway
-![Dist TGW connectivity](images/1a-2b-Configure_Dist_TGW.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![Dist TGW connectivity](images/1a-2b-Configure_Dist_TGW.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Region**:  
   Select the [Region](3a-region_zone.md#region) for the Transit Gateway.  
@@ -135,7 +135,7 @@ The status reflects the successful application of the configuration.
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 
-![Dist TGW validation](images/1a-2c-Validation_Dist_TGW.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![Dist TGW validation](images/1a-2c-Validation_Dist_TGW.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 ---

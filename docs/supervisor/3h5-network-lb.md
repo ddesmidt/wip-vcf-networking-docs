@@ -17,7 +17,7 @@ This section describes the procedures for **provisioning and managing Network Se
 </div>
 
 <div markdown>
-![VDS Architecture](images/3h5-0-lb.jpg){ width="100%" }
+![VDS Architecture](images/3h5-0-lb.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -27,7 +27,7 @@ This section describes the procedures for **provisioning and managing Network Se
 
 The primary use case for configuring a **VM Load Balancer** is to efficiently distribute inbound network traffic across a designated pool of backend Virtual Machines.
 
-![Topology](images/3h5-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
+![Topology](images/3h5-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 !!! warning "Current Limitation: No Application Health Checks"
     Currently, the vCenter Namespace VM Load Balancer does not perform application-level health checks on backend VMs.  
@@ -38,11 +38,11 @@ The primary use case for configuring a **VM Load Balancer** is to efficiently di
 
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select your target Supervisor, click the **Namespaces** tab, and select your specific Namespace.  
 Under the **Resources** card, click **Network - Go to Service**.  
-![Network Service](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Network Service](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 **1. Create New VM Load Balancer**  
 Navigate to the **VM Load Balancers** tab, and click **Create**.  
-![Create LB](images/2h5-1a-lbcreate.jpg){ width="50%" style="display: block; margin: 0 auto;" }  
+![Create LB](images/2h5-1a-lbcreate.jpg){ width="50%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 **2. Apply Selectors (Labels) to the Backend VMs**  
 The load balancer identifies which VMs to send traffic to based on Kubernetes labels.  If you deploy a new VM from the vCenter UI, you can apply this label during creation.  If the VM is already deployed, you can apply the label using `kubectl`.  
@@ -76,7 +76,7 @@ The load balancer identifies which VMs to send traffic to based on Kubernetes la
 1. **Locate the Load Balancer VIP**  
 Navigate back to **vCenter** > **Supervisor Management** > **Supervisors** > target Supervisor > **Namespaces** > specific Namespace > **Resources** > **Network - Go to Service**.  
 Go to the **VM Load Balancers** tab and expand the newly created VM Load Balancer to view its assigned IP address.  
-![Check LB](images/3h5-2a-lbvip.jpg){ width="50%" style="display: block; margin: 0 auto;" }  
+![Check LB](images/3h5-2a-lbvip.jpg){ width="50%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 1. **Test Connectivity**  
 To verify connectivity, connect to a VM within the VPC and use `curl` to directly access the Load Balancer's Virtual IP (VIP).

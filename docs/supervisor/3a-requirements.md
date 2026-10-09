@@ -16,7 +16,7 @@ This section describes the requirements for **deploying the Supervisor utilizing
 </div>
 
 <div markdown>
-![CTGW Architecture](images/0-CTGW.jpg){ width="100%" }
+![CTGW Architecture](images/0-CTGW.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -26,7 +26,7 @@ This section describes the requirements for **deploying the Supervisor utilizing
 
 Supervisor with "NSX + CTGW/Edge/T0" has the following networking requirements:  
 
-![Topology](images/3a-1-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Topology](images/3a-1-Topology.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Physical Fabric {: #physical_fabric }
 
@@ -51,7 +51,7 @@ Supervisor with "NSX + CTGW/Edge/T0" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **VDS-PortGroup** > **Edit Settings** > **VLAN**.  
         Ensure the VLAN Type is "VLAN" with the right "VLAN ID":
-        ![VDS Port Group Settings](images/1a-2a-VDS-PG.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![VDS Port Group Settings](images/1a-2a-VDS-PG.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 
@@ -74,7 +74,7 @@ Supervisor with "NSX + CTGW/Edge/T0" has the following networking requirements:
         Ensure "Cluster Status" and "Host Status" are "Green", and ESX have at least 1 TEP IP Address:  
         > **Note:** If no workloads have been deployed on logical networks yet, it is normal to have zero tunnels established on the ESX hosts.  
     
-        ![NSX Host Preparation Status](images/3a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![NSX Host Preparation Status](images/3a-3a-NSX-Prep.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### **vCenter with "CTGW + Edge + T0 ready"**  {: #ctgw-edge-t0-ready }
 
@@ -84,7 +84,7 @@ Supervisor with "NSX + CTGW/Edge/T0" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **Edge Clusters**.  
         Ensure the Edge Cluster with its Nodes is deployed and shows a Green status.
-        ![Edge Cluster Status](images/3a-3b-Edge-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![Edge Cluster Status](images/3a-3b-Edge-Cluster.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Centralized External Connection**  
     A Centralized External Connection is the VLAN and physical router used by logical networks (such as Transit Gateways and VPCs) to connect to the physical network.  
@@ -92,7 +92,7 @@ Supervisor with "NSX + CTGW/Edge/T0" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **vCenter** > **Configure** > **Networking** > **External Connection**.  
         Ensure you have at least 1 Centralized External Connection configured:
-        ![Ext Conn Properties](images/3a-3c-ExternalConnection.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![Ext Conn Properties](images/3a-3c-ExternalConnection.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **IP Blocks**  
     The External IP Block is for the future K8s VIPs, VPC Outbound-NAT, and VPC Public Subnet (IP Block is the full Dataplane subnet or part of it).  
@@ -100,7 +100,7 @@ Supervisor with "NSX + CTGW/Edge/T0" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **Virtual Private Clouds** > **Configure** > **Settings** > **IP Blocks**.  
         Ensure you have at least 1 External IP Block configured:
-        ![IP Blocks Properties](images/3a-3d-IPBlocks.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![IP Blocks Properties](images/3a-3d-IPBlocks.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Connectivity Profile**  
     The Connectivity Profile binds the CTGW configuration (Edge Cluster, Outbound-NAT, and N-S Services for Load Balancing).  
@@ -114,7 +114,7 @@ Supervisor with "NSX + CTGW/Edge/T0" has the following networking requirements:
           <li style="margin-bottom: 2px;">N-S Services enabled (for the LB service)</li>
           <li style="margin-bottom: 2px;">Default Outbound NAT enabled (for NAT)</li>
         </ul>
-        ![Connectivity Profile Properties](images/3a-3e-ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![Connectivity Profile Properties](images/3a-3e-ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Centralized Transit Gateway (CTGW)**  
     The Centralized Transit Gateway is the Centralized logical router responsible for routing traffic between the VPC(s) and Tier-0.  
@@ -122,7 +122,7 @@ Supervisor with "NSX + CTGW/Edge/T0" has the following networking requirements:
     ??? info "Status Validation"
         Navigate to **vCenter** > **Networking** > **Default Transit Gateway** > **Configure** > **Settings** > **Properties**.  
         Ensure the CTGW has a Connection Type of "Centralized", and an External Connection configured. 
-        ![CTGW Properties](images/3a-3f-CTGW.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![CTGW Properties](images/3a-3f-CTGW.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Tier-0 (T0)**  
     The Tier-0 is the logical router responsible for routing traffic between the logical and physical networks.  
@@ -131,4 +131,4 @@ Supervisor with "NSX + CTGW/Edge/T0" has the following networking requirements:
         The T0 status is only available from NSX.  
         Navigate to **NSX** > **Networking** > **Tier-0 Gateways**.  
         Ensure the T0 has a Green status and no Alarms.
-        ![T0 Status](images/3a-3g-T0.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+        ![T0 Status](images/3a-3g-T0.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }

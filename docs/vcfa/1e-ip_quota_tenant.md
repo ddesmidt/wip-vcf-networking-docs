@@ -12,7 +12,7 @@ This section describes the procedures for configuring IP Quota by the VCF-A Tena
 </div>
 
 <div markdown>
-![VCFA IP Quota](images/1e-0-IPQuota_Tenant.jpg){ width="100%" }
+![VCFA IP Quota](images/1e-0-IPQuota_Tenant.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -25,7 +25,7 @@ This section describes the procedures for configuring IP Quota by the VCF-A Tena
 This is the IP Quota applied to 1 or more VPCs.
 
 #### Step1. Create new IP Block Private-TGW
-![IP Quota Ext config](images/1e-1a-Create_IPQuota_Tenant.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![IP Quota Ext config](images/1e-1a-Create_IPQuota_Tenant.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Region**:  
   Select the [Region](3a-region_zone.md#region) for the IP Block.  
@@ -53,7 +53,7 @@ This is the IP Quota applied to 1 or more VPCs.
 #### Utilization
 Real-time utilization metrics for IP Quotas can be monitored via the following indicators:
 
-![IP Quota Statistics](images/1e-1b-Statistics_IPQuota_Tenant.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![IP Quota Statistics](images/1e-1b-Statistics_IPQuota_Tenant.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **IPs Used**: IPs Usage per Tenant's VPC.
 

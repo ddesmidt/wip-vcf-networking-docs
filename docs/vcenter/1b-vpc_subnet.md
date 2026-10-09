@@ -18,7 +18,7 @@ There are 2 types of VPC Subnets:
 
 
 <div markdown>
-![vCenter VPC Connectivity](images/1b-0-VPC_Subnet.jpg){ width="100%" }
+![vCenter VPC Connectivity](images/1b-0-VPC_Subnet.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -45,10 +45,10 @@ Different Subnet Overlay types are available:
 ### Configuration
 
 * **Step1. Create new VPC Subnet (Overlay)**
-    ![vCenter Create VPC](images/1b-1a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+    ![vCenter Create VPC](images/1b-1a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Step2. Configure new VPC Subnet**
-    ![vCenter Create VPC](images/1b-1b-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+    ![vCenter Create VPC](images/1b-1b-Create_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **VLAN Extensions**  
       "No" for a VPC-Subnet Overlay.  
@@ -81,7 +81,7 @@ Different Subnet Overlay types are available:
 ### Monitoring
 #### Topology
 You can see the VPC Subnets Overlay in a graphical way under Topology:
-![vCenter Validation VPC Subnet](images/1b-1c-Validation_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![vCenter Validation VPC Subnet](images/1b-1c-Validation_VPC_Subnet.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 
@@ -113,11 +113,11 @@ Different Subnet VLAN options are available:
 ### Configuration
 
 * **Step1. Create new VPC Subnet VLAN-Extension**
-    ![vCenter Create VPC](images/1b-2a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+    ![vCenter Create VPC](images/1b-2a-Create_VPC_Subnet.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 * **Step2. Choose the VPC Subnet name + VLAN Extension + Access Mode + VLAN ID (+ Gateway IP + Connectivity)**
-    ![vCenter Create VPC](images/1b-2b-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+    ![vCenter Create VPC](images/1b-2b-Create_VPC_Subnet_VLAN.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **VLAN Extensions**  
       "Yes" for a VPC-Subnet VLAN-Extension.  
@@ -138,6 +138,6 @@ Different Subnet VLAN options are available:
 ### Monitoring 
 #### Topology
 You can see the VPC Subnets VLAN-Extension in a graphical way under Topology:
-![vCenter Validation VPC Subnet](images/1b-2c-Validation_VPC_Subnet_VLAN.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![vCenter Validation VPC Subnet](images/1b-2c-Validation_VPC_Subnet_VLAN.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---

@@ -11,7 +11,7 @@ This section describes the procedures for configuring  Connectivity Profile usin
 </div>
 
 <div markdown>
-![vCenter Conn Profile](images/3e-0-Conn_Prof.jpg){ width="100%" }
+![vCenter Conn Profile](images/3e-0-Conn_Prof.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -42,7 +42,7 @@ Defines the VPC's connection to the Transit Gateway, specifies the assigned Exte
 ### Configuration
 
 * **Step1. Create Connectivity Profile**  
-    ![Connectivity Prof config](images/3e-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+    ![Connectivity Prof config](images/3e-1a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **Transit Gateway**:  
       Select the Centralized Transit Gateway, VPC Gateways will be connected to.
@@ -80,7 +80,7 @@ The status reflects the successful application of the configuration.
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 
-![Connectivity Prof validation](images/3e-1b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Connectivity Prof validation](images/3e-1b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 ---
@@ -92,7 +92,7 @@ The status reflects the successful application of the configuration.
 ### Configuration
 
 * **Step1. Create Connectivity Profile**  
-    ![Connectivity Prof config](images/3e-2a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+    ![Connectivity Prof config](images/3e-2a-Create_ConnProf.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **Transit Gateway**:  
       Select the Distributed Transit Gateway, VPC Gateways will be connected to.
@@ -123,7 +123,7 @@ The status reflects the successful application of the configuration.
 ??? info "Note about the Status"
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 
-![Connectivity Prof validation](images/3e-2b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Connectivity Prof validation](images/3e-2b-Validation_ConProf.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 </div>
 
 ---

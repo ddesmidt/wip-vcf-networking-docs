@@ -14,7 +14,7 @@ This section describes the procedures for **deploying the Supervisor Namespace u
 </div>
 
 <div markdown>
-![VDS Architecture](images/1c1-0-Namespace.jpg){ width="100%" }
+![VDS Architecture](images/1c1-0-Namespace.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -22,7 +22,7 @@ This section describes the procedures for **deploying the Supervisor Namespace u
 
 ## Supervisor Access {: #supervisoraccess }
 
-![Topology](images/1b-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![Topology](images/1b-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ??? info ":material-laptop: Client Operating System"
     While the command outputs below are captured from a **Windows client**, the `vcf` and `kubectl` CLI tools operate identically across **Linux** and **macOS** environments.
@@ -31,7 +31,7 @@ This section describes the procedures for **deploying the Supervisor Namespace u
 
 #### Find Supervisor Control Plane IP Address
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**.  
-![Supervisor Validation Status](images/1b-5a-Validation.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Supervisor Validation Status](images/1b-5a-Validation.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Connect to the Supervisor
 From your K8s client:

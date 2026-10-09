@@ -6798,23 +6798,23 @@
 </ul>
 </div>
 <div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3h3-0-staticroute.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/3h3-0-staticroute.jpg" width="100%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3h3-0-staticroute.jpg" data-desc-position="bottom"><img alt="VDS Architecture" src="../images/3h3-0-staticroute.jpg" style="max-width: 250px;" width="100%"></a></p>
 </div>
 </div>
 <hr>
 <h2 id="networkservices">Network Services - Static Routes</h2>
 <p>The primary use case for configuring a <strong>Static Route</strong> is to enable direct, routable communication to individual K8s Pods residing on specific Worker Nodes.<br>
 Note: With the "NSX + DTGW/VNA" architecture, communication to individual K8s Pods is only from VMs within the VPC.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3h3-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/3h3-1-Topology.jpg" style="display: block; margin: 0 auto;" width="55%"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3h3-1-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/3h3-1-Topology.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="55%"></a></p>
 <h3 id="create-static-route">Create Static Route</h3>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong> &gt; <strong>Supervisors</strong>, select your target Supervisor, click the <strong>Namespaces</strong> tab, and select your specific Namespace.<br>
 Under the <strong>Resources</strong> card, click <strong>Network - Go to Service</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Network Service" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto;" width="95%"></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h1-1-network.jpg" data-desc-position="bottom"><img alt="Network Service" src="../images/2h1-1-network.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="95%"></a></p>
 <ol>
 <li>
 <p><strong>Create New Static Route</strong><br>
 Navigate to <strong>Static Routes</strong>, and click <strong>New Static Route</strong>.<br>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h3-1a-staticroutecreate.jpg" data-desc-position="bottom"><img alt="Create Subnet" src="../images/2h3-1a-staticroutecreate.jpg" style="display: block; margin: 0 auto;" width="50%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h3-1a-staticroutecreate.jpg" data-desc-position="bottom"><img alt="Create Subnet" src="../images/2h3-1a-staticroutecreate.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="50%"></a>  </p>
 <details class="info">
 <summary>How to find required IP information via kubectl</summary>
 <ol>
@@ -6869,7 +6869,7 @@ apache-deployment-58bf9564f6-dpmcd   1/1     Running   0          8d    192.168.
 <li>
 <p><strong>Static Route Configuration</strong><br>
 Expand the newly created Static Route to view its routes.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h3-2a-staticroutecreated.jpg" data-desc-position="bottom"><img alt="Created StaticRoute" src="../images/2h3-2a-staticroutecreated.jpg" style="display: block; margin: 0 auto;" width="90%"></a>  </p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2h3-2a-staticroutecreated.jpg" data-desc-position="bottom"><img alt="Created StaticRoute" src="../images/2h3-2a-staticroutecreated.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="90%"></a>  </p>
 </li>
 <li>
 <p><strong>Static Route Validation</strong><br>

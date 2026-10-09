@@ -13,7 +13,7 @@ This section describes the procedures for configuring NSX Edge Clusters and Node
 
 
 <div markdown>
-![vCenter Edge](images/2a-0-Edge.jpg){ width="100%" }
+![vCenter Edge](images/2a-0-Edge.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -31,10 +31,10 @@ This section describes the procedures for configuring NSX Edge Clusters and Node
 </div>
 
 * **Step1. Create new Edge Cluster / Edge Nodes**
-    ![vCenter Edge Cluster](images/2a-1-Create_Edge.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+    ![vCenter Edge Cluster](images/2a-1-Create_Edge.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Step2. Configure Edge Cluster**
-    ![vCenter Edge Cluster config](images/2a-2-Create_Edge.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+    ![vCenter Edge Cluster config](images/2a-2-Create_Edge.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **Node Form Factor**:  
       Select the appliance size (vCPU / Memory) of the Edge Nodes.  
@@ -45,7 +45,7 @@ This section describes the procedures for configuring NSX Edge Clusters and Node
       Enabling this option automates password generation and allows SDDC Manager to handle credential lifecycle management.
 
 * **Step3. Configure Edge Nodes Placement and Networking**
-    ![vCenter Edge Node](images/2a-3a-Configure_EdgeNode1.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+    ![vCenter Edge Node](images/2a-3a-Configure_EdgeNode1.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
     * **vSphere Cluster / Resource Pool / Host Group Affinity / Data Store**:  
       Defines the physical placement of the Edge Node VM.  
@@ -64,7 +64,7 @@ This section describes the procedures for configuring NSX Edge Clusters and Node
             1. Go to **NSX Manager**.  
             2. Navigate to **System** > **Fabric** > **Host** > **Clusters**.  
             3. Activate NSX on DVPGs.  
-            ![NSX on DVPGs](images/2a-3b-Enable_NSX_on_DVPGs.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+            ![NSX on DVPGs](images/2a-3b-Enable_NSX_on_DVPGs.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
             !!! warning "Security Consideration: Microsegmentation / DFW"
                 Enabling "NSX on DVPG" activates the **Distributed Firewall (DFW)** for all VMs connected to VDS Port Groups. 
@@ -79,12 +79,12 @@ This section describes the procedures for configuring NSX Edge Clusters and Node
 <div style="margin-left: 40px; margin-right: 40px;" markdown="1">
 ??? info "Cloning option"
     In case other Edge Nodes have the vSphere Cluster and Uplink settings, use the cloning option.
-    ![Add Edge Node2](images/2a-3c-Configure_EdgeNode2.jpg){ width="50%" style="display: block; margin: 0 auto;" }
+    ![Add Edge Node2](images/2a-3c-Configure_EdgeNode2.jpg){ width="50%" style="display: block; margin: 0 auto; max-width: 900px;" }
 </div>
 
 ### Monitoring
 * **Status**
     The status reflects the successful application of the configuration.
-    ![vCenter Edge Status](images/2a-4-Validation_Edge.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+    ![vCenter Edge Status](images/2a-4-Validation_Edge.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---

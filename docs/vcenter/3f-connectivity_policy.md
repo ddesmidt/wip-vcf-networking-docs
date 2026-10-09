@@ -12,7 +12,7 @@ This section describes the procedures for configuring Connectivity Policy using 
 
 
 <div markdown>
-![vCenter Conn Policy](images/3f-0-Conn_Policy.jpg){ width="100%" }
+![vCenter Conn Policy](images/3f-0-Conn_Policy.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -44,7 +44,7 @@ Different Connectivity Policy types are available:
 </div>
 
 #### Step1. Create Connectivity Policy
-![vCenter Conn Policy config](images/3f-1a-Create_ConnPolicy.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![vCenter Conn Policy config](images/3f-1a-Create_ConnPolicy.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Visibility**:  
   Set to External.
@@ -63,11 +63,11 @@ Different Connectivity Policy types are available:
 
 #### Show other VPCs within your community
 
-![vCenter Conn Policy validation](images/3f-1b-Validation_ConnPolicy_Members.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![vCenter Conn Policy validation](images/3f-1b-Validation_ConnPolicy_Members.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Show VPCs who don't belog to any Community
 
-![vCenter Conn Policy validation](images/3f-1b-Validation_VPC_NoConnPolicy.jpg){ width="80%" style="display: block; margin: 0 auto;" }
+![vCenter Conn Policy validation](images/3f-1b-Validation_VPC_NoConnPolicy.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 #### Show all VPCs with connectivity to yours

@@ -17,7 +17,7 @@ This section describes the procedures for **deploying a K8s Cluster in a Namespa
 </div>
 
 <div markdown>
-![VDS Architecture](images/2e1-0-k8s.jpg){ width="100%" }
+![VDS Architecture](images/2e1-0-k8s.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -25,20 +25,20 @@ This section describes the procedures for **deploying a K8s Cluster in a Namespa
 
 ## K8s Cluster Deployment {: #deployment_k8s }
 
-![Topology](images/2e1-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
+![Topology](images/2e1-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Create K8s Cluster
 
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Kubernetes - Create Cluster**  
-![Add Namespace Resources](images/2e1-1-kubernetes-create.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Add Namespace Resources](images/2e1-1-kubernetes-create.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 1. **Configuration Type**  
 Select the **Cluster Type** and **Configuration Type**.
-![Select VM Deployment Source](images/2e1-1a-ConfType.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+![Select VM Deployment Source](images/2e1-1a-ConfType.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 1. **Review and Confirm**  
 Review and click **Finish** to deploy the k8s cluster.
-![Select VM Deployment Source](images/2e1-1b-Deploy.jpg){ width="95%" style="display: block; margin: 0 auto;" }  
+![Select VM Deployment Source](images/2e1-1b-Deploy.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 ??? info "More k8s cluster options"
     To get more options, such as **replicas** and **OS images**, select at step1 **Custom configuration**.
@@ -52,14 +52,14 @@ Review and click **Finish** to deploy the k8s cluster.
 #### Validate K8s Cluster Status
 Once the wizard completes, verify the deployment was successful by navigating to **vCenter** > **Supervisor Management** > **Supervisors**, select **[your supervisor]**, navigate to **Namespaces**, select **[your namespace]**, navigate to **Resources**, and click on **Kubernetes - Go to Service**.  
 
-![Validate K8s Cluster Status](images/2e1-2a-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
+![Validate K8s Cluster Status](images/2e1-2a-Validation.jpg){ width="85%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Retrieve K8s Cluster Controller VIP
 Once the wizard completes, look at the K8s Cluster YAML file by navigating to the K8s Cluster Status (see above), click on **View YAML**, and find the **controlPlaneEndpoint** configuration.
 
-![Find K8s Cluster VIP](images/2e1-2b-K8sVIP.jpg){ width="70%" style="display: block; margin: 0 auto;" }
+![Find K8s Cluster VIP](images/2e1-2b-K8sVIP.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 #### Check K8s Cluster VMs in vCenter Inventory
 Verify the K8s Cluster VMs are running by navigating to **vCenter** > **Inventory**, select the **K8s VM in the Namespace**.
-![Validate K8s Cluster VMs](images/2e1-2c-Validation.jpg){ width="85%" style="display: block; margin: 0 auto;" }
+![Validate K8s Cluster VMs](images/2e1-2c-Validation.jpg){ width="85%" style="display: block; margin: 0 auto; max-width: 900px;" }
 

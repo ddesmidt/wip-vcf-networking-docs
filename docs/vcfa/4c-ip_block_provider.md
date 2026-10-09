@@ -12,7 +12,7 @@ This section describes the procedures for configuring IP Blocks using the vSpher
 </div>
 
 <div markdown>
-![vCenter IP Blocks](images/3c-0-IP_Block.jpg){ width="100%" }
+![vCenter IP Blocks](images/3c-0-IP_Block.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 
 </div>
@@ -45,7 +45,7 @@ Also used for VLAN-backed Subnets.
 ### Configuration
 
 #### Step1. Create new IP Block External
-![IP Block Ext config](images/3c-1a-Create_IPBlock_Ext.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![IP Block Ext config](images/3c-1a-Create_IPBlock_Ext.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Visibility**:  
   Set to External.
@@ -73,7 +73,7 @@ The status reflects the successful application of the configuration.
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 
-![IP Block Ext validation](images/3c-1b-Validation_IPBlock_Ext.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![IP Block Ext validation](images/3c-1b-Validation_IPBlock_Ext.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 
@@ -84,7 +84,7 @@ The status reflects the successful application of the configuration.
 This is the IP Block used for future VPC Subnets Private-TGW.
 
 #### Step1. Create new IP Block Private-TGW
-![IP Block Ext config](images/3c-2a-Create_IPBlock_Private_TGW.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![IP Block Ext config](images/3c-2a-Create_IPBlock_Private_TGW.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 * **Visibility**:  
   Set to Private.
@@ -109,7 +109,7 @@ The status reflects the successful application of the configuration.
     Because this represents a logical configuration mapping rather than an active link-state protocol, the status will typically remain Green (Healthy) once the settings are validated by the NSX Manager.
 </div>
 
-![IP Block Ext validation](images/3c-2b-Validation_IPBlock_Private_TGW.jpg){ width="90%" style="display: block; margin: 0 auto;" }
+![IP Block Ext validation](images/3c-2b-Validation_IPBlock_Private_TGW.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ---
 
@@ -131,7 +131,7 @@ Real-time utilization metrics for IP Blocks can be monitored via the following i
 
 * **Used IPs**: The number of addresses currently assigned to active VPC subnets. For External IP Blocks, this also includes addresses consumed by NAT and Load Balancer Virtual VIPs.
 
-![IP Block Statistics](images/3c-4-Statistics_IPBlock.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![IP Block Statistics](images/3c-4-Statistics_IPBlock.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 
 ---

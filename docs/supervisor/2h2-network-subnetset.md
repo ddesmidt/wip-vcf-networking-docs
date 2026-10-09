@@ -18,7 +18,7 @@ This section describes the procedures for **provisioning and managing Network Se
 </div>
 
 <div markdown>
-![VDS Architecture](images/2h2-0-subnetset.jpg){ width="100%" }
+![VDS Architecture](images/2h2-0-subnetset.jpg){ width="100%" style="max-width: 250px;" }
 </div>
 </div>
 
@@ -34,23 +34,23 @@ A **SubnetSet** provides dynamic, automated scaling functionality for subnets:
 
 For more information about Subnets settings review the [VPC Subnet Overlay page](../vcenter/1b-vpc_subnet.md#overlay){target="_blank"}.
 
-![Topology](images/2h2-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto;" }
+![Topology](images/2h2-1-Topology.jpg){ width="55%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 ### Create SubnetSet
 
 Navigate to **vCenter** > **Supervisor Management** > **Supervisors**, select your target Supervisor, click the **Namespaces** tab, and select your specific Namespace.  
 Under the **Resources** card, click **Network - Go to Service**.  
-![Network Service](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto;" }
+![Network Service](images/2h1-1-network.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
 1. **Create New SubnetSet**  
 Navigate to **SubnetSets**, and click **New SubnetSet**.  
-![Create Subnet](images/2h2-1a-subnetsetcreate.jpg){ width="70%" style="display: block; margin: 0 auto;" }  
+![Create Subnet](images/2h2-1a-subnetsetcreate.jpg){ width="70%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 ---
 
 ### Validate Subnetset
 Click on the newly created Subnetset, and navigate to **Subnets** to view its current subnets CIDR and VPC Gateway.
-![Created Subnet](images/2h2-2a-subnetsetcreated.jpg){ width="90%" style="display: block; margin: 0 auto;" }  
+![Created Subnet](images/2h2-2a-subnetsetcreated.jpg){ width="90%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 !!! warning "Subnet list empty"
     SubnetSets automatically scale in/out the subnets.  
