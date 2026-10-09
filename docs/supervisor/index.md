@@ -16,7 +16,7 @@ This section describes the procedures for **deploying the Supervisor** within a 
 
 * **1a. VDS + FLB**  
 
-| <div style="width: 100px;">Metric /Feature</div> | <div style="min-width: 140px;">**1a. VDS + FLB**<br>![VDS Architecture](images/0-VDS.jpg){ width="100" }|
+| <div style="width: 100px;">Metric /Feature</div> | <div style="min-width: 140px;">**1a. VDS + FLB**<br>![VDS Architecture](images/0-VDS.jpg){ width="100%" style="max-width: 200px;"  }|
 | :--- | :--- |
 | **Physical Fabric** | MTU ≥ 1500,<br> L2 Physical |
 | **VCF-A Support** | 🔴 No |
