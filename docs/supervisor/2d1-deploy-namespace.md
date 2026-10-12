@@ -66,6 +66,10 @@ Navigate to **vCenter** > **Supervisor Management** > **Namespaces**, and click 
             However, when a namespace is deploy with non-default network settings, then NSX LB must be manually enabled (unless you use AVI LB).  
             <img src="../images/2d1-1b-d1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 400px !important; display: block; margin: 0 auto;" />
             NSX LB can be enabled is a non-default namespace VPC currently only via NSX-API.  
+            ```text
+            PUT https://[NSX-Mgr]/policy/api/v1/orgs/default/projects/[project-name]/vpcs/[vpc-name]/vpc-lbs/lb-1" 
+            ```  
+
             ??? abstract "Output example"
                 <pre><code>curl -k -i -X PUT \
                 -H "Content-Type: application/json" \
