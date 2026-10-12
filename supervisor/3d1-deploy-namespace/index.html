@@ -6994,6 +6994,58 @@
 <p><strong>Configuration</strong><br>
    Give a name to the <strong>Namespace</strong>, and click <strong>Next</strong>.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-1b-SupervisorNamespace.jpg" data-desc-position="bottom"><img alt="Name the Namespace" src="../images/2d1-1b-SupervisorNamespace.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="95%"></a>  </p>
+<details class="info">
+<summary>Special Use Case: Override Network Settings</summary>
+<p>Multiple use cases are available:</p>
+<details class="info">
+<summary>Use Case1: Deploy that namespace with an existing VPC</summary>
+<p>The typical use case is to have a namespace exiting via another External Connection than the one Supervisor uses.
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3d1-1b-a1-SupervisorNamespace.jpg" data-desc-position="bottom"><img src="../images/3d1-1b-a1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;"></a>
+Select <strong>Consume an existing VPC</strong>, select the <strong>Project / VPC</strong>, <strong>Default Subnet Size</strong> (number power of 2) for future subnets, and click <strong>Next</strong>.
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-1b-a2-SupervisorNamespace.jpg" data-desc-position="bottom"><img src="../images/2d1-1b-a2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;"></a></p>
+</details>
+<details class="info">
+<summary>Use Case2: Deploy that namespace with a new VPC with different Default Subnet Size and Private VPC CIDRs settings</summary>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3d1-1b-b1-SupervisorNamespace.jpg" data-desc-position="bottom"><img src="../images/3d1-1b-b1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;"></a>
+Configure a <strong>Default Subnet Size</strong> (number power of 2) for future subnets, a <strong>Private (VPC) CIDRs</strong>, and click <strong>Next</strong>.
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-1b-b2-SupervisorNamespace.jpg" data-desc-position="bottom"><img src="../images/2d1-1b-b2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;"></a></p>
+</details>
+<details class="info">
+<summary>Use Case3: Provide Access to other VPC Subnets to this new namespace</summary>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-1b-c1-SupervisorNamespace.jpg" data-desc-position="bottom"><img src="../images/2d1-1b-c1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;"></a>
+Add the external VPC Subnet you want to be shared with that namespace.<br>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3d1-1b-c2-SupervisorNamespace.jpg" data-desc-position="bottom"><img src="../images/3d1-1b-c2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 400px !important; display: block; margin: 0 auto;"></a>
+For this subnet to be used by default for future VMs and/or pods, that subnet must be on the VPC used by that namespace (see above Use Case1).
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3d1-1b-c3-SupervisorNamespace.jpg" data-desc-position="bottom"><img src="../images/3d1-1b-c3-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 400px !important; display: block; margin: 0 auto;"></a></p>
+</details>
+<details class="info">
+<summary>Use Case4: Enable NSX LB for future VKS deployments when using non default network settings (non needed if using AVI LB)</summary>
+<p>Future VKS deployments will need an Load Balancing (LB) service.<br>
+The LB service canbe offered by NSX or Avi.<br>
+When a namespace is deployed with the default network settings, NSX LB is automatically enabled (unless AVI LB is available in the Supervisor).<br>
+However, when a namespace is deploy with non-default network settings, then NSX LB must be manually enabled (unless you use AVI LB).<br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3d1-1b-d1-SupervisorNamespace.jpg" data-desc-position="bottom"><img src="../images/3d1-1b-d1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 400px !important; display: block; margin: 0 auto;"></a>
+NSX LB can be enabled is a non-default namespace VPC currently only via NSX-API.<br>
+</p><div class="highlight"><pre><span></span><code>PUT https://[NSX-Mgr]/policy/api/v1/orgs/default/projects/[project-name]/vpcs/[vpc-name]/vpc-lbs/lb-1" 
+</code></pre></div><p></p>
+<details class="abstract">
+<summary>Output example</summary>
+<p></p><pre><code>curl -k -i -X PUT \
+-H "Content-Type: application/json" \
+-u 'admin:VMware123!VMware123!' \
+"https://nsx-wld01-a.site-a.vcf.lab/policy/api/v1/orgs/default/projects/default/vpcs/vpc-wld01-a/vpc-lbs/lb-1" \
+-d '{
+    "resource_type": "LBService",
+    "display_name": "lb-1",
+    "enabled": true,
+    "size": "SMALL"
+}'
+</code></pre><p></p>
+</details>
+<p>And then, you can see NSX LB is enabled in the VPC:<br>
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-1b-d2-SupervisorNamespace.jpg" data-desc-position="bottom"><img src="../images/2d1-1b-d2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;"></a></p>
+</details>
+</details>
 </li>
 <li>
 <p><strong>Add Zones</strong><br>
