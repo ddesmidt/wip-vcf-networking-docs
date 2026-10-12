@@ -38,6 +38,54 @@ Navigate to **vCenter** > **Supervisor Management** > **Namespaces**, and click 
    Give a name to the **Namespace**, and click **Next**.  
     ![Name the Namespace](images/2d1-1b-SupervisorNamespace.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
+    ??? info "Special Use Case: Override Network Settings"
+        Multiple use cases are available:
+
+        ??? info "Use Case1: Deploy that namespace with an existing VPC" 
+            The typical use case is to have a namespace exiting via another External Connection than the one Supervisor uses.
+                <img src="../images/3d1-1b-a1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+            Select **Consume an existing VPC**, select the **Project / VPC**, **Default Subnet Size** (number power of 2) for future subnets, and click **Next**.
+                <img src="../images/2d1-1b-a2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+
+        ??? info "Use Case2: Deploy that namespace with a new VPC with different Default Subnet Size and Private VPC CIDRs settings" 
+            <img src="../images/3d1-1b-b1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+            Configure a **Default Subnet Size** (number power of 2) for future subnets, a **Private (VPC) CIDRs**, and click **Next**.
+                <img src="../images/2d1-1b-b2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+
+        ??? info "Use Case3: Provide Access to other VPC Subnets to this new namespace" 
+            <img src="../images/2d1-1b-c1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+            Add the external VPC Subnet you want to be shared with that namespace.  
+                <img src="../images/3d1-1b-c2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 400px !important; display: block; margin: 0 auto;" />
+            For this subnet to be used by default for future VMs and/or pods, that subnet must be on the VPC used by that namespace (see above Use Case1).
+                <img src="../images/3d1-1b-c3-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 400px !important; display: block; margin: 0 auto;" />
+
+        ??? info "Use Case4: Enable NSX LB for future VKS deployments when using non default network settings (non needed if using AVI LB)"
+            Future VKS deployments will need an Load Balancing (LB) service.  
+            The LB service canbe offered by NSX or Avi.  
+            When a namespace is deployed with the default network settings, NSX LB is automatically enabled (unless AVI LB is available in the Supervisor).  
+            However, when a namespace is deploy with non-default network settings, then NSX LB must be manually enabled (unless you use AVI LB).  
+            <img src="../images/3d1-1b-d1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 400px !important; display: block; margin: 0 auto;" />
+            NSX LB can be enabled is a non-default namespace VPC currently only via NSX-API.  
+            ```text
+            PUT https://[NSX-Mgr]/policy/api/v1/orgs/default/projects/[project-name]/vpcs/[vpc-name]/vpc-lbs/lb-1" 
+            ```  
+
+            ??? abstract "Output example"
+                <pre><code>curl -k -i -X PUT \
+                -H "Content-Type: application/json" \
+                -u 'admin:VMware123!VMware123!' \
+                "https://nsx-wld01-a.site-a.vcf.lab/policy/api/v1/orgs/default/projects/default/vpcs/vpc-wld01-a/vpc-lbs/lb-1" \
+                -d '{
+                    "resource_type": "LBService",
+                    "display_name": "lb-1",
+                    "enabled": true,
+                    "size": "SMALL"
+                }'
+                </code></pre>
+            And then, you can see NSX LB is enabled in the VPC:  
+                <img src="../images/2d1-1b-d2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+
+
 3. **Add Zones**  
    Select the **Workload Zone** (one or more vCenter Clusters), and click **Next**.  
     ![Add Workload Zones](images/2d1-1c-SupervisorNamespace.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
