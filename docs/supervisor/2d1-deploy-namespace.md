@@ -67,7 +67,13 @@ Navigate to **vCenter** > **Supervisor Management** > **Namespaces**, and click 
             <img src="../images/2d1-1b-d1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 400px !important; display: block; margin: 0 auto;" />
             NSX LB can be enabled is a non-default namespace VPC currently only via NSX-API.  
             ```text
-            PUT https://[NSX-Mgr]/policy/api/v1/orgs/default/projects/[project-name]/vpcs/[vpc-name]/vpc-lbs/lb-1" 
+            PUT https://[NSX-Mgr]/policy/api/v1/orgs/default/projects/[project-name]/vpcs/[vpc-name]/vpc-lbs/lb-1  
+            {
+                "resource_type": "LBService",
+                "display_name": "lb-1",
+                "enabled": true,
+                "size": "SMALL"
+            }
             ```  
 
             ??? abstract "Output example"

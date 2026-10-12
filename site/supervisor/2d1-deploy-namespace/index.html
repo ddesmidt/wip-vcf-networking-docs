@@ -7026,7 +7026,13 @@ When a namespace is deployed with the default network settings, NSX LB is automa
 However, when a namespace is deploy with non-default network settings, then NSX LB must be manually enabled (unless you use AVI LB).<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/2d1-1b-d1-SupervisorNamespace.jpg" data-desc-position="bottom"><img src="../images/2d1-1b-d1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 400px !important; display: block; margin: 0 auto;"></a>
 NSX LB can be enabled is a non-default namespace VPC currently only via NSX-API.<br>
-</p><div class="highlight"><pre><span></span><code>PUT https://[NSX-Mgr]/policy/api/v1/orgs/default/projects/[project-name]/vpcs/[vpc-name]/vpc-lbs/lb-1" 
+</p><div class="highlight"><pre><span></span><code>PUT https://[NSX-Mgr]/policy/api/v1/orgs/default/projects/[project-name]/vpcs/[vpc-name]/vpc-lbs/lb-1  
+{
+    "resource_type": "LBService",
+    "display_name": "lb-1",
+    "enabled": true,
+    "size": "SMALL"
+}
 </code></pre></div><p></p>
 <details class="abstract">
 <summary>Output example</summary>
