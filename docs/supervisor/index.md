@@ -35,9 +35,9 @@ This section describes the procedures for **deploying the Supervisor** within a 
 
 | <div style="width: 100px;">Metric /Feature</div> | <div style="min-width: 140px;">**2a. NSX +<br>CTGW(TEP)**<br>![NSX Architecture](images/0-NSX_CTGW.jpg){ width="100%" style="max-width: 200px;"  }</div> | <div style="min-width: 140px;">**2b. NSX +<br>DTGW VLAN(TEP)**<br>![NSX Architecture](images/0-NSX_DTGW_VLAN.jpg){ width="100%" style="max-width: 200px;"  }</div> | <div style="min-width: 140px;">**2c. NSX +<br>DTGW VXLAN(TEP)**<br>![NSX Architecture](images/0-NSX_DTGW_VXLAN.jpg){ width="100%" style="max-width: 200px;"  }</div> | <div style="min-width: 140px;">**2d. NSX +<br>DTGW VLAN(TEP-Less)**<br>![NSX Architecture](images/0-NSX_DTGW_VLAN_TEP-Less.jpg){ width="100%" style="max-width: 200px;"  }</div> |
 | :--- | :--- | :--- | :--- | :--- |
-| **Physical Fabric** | MTU ≥ 1700,<br> BGP | MTU ≥ 1700,<br> L2 Physical | MTU ≥ 1700,<br> EVPN + BGP | MTU ≥ 1500,<br> L2 Physical |
+| **Physical Fabric** | MTU ≥ 1700,<br> L2 or L3 Fabric with VLAN <br>+ BGP | MTU ≥ 1700,<br> L2 Fabric with VLAN | MTU ≥ 1700,<br> EVPN Fabric <br>+ BGP | MTU ≥ 1500,<br> L2 Fabric with VLAN |
 | **VCF-A Support** | 🟢 Yes | 🟢 Yes | 🟢 Yes | 🟢 Yes |
-| **Network Services** | 🟢 All | 🟢 Most <br>(All but VPN) | 🟢 Most <br>(All but VPN) | 🔴 Limited <br>(No Subnets private, No NAT, No VPN, no Multicast/VRRP/HSRP/etc) |
+| **Network Services** | 🟢 All | 🟢 Most <br>(All but VPN) | 🟢 Most <br>(All but VPN) | 🔴 Limited <br>(No Subnets private, No NAT, No VPN, Supports VMs with IP unicast traffic only (no multicast/VRRP/HSRP/etc)) |
 | **Scale** | 🟢 Large | 🟢 Large | 🟢 Large | 🔴 Limited <br>(All VMs and K8s consume a Public IP)|
 | **Security** | 🟢 Isolated | 🟢 Isolated | 🟢 Isolated | 🔴 Direct Access <br>(K8s Nodes reachable from external) |
 | **High Availability** | 🟢 Yes | 🟢 Yes | 🟢 Yes | 🟢 Yes |

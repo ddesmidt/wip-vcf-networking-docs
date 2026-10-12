@@ -6936,6 +6936,17 @@
 </div>
 <hr>
 <h2 id="supervisordeployment">Supervisor Deployment</h2>
+<div class="admonition info">
+<p class="admonition-title">Supervisor Tool App</p>
+<p>As an option, you can go through the Supervisor deployment with the <strong>Supervisor Tool App web application</strong> that guides you through:  </p>
+<ul>
+<li><strong>checking prerequisites</strong> (and adding them if missing)</li>
+<li><strong>deploying vSphere Supervisor</strong> in a friendly workflow ⬅️ ⬅️ ⬅️  </li>
+<li><strong>validating Supervisor and VKS</strong> environments  </li>
+</ul>
+<p><a href="https://github.com/ddesmidt/Supervisor_Install_Tool" target="_blank">GitHub Repository</a>: Product overview, installation guides (git pull or direct OVA), and recorded demos for all three use cases.</p>
+<p>Otherwise, you can also follow the steps below.</p>
+</div>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c1-0-Topology.jpg" data-desc-position="bottom"><img alt="Topology" src="../images/3c1-0-Topology.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="80%"></a></p>
 <h3 id="create-supervisor">Create Supervisor</h3>
 <p>Navigate to <strong>vCenter</strong> &gt; <strong>Supervisor Management</strong>, and click <strong>Get Started</strong>.
@@ -6951,6 +6962,10 @@
 <li>
 <p><strong>Supervisor Location</strong>  </p>
 <ul>
+<li>Select the <strong>Cluster Deployment</strong>, and click <strong>Next</strong>.<br>
+Note: You can deploy Supervisor VMs:<br>
+    . High Availability: With HA enabled (3 VMs) or in standalone (non-HA) mode<br>
+    . Placement: Target a vSphere Cluster (shown below) or a vSphere Zone.</li>
 <li>Select the <strong>Cluster Deployment</strong>, and click <strong>Next</strong>.<br>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/3c1-1b-Supervisor.jpg" data-desc-position="bottom"><img alt="Supervisor Location Settings" src="../images/3c1-1b-Supervisor.jpg" style="display: block; margin: 0 auto; max-width: 900px;" width="95%"></a>  </li>
 </ul>

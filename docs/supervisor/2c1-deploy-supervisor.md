@@ -42,11 +42,13 @@ Navigate to **vCenter** > **Supervisor Management**, and click **Get Started**.
 
 1. **vCenter Server and Network**  
     * Select the network stack **VCF Networking with VPC (recommended)**, and click **Next**.  
-      Note: You can choose a vSphere Cluster or a vSphere Zone (the screenshot below selects a vSphere Cluster).
     ![vCenter Server and Network Configuration](images/2c1-1a-vCenter.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 2. **Supervisor Location**  
     * Select the **Cluster Deployment**, and click **Next**.  
+    Note: You can deploy Supervisor VMs:  
+        . High Availability: With HA enabled (3 VMs) or in standalone (non-HA) mode  
+        . Placement: Target a vSphere Cluster (shown below) or a vSphere Zone.
     ![Supervisor Location Settings](images/2c1-1b-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 3. **Storage**  

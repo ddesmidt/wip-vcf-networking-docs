@@ -6759,10 +6759,10 @@
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>Physical Fabric</strong></td>
-<td style="text-align: left;">MTU ≥ 1700,<br> BGP</td>
-<td style="text-align: left;">MTU ≥ 1700,<br> L2 Physical</td>
-<td style="text-align: left;">MTU ≥ 1700,<br> EVPN + BGP</td>
-<td style="text-align: left;">MTU ≥ 1500,<br> L2 Physical</td>
+<td style="text-align: left;">MTU ≥ 1700,<br> L2 or L3 Fabric with VLAN <br>+ BGP</td>
+<td style="text-align: left;">MTU ≥ 1700,<br> L2 Fabric with VLAN</td>
+<td style="text-align: left;">MTU ≥ 1700,<br> EVPN Fabric <br>+ BGP</td>
+<td style="text-align: left;">MTU ≥ 1500,<br> L2 Fabric with VLAN</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>VCF-A Support</strong></td>
@@ -6776,7 +6776,7 @@
 <td style="text-align: left;">🟢 All</td>
 <td style="text-align: left;">🟢 Most <br>(All but VPN)</td>
 <td style="text-align: left;">🟢 Most <br>(All but VPN)</td>
-<td style="text-align: left;">🔴 Limited <br>(No Subnets private, No NAT, No VPN, no Multicast/VRRP/HSRP/etc)</td>
+<td style="text-align: left;">🔴 Limited <br>(No Subnets private, No NAT, No VPN, Supports VMs with IP unicast traffic only (no multicast/VRRP/HSRP/etc))</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Scale</strong></td>

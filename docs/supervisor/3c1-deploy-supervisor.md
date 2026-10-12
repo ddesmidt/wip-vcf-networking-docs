@@ -21,6 +21,17 @@ This section describes the requirements for **deploying a Supervisor utilizing a
 ---
 
 ## Supervisor Deployment {: #supervisordeployment }
+!!! info "Supervisor Tool App"
+    As an option, you can go through the Supervisor deployment with the **Supervisor Tool App web application** that guides you through:  
+
+    - **checking prerequisites** (and adding them if missing)
+    - **deploying vSphere Supervisor** in a friendly workflow ⬅️ ⬅️ ⬅️  
+    - **validating Supervisor and VKS** environments  
+    
+    [GitHub Repository](https://github.com/ddesmidt/Supervisor_Install_Tool){:target="_blank"}: Product overview, installation guides (git pull or direct OVA), and recorded demos for all three use cases.
+
+    
+    Otherwise, you can also follow the steps below.
 
 ![Topology](images/3c1-0-Topology.jpg){ width="80%" style="display: block; margin: 0 auto; max-width: 900px;" }
 
@@ -33,6 +44,10 @@ Navigate to **vCenter** > **Supervisor Management**, and click **Get Started**.
     ![vCenter Server and Network Configuration](images/3c1-1a-vCenter.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 
 2. **Supervisor Location**  
+    * Select the **Cluster Deployment**, and click **Next**.  
+    Note: You can deploy Supervisor VMs:  
+        . High Availability: With HA enabled (3 VMs) or in standalone (non-HA) mode  
+        . Placement: Target a vSphere Cluster (shown below) or a vSphere Zone.
     * Select the **Cluster Deployment**, and click **Next**.  
     ![Supervisor Location Settings](images/3c1-1b-Supervisor.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
 

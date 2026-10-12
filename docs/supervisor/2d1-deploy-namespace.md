@@ -36,7 +36,29 @@ Navigate to **vCenter** > **Supervisor Management** > **Namespaces**, and click 
 
 2. **Configuration**  
    Give a name to the **Namespace**, and click **Next**.  
-    ![Name the Namespace](images/2d1-1b-SupervisorNamespace.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
+       ![Name the Namespace](images/2d1-1b-SupervisorNamespace.jpg){ width="95%" style="display: block; margin: 0 auto; max-width: 900px;" }  
+
+    ??? info "Special Use Case: Override Network Settings"
+        Multiple use cases are available:
+
+        ??? info "Use Case1: Deploy that namespace with an existing VPC" 
+            The typical use case is to have a namespace exiting via another External Connection than the one Supervisor uses.
+                <img src="../images/2d1-1b-a1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+            Select **Consume an existing VPC**, select the **Project / VPC**, **Default Subnet Size** (number power of 2) for future subnets, and click **Next**.
+                <img src="../images/2d1-1b-a2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+
+        ??? info "Use Case2: Deploy that namespace with a new VPC with different Default Subnet Size and Private VPC CIDRs settings" 
+            <img src="../images/2d1-1b-b1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+            Configure a **Default Subnet Size** (number power of 2) for future subnets, a **Private (VPC) CIDRs**, and click **Next**.
+                <img src="../images/2d1-1b-b2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+
+        ??? info "Use Case3: Provide Access to other VPC Subnets to this new namespace" 
+            <img src="../images/2d1-1b-c1-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 400px !important; display: block; margin: 0 auto;" />
+            Add the external VPC Subnet you want to be shared with that namespace.  
+                <img src="../images/2d1-1b-c2-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+            For this subnet to be used by default for future VMs and/or pods, that subnet must be on the VPC used by that namespace (see above Use Case1).
+                <img src="../images/2d1-1b-c3-SupervisorNamespace.jpg" style="width: 80% !important; max-width: 600px !important; display: block; margin: 0 auto;" />
+
 
 3. **Add Zones**  
    Select the **Workload Zone** (one or more vCenter Clusters), and click **Next**.  
